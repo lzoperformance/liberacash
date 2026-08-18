@@ -1,0 +1,2 @@
+# Evita listar os arquivos da pasta caso o index.php seja removido/renomeado
+Options -Indexes

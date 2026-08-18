@@ -1,0 +1,17 @@
+.idea
+.DS_Store
+libs/
+
+# Credenciais — NUNCA commitar (aprenda com o erro do credito.vc:
+# esses arquivos estavam aqui listados mas já tinham sido commitados
+# antes, então o git continuava versionando. Se algum dia existir um
+# desses arquivos de verdade, rode `git rm --cached <arquivo>` também).
+config/db-config.php
+config/aws-config.php
+config/parceiros-config.php
+.env
+.env.*
+!.env.example
+
+# Dependências do Composer (AWS SDK etc.)
+vendor/

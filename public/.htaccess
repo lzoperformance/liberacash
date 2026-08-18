@@ -1,0 +1,75 @@
+RewriteEngine On
+
+# ============================================================
+# 1. REDIRECIONAMENTOS 301 (URL antiga .php -> URL nova limpa)
+#    Usam %{THE_REQUEST} para só pegar o pedido direto do navegador,
+#    evitando loop com as regras de reescrita interna lá embaixo.
+# ============================================================
+
+# home.php / index.php -> /
+RewriteCond %{THE_REQUEST} \s/+(home|index)\.php[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# blog.php?post=slug -> /blog/slug/
+RewriteCond %{THE_REQUEST} \s/+blog\.php\?post=([a-z0-9-]+) [NC]
+RewriteRule ^blog\.php$ /blog/%1/? [R=301,L]
+
+# blog.php?categoria=x -> mantém como está (parâmetro de filtro, não precisa virar slug)
+# blog.php (sem parâmetro) -> /blog/
+RewriteCond %{THE_REQUEST} \s/+blog\.php[\s?] [NC]
+RewriteRule ^blog\.php$ /blog/ [R=301,L]
+
+# cartoes.php -> /cartoes/
+RewriteCond %{THE_REQUEST} \s/+cartoes\.php[\s?] [NC]
+RewriteRule ^cartoes\.php$ /cartoes/ [R=301,L]
+
+# sobre.php -> /sobre/
+RewriteCond %{THE_REQUEST} \s/+sobre\.php[\s?] [NC]
+RewriteRule ^sobre\.php$ /sobre/ [R=301,L]
+
+# contato.php -> /contato/
+RewriteCond %{THE_REQUEST} \s/+contato\.php[\s?] [NC]
+RewriteRule ^contato\.php$ /contato/ [R=301,L]
+
+# time.php -> /time/
+RewriteCond %{THE_REQUEST} \s/+time\.php[\s?] [NC]
+RewriteRule ^time\.php$ /time/ [R=301,L]
+
+# termos-e-condicoes.php -> /termos-e-condicoes/
+RewriteCond %{THE_REQUEST} \s/+termos-e-condicoes\.php[\s?] [NC]
+RewriteRule ^termos-e-condicoes\.php$ /termos-e-condicoes/ [R=301,L]
+
+# politica-de-privacidade.php -> /politica-de-privacidade/
+RewriteCond %{THE_REQUEST} \s/+politica-de-privacidade\.php[\s?] [NC]
+RewriteRule ^politica-de-privacidade\.php$ /politica-de-privacidade/ [R=301,L]
+
+# ============================================================
+# 2. REESCRITA INTERNA (URL limpa -> arquivo .php real)
+#    Não reescreve se for arquivo ou pasta real (imagens, css, etc.)
+# ============================================================
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# /blog/algum-slug -> blog.php?post=algum-slug
+RewriteRule ^blog/([a-z0-9-]+)/?$ blog.php?post=$1 [L,QSA]
+
+# /blog -> blog.php (listagem, aceita ?categoria=x também)
+RewriteRule ^blog/?$ blog.php [L,QSA]
+
+# /cartoes -> cartoes.php
+RewriteRule ^cartoes/?$ cartoes.php [L,QSA]
+
+# /sobre -> sobre.php
+RewriteRule ^sobre/?$ sobre.php [L,QSA]
+
+# /contato -> contato.php
+RewriteRule ^contato/?$ contato.php [L,QSA]
+
+# /time -> time.php
+RewriteRule ^time/?$ time.php [L,QSA]
+
+# /termos-e-condicoes -> termos-e-condicoes.php
+RewriteRule ^termos-e-condicoes/?$ termos-e-condicoes.php [L,QSA]
+
+# /politica-de-privacidade -> politica-de-privacidade.php
+RewriteRule ^politica-de-privacidade/?$ politica-de-privacidade.php [L,QSA]

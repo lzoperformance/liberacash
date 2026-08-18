@@ -1,0 +1,542 @@
+.all { display: block; max-width: 1200px; margin-right: auto; margin-left: auto; }
+.logo-oicred { padding-top: 33px; padding-bottom: 15px; }
+.logo-oicred.logo-mob { display: none; }
+.conteudo {background-image: url(../images/hub/bg.jpg);background-position: top;background-size: cover;background-color: #ffffff !important;background-repeat: no-repeat;}
+.parceiros {background-color: #dcdcdc;position: relative;z-index: -1;}
+.box-parceiros { padding-top: 17px; padding-bottom: 17px; }
+.chamada {padding-top: 91px;padding-right: 0px;padding-bottom: 25px;text-align: left;}
+.heading {color: #181a1f;font-size: 21px;line-height: 37px;font-weight: 900;}
+.heading.h1-2 { margin-top: 157px; font-size: 47px; }
+.heading.h1-5 { margin-top: 157px; font-size: 47px; color:#b1ff0a !important; }
+.heading.taxa-topo { margin-top: 3px; font-size: 21px; font-weight: 700; letter-spacing: -1px; }
+.heading.h-mobile { display: none; }
+.body { font-family: Raleway, sans-serif; }
+.text-span {font-weight: 500;}
+.heading-2 {padding-right: 0;color: #272a31;font-size: 17px;line-height: 21px;font-weight: 400;letter-spacing: 0px;}
+.heading-2.tit-taxas {display: inline-block;margin-bottom: -10px;padding: 5px 12px;border-radius: 15px;background-color: rgba(144, 254, 20, .84);color: #04073b;font-size: 16px;line-height: 20px;font-weight: 800;}
+.formulario {
+    margin: 0 auto;
+    width: auto;
+    margin-bottom: 132px;
+    margin-left: 35px;
+    margin-top: 88px;
+    padding: 9px 29px;
+    border-radius: 5px;
+    background-color: #1f252b;
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2);
+}
+.tranquilo{font-size: 30px;}
+.topo{/* background-color: #272a311a; */}
+.box-conteudo{ padding-right: 250px;}
+
+.box-cpf{margin-top: 78px;}
+.heading-3 { margin-bottom: 5px; color: #fff; font-size: 17px; line-height: 25px; text-align: center; }
+.heading-4 { margin-top: 2px; color: #b2b2b2; font-size: 14px; line-height: 23px; font-weight: 400; text-align: center; }
+.heading-4.cote { display: none; }
+.step1 { padding-top: 21px; padding-bottom: 5px; }
+.logo-parceiro { text-align: center; }
+.taxas {padding-bottom: 50px;background-color: #1f252b;}
+.box-taxas {padding-top: 50px;}
+.taxa { padding-top: 184px; padding-bottom: 184px; background-image: url('../images/hub/bg-taxas.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.v-taxa { margin-top: 15px; padding-right: 14px; padding-left: 14px; text-align: center; }
+.titulo-vantagem { padding-top: 14px; color: #90fe14; font-size: 18px; font-weight: 700; text-align: center; text-transform: uppercase; }
+.text-vantagem { color: #ffffff; text-align: center; }
+.destaque{
+    background-color: #1f252b}
+.box-destaque {position: relative;margin: -17px 100px -179px;border-radius: 6px;background-color: #8ffe14;box-shadow: 0 11px 47px -5px rgba(0, 0, 0, .19);}
+.grafico {position: static;height: auto;margin-bottom: 0px;padding-top: 35px;padding-bottom: 40px;background-color: #f2f2f2;background-position: 0px 0px;background-size: cover;background-repeat: no-repeat;text-align: right;border-radius: 10px;}
+.destaquer-credito {width: 101%;padding: 42px 55px;/* background-color: #90fe14; */}
+.col { height: auto; padding-right: 0px; padding-left: 0px; }
+.heading-6 {margin-top: 7px;margin-bottom: 6px;padding: 4px 0px 15px;color: #1f252b;font-size: 25px;line-height: 28px;font-weight: 700;text-transform: none;}
+.heading-6.sub-faixa { font-size: 22px; font-weight: 300; }
+.text-grafico {color: #0d3b4a;font-size: 16px;line-height: 24px;font-weight: 300;}
+.row { font-size: 16px; }
+.destaque8 {color: #8ffe14;padding: 1px 14px;/* margin-top: 14px; */line-height: 41px;font-weight: bold;border-radius: 18px;background-color: #1f252b;}
+.faixa {padding-top: 45px;background-image: -webkit-linear-gradient(270deg, rgba(0, 19, 42, .75), rgba(0, 19, 42, .75)), url('../images/hub/bg-faixa.jpg');background-image: linear-gradient(180deg, rgba(0, 19, 42, .75), rgba(0, 19, 42, 0.56)), url(../images/hub/bg-faixa.jpg);background-position: 0px 0px, 0px 0px;background-size: auto, cover;background-repeat: repeat, no-repeat;}
+.box-faixa { padding-top: 150px; padding-bottom: 105px; text-align: center; }
+.box-bt-faixa { margin-top: 19px; }
+.bt-faixa { padding: 19px 59px; border-radius: 100px; background-color: #90fe14; box-shadow: 1px 1px 22px 0 rgba(0, 0, 0, .27), inset 0 0 0 0 #f3ff6c; -webkit-transition: -webkit-transform 200ms ease; transition: -webkit-transform 200ms ease; transition: transform 200ms ease; transition: transform 200ms ease, -webkit-transform 200ms ease; color: #030751; font-size: 21px; font-weight: 800; text-transform: none; }
+.bt-faixa:hover { background-color: #cf0; -webkit-transform: translate(0px, -3px); -ms-transform: translate(0px, -3px); transform: translate(0px, -3px); }
+.bt-faixa.bt-form { width: 100%; margin-top: 2px; }
+.rodape { background-color: #1f252b; }
+.box-form { height: 50px; }
+.destaque-taxa {color: #1f252b;font-size: 36px;font-weight: 800;}
+.text-span-3 {color: #1f252b;font-weight: bold;}
+.div {width: 15%;height: 5px;margin-bottom: 21px;padding-bottom: 5px;border-radius: 100px;background-color: #1f252b;}
+.div.div2 {position: static;display: inline-block;width: 30%;height: 4px;margin-bottom: -1px;padding-bottom: 2px;text-align: center;}
+.frase {
+    margin-bottom: 0px;
+    padding-top: 33px;
+    padding-right: 47px;
+    padding-bottom: 26px;
+    color: #384551;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: right;
+}
+.box-valores {margin: 3px -5px;}
+.label-radio { color: #fff; font-size: 17px; font-weight: 700; }
+.label-radio:hover {
+	background: #90fe14;
+	color: #000;
+	border: 2px solid #90fe14;
+	-webkit-transition: background-color 200ms ease;
+	transition: background-color 200ms ease;
+	}
+.label-radio.outro { margin-top: -12px; margin-left: 6px; font-size: 16px; }
+.label-formulario {
+    color: #ededed;
+    font-size: 17px;
+    padding-top: 5px;
+    /* padding-left: 16px; */
+    position: relative;
+    font-weight: 500;
+	margin-bottom: 0px;
+}
+.label-cpf {
+    color: #272a31;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 16px;
+    position: absolute;
+    font-weight: bold;
+}
+.meses{
+    position: absolute;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+}
+.c-cpf{padding-top: 20px;}
+.campos {height: 52px;margin-top: -22px;margin-bottom: 20px;border-radius: 4px;}
+.campos-cpf {height: 52px;margin-top: -22px;margin-bottom: 10px;border-radius: 4px;}
+.divisoria {text-align: left;}
+.text-span-4 { font-size: 11px; }
+.utility-page-wrap { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 100vw; height: 100vh; max-height: 100%; max-width: 100%; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.utility-page-content { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 260px; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; text-align: center; }
+.utility-page-form { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align: stretch; align-items: stretch; }
+.topo-step {
+    /* background-image: url(../images/hub/pattern-bg_1.png), -webkit-linear-gradient(288deg, #020538, #1751b1); */
+    /* background-image: url(../images/hub/pattern-bg_1.png), linear-gradient(162deg, #020538, #1751b1); */
+    background-position: 0px 0px, 0px 0px;
+    background-size: auto, auto;
+}
+.logo { padding-top: 21px; padding-bottom: 21px; }
+.conteudo-step {
+    height: 105vh;
+    background-image: url(../images/hub/bg-form.png), url(../images/hub/pattern-bg_1.png);
+    background-position: -8% 99%, 0px 0px;
+    background-size: 45%, auto;
+    background-repeat: no-repeat, repeat;
+}
+.box-steps { width: auto; padding-left: 443px; }
+.bar { margin-top: 0px; margin-bottom: 47px; padding-top: 34px; padding-bottom: 11px; text-align: center; }
+.box-motivo { padding-right: 175px; padding-left: 175px; }
+.box-motivo.bm { margin-bottom: 17px; padding-right: 0px; padding-left: 0px; }
+.body-2 { font-family: Raleway, sans-serif; font-size: 13px; font-weight: 600; }
+.label-radio2 { position: static; }
+.label-radio2.bt-divida { background-image: url('../images/hub/dividas.png'); background-position: 50% 50%; background-size: auto; }
+.label-radio2.bt-conta { background-image: url('../images/hub/conta.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-veiculo { background-image: url('../images/hub/carro.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-negocio { background-image: url('../images/hub/negocio.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-outros { background-image: url('../images/hub/outros.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-sim-veiculo { background-image: url('../images/hub/carrocarro-moto.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-nao-veiculo { background-image: url('../images/hub/nao-veiculo.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-imovel { background-image: url('../images/hub/casa.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-divida { background-image: url('../images/hub/negocio.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-cheque { background-image: url('../images/hub/cheque.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-negativado { background-image: url('../images/hub/negativado.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-casado { background-image: url('../images/hub/casado2.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-solteiro { background-image: url('../images/hub/solteiro.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-viuvo { background-image: url('../images/hub/viuvo.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bt-pensionista_aposentado { background-image: url('../images/hub/sim-aposentado.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+
+.label-radio2.bradesco { background-image: url('../images/hub/bancos/bradesco.png'); background-size: auto; background-repeat: no-repeat; }
+.label-radio2.bb { background-image: url('../images/hub/bancos/bb.png'); background-size: auto; background-repeat: no-repeat; }
+.label-radio2.caixa { background-image: url('../images/hub/bancos/caixa.png'); background-size: auto; background-repeat: no-repeat; }
+.label-radio2.citibank { background-image: url('../images/hub/bancos/citibank.png'); background-size: auto; background-repeat: no-repeat; }
+.label-radio2.itau { background-image: url('../images/hub/bancos/itau.png'); background-size: auto; background-repeat: no-repeat; }
+.label-radio2.santander { background-image: url('../images/hub/bancos/santander.png'); background-size: auto; background-repeat: no-repeat; }
+
+input:checked + .label-radio2.bt-divida { background-image: url('../images/hub/dividas_hover.png'); background-position: 50% 50%; background-size: auto; }
+input:checked + .label-radio2.bt-conta { background-image: url('../images/hub/dividas_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-veiculo { background-image: url('../images/hub/carro_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-negocio { background-image: url('../images/hub/negocio_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-outros { background-image: url('../images/hub/outros_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-sim-veiculo { background-image: url('../images/hub/carrocarro-moto_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-nao-veiculo { background-image: url('../images/hub/nao-veiculo_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-imovel { background-image: url('../images/hub/casa_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-divida { background-image: url('../images/hub/negocio_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-cheque { background-image: url('../images/hub/cheque_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-negativado { background-image: url('../images/hub/negativado_hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-casado { background-image: url('../images/hub/casado3.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-solteiro { background-image: url('../images/hub/solteiro2.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-viuvo { background-image: url('../images/hub/viuvo1.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bt-pensionista_aposentado { background-image: url('../images/hub/sim-aposentado-hover.png'); background-position: 50% 50%; background-size: auto; background-repeat: no-repeat; }
+
+input:checked + .label-radio2.bradesco { background-image: url('../images/hub/bancos/bradesco_hover.png'); background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.bb { background-image: url('../images/hub/bancos/bb_hover.png'); background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.caixa { background-image: url('../images/hub/bancos/caixa_hover.png'); background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.citibank { background-image: url('../images/hub/bancos/citibank_hover.png'); background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.itau { background-image: url('../images/hub/bancos/itau_hover.png'); background-size: auto; background-repeat: no-repeat; }
+input:checked + .label-radio2.santander { background-image: url('../images/hub/bancos/santander_hover.png'); background-size: auto; background-repeat: no-repeat; }
+
+.label-form-motivos { margin-bottom: 25px; font-size: 17px; font-weight: 700; }
+.label-form-motivos.sub { margin-top: -19px; margin-bottom: 36px; color: #7c7c7c; font-size: 14px; font-weight: 500; }
+.image-4 { display: inline-block; }
+.titulo-step { color: rgba(62, 109, 206, 0); font-size: 24px; font-weight: 700; }
+.titulo-step._3 { color: #1f252b }
+.box-bt-voltar { padding-top: 91px; padding-left: 36px; }
+.bt-voltar { padding-left: 57px; background-color: transparent; background-image: url('../images/hub/seta.png'); background-position: 24% 50%; background-size: auto; background-repeat: no-repeat; -webkit-transition: background-position 200ms ease; transition: background-position 200ms ease; color: #3e6dce; font-size: 15px; }
+.bt-voltar:hover { background-position: 18px 10px; }
+._7step { padding-right: 46px; }
+.label5 { margin-bottom: 3px; margin-left: 12px; color: #6d6d6d; font-size: 11px; line-height: 17px; }
+.box-bt { text-align: right; }
+
+.padd_5 {
+    padding: 4px !important;
+}
+
+.label-radio {
+	width: 100%;
+	/* background-color: #ffffff; */
+	text-align: center;
+	height: 58px;
+	line-height: 16px;
+	color: #FFF;
+	border-radius: 5px;
+	border: 1px solid #ededed;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+input:checked + label.label-radio { background: #90fe14; color: #000; border: 2px solid #90fe14;}
+input[type=checkbox].w-radio-input, input[type=radio].w-radio-input { position: absolute; left: -9999px; }
+
+.custom_select {width: 100%;padding: 12px 10px;border-radius: 2px;border: 1px solid #272a31;background: #ededed;color: #272a31;font-size: 15px;font-weight: bold; margin-bottom: 10px;}
+
+.selo { display: block; margin-left: auto; margin-right: auto;}
+/*
+.label-radio:before { width: 88%; text-align: center; height: 59px; background: #ffffff00; color: #FFF; margin-top: -19px; display: inline-block; border-radius: 5px; border: 2px solid #ffffff; position: absolute; left: 2px; top: -3px; transition: .3s ease-in-out all; }
+.label-radio { }
+input:checked+.label-radio:before { width: 88%; text-align: center; height: 59px; margin-top: -19px; background: #90fe14; color: #000; display: inline-block; border-radius: 5px; border: 2px solid #90fe14; position: absolute; left: 2px; top: -3px; transition: .3s ease-in-out all; }
+input:hover+.label-radio:before { width: 88%; text-align: center; height: 59px; margin-top: -19px; background: #90fe14; color: #000; display: inline-block; border-radius: 5px; border: 2px solid #90fe14; position: absolute; left: 2px; top: -3px; transition: .3s ease-in-out all; }
+.label-radio:before,  .nice-select:after { content: ''; }
+input[type=checkbox],  input[type=radio] { position: absolute!important; left: -9999px!important; }
+.label-radio2:before { width: 88%; position: absolute; margin-right: 7px; margin-left: 7px; padding-top: 22px; padding-bottom: 4px; border-style: solid; border-width: 1px; border-color: hsla(0, 0%, 76%, .27); border-radius: 10px; background-color: #fff; box-shadow: 0 5px 33px -6px rgba(71, 71, 71, .23); -webkit-transition: background-color 200ms ease, -webkit-transform 200ms ease; transition: background-color 200ms ease, -webkit-transform 200ms ease; transition: background-color 200ms ease, transform 200ms ease; transition: background-color 200ms ease, transform 200ms ease, -webkit-transform 200ms ease; text-align: center; }
+.label-radio { }
+input:checked+.label-radio2:before { position: absolute; width: 88%; border-color: rgba(144, 254, 20, 0); background-color: #d3e4ff; background-image: none; box-shadow: none; -webkit-transform: translate(0px, -3px); -ms-transform: translate(0px, -3px); transform: translate(0px, -3px); }
+input:hover+.label-radio2:before { position: absolute; width: 88%; border-color: rgba(144, 254, 20, 0); background-color: #d3e4ff; background-image: none; box-shadow: none; -webkit-transform: translate(0px, -3px); -ms-transform: translate(0px, -3px); transform: translate(0px, -3px); }
+.label-radio2:before,  .nice-select:after { content: ''; }
+*/
+.disclaimer{color: #636a72 !important;
+    font-size: 10px !important;
+    padding: 13px 0;
+    line-height: 14px;
+    text-align: justify;}
+.sub-faixa{color:#FFF}
+
+@media (max-width: 1440px) {
+/*    .campos {margin-top: -32px;}*/
+	.destaquer-credito {
+    width: 101%;
+    padding: 32px 32px;
+    /* background-color: #90fe14; */
+}
+	.tranquilo {
+    font-size: 28px;
+}
+	.conteudo-step {
+    height: 115vh;
+    background-image: url(../images/hub/bg-form.png), url(../images/hub/pattern-bg_1.png);
+    background-position: -4% 100%, 0px 0px;
+    background-size:605px, auto;
+    background-repeat: no-repeat, repeat;
+}
+	
+	.c-cpf {
+    padding-top: 16px;
+    height: 45px !important;
+}
+	.label-formulario {
+    color: #ffffff;
+    font-size: 12px;
+    padding-top: 3px;
+    line-height: 12px;
+    /* padding-left: 16px; */
+    position: relative;
+    font-weight: 500;
+}
+	.box-valores {
+    margin: 1px 0px 1px -3px;
+}
+	.bt-faixa.bt-form {
+    width: 100%;
+    margin-top: -2px;
+    padding: 17px 5px;
+}
+	
+	.custom_select {
+    width: 100%;
+    padding: 13px 5px;
+    margin-top: 5px;
+}
+	.chamada {
+    padding-top: 134px;
+    padding-bottom: 50px;
+}
+	.heading-3 {
+		margin-bottom: 5px;
+		color: #fff;
+		font-size: 17px;
+		line-height: 12px;
+		text-align: center;
+	}
+	.step1 {
+		padding-top: 7px;
+		padding-bottom: 5px;
+	}
+	.formulario {
+    margin: 0 auto;
+    width: auto;
+    margin-bottom: 81px;
+    margin-left: 14px;
+    margin-right: 50px;
+    margin-top: 99px;
+    padding: 7px 25px;
+    border-radius: 5px;
+    background-color: #1f252b;
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2);
+}
+	.all {
+    display: block;
+		max-width: 85%;}
+	.logo-oicred {
+    padding-top: 23px;
+    padding-bottom: 7px;
+}
+	.frase {
+    margin-bottom: 0px;
+    padding-top: 33px;
+	}
+	
+	.label-radio {
+	width: 100%;
+	text-align: center;
+	height: 61px;
+	}
+	
+	.label-cpf {
+		color: #272a31;
+		font-size: 12px;
+		padding-top: 13px;
+		padding-left: 16px;
+		position: relative;
+		font-weight: bold !important;
+	}
+}
+
+@media (max-width: 1366px) {
+    /* .campos-cpf {
+		margin-bottom: 20px;
+	} */
+}
+
+@media (max-width: 1024px) {
+    .box-conteudo{padding-right: 120px;}
+}
+
+@media (max-width: 991px) {
+	.box-conteudo { padding-right:10px; }
+	.conteudo { padding-right: 12px; padding-left: 12px; }
+	.box-parceiros { padding: 21px 32px; }
+	.chamada { padding-right: 13px; }
+	.heading { font-size: 43px; }
+	.heading.h1-2 { font-size: 42px; }
+	.heading-2 { font-size: 16px; }
+	.heading-2.tit-taxas { font-size: 12px; }
+	.formulario { margin:60px 4px 16px 11px; padding-right: 20px; padding-left: 20px; background-color: #1f252ba8; }
+	.heading-3 { font-size: 12px; }
+	.heading-4 { font-size: 11px; }
+	.taxas { padding-right: 15px; padding-bottom: 37px; padding-left: 15px; }
+	.text-vantagem { font-size: 12px; line-height: 12px; font-weight: 500; }
+	.box-destaque { margin-right: 29px; margin-left: 29px; }
+	.destaquer-credito { height: 100%; padding: 37px 33px 20px; }
+	.heading-6 { padding-bottom: 16px; font-size: 14px; line-height: 20px; }
+	.heading-6.sub-faixa { font-size: 17px; }
+	.text-grafico { font-size: 14px; line-height: 21px; }
+	.box-faixa { padding-top: 77px; padding-bottom: 77px; }
+	.destaque-taxa { font-size: 35px; }
+	.label-radio { font-size: 15px; }
+	.label-radio.outro { font-size: 12px; }
+	.conteudo-step { background-position: -45% 100%, 0px 0px; background-size: 379px, auto; }
+	.box-steps { padding-left: 136px; }
+	.box-motivo.bm { padding-right: 29px; padding-left: 29px; }
+	.box-bt-voltar { padding-top: 114px; padding-left: 113px; }
+}
+
+@media (max-width: 767px) {
+	.logo-oicred { padding-top: 13px; text-align: center; }
+	.frase-topo { text-align: center; }
+	.conteudo { padding-right: 0px; padding-left: 0px; background-position: right !important;}
+	.box-parceiros { padding: 7px 40px; }
+	.chamada { padding-top: 3px; padding-right: 0px; padding-bottom: 0px; text-align: center; }
+	.heading { display: none; font-size: 43px; }
+	.heading.h1-2 { display: block; }
+	.heading.taxa-topo { display: block; }
+	.heading.h-mobile { display: block; margin-bottom: 2px; font-size: 32px; }
+	.heading-2 { display: none; padding-right: 0px; font-size: 11px; }
+	.heading-2.tit-taxas { margin-top: 15px; }
+	.formulario { margin-top:2px; margin-right: 0px; margin-left: 0px; background-color: #1f252ba8; box-shadow: none; }
+	.heading-3 { display: none; }
+	.heading-4 { font-size: 14px; }
+	.logo-parceiro { margin-top: 6px; margin-bottom: 15px; padding-right: 22px; padding-left: 22px; }
+	.taxas { padding-top: 3px; padding-bottom: 3px; }
+	.v-taxa { padding-right: 106px; padding-bottom: 19px; padding-left: 106px; margin-top:1px !important; }
+	.text-vantagem { font-size: 13px; line-height: 15px; }
+	.grafico { padding-top: 16px; padding-bottom: 11px; }
+	.destaquer-credito { padding-right: 71px; padding-left: 71px; text-align: center; }
+	.heading-6 { font-size: 22px; line-height: 26px; text-align: center; }
+	.text-grafico { text-align: center; }
+	.box-faixa { padding-top: 76px; margin-top: 160px; }
+	.bt-faixa.bt-for-step { width: 100%; }
+	.div { position: static; display: inline-block; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: baseline; -webkit-align-items: baseline; -ms-flex-align: baseline; align-items: baseline; text-align: center; }
+	.frase { display: none; padding-top: 6px; padding-right: 0px; padding-bottom: 6px; text-align: center; }
+	.logo { text-align: center; }
+	.conteudo-step { background-position: 121% 102%, 0px 0px; background-size: 299px, auto; }
+	.box-steps { padding-left: 0px; }
+	.box-motivo.bm { padding-right: 18px; padding-left: 18px; }
+	.label-form-motivos { text-align: center; }
+	.label-form-motivos.sub { text-align: center; }
+	.box-bt-voltar { padding-top: 82px; padding-left: 13px; }
+	._7step { padding-right: 5px; }
+	.box-bt { text-align: center; }
+	.divisoria {display: none;}
+}
+
+@media (max-width: 479px) {
+	.all {
+		display: block;
+		max-width: 96%;
+	}
+	.padd_5 .val {
+		font-size: 14px !important;
+		line-height: 16px !important;
+	}
+	.box-valores {
+		margin: 4px 2px 0px -6px;
+	}
+	.meses {
+		/* margin-top: -10px; */
+		position: relative;
+		margin-bottom: 32px;
+	}
+	.label-cpf {
+		color: #081a58;
+		font-size: 12px;
+		padding-top: 13px;
+		padding-left: 16px;
+		position: absolute;
+		font-weight: bold !important;
+	}
+	.box-conteudo {
+		padding-right: 0px !important;
+	}
+	.padd_5 {
+		padding: 2px !important;
+	}
+	.box-cpf {
+		margin-top: -24px;
+	}
+	.label-radio{ font-size: 18px !important; line-height: 13px !important;}
+	.logo-oicred {display: block;padding: 23px 30px 13px;}
+	.conteudo {background-image: none;background-position: top;background-size: auto;background-repeat: repeat;background-color: #90fe14 !important;}
+	.box-parceiros {
+    	padding: 22px 9px;
+	}
+	.heading.h1-2 { margin-top: 36px; margin-bottom: 0px; font-size: 25px; }
+	.heading.taxa-topo { margin-top: 0px; font-size: 15px; line-height: 39px; }
+	.heading.h-mobile {
+		margin-top: 22px;
+		font-size: 26px;
+		line-height: 21px;
+	}
+	.text-span { font-weight: 400; }
+	.heading-2.tit-taxas {padding-top: 0px;background-color: hsla(0, 0%, 100%, .84);font-size: 10px;line-height: 15px;font-weight: 600;display: none;}
+	.formulario {
+		margin-top: -2px;
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-top: 3px;
+		padding-right: 17px;
+		padding-left: 17px;
+		background-color: #1f252bf0;
+	}
+	.heading-4 { display: none; color: #dadada; font-size: 14px; font-weight: 500; }
+	.heading-4.cote { display: none; margin-bottom: 1px; font-size: 15px; font-weight: 700; text-transform: uppercase; }
+	.step1 { padding-top: 16px; }
+	.logo-parceiro {
+		padding-right: 13px;
+		padding-left: 11px;
+		margin-top: -2px;
+		margin-bottom: 12px;
+	}
+	.c-cpf {
+		padding-top: 25px;
+		height: 57px !important;
+	}
+	.selo {
+		display: block;
+		padding-top: 14px;
+		padding-bottom: 13px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.logo {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.taxas { display: block !important; padding-top: 1px; }
+	.v-taxa { margin-top: 26px; padding-top: 0px; padding-right: 30px; padding-left: 30px; }
+	.destaque { display: none; }
+	.grafico { display: none; }
+	.destaquer-credito { display: none; padding-top: 20px; padding-right: 19px; padding-left: 19px; }
+	.heading-6 { font-size: 16px; }
+	.heading-6.sub-faixa { margin-top: 0px; padding-top: 0px; font-size: 13px; }
+	.text-grafico { font-size: 12px; line-height: 17px; }
+	.faixa {display: none;}
+	.box-faixa { display: none; margin-top: 177px; padding-top: 30px; padding-bottom: 30px; }
+	.bt-faixa.bt-form { margin-top: 10px; padding-top: 16px; padding-bottom: 16px; }
+	.rodape { display: block; }
+	.destaque-taxa { font-size: 23px; }
+	.box-valores.b2 { margin-bottom: 10px; }
+	.label-formulario {
+		margin-bottom: 5px;
+		font-weight: 500;
+		line-height: 11px;
+	}
+	.campos { margin-bottom: 12px; }
+	.divisoria { display: none; }
+	.image { display: inline-block; }
+	.image.img-logo {display: inline-block;width: auto;max-width: auto;}
+	.conteudo-step {
+		padding-bottom: 22px;
+		height: 100%;
+		margin-bottom: 0px;
+		background-size: 0px, auto;
+		background-position: 77px 344px, 0px 0px;
+		background-image: url(../images/hub/bg-form.png), url(../images/hub/pattern-bg_1.png);
+	}
+	.box-steps { width: auto !important; padding-right: 0px; padding-left: 0px; }
+	.box-motivo.bm { padding-right: 7px; padding-left: 7px; margin-bottom: 3px; }
+	.label-form-motivos { padding-right: 18px; padding-left: 18px; font-size: 15px; }
+	.label-form-motivos.sub { padding-right: 8px; padding-left: 8px; font-size: 11px; }
+	.box-bt-voltar {
+		padding-top: 5px;
+		padding-bottom: 35px;
+		margin-top: 20px;
+	}
+	.logo img{width: 100px}
+	.duracao { margin-bottom: 15px;  }
+}

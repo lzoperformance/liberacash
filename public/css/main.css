@@ -1,0 +1,145 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.box-input {
+    position: relative;
+}
+
+span.error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 11px;
+    background: #f00;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.bigdata-field {
+    display: block;
+}
+
+.bt_correio {
+    float: right;
+    font-size: 12px;
+    color: white;
+}
+
+.label-busca-cep {
+    min-height: 14px;
+}
+
+.txt_cel {
+    display: none;
+    color: #fff;
+    font-style: italic;
+    font-size: 12px;
+    background: red;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.box_nome_marca_cel {
+    display: none;
+}
+
+.termos-uso-politica-privacidade {
+    margin-top: 30px;
+}
+
+.txt-termos {
+    color: #fff;
+    font-size: 14px;
+}
+
+.eac-sugg {
+    color: white;
+    padding-top: 24px !important;
+    font-style: italic;
+}
+
+#bank_validation {
+    position: absolute;
+    left:-99999px;
+}
+
+#bank_validation-error {
+    width: 100%;
+    text-align: center;
+}
+
+.txt-termos-easy {
+    font-weight: normal;
+    font-size: 14px;
+}
+.box-termos-easy {
+    margin-top: 30px;
+    color: white;
+    font-size: 12px;
+}
+
+.select2-container .select2-selection--single {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    border-style: none none solid;
+    border-width: 1px 1px 2px;
+    border-color: #fff;
+    border-radius: 0px;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 14px;
+    color: white;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 13px;
+    right: -3px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #FFF;
+    margin-left: -5px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #FFF transparent transparent transparent;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #FFF transparent;
+}
+.select2-container--default .select2-results>.select2-results__options {
+    font-size: 14px;
+}
+
+.fa.fa-times {
+    display: none;
+}
+.fa-solid.fa-circle-info {
+    font-size: 3em;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.box-work-street {
+    margin-top: 30px;
+}
+
+.termos-uso {
+    margin-bottom: 20px;
+}
+.termos-paragraph {
+    font-size: 12px;
+    color: black;
+    margin: 0 20px;
+}
+.termos-uso-open {
+    color: #896ad8;
+}
+
+.label-cel-garantia {
+    margin-top: 20px;
+}
