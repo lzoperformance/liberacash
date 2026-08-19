@@ -1,0 +1,37 @@
+/**
+ * brand-tokens.css — paleta oficial libera.cash
+ * Extraída do logo (ver docs/briefing-marca.md). Fonte única de verdade
+ * pra cor em qualquer página nova/refeita — evita cor "no olho" espalhada
+ * pelo código, que era o que acontecia no credito.vc (cada .webflow.css
+ * com sua própria paleta hardcoded).
+ *
+ * Enquanto as páginas ainda usam o CSS do Webflow antigo, este arquivo
+ * pode ser incluído em paralelo pra novos componentes (ex.: novo header,
+ * novo footer) sem precisar reescrever o resto ainda.
+ */
+
+:root {
+    /* Verde principal — cor de marca, usar em CTA, links, destaques */
+    --lc-green-500: #5FDD7A;   /* base */
+    --lc-green-400: #8CE64E;   /* tom mais lima, ponta esquerda do logo */
+    --lc-green-300: #3DDC91;   /* tom mais teal/menta, ponta direita do logo */
+    --lc-green-600: #2FBE63;   /* hover / estado ativo, mais escuro que o 500 */
+
+    /* Fundo escuro — hero, footer, seções de destaque (mesmo tom do logo) */
+    --lc-bg-dark-900: #071A0F;
+    --lc-bg-dark-800: #0B2415;
+    --lc-bg-dark-700: #0F2E1B;
+
+    /* Neutros */
+    --lc-white: #FFFFFF;
+    --lc-off-white: #EAFBEF;   /* branco com leve matiz verde, texto sobre fundo escuro */
+    --lc-text-dark: #0B2415;   /* texto sobre fundo claro */
+    --lc-gray-500: #6B7A70;
+
+    /* Feedback (mantém convenção do site antigo) */
+    --lc-error: #E5484D;
+    --lc-warning: #F2B705;
+
+    /* Gradiente de marca (usar com moderação — hero, botão principal) */
+    --lc-gradient-brand: linear-gradient(135deg, var(--lc-green-400), var(--lc-green-300));
+}
