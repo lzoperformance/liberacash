@@ -58,10 +58,40 @@ A partir dele já gerei e apliquei em produção:
   atualiza o favicon em todo o site, sem editar HTML
 - `public/images/webclip.png` (180×180, apple-touch-icon) — mesma lógica
 
-**Ainda falta:** o lockup completo com o wordmark "**Libera**Cash" em
-arquivo (as imagens enviadas até agora do lockup completo foram só prévia
-no chat, não salvas em disco) — precisa pra substituir `logo.png` (header)
-e `logo-footer.png`. Assim que vier, aplico do mesmo jeito.
+### Wordmark completo — RECEBIDO ✅
+
+Três arquivos reais recebidos e organizados:
+- `public/images/logo-full-black-text.png` — "Libera" preto + "Cash" verde,
+  fundo transparente → usado como `logo.png` (header, fundo claro)
+- `public/images/logo-full-white-text.png` — "Libera" branco + "Cash"
+  verde, fundo transparente → usado como `logo-footer.png` (footer —
+  **assumi fundo escuro no footer**, não consegui confirmar isso no CSS do
+  Webflow antigo por regex; conferir visualmente na Fase 5/QA e trocar por
+  `logo-full-black-text.png` se o footer for claro)
+- `public/images/logo-full-dark.png` — versão já composta sobre fundo verde
+  escuro (sem transparência) — boa candidata pra `og:image`/social card
+  mais pra frente
+
+Todas as 10 páginas que referenciavam o logo (`index`, `sobre`, `cartoes`,
+`contato`, `time`, `blog`, `sucesso`, `politica-de-privacidade`,
+`termos-e-condicoes`) foram atualizadas. De quebra, corrigi um problema
+real que apareceu nesse processo: essas páginas carregavam o logo (e vários
+banners/links) direto de `https://www.credito.vc/...` — domínio que não é
+mais do usuário. Isso foi trocado por caminhos relativos, e os metadados
+que precisam ser absolutos (og:url, og:image, canonical, JSON-LD) passaram
+a apontar pro domínio novo (`libera.cash`). Detalhe no commit
+`4cb6ee5`.
+
+**Ainda pendente:**
+- Confirmar visualmente se o footer é claro ou escuro (decide qual versão
+  do wordmark fica lá)
+- `alt="Crédito.vc"` nas tags de imagem do logo ainda não foi atualizado
+  pra "LiberaCash" (cosmético, fica pra Fase 2 junto com o resto da cópia)
+- Texto jurídico de termos/política ainda cita `www.credito.vc` — precisa
+  de revisão legal de verdade com CNPJ/razão social novos, não é find-replace
+- `cartoes.php` tem uma referência solta a um domínio diferente,
+  `financeiro.vc` (og:image/og:title), não relacionada ao credito.vc —
+  verificar o que é isso antes de decidir o que fazer
 
 Racional: verde reforça "dinheiro liberado" de forma mais direta que o
 azul do credito.vc, e o nome `libera.cash` pede um visual mais
