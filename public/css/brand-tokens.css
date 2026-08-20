@@ -11,13 +11,22 @@
  */
 
 :root {
-    /* Verde principal — cor de marca, usar em CTA, links, destaques */
-    --lc-green-500: #5FDD7A;   /* base */
-    --lc-green-400: #8CE64E;   /* tom mais lima, ponta esquerda do logo */
-    --lc-green-300: #3DDC91;   /* tom mais teal/menta, ponta direita do logo */
+    /* Verde principal — cor de marca, usar em CTA, links, destaques.
+       Valores extraídos por amostragem de pixel do arquivo real
+       (public/images/logo-icon.png), não estimados visualmente. */
+    --lc-green-500: #7CE071;   /* base — fundo do ícone */
+    --lc-green-400: #83E167;   /* tom lima, lado esquerdo do gradiente */
+    --lc-green-300: #6BE193;   /* tom teal/menta, lado direito do gradiente */
     --lc-green-600: #2FBE63;   /* hover / estado ativo, mais escuro que o 500 */
 
-    /* Fundo escuro — hero, footer, seções de destaque (mesmo tom do logo) */
+    /* Verde escuro do monograma "Lc" — usar em texto sobre fundo claro,
+       ícones de linha, ou como alternativa ao preto puro */
+    --lc-green-900: #16562D;
+    --lc-green-700: #368C52;
+
+    /* Fundo escuro — hero, footer, seções de destaque. Ainda não temos
+       amostra real (nenhum arquivo com esse fundo foi enviado, só prévias
+       no chat) — valor estimado, recalibrar se vier um asset com fundo. */
     --lc-bg-dark-900: #071A0F;
     --lc-bg-dark-800: #0B2415;
     --lc-bg-dark-700: #0F2E1B;

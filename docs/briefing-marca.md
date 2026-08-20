@@ -44,9 +44,24 @@ Isso define o nome de marca por extenso como **"LiberaCash"** (uma
 palavra, L e C maiúsculos) — usar essa grafia em textos/título, mantendo
 `libera.cash` só como domínio/URL.
 
-**Pendente:** ainda não recebi o arquivo fonte (PNG/SVG) — só a prévia no
-chat. Preciso do arquivo pra extrair o ícone sozinho (favicon) e gerar os
-tamanhos de produção (favicon 32/512px, OG image, versão do header).
+### Ícone — RECEBIDO ✅
+
+Arquivo real recebido (`public/images/logo-icon.png`, 546×546, fundo
+transparente). A paleta em `brand-tokens.css` foi recalibrada por
+amostragem de pixel direto desse arquivo (não é mais estimativa visual):
+verde do fundo `#83E167` → `#6BE193`, verde do monograma `#16562D` /
+`#368C52`.
+
+A partir dele já gerei e apliquei em produção:
+- `public/images/favicon.png` (64×64) — as páginas referenciam
+  `images/favicon.png` por caminho relativo, então trocar o arquivo já
+  atualiza o favicon em todo o site, sem editar HTML
+- `public/images/webclip.png` (180×180, apple-touch-icon) — mesma lógica
+
+**Ainda falta:** o lockup completo com o wordmark "**Libera**Cash" em
+arquivo (as imagens enviadas até agora do lockup completo foram só prévia
+no chat, não salvas em disco) — precisa pra substituir `logo.png` (header)
+e `logo-footer.png`. Assim que vier, aplico do mesmo jeito.
 
 Racional: verde reforça "dinheiro liberado" de forma mais direta que o
 azul do credito.vc, e o nome `libera.cash` pede um visual mais
