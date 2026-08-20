@@ -14,7 +14,7 @@
   <meta property="og:title" content="Credito.vc - O Financeiro">
   <meta property="og:description" content="Escolha seu novo cartão! Conheça os benefícios de cada um e mude!">
   <meta property="og:image" content="https://www.financeiro.vc/images/webclip-financeiro.png">
-  <meta property="og:url" content="https://www.credito.vc/">
+  <meta property="og:url" content="https://libera.cash/">
   <meta content="summary" name="twitter:card">
   
   <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
@@ -237,14 +237,14 @@
   <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="https://www.credito.vc/"><img src="https://www.credito.vc/images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
         </div>
         <ul class="nav-menu">
-            <li><a href="https://www.credito.vc/">Home</a></li>
-            <li><a href="https://www.credito.vc/cartoes/">Cartão de Crédito</a></li>
-            <li><a href="https://www.credito.vc/blog/">Blog</a></li>
-            <li><a href="https://www.credito.vc/sobre/">Sobre</a></li>
-            <li><a href="https://www.credito.vc/contato/">Contato</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/cartoes/">Cartão de Crédito</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
         </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>

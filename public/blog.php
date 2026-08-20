@@ -82,20 +82,20 @@ if ($categoria_filtro) {
         <meta property="og:description" content="<?php echo htmlspecialchars($current_post['resumo'], ENT_QUOTES, 'UTF-8'); ?>">
         <meta property="og:image" content="<?php echo htmlspecialchars($current_post['imagem'], ENT_QUOTES, 'UTF-8'); ?>">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://www.credito.vc/blog/<?php echo urlencode($current_post["slug"]); ?>/">
+        <meta property="og:url" content="https://libera.cash/blog/<?php echo urlencode($current_post["slug"]); ?>/">
         <meta name="twitter:card" content="summary_large_image">
     <?php else: ?>
         <meta name="description" content="Blog Credito.vc — Dicas de saúde financeira, cartões de crédito, empréstimos e organização do seu dinheiro.">
         <meta property="og:title" content="Blog Credito.vc">
         <meta property="og:description" content="Dicas para sua saúde financeira, cartões e empréstimos.">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.credito.vc/blog/">
+        <meta property="og:url" content="https://libera.cash/blog/">
     <?php endif; ?>
 
     <?php if ($current_post): ?>
-    <link rel="canonical" href="https://www.credito.vc/blog/<?php echo urlencode($current_post["slug"]); ?>/">
+    <link rel="canonical" href="https://libera.cash/blog/<?php echo urlencode($current_post["slug"]); ?>/">
 <?php else: ?>
-    <link rel="canonical" href="https://www.credito.vc/blog/">
+    <link rel="canonical" href="/blog/">
 <?php endif; ?>
 <?php if ($current_post):
         // Converte data DD/MM/AAAA para ISO 8601 com fuso horário de Brasília
@@ -114,19 +114,19 @@ if ($categoria_filtro) {
             "author" => [
                 "@type" => "Person",
                 "name" => $autor_post,
-                "url" => "https://www.credito.vc/blog/"
+                "url" => "https://libera.cash/blog/"
             ],
             "publisher" => [
                 "@type" => "Organization",
                 "name" => "Crédito.vc",
                 "logo" => [
                     "@type" => "ImageObject",
-                    "url" => "https://www.credito.vc/images/logo.png"
+                    "url" => "images/logo.png"
                 ]
             ],
             "mainEntityOfPage" => [
                 "@type" => "WebPage",
-                "@id" => "https://www.credito.vc/blog/" . urlencode($current_post['slug']) . "/"
+                "@id" => "https://libera.cash/blog/" . urlencode($current_post['slug']) . "/"
             ],
             "articleSection" => $current_post['categoria'],
             "inLanguage" => "pt-BR"
@@ -140,15 +140,15 @@ if ($categoria_filtro) {
     <?php
         // Breadcrumb: Início > Blog [> Post, se aplicável]
         $breadcrumb_items = [
-            ["@type" => "ListItem", "position" => 1, "name" => "Início", "item" => "https://www.credito.vc/"],
-            ["@type" => "ListItem", "position" => 2, "name" => "Blog", "item" => "https://www.credito.vc/blog/"]
+            ["@type" => "ListItem", "position" => 1, "name" => "Início", "item" => "https://libera.cash/"],
+            ["@type" => "ListItem", "position" => 2, "name" => "Blog", "item" => "https://libera.cash/blog/"]
         ];
         if ($current_post) {
             $breadcrumb_items[] = [
                 "@type" => "ListItem",
                 "position" => 3,
                 "name" => $current_post['titulo'],
-                "item" => "https://www.credito.vc/blog/" . urlencode($current_post['slug']) . "/"
+                "item" => "https://libera.cash/blog/" . urlencode($current_post['slug']) . "/"
             ];
         }
         $breadcrumb_jsonld = [
@@ -161,8 +161,8 @@ if ($categoria_filtro) {
     <?php echo json_encode($breadcrumb_jsonld, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
     </script>
 
-    <link href="https://www.credito.vc/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="https://www.credito.vc/images/webclip.png" rel="apple-touch-icon">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/webclip.png" rel="apple-touch-icon">
 
     <!-- Fontes / ícones -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
@@ -762,14 +762,14 @@ if ($categoria_filtro) {
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="https://www.credito.vc/"><img src="https://www.credito.vc/images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
         </div>
         <ul class="nav-menu">
-            <li><a href="https://www.credito.vc/">Home</a></li>
-            <li><a href="https://www.credito.vc/cartoes/">Cartão de Crédito</a></li>
-            <li><a href="https://www.credito.vc/blog/">Blog</a></li>
-            <li><a href="https://www.credito.vc/sobre/">Sobre</a></li>
-            <li><a href="https://www.credito.vc/contato/">Contato</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/cartoes/">Cartão de Crédito</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
 </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
@@ -780,21 +780,21 @@ if ($categoria_filtro) {
     <div class="banner-slider">
         <div class="slider-wrapper">
             <a href="#linkbanner#" class="slide">
-                <img src="https://www.credito.vc/images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo">
+                <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo">
             </a>
             <a href="https://www.itau.com.br/cartoes/escolha/g/azul-visa-infinite?utm_source=lzo&utm_medium=affiliate&utm_campaign=gl-aff-cartoes-conversao-azul-infinite&cpg_s=sliceafl&utmgl=utm_camp-{campaign.id}" class="slide">
-                <img src="https://www.credito.vc/images/banner-itaul-infinity.png" alt="Itaú Azul Visa Infinite">
+                <img src="images/banner-itaul-infinity.png" alt="Itaú Azul Visa Infinite">
             </a>
             <a href="#linkbanner#" class="slide">
-                <img src="https://www.credito.vc/images/banner-itaul-atacadao.png" alt="Atacadao - Slide 3">
+                <img src="images/banner-itaul-atacadao.png" alt="Atacadao - Slide 3">
             </a>
             <!-- Slide 4 - substitua o src e o href pelos seus -->
             <a href="#linkbanner4#" class="slide">
-                <img src="https://www.credito.vc/images/banner-itaul-passai.png" alt="Assai Banner 4">
+                <img src="images/banner-itaul-passai.png" alt="Assai Banner 4">
             </a>
             <!-- Slide 5 - substitua o src e o href pelos seus -->
             <a href="#linkbanner5#" class="slide">
-                <img src="https://www.credito.vc/images/banner-itaul-carredour.png" alt="Carrefour Banner 5">
+                <img src="images/banner-itaul-carredour.png" alt="Carrefour Banner 5">
             </a>
         </div>
     </div>
@@ -844,7 +844,7 @@ if ($categoria_filtro) {
             </div>
 
             <?php
-                $url_atual = "https://www.credito.vc/blog/" . urlencode($current_post['slug']) . "/";
+                $url_atual = "https://libera.cash/blog/" . urlencode($current_post['slug']) . "/";
                 $texto_share = urlencode($current_post['titulo'] . ' - ');
             ?>
             <div class="share-buttons">
@@ -935,7 +935,7 @@ if ($categoria_filtro) {
 <!-- ==== Footer (mesma estrutura da home) ==== -->
 <footer class="footer">
     <div class="footer-container">
-        <img src="https://www.credito.vc/images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
 
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>

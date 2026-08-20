@@ -63,7 +63,7 @@ class EmailService
             <p>Olá, {$this->primeiroNome($usuario['nome'])}!</p>
             <p>Encontramos uma proposta pré-aprovada de <strong>{$produto['nome']}</strong>
                no valor de <strong>{$valorFmt}</strong> para o seu CPF.</p>
-            <p><a href=\"https://credito.vc/painel/index.php\">Acesse seu painel</a> para conferir e contratar.</p>
+            <p><a href=\"https://libera.cash/painel/index.php\">Acesse seu painel</a> para conferir e contratar.</p>
         ";
         return $this->enviar($usuario['email'], $assunto, $corpo);
     }
@@ -82,7 +82,7 @@ class EmailService
             <p>Olá, {$this->primeiroNome($usuario['nome'])}!</p>
             <p>Sua contratação de <strong>{$produto['nome']}</strong> foi concluída com sucesso. 🎉</p>
             <p>Você pode acompanhar os detalhes a qualquer momento em
-               <a href=\"https://credito.vc/painel/historico.php\">Meu Histórico</a>.</p>
+               <a href=\"https://libera.cash/painel/historico.php\">Meu Histórico</a>.</p>
         ";
         return $this->enviar($usuario['email'], $assunto, $corpo);
     }

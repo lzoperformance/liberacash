@@ -9,7 +9,7 @@
  * Vive na RAIZ do repositório, mesmo nível de db.php e register.php.
  *
  * TODO (pós-V2): plugar um serviço de e-mail (SES, SMTP, etc.) e
- * enviar um link tipo https://credito.vc/redefinir-senha.php?token=...
+ * enviar um link tipo https://libera.cash/redefinir-senha.php?token=...
  * em vez de logar o token.
  */
 

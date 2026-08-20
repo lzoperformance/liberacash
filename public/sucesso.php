@@ -79,8 +79,8 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
     <meta name="description" content="Confira as propostas de emprestimo pre-aprovadas para voce. Compare taxas, parcelas e escolha a melhor opcao.">
     <meta name="robots" content="noindex, nofollow">
 
-    <link href="https://www.credito.vc/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="https://www.credito.vc/images/webclip.png" rel="apple-touch-icon">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/webclip.png" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -600,14 +600,14 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="https://www.credito.vc/home.php"><img src="https://www.credito.vc/images/logo.png" alt="Credito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="LiberaCash"></a>
         </div>
         <ul class="nav-menu">
-            <li><a href="https://www.credito.vc/home.php">Credito</a></li>
-            <li><a href="https://www.credito.vc/cartoes.php">Cartao de Credito</a></li>
-            <li><a href="https://www.credito.vc/blog.php">Blog</a></li>
-            <li><a href="https://www.credito.vc/sobre.php">Sobre</a></li>
-            <li><a href="https://www.credito.vc/contato.php">Contato</a></li>
+            <li><a href="/">Credito</a></li>
+            <li><a href="cartoes.php">Cartao de Credito</a></li>
+            <li><a href="blog.php">Blog</a></li>
+            <li><a href="sobre.php">Sobre</a></li>
+            <li><a href="contato.php">Contato</a></li>
         </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
@@ -740,14 +740,14 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
     <div class="cta-section">
         <h2><i class="fas fa-comments"></i> Precisa de ajuda?</h2>
         <p>Tem alguma duvida sobre as propostas? Entre em contato com nosso time.</p>
-        <a href="https://www.credito.vc/contato.php" class="cta-btn">ENTRAR EM CONTATO</a>
+        <a href="contato.php" class="cta-btn">ENTRAR EM CONTATO</a>
     </div>
 
 </div>
 
 <footer class="footer">
     <div class="footer-container">
-        <img src="https://www.credito.vc/images/logo-footer.png" class="footer-logo" alt="Credito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
 
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Credito.vc"><i class="fab fa-facebook-f"></i></a>

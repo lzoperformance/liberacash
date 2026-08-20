@@ -19,13 +19,13 @@ $produtos_ativos = get_products_ordered();
   <meta content="Webflow" name="generator">
   <meta property="og:title" content="Credito.vc">
   <meta property="og:description" content="Descubra quanto você tem disponível para receber e tenha o dinheiro na sua conta in até 24h.">
-  <meta property="og:image" content="https://www.credito.vc/images/webclip.png">
-  <meta property="og:url" content="https://www.credito.vc/">
+  <meta property="og:image" content="https://libera.cash/images/webclip.png">
+  <meta property="og:url" content="https://libera.cash/">
   <meta content="summary" name="twitter:card">
   <meta name="description" content="Crédito.vc — Empréstimo pessoal online rápido e seguro. Compare propostas de múltiplos parceiros e receba o dinheiro na conta em até 24h. Simule grátis!">
   <meta name="keywords" content="empréstimo pessoal, empréstimo online, crédito pessoal, empréstimo negativado, simular empréstimo, crédito rápido">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.credito.vc/">
+  <link rel="canonical" href="/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Crédito.vc">
@@ -277,7 +277,7 @@ $produtos_ativos = get_products_ordered();
     /* Seção de comparação */
     .section-comparison { 
       background-color: #1e5d3b; 
-      background-image: url('https://www.credito.vc/images/bg-cel-creditovc.png'); 
+      background-image: url('images/bg-cel-creditovc.png'); 
       background-size: cover; 
       background-position: center center;
       background-repeat: no-repeat;
@@ -478,8 +478,8 @@ $produtos_ativos = get_products_ordered();
     "@context": "https://schema.org",
     "@type": "FinancialService",
     "name": "Crédito.vc",
-    "url": "https://www.credito.vc",
-    "logo": "https://www.credito.vc/images/logo.png",
+    "url": "https://libera.cash",
+    "logo": "images/logo.png",
     "description": "Plataforma de comparação de empréstimo pessoal online. Conectamos você às melhores opções de crédito do mercado.",
     "telephone": "+55-11-0000-0000",
     "address": {
@@ -554,11 +554,11 @@ $produtos_ativos = get_products_ordered();
     <div class="header-container">
       <div class="logo"><img src="images/logo.png" alt="Crédito.vc"></div>
       <nav class="nav-menu">
-            <li><a href="https://www.credito.vc/">Crédito</a></li>
-            <li><a href="https://www.credito.vc/cartoes/">Cartão de Crédito</a></li>
-            <li><a href="https://www.credito.vc/blog/">Blog</a></li>
-            <li><a href="https://www.credito.vc/sobre/">Sobre</a></li>
-            <li><a href="https://www.credito.vc/contato/">Contato</a></li>
+            <li><a href="/">Crédito</a></li>
+            <li><a href="/cartoes/">Cartão de Crédito</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
       </nav>
       <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
@@ -568,13 +568,13 @@ $produtos_ativos = get_products_ordered();
     <div class="banner-slider">
       <div class="slider-wrapper">
         <a href="#linkbanner#" class="slide">
-          <img src="https://www.credito.vc/images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo">
+          <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo">
         </a>
         <a href="https://www.itau.com.br/cartoes/escolha/g/azul-visa-infinite?utm_source=lzo&utm_medium=affiliate&utm_campaign=gl-aff-cartoes-conversao-azul-infinite&cpg_s=sliceafl&utmgl=utm_camp-{campaign.id}" class="slide">
-          <img src="https://www.credito.vc/images/banner-itaul-infinity.png" alt="Empréstimo pessoal Juvo - Slide 2">
+          <img src="images/banner-itaul-infinity.png" alt="Empréstimo pessoal Juvo - Slide 2">
         </a>
         <a href="#linkbanner#" class="slide">
-          <img src="https://www.credito.vc/images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo - Slide 3">
+          <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo - Slide 3">
         </a>
       </div>
     </div>
@@ -664,17 +664,17 @@ $produtos_ativos = get_products_ordered();
       <h2>Empréstimo com parcelas que cabem no seu bolso</h2>
       <div class="features-boxes-grid">
         <div class="box-item">
-          <img src="https://www.credito.vc/images/smile-creditovc.png" class="box-icon-img" alt="Autônomo">
+          <img src="images/smile-creditovc.png" class="box-icon-img" alt="Autônomo">
           <h4>Sem complicações ou burocracia!</h4>
           <p>Facilitamos o seu acesso ao crédito.<br>Você preenche o formulário em menos de 2 minutos e nós fazemos o trabalho duro por você.</p>
         </div>
         <div class="box-item">
-          <img src="https://www.credito.vc/images/smartphone-creditovc.png" class="box-icon-img" alt="Celular">
+          <img src="images/smartphone-creditovc.png" class="box-icon-img" alt="Celular">
           <h4>As melhores opções em um só lugar!</h4>
           <p>Conectamos seu perfil a diversas instituições financeiras parceiras para encontrar as taxas mais justas e personalizadas para você.</p>
         </div>
         <div class="box-item">
-          <img src="https://www.credito.vc/images/money-bag-creditovc.png" class="box-icon-img" alt="Parcelas">
+          <img src="images/money-bag-creditovc.png" class="box-icon-img" alt="Parcelas">
           <h4>Pode ser autônomo e negativado!</h4>
           <p>A Crédito.vc entende a sua realidade.<br>Temos parceiros com soluções de crédito sob medida, mesmo se você estiver com o nome sujo.</p>
         </div>

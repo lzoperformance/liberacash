@@ -10,8 +10,8 @@
   <meta content="Webflow" name="generator">
   <meta property="og:title" content="Credito.vc">
   <meta property="og:description" content="Descubra quanto você tem disponível para receber e tenha o dinheiro na sua conta em até 24h.">
-  <meta property="og:image" content="https://www.credito.vc/images/webclip.png">
-  <meta property="og:url" content="https://www.credito.vc/">
+  <meta property="og:image" content="https://libera.cash/images/webclip.png">
+  <meta property="og:url" content="https://libera.cash/">
   <meta content="summary" name="twitter:card">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">

@@ -10,8 +10,8 @@
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.credito.vc/"},
-        {"@type": "ListItem", "position": 2, "name": "Política de Privacidade", "item": "https://www.credito.vc/politica-de-privacidade/"}
+        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://libera.cash/"},
+        {"@type": "ListItem", "position": 2, "name": "Política de Privacidade", "item": "https://libera.cash/politica-de-privacidade/"}
       ]
     }
     </script>
@@ -20,12 +20,12 @@
     <meta property="og:title" content="Política de Privacidade - Credito.vc">
     <meta property="og:description" content="Transparência e segurança: veja como a Credito.vc trata seus dados pessoais em conformidade com a LGPD.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.credito.vc/politica-de-privacidade/">
+    <meta property="og:url" content="https://libera.cash/politica-de-privacidade/">
 
-    <link rel="canonical" href="https://www.credito.vc/politica-de-privacidade/">
+    <link rel="canonical" href="/politica-de-privacidade/">
 
-    <link href="https://www.credito.vc/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="https://www.credito.vc/images/webclip.png" rel="apple-touch-icon">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/webclip.png" rel="apple-touch-icon">
 
     <!-- Fontes / ícones -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
@@ -320,22 +320,22 @@
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="https://www.credito.vc/"><img src="https://www.credito.vc/images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
         </div>
         
         <ul class="nav-menu">
-            <li><a href="https://www.credito.vc/">Crédito</a></li>
-            <li><a href="https://www.credito.vc/cartoes/">Cartões</a></li>
-            <li><a href="https://www.credito.vc/blog/">Blog</a></li>
-            <li><a href="https://www.credito.vc/sobre/">Sobre</a></li>
-            <li><a href="https://www.credito.vc/contato/">Contato</a></li>
+            <li><a href="/">Crédito</a></li>
+            <li><a href="/cartoes/">Cartões</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
         </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
 </header>
 
 <nav class="breadcrumbs" aria-label="breadcrumb">
-    <a href="https://www.credito.vc/">Início</a>
+    <a href="/">Início</a>
     <span class="sep">/</span>
     <span class="current">Política de Privacidade</span>
 </nav>
@@ -519,7 +519,7 @@
 <!-- ==== Footer ==== -->
 <footer class="footer">
     <div class="footer-container">
-        <img src="https://www.credito.vc/images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
 
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>

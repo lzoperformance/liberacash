@@ -16,23 +16,23 @@
     <meta property="og:title" content="Sobre a Crédito.vc | Quem Somos">
     <meta property="og:description" content="Conheça a Crédito.vc — comparação gratuita de crédito entre os principais bancos e fintechs do Brasil.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.credito.vc/sobre/">
+    <meta property="og:url" content="https://libera.cash/sobre/">
 
-    <link rel="canonical" href="https://www.credito.vc/sobre/">
+    <link rel="canonical" href="/sobre/">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.credito.vc/"},
-        {"@type": "ListItem", "position": 2, "name": "Sobre", "item": "https://www.credito.vc/sobre/"}
+        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://libera.cash/"},
+        {"@type": "ListItem", "position": 2, "name": "Sobre", "item": "https://libera.cash/sobre/"}
       ]
     }
     </script>
 
-    <link href="https://www.credito.vc/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="https://www.credito.vc/images/webclip.png" rel="apple-touch-icon">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/webclip.png" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -383,14 +383,14 @@
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="https://www.credito.vc/"><img src="https://www.credito.vc/images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
         </div>
         <ul class="nav-menu">
-            <li><a href="https://www.credito.vc/">Home</a></li>
-            <li><a href="https://www.credito.vc/cartoes/">Cartão de Crédito</a></li>
-            <li><a href="https://www.credito.vc/blog/">Blog</a></li>
-            <li><a href="https://www.credito.vc/sobre/">Sobre</a></li>
-            <li><a href="https://www.credito.vc/contato/">Contato</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/cartoes/">Cartão de Crédito</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
         </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
@@ -445,7 +445,7 @@
         <p>Crédito.vc é uma marca da <strong>LZO Agência de Publicidade LTDA</strong> (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP.</p>
         <p>Importante: <strong>não somos uma instituição financeira</strong>. Não emprestamos dinheiro nem emitimos cartões de crédito. O que fazemos é conectar você aos melhores parceiros do mercado, bancos consolidados e fintechs inovadoras, para que você compare condições e escolha a opção que faz mais sentido pra você.</p>
         <p>Trabalhamos com os principais nomes do setor financeiro brasileiro, sempre em busca das melhores condições para nossos usuários.</p>
-        <p>Sabe quem esta por trás de tudo isso? <strong>nosso time de especialistas!</strong>. Quer conhecer eles? </p> <a href="https://www.credito.vc/time/" class="cta-btn">Conheça nosso Time</a>
+        <p>Sabe quem esta por trás de tudo isso? <strong>nosso time de especialistas!</strong>. Quer conhecer eles? </p> <a href="/time/" class="cta-btn">Conheça nosso Time</a>
     </div>
 
     <div class="section">
@@ -461,22 +461,22 @@
         <p>Trabalhamos com as principais Fintechs de Crédito e Bancos do Brasil para trazer as melhores condições para você.</p>
         <div class="logos-container">
             <div class="logos-track">
-                <div class="logo-item"><img src="https://www.credito.vc/images/juvo-creditovc.png" alt="Juvo"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/noverde-creditovc.png" alt="NoVerde"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/creditas-creditovc.png" alt="Creditas"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/bv-creditovc.png" alt="Banco BV"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/juvo-creditovc.png" alt="Juvo"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/noverde-creditovc.png" alt="NoVerde"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/creditas-creditovc.png" alt="Creditas"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/bv-creditovc.png" alt="Banco BV"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/juvo-creditovc.png" alt="Juvo"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/noverde-creditovc.png" alt="NoVerde"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/creditas-creditovc.png" alt="Creditas"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/bv-creditovc.png" alt="Banco BV"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/juvo-creditovc.png" alt="Juvo"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/noverde-creditovc.png" alt="NoVerde"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/creditas-creditovc.png" alt="Creditas"></div>
-                <div class="logo-item"><img src="https://www.credito.vc/images/bv-creditovc.png" alt="Banco BV"></div>
+                <div class="logo-item"><img src="images/juvo-creditovc.png" alt="Juvo"></div>
+                <div class="logo-item"><img src="images/noverde-creditovc.png" alt="NoVerde"></div>
+                <div class="logo-item"><img src="images/creditas-creditovc.png" alt="Creditas"></div>
+                <div class="logo-item"><img src="images/bv-creditovc.png" alt="Banco BV"></div>
+                <div class="logo-item"><img src="images/juvo-creditovc.png" alt="Juvo"></div>
+                <div class="logo-item"><img src="images/noverde-creditovc.png" alt="NoVerde"></div>
+                <div class="logo-item"><img src="images/creditas-creditovc.png" alt="Creditas"></div>
+                <div class="logo-item"><img src="images/bv-creditovc.png" alt="Banco BV"></div>
+                <div class="logo-item"><img src="images/juvo-creditovc.png" alt="Juvo"></div>
+                <div class="logo-item"><img src="images/noverde-creditovc.png" alt="NoVerde"></div>
+                <div class="logo-item"><img src="images/creditas-creditovc.png" alt="Creditas"></div>
+                <div class="logo-item"><img src="images/bv-creditovc.png" alt="Banco BV"></div>
+                <div class="logo-item"><img src="images/juvo-creditovc.png" alt="Juvo"></div>
+                <div class="logo-item"><img src="images/noverde-creditovc.png" alt="NoVerde"></div>
+                <div class="logo-item"><img src="images/creditas-creditovc.png" alt="Creditas"></div>
+                <div class="logo-item"><img src="images/bv-creditovc.png" alt="Banco BV"></div>
             </div>
         </div>
     </div>
@@ -484,14 +484,14 @@
     <div class="cta-section">
         <h2><i class="fas fa-comments"></i> Fale com a Gente</h2>
         <p>Tem alguma dúvida, sugestão ou quer ser nosso parceiro? Adoraríamos ouvir você.</p>
-        <a href="https://www.credito.vc/contato/" class="cta-btn">ENTRAR EM CONTATO</a>
+        <a href="/contato/" class="cta-btn">ENTRAR EM CONTATO</a>
     </div>
 
 </div>
 
 <footer class="footer">
     <div class="footer-container">
-        <img src="https://www.credito.vc/images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
 
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>

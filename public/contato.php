@@ -57,8 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.credito.vc/"},
-        {"@type": "ListItem", "position": 2, "name": "Contato", "item": "https://www.credito.vc/contato/"}
+        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://libera.cash/"},
+        {"@type": "ListItem", "position": 2, "name": "Contato", "item": "https://libera.cash/contato/"}
       ]
     }
     </script>
@@ -67,12 +67,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta property="og:title" content="Contato | Crédito.vc">
     <meta property="og:description" content="Entre em contato com a Crédito.vc. Tire dúvidas, envie sugestões ou proponha parcerias.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.credito.vc/contato/">
+    <meta property="og:url" content="https://libera.cash/contato/">
 
-    <link rel="canonical" href="https://www.credito.vc/contato/">
+    <link rel="canonical" href="/contato/">
 
-    <link href="https://www.credito.vc/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="https://www.credito.vc/images/webclip.png" rel="apple-touch-icon">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/webclip.png" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -185,21 +185,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="https://www.credito.vc/"><img src="https://www.credito.vc/images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
         </div>
         <ul class="nav-menu">
-            <li><a href="https://www.credito.vc/">Home</a></li>
-            <li><a href="https://www.credito.vc/cartoes/">Cartão de Crédito</a></li>
-            <li><a href="https://www.credito.vc/blog/">Blog</a></li>
-            <li><a href="https://www.credito.vc/sobre/">Sobre</a></li>
-            <li><a href="https://www.credito.vc/contato/">Contato</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/cartoes/">Cartão de Crédito</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
         </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
 </header>
 
 <nav class="breadcrumbs" aria-label="breadcrumb">
-    <a href="https://www.credito.vc/">Início</a>
+    <a href="/">Início</a>
     <span class="sep">/</span>
     <span class="current">Contato</span>
 </nav>
@@ -260,7 +260,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="info-icon"><i class="fas fa-envelope"></i></div>
                 <div class="info-text">
                     <strong>E-mail</strong>
-                    <a href="mailto:contato@credito.vc">contato@credito.vc</a>
+                    <a href="mailto:contato@libera.cash">contato@libera.cash</a>
                 </div>
             </div>
 
@@ -308,7 +308,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <footer class="footer">
     <div class="footer-container">
-        <img src="https://www.credito.vc/images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Crédito.vc"><i class="fab fa-instagram"></i></a>

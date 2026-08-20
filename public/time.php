@@ -108,9 +108,9 @@ $areas = array_filter($lideres, function($l){ return empty($l['destaque']); });
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.credito.vc/"},
-        {"@type": "ListItem", "position": 2, "name": "Sobre", "item": "https://www.credito.vc/sobre/"},
-        {"@type": "ListItem", "position": 3, "name": "Nosso Time", "item": "https://www.credito.vc/time/"}
+        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://libera.cash/"},
+        {"@type": "ListItem", "position": 2, "name": "Sobre", "item": "https://libera.cash/sobre/"},
+        {"@type": "ListItem", "position": 3, "name": "Nosso Time", "item": "https://libera.cash/time/"}
       ]
     }
     </script>
@@ -119,12 +119,12 @@ $areas = array_filter($lideres, function($l){ return empty($l['destaque']); });
     <meta property="og:title" content="Nosso Time | Crédito.vc">
     <meta property="og:description" content="Conheça as lideranças da Crédito.vc.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.credito.vc/time/">
+    <meta property="og:url" content="https://libera.cash/time/">
 
-    <link rel="canonical" href="https://www.credito.vc/time/">
+    <link rel="canonical" href="/time/">
 
-    <link href="https://www.credito.vc/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="https://www.credito.vc/images/webclip.png" rel="apple-touch-icon">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/webclip.png" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -346,23 +346,23 @@ $areas = array_filter($lideres, function($l){ return empty($l['destaque']); });
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="https://www.credito.vc/"><img src="https://www.credito.vc/images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
         </div>
         <ul class="nav-menu">
-            <li><a href="https://www.credito.vc/">Crédito</a></li>
-            <li><a href="https://www.credito.vc/cartoes/">Cartões</a></li>
-            <li><a href="https://www.credito.vc/blog/">Blog</a></li>
-            <li><a href="https://www.credito.vc/sobre/">Sobre</a></li>
-            <li><a href="https://www.credito.vc/contato/">Contato</a></li>
+            <li><a href="/">Crédito</a></li>
+            <li><a href="/cartoes/">Cartões</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
         </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
 </header>
 
 <nav class="breadcrumbs" aria-label="breadcrumb">
-    <a href="https://www.credito.vc/">Início</a>
+    <a href="/">Início</a>
     <span class="sep">/</span>
-    <a href="https://www.credito.vc/sobre/">Sobre</a>
+    <a href="/sobre/">Sobre</a>
     <span class="sep">/</span>
     <span class="current">Nosso Time</span>
 </nav>
@@ -421,14 +421,14 @@ $areas = array_filter($lideres, function($l){ return empty($l['destaque']); });
     <div class="cta-join">
         <h2>Quer fazer parte do time?</h2>
         <p>Estamos sempre em busca de pessoas talentosas e apaixonadas por transformar o mercado de crédito no Brasil.</p>
-        <a href="mailto:carreiras@credito.vc" class="cta-btn">VER OPORTUNIDADES</a>
+        <a href="mailto:carreiras@libera.cash" class="cta-btn">VER OPORTUNIDADES</a>
     </div>
 
 </div>
 
 <footer class="footer">
     <div class="footer-container">
-        <img src="https://www.credito.vc/images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Crédito.vc"><i class="fab fa-instagram"></i></a>
