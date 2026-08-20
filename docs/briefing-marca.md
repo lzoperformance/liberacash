@@ -31,6 +31,23 @@ Valores extraídos visualmente do arquivo de logo enviado (ainda não temos o
 arquivo fonte/vetor — pedir PNG ou SVG original pra recalibrar se
 necessário, e pra gerar favicon/OG image em alta resolução).
 
+### Logo — versão atualizada (2ª rodada)
+
+Lockup definido: ícone (quadrado arredondado, monograma "Lc" em verde
+escuro sobre fundo em gradiente verde-lima, com glow) + wordmark
+"**Libera**Cash" — "Libera" em cor neutra (preto no fundo claro, branco no
+fundo escuro) e "**Cash**" em verde de destaque, mesma cor do ícone.
+Testado em fundo claro e em fundo escuro (`--lc-bg-dark-800`), os dois
+funcionam.
+
+Isso define o nome de marca por extenso como **"LiberaCash"** (uma
+palavra, L e C maiúsculos) — usar essa grafia em textos/título, mantendo
+`libera.cash` só como domínio/URL.
+
+**Pendente:** ainda não recebi o arquivo fonte (PNG/SVG) — só a prévia no
+chat. Preciso do arquivo pra extrair o ícone sozinho (favicon) e gerar os
+tamanhos de produção (favicon 32/512px, OG image, versão do header).
+
 Racional: verde reforça "dinheiro liberado" de forma mais direta que o
 azul do credito.vc, e o nome `libera.cash` pede um visual mais
 ágil/desburocratizado — o gradiente lima→menta ajuda nisso sem cair no
