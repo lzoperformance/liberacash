@@ -17,19 +17,19 @@ $produtos_ativos = get_products_ordered();
   <title>Credito.vc - Empréstimo Rápido e Seguro</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
-  <meta property="og:title" content="Credito.vc">
+  <meta property="og:title" content="LiberaCash">
   <meta property="og:description" content="Descubra quanto você tem disponível para receber e tenha o dinheiro na sua conta in até 24h.">
   <meta property="og:image" content="https://libera.cash/images/webclip.png">
   <meta property="og:url" content="https://libera.cash/">
   <meta content="summary" name="twitter:card">
-  <meta name="description" content="Crédito.vc — Empréstimo pessoal online rápido e seguro. Compare propostas de múltiplos parceiros e receba o dinheiro na conta em até 24h. Simule grátis!">
+  <meta name="description" content="Libera Cash — Empréstimo pessoal online rápido e seguro. Compare propostas de múltiplos parceiros e receba o dinheiro na conta em até 24h. Simule grátis!">
   <meta name="keywords" content="empréstimo pessoal, empréstimo online, crédito pessoal, empréstimo negativado, simular empréstimo, crédito rápido">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="Crédito.vc">
-  <meta name="twitter:title" content="Credito.vc - Empréstimo Rápido e Seguro">
+  <meta property="og:site_name" content="Libera Cash">
+  <meta name="twitter:title" content="Libera Cash - Empréstimo Rápido e Seguro">
   <meta name="twitter:description" content="Compare propostas de empréstimo e receba o dinheiro na conta em até 24h. Simule grátis!">
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
@@ -547,14 +547,14 @@ $produtos_ativos = get_products_ordered();
 <body>
 
   <div class="top-bar">
-    Atenção! A Crédito.vc não cobra nenhum depósito antecipado para a liberação de empréstimo.
+    Atenção! A Libera Cash não cobra nenhum depósito antecipado para a liberação de empréstimo.
   </div>
 
   <header class="header">
     <div class="header-container">
       <div class="logo"><img src="images/logo.png" alt="Crédito.vc"></div>
       <nav class="nav-menu">
-            <li><a href="/">Crédito</a></li>
+            <li><a href="/">Crédito Pessoal</a></li>
             <li><a href="/cartoes/">Cartão de Crédito</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/sobre/">Sobre</a></li>
@@ -707,7 +707,7 @@ $produtos_ativos = get_products_ordered();
     <h2>Perguntas <span>Frequentes</span></h2>
     <div class="faq-container">
       <div class="faq-item">
-        <div class="faq-header">1 - Como funciona a Credito.vc? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-header">1 - Como funciona a Libera Cash? <i class="fas fa-chevron-down"></i></div>
         <div class="faq-content">Nós conectamos você às melhores empresas de crédito do mercado.<br>Você preenche um rápido formulário com o seu perfil e nós encontramos as instituições financeiras com as maiores chances de aprovação e as melhores taxas para o seu caso</div>
       </div>
       <div class="faq-item">
@@ -745,7 +745,7 @@ $produtos_ativos = get_products_ordered();
       </label>
 
       <div class="footer-text">
-Prazo de Pagamento: varia de acordo com a Instituição Financeira escolhida, podendo ser entre 6 e 120 meses. A variação da taxa de juros, de acordo com a Instituição Financeira escolhida, pode ser de 14,9% a.m. (423,96% a.a.) até 18,5% a.m. (668,75% a.a.), e o custo efetivo total (CET) pode variar de 15,57% a.m. (467,86% a.a.) até 27,29% a.m. (1709,88% a.a.). Exemplo: um empréstimo de R$ 750,00 em 6 meses com taxa de juros de 14,9% a.m. (423,96% a.a.) terá parcelas de R$ 198,39 (caso o CET seja igual à taxa de juros). Um modelo de aparelho celular compatível poderá ser necessário para a aprovação do crédito. A Credito.vc não é uma instituição financeira. O portal presta um serviço 100% gratuito e foi criado com o objetivo de ajudar usuários a encontrarem as melhores condições de crédito pessoal e empresarial, personalizadas de acordo com seu perfil. Temos parcerias com as principais Fintechs de Crédito e Bancos do Brasil. Preencha o nosso formulário para solicitar o seu empréstimo pessoal e receber o contato de um de nossos parceiros.      </div>
+Prazo de Pagamento: varia de acordo com a Instituição Financeira escolhida, podendo ser entre 6 e 120 meses. A variação da taxa de juros, de acordo com a Instituição Financeira escolhida, pode ser de 14,9% a.m. (423,96% a.a.) até 18,5% a.m. (668,75% a.a.), e o custo efetivo total (CET) pode variar de 15,57% a.m. (467,86% a.a.) até 27,29% a.m. (1709,88% a.a.). Exemplo: um empréstimo de R$ 750,00 em 6 meses com taxa de juros de 14,9% a.m. (423,96% a.a.) terá parcelas de R$ 198,39 (caso o CET seja igual à taxa de juros). Um modelo de aparelho celular compatível poderá ser necessário para a aprovação do crédito. A Libera Cash não é uma instituição financeira. O portal presta um serviço 100% gratuito e foi criado com o objetivo de ajudar usuários a encontrarem as melhores condições de crédito pessoal e empresarial, personalizadas de acordo com seu perfil. Temos parcerias com as principais Fintechs de Crédito e Bancos do Brasil. Preencha o nosso formulário para solicitar o seu empréstimo pessoal e receber o contato de um de nossos parceiros.      </div>
     </div>
   </footer>
 
