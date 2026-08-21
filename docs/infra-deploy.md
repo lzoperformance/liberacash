@@ -102,6 +102,13 @@ lida com CPF, e-mail, telefone e renda de gente real.
    `DB_USER`, `DB_PASS`, `AWS_*`, `VELOTAX_*` — ver `.env.example` na raiz
    deste projeto) na aba de **Environment Variables** do CloudPanel.
 6. Clicar em **Deploy**.
+7. Rodar `composer install --no-dev --optimize-autoloader` na raiz do
+   repositório clonado (via terminal do CloudPanel, se tiver, ou SSH) —
+   necessário pro `EmailService.php` (usa o AWS SDK via
+   `public/vendor/autoload.php`, gerado pelo `composer.json` do projeto).
+   Se o CloudPanel oferecer um campo de "deploy script"/"post-deploy
+   command", cadastrar esse comando lá pra rodar automaticamente a cada
+   push, em vez de manual.
 
 ### 6. Cache bypass nas áreas sensíveis
 1. Cloudflare → **Caching → Cache Rules** (ou **Rules → Page Rules** em

@@ -1,0 +1,13 @@
+{
+    "name": "liberacash/site",
+    "description": "Funil de crédito pessoal libera.cash",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "aws/aws-sdk-php": "^3.0"
+    },
+    "config": {
+        "vendor-dir": "public/vendor",
+        "optimize-autoloader": true
+    }
+}
