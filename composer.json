@@ -6,6 +6,9 @@
         "php": ">=8.1",
         "aws/aws-sdk-php": "^3.0"
     },
+    "require-dev": {
+        "phpstan/phpstan": "^1.11"
+    },
     "config": {
         "vendor-dir": "public/vendor",
         "optimize-autoloader": true
