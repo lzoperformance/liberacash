@@ -37,10 +37,11 @@ function v($arr, $key) { return htmlspecialchars((string)($arr[$key] ?? ''), ENT
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Minha Conta — Crédito.vc</title>
+<title>Minha Conta — LiberaCash</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="../css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
 </head>
 <body>
 
@@ -77,8 +78,8 @@ function v($arr, $key) { return htmlspecialchars((string)($arr[$key] ?? ''), ENT
         </div>
       </fieldset>
 
-      <fieldset class="conta-fieldset conta-fieldset--sensivel">
-        <legend>Endereço <span class="conta-badge-lock"><i class="fas fa-lock"></i> requer senha</span></legend>
+      <fieldset class="conta-fieldset">
+        <legend>Endereço</legend>
         <div class="conta-grid">
           <div class="form-group"><label>CEP</label><input type="text" name="cep" id="conta_cep" value="<?php echo v($perfil,'cep'); ?>" maxlength="9"></div>
           <div class="form-group"><label>Logradouro</label><input type="text" name="logradouro" value="<?php echo v($perfil,'logradouro'); ?>"></div>
@@ -142,33 +143,33 @@ function v($arr, $key) { return htmlspecialchars((string)($arr[$key] ?? ''), ENT
 
 <style>
 * { box-sizing: border-box; }
-body { margin: 0; font-family: 'Lato', sans-serif; background: #f5f7f6; color: #333; }
+body { margin: 0; font-family: var(--lc-font-body, 'Inter', sans-serif); background: var(--lc-off-white, #EAFBEF); color: var(--lc-text-dark, #0C2F1B); }
 .painel-main { max-width: 800px; margin: 0 auto; padding: 28px 24px 60px; }
-.painel-secao-titulo { font-family: 'Raleway', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 16px; }
+.painel-secao-titulo { font-family: var(--lc-font-display, 'Space Grotesk', sans-serif); font-size: 19px; font-weight: 600; margin-bottom: 16px; }
 
-.conta-form { background: #fff; border-radius: 16px; padding: 8px 28px 28px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
-.conta-fieldset { border: none; border-top: 1px solid #f0f0f0; padding: 20px 0; }
+.conta-form { background: var(--lc-white, #fff); border-radius: var(--lc-radius-lg, 24px); padding: 8px 28px 28px; box-shadow: var(--lc-shadow-card, 0 2px 12px rgba(12,47,27,.08)); }
+.conta-fieldset { border: none; border-top: 1px solid var(--lc-border, #D3EBD9); padding: 20px 0; }
 .conta-fieldset:first-of-type { border-top: none; }
-.conta-fieldset legend { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 14px; color: #1e8449; padding: 0; display: flex; align-items: center; gap: 8px; }
-.conta-badge-lock { font-size: 10px; font-weight: 700; color: #b8860b; background: #fff8e6; padding: 2px 8px; border-radius: 10px; }
+.conta-fieldset legend { font-family: var(--lc-font-display, 'Space Grotesk', sans-serif); font-weight: 600; font-size: 14px; color: var(--lc-green-900, #16562D); padding: 0; display: flex; align-items: center; gap: 8px; }
+.conta-badge-lock { font-size: 10px; font-weight: 700; color: #A97900; background: #FFF8E9; padding: 2px 8px; border-radius: 10px; }
 .conta-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
 @media (max-width: 600px) { .conta-grid { grid-template-columns: 1fr; } }
-.form-group label { display: block; font-size: 12px; font-weight: 700; color: #888; margin-bottom: 4px; }
-.form-group input, .form-group select { width: 100%; padding: 11px 16px; border: 1px solid #ddd; border-radius: 10px; font-size: 14px; font-family: 'Lato', sans-serif; }
-.form-group input:disabled { background: #f5f5f5; color: #999; }
-.form-group input:focus, .form-group select:focus { border-color: #2ecc71; outline: none; }
+.form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--lc-text-muted, #4B5F52); margin-bottom: 4px; }
+.form-group input, .form-group select { width: 100%; padding: 11px 16px; border: 1.5px solid var(--lc-border, #D3EBD9); border-radius: var(--lc-radius-md, 16px); font-size: 14px; font-family: var(--lc-font-body, 'Inter', sans-serif); background: var(--lc-surface, #F3FBF3); color: var(--lc-text-dark, #0C2F1B); }
+.form-group input:disabled { background: var(--lc-border, #D3EBD9); color: var(--lc-text-muted, #4B5F52); }
+.form-group input:focus, .form-group select:focus { border-color: var(--lc-green-500, #7CE071); background: #fff; outline: none; }
 
-.conta-confirmacao-senha { background: #fff8e6; border: 1px solid #ffe4a3; border-radius: 12px; padding: 16px; margin-top: 18px; }
-.conta-confirmacao-senha p { margin: 0 0 10px; font-size: 13px; color: #7a5c00; }
-.conta-confirmacao-senha input { width: 100%; padding: 11px 16px; border: 1px solid #ffe4a3; border-radius: 10px; }
+.conta-confirmacao-senha { background: #FFF8E9; border: 1px solid #F5DFA8; border-radius: var(--lc-radius-md, 16px); padding: 16px; margin-top: 18px; }
+.conta-confirmacao-senha p { margin: 0 0 10px; font-size: 13px; color: #6B5000; }
+.conta-confirmacao-senha input { width: 100%; padding: 11px 16px; border: 1px solid #F5DFA8; border-radius: var(--lc-radius-md, 16px); }
 
-.modal-btn-submit { width: 100%; background: #2ecc71; color: #fff; padding: 14px 20px; border: none; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 20px; transition: background .3s; }
-.modal-btn-submit:hover { background: #27ae60; }
-.modal-btn-submit:disabled { background: #a8dab3; cursor: not-allowed; }
+.modal-btn-submit { width: 100%; background: var(--lc-gradient-brand, linear-gradient(135deg,#83E167,#6BE193)); color: var(--lc-text-dark, #0C2F1B); padding: 15px 20px; border: none; border-radius: var(--lc-radius-md, 16px); font-size: 15px; font-weight: 700; font-family: var(--lc-font-body, 'Inter', sans-serif); cursor: pointer; margin-top: 20px; transition: transform .15s, box-shadow .15s; box-shadow: 0 6px 16px rgba(131,225,103,.35); }
+.modal-btn-submit:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(131,225,103,.45); }
+.modal-btn-submit:disabled { background: var(--lc-border, #D3EBD9); color: var(--lc-text-muted, #4B5F52); box-shadow: none; cursor: not-allowed; transform: none; }
 
 .alert-box { border-radius: 10px; padding: 12px 16px; font-size: 13px; margin-bottom: 16px; }
 .alert-box.is-error { background: #fdecea; border: 1px solid #f5c6cb; color: #c0392b; }
-.alert-box.is-success { background: #f0fff4; border: 1px solid #7ed684; color: #1e8449; }
+.alert-box.is-success { background: var(--lc-surface, #F3FBF3); border: 1px solid var(--lc-green-400, #83E167); color: var(--lc-green-900, #16562D); }
 </style>
 
 <script>
@@ -176,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('formMinhaConta');
   var alertBox = document.getElementById('contaAlert');
   var blocoSenhaAtual = document.getElementById('blocoSenhaAtual');
-  var camposSensiveis = ['email', 'celular', 'cep', 'logradouro', 'numero', 'complemento', 'bairro', 'cidade', 'estado'];
+  var camposSensiveis = ['email', 'celular'];
   var valoresIniciais = {};
   camposSensiveis.forEach(function (nome) {
     var el = form.querySelector('[name="' + nome + '"]');

@@ -46,14 +46,46 @@ $camposPermitidos = [
 ];
 
 // Campos considerados sensíveis: exigem confirmação de senha atual quando
-// a origem for a tela "Minha Conta" (payload traz current_password).
+// o VALOR realmente muda (não só quando a chave aparece no payload — o
+// formulário do "Minha Conta" sempre manda o formulário inteiro, então
+// email/celular sempre estão presentes mesmo sem edição nenhuma).
 $camposSensiveis = ['email', 'celular', 'cep', 'logradouro', 'numero', 'complemento', 'bairro', 'cidade', 'estado'];
 
+$stmtAtual = $pdo->prepare(
+    'SELECT u.email, u.celular, p.cep, p.logradouro, p.numero, p.complemento, p.bairro, p.cidade, p.estado
+     FROM usuarios u
+     LEFT JOIN perfil_usuario p ON p.user_id = u.id
+     WHERE u.id = :id LIMIT 1'
+);
+$stmtAtual->execute(['id' => $userId]);
+$valoresAtuais = $stmtAtual->fetch() ?: [];
+
 $tocaCampoSensivel = false;
-foreach (array_keys($input) as $campo) {
-    if (in_array($campo, $camposSensiveis, true)) { $tocaCampoSensivel = true; break; }
+$editandoContaOuEmail = false;
+foreach ($camposSensiveis as $campo) {
+    if (!array_key_exists($campo, $input)) continue;
+
+    $valorNovo = is_string($input[$campo]) ? trim($input[$campo]) : $input[$campo];
+    $valorAtual = (string)($valoresAtuais[$campo] ?? '');
+
+    // Normaliza celular pra comparar só dígitos (o form manda mascarado)
+    if ($campo === 'celular') {
+        $valorNovo = preg_replace('/\D/', '', (string)$valorNovo);
+    }
+    if ($campo === 'cep') {
+        $valorNovo = preg_replace('/\D/', '', (string)$valorNovo);
+    }
+
+    if ((string)$valorNovo !== $valorAtual) {
+        $tocaCampoSensivel = true;
+        // Só e-mail/celular de fato travam com senha — o modal de
+        // qualificação do dashboard preenche endereço pela primeira vez
+        // sem pedir senha nenhuma, e precisa continuar assim.
+        if ($campo === 'email' || $campo === 'celular') {
+            $editandoContaOuEmail = true;
+        }
+    }
 }
-$editandoContaOuEmail = isset($input['email']) || isset($input['celular']);
 
 if ($tocaCampoSensivel && $editandoContaOuEmail) {
     // Só exige senha quando E-mail/Telefone estão sendo alterados (Minha Conta).
