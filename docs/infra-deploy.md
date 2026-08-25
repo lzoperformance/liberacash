@@ -1,5 +1,22 @@
 # Infraestrutura & Deploy — avaliação do plano Cloudflare + Hostinger
 
+## Correções depois de implementar de verdade (25/08/2026)
+
+O plano abaixo foi escrito antes de mexer no CloudPanel real. Na prática,
+duas coisas que ele descrevia **não existem** nessa instalação:
+
+- **Não tem aba "Git"/Deployment no CloudPanel.** Deploy é via SSH: clonar
+  o repo manualmente na pasta do site e rodar `git pull` a cada
+  atualização (ver seção "Deploy via Git" revisada abaixo).
+- **Não tem "Environment Variables" na UI do site.** As credenciais do
+  banco não vêm de variável de ambiente — o `public/db.php` lê de
+  `config/db-config.php` (fora do document root, gitignorado, criado uma
+  vez via SSH). Modelo em `config/db-config.example.php`.
+
+Fica como lição: **confirmar o recurso existe na versão real do painel
+antes de documentar o passo a passo**, em vez de assumir com base em
+conhecimento genérico do CloudPanel.
+
 ## Veredito
 
 Faz sentido. Cloudflare na frente da Hostinger, VPS com CloudPanel, deploy
