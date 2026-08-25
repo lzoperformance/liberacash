@@ -54,8 +54,7 @@ $nome            = clean($input['full_name']       ?? '');
 $cpfRaw          = clean($input['cpf_number']      ?? '');
 $celularRaw      = clean($input['mobile_phone']     ?? '');
 $email           = clean($input['email']           ?? '');
-$senha           = (string)($input['password']         ?? '');
-$senhaConfirm    = (string)($input['password_confirm'] ?? '');
+$senha           = (string)($input['password'] ?? '');
 
 $utmSource   = clean($input['utm_source']   ?? '');
 $utmMedium   = clean($input['utm_medium']   ?? '');
@@ -91,10 +90,6 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 if (strlen($senha) < 6) {
     $errors[] = 'A senha deve ter ao menos 6 caracteres.';
-}
-
-if ($senha !== $senhaConfirm) {
-    $errors[] = 'As senhas não coincidem.';
 }
 
 if (!empty($errors)) {

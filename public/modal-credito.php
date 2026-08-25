@@ -60,14 +60,6 @@
         <span class="field-error" id="error_reg_password"></span>
       </div>
 
-      <div class="form-group">
-        <div class="input-with-icon">
-          <input type="password" id="reg_password_confirm" name="password_confirm" placeholder="Confirmar senha" required minlength="6" autocomplete="new-password">
-          <span class="input-icon toggle-password" data-target="reg_password_confirm"><i class="fas fa-eye"></i></span>
-        </div>
-        <span class="field-error" id="error_reg_password_confirm"></span>
-      </div>
-
       <div class="form-group full-width">
         <label class="checkbox-terms">
           <input type="checkbox" id="reg_terms_accepted" name="terms_accepted" required>
@@ -582,7 +574,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!val('reg_mobile_phone', v => v.replace(/\D/g,'').length === 11, 'Telefone inválido')) ok = false;
     if (!val('reg_email', v => isValidEmail(v), 'E-mail inválido')) ok = false;
     if (!val('reg_password', v => v.length >= 6, 'A senha deve ter ao menos 6 caracteres')) ok = false;
-    if (!val('reg_password_confirm', v => v === document.getElementById('reg_password').value.trim() && v.length > 0, 'As senhas não coincidem')) ok = false;
     if (!document.getElementById('reg_terms_accepted').checked) {
       document.getElementById('error_reg_terms_accepted').textContent = 'Você precisa aceitar os termos';
       ok = false;
@@ -637,7 +628,6 @@ document.addEventListener('DOMContentLoaded', function() {
       mobile_phone: document.getElementById('reg_mobile_phone').value.trim(),
       email: document.getElementById('reg_email').value.trim(),
       password: document.getElementById('reg_password').value,
-      password_confirm: document.getElementById('reg_password_confirm').value,
       utm_source: document.getElementById('tracking_utm_source').value,
       utm_medium: document.getElementById('tracking_utm_medium').value,
       utm_campaign: document.getElementById('tracking_utm_campaign').value,

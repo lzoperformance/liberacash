@@ -1,17 +1,22 @@
 <?php
 /**
  * db.php - Conexão com o banco de dados
- * Credenciais SEMPRE via variáveis de ambiente do servidor (nunca hardcoded
- * aqui — foi exatamente isso que vazou no repo antigo do credito.vc).
+ * Credenciais vêm de config/db-config.php (fora do document root,
+ * gitignorado — nunca commitado, mesmo padrão do aws-config.php e do
+ * parceiros-config.php). Se não existir, cai pra variável de ambiente
+ * como alternativa (útil em hosts que suportam env var de verdade).
  *
- * Defina no CloudPanel (Site > Environment Variables) ou no .env local:
- *   DB_HOST, DB_NAME, DB_USER, DB_PASS
+ * Pra criar o arquivo real: copie config/db-config.example.php pra
+ * config/db-config.php e preencha com as credenciais do banco.
  */
 
-$db_host = getenv('DB_HOST') ?: '127.0.0.1';
-$db_name = getenv('DB_NAME') ?: 'liberacash';
-$db_user = getenv('DB_USER') ?: '';
-$db_pass = getenv('DB_PASS') ?: '';
+$dbConfig = @include __DIR__ . '/../config/db-config.php';
+$dbConfig = is_array($dbConfig) ? $dbConfig : [];
+
+$db_host = $dbConfig['host'] ?? (getenv('DB_HOST') ?: '127.0.0.1');
+$db_name = $dbConfig['name'] ?? (getenv('DB_NAME') ?: 'liberacash');
+$db_user = $dbConfig['user'] ?? (getenv('DB_USER') ?: '');
+$db_pass = $dbConfig['pass'] ?? (getenv('DB_PASS') ?: '');
 
 try {
     $pdo = new PDO("mysql:host=$db_host;dbname=$db_name;charset=utf8mb4", $db_user, $db_pass, [
