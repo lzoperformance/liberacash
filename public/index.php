@@ -558,7 +558,7 @@ $produtos_ativos = get_products_ordered();
 
   <header class="header">
     <div class="header-container">
-      <div class="logo"><img src="images/logo.png" alt="LiberaCash"></div>
+      <div class="logo"><img src="images/logo.png?v=2" alt="LiberaCash"></div>
       <nav class="nav-menu">
             <li><a href="/">Crédito Pessoal</a></li>
             <li><a href="/cartoes/">Cartão de Crédito</a></li>
@@ -737,7 +737,7 @@ $produtos_ativos = get_products_ordered();
 
   <footer class="footer">
     <div class="footer-container">
-      <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
+      <img src="images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
 
        <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>

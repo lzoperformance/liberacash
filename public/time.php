@@ -347,7 +347,7 @@ $areas = array_filter($lideres, function($l){ return empty($l['destaque']); });
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png" alt="LiberaCash"></a>
+            <a href="/"><img src="images/logo.png?v=2" alt="LiberaCash"></a>
         </div>
         <ul class="nav-menu">
             <li><a href="/">Crédito</a></li>
@@ -429,7 +429,7 @@ $areas = array_filter($lideres, function($l){ return empty($l['destaque']); });
 
 <footer class="footer">
     <div class="footer-container">
-        <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
+        <img src="images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>

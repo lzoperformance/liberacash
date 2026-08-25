@@ -601,7 +601,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png" alt="LiberaCash"></a>
+            <a href="/"><img src="images/logo.png?v=2" alt="LiberaCash"></a>
         </div>
         <ul class="nav-menu">
             <li><a href="/">Credito</a></li>
@@ -748,7 +748,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
 
 <footer class="footer">
     <div class="footer-container">
-        <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
+        <img src="images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
 
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
