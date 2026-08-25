@@ -590,6 +590,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
             .footer-text { text-align: left; }
         }
     </style>
+  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
 </head>
 <body>
 

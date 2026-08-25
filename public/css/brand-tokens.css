@@ -64,4 +64,20 @@
     --lc-radius-lg: 24px;
     --lc-radius-md: 16px;
     --lc-radius-full: 999px;
+
+    /* Aliases de compatibilidade — o HTML de 11 páginas do site já usava
+       var(--primary-green), var(--white) etc. em 95 lugares, mas o :root
+       que deveria defini-las nunca existiu (bug antigo, não introduzido
+       por esse redesign). Definir aqui conserta tudo de uma vez, sem
+       precisar editar cada ocorrência. */
+    --primary-green: var(--lc-green-600);
+    --accent-green: var(--lc-green-400);
+    --light-green: var(--lc-surface);
+    --dark-green: var(--lc-green-900);
+    --dark-bg: var(--lc-bg-dark-800);
+    --text-dark: var(--lc-text-dark);
+    --text-light: var(--lc-text-muted);
+    --gray-text: var(--lc-text-muted);
+    --white: var(--lc-white);
+    --transition: all 0.3s ease;
 }

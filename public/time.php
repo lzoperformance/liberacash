@@ -336,6 +336,7 @@ $areas = array_filter($lideres, function($l){ return empty($l['destaque']); });
             .footer-text { text-align: left; }
         }
     </style>
+  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
 </head>
 <body>
 

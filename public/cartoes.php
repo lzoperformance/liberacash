@@ -226,6 +226,7 @@
       .c-botao-mobile { margin-top: 42px; padding-right: 15px; padding-left: 15px; }
     }
   </style>
+  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
 </head>
 
 <body class="body">

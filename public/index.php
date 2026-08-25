@@ -44,8 +44,7 @@ $produtos_ativos = get_products_ordered();
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/credito-vc-jul-23.webflow.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
   <link href="css/main.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
-  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
-  
+
   <!-- Font Awesome - carregado de forma não-bloqueante -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
@@ -545,6 +544,7 @@ $produtos_ativos = get_products_ordered();
     ]
   }
   </script>
+  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
 </head>
 <body>
 
