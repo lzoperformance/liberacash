@@ -9,6 +9,8 @@
 $abaAtiva = $abaAtiva ?? 'ofertas';
 $temPropostaPreAprovada = $temPropostaPreAprovada ?? false;
 ?>
+<div class="painel-top-bar">Atenção! A Libera Cash não cobra nenhum depósito antecipado para a liberação de empréstimo.</div>
+
 <header class="painel-header">
   <div class="painel-header__inner">
     <img src="/images/logo-full-white-text.png?v=2" alt="LiberaCash" class="painel-logo">
@@ -38,7 +40,17 @@ $temPropostaPreAprovada = $temPropostaPreAprovada ?? false;
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="/css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
 <style>
-.painel-header { background: var(--lc-gradient-dark, linear-gradient(160deg, #123A22, #081A0F)); }
+body { padding-top: 32px; }
+
+.painel-top-bar {
+  background: var(--lc-gradient-dark, linear-gradient(160deg, #123A22, #081A0F));
+  color: var(--lc-off-white, #EAFBEF);
+  height: 32px; padding: 0 16px; display: flex; align-items: center; justify-content: center;
+  text-align: center; font-size: 11px; font-family: var(--lc-font-body, 'Inter', sans-serif);
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;
+}
+
+.painel-header { background: var(--lc-gradient-dark, linear-gradient(160deg, #123A22, #081A0F)); position: sticky; top: 32px; z-index: 1000; }
 .painel-header__inner {
   max-width: 1100px; margin: 0 auto; padding: 16px 24px;
   display: flex; align-items: center; justify-content: space-between;
