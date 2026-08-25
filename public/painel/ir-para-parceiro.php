@@ -38,8 +38,16 @@ if (!produto_liberado_completo($produto, $perfil)) {
     exit;
 }
 
+$parceiroId = isset($_GET['parceiro']) ? trim((string)$_GET['parceiro']) : null;
+$parceiro = get_partner_by_id($produto, $parceiroId);
+
+if (!$parceiro) {
+    header('Location: /painel/index.php');
+    exit;
+}
+
 $extras = [];
-if (!empty($produto['passar_cpf_na_url'])) {
+if (!empty($parceiro['passar_cpf_na_url'])) {
     $stmt = $pdo->prepare('SELECT cpf FROM usuarios WHERE id = :id LIMIT 1');
     $stmt->execute(['id' => $userId]);
     $cpf = $stmt->fetchColumn();
@@ -51,7 +59,12 @@ $utms = [
     'utm_medium'   => $_GET['utm_medium']   ?? 'painel',
     'utm_campaign' => $_GET['utm_campaign'] ?? $produto['slug'],
 ];
-$urlFinal = montar_url_parceiro($produto, $utms, $extras);
+// monta a URL a partir do link do parceiro escolhido (não do produto)
+$urlFinal = montar_url_parceiro(
+    ['link_afiliado' => $parceiro['link_afiliado'], 'slug' => $produto['slug']],
+    $utms,
+    $extras
+);
 
 $stmt = $pdo->prepare(
     'INSERT INTO historico_solicitacoes
@@ -62,7 +75,7 @@ $stmt = $pdo->prepare(
 $stmt->execute([
     'user_id'          => $userId,
     'produto_slug'     => $produto['slug'],
-    'parceiro'         => $produto['nome'],
+    'parceiro'         => $parceiro['nome'],
     'valor_solicitado' => $perfil['valor_desejado'] ?? null,
     'status'           => 'em_analise',
     'utm_source'       => $utms['utm_source'],

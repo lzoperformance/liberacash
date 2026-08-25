@@ -151,7 +151,7 @@ $abaAtiva = 'ofertas';
 
           <?php if ($item['liberado']): ?>
             <span class="oferta-card__status oferta-card__status--ativa"><i class="fas fa-check-circle"></i> Disponível</span>
-            <a href="/painel/ir-para-parceiro.php?produto=<?php echo urlencode($produto['slug']); ?>" class="oferta-card__btn">Ver oferta</a>
+            <a href="/painel/escolha-parceiro.php?produto=<?php echo urlencode($produto['slug']); ?>" class="oferta-card__btn">Ver oferta</a>
           <?php else: ?>
             <span class="oferta-card__status oferta-card__status--bloqueada"><i class="fas fa-lock"></i> Bloqueado</span>
             <button type="button" class="oferta-card__btn oferta-card__btn--desbloquear"

@@ -32,6 +32,39 @@ $products = [
         'selos' => ['ALTA CHANCE DE APROVAÇÃO', 'DINHEIRO EM 24H'],
         // Campos de perfil_usuario que precisam estar preenchidos pra liberar direto
         'campos_necessarios' => ['negativado'],
+        // Múltiplos parceiros pro mesmo produto — usuário escolhe na tela
+        // de "Escolher parceiro" antes de sair pro site de cada um.
+        // TODO: aguardando logo (arquivo) e link de afiliado reais de
+        // SuperSim e NoVerde — Velotax já é o único com API de verdade.
+        'parceiros' => [
+            [
+                'id' => 'velotax',
+                'nome' => 'Velotax',
+                'logo' => null, // A DEFINIR
+                'descricao_curta' => 'Pré-aprovação automática consultando seu CPF',
+                'link_afiliado' => 'https://credito.velotax.com.br/cpf?utm_source=lzo',
+                'passar_cpf_na_url' => true,
+                'tem_api' => true,
+            ],
+            [
+                'id' => 'supersim',
+                'nome' => 'SuperSim',
+                'logo' => null, // A DEFINIR
+                'descricao_curta' => 'Empréstimo pessoal, aceita nome negativado',
+                'link_afiliado' => '#', // A DEFINIR
+                'passar_cpf_na_url' => false,
+                'tem_api' => false,
+            ],
+            [
+                'id' => 'noverde',
+                'nome' => 'NoVerde',
+                'logo' => null, // A DEFINIR
+                'descricao_curta' => 'Empréstimo pessoal sem burocracia',
+                'link_afiliado' => '#', // A DEFINIR
+                'passar_cpf_na_url' => false,
+                'tem_api' => false,
+            ],
+        ],
     ],
 
     'garantia-celular' => [
@@ -205,4 +238,41 @@ function get_campos_faltantes(array $produto, array $perfil): array {
  */
 function produto_esta_desbloqueado(array $produto, array $perfil): bool {
     return empty(get_campos_faltantes($produto, $perfil));
+}
+
+/**
+ * Lista de parceiros de um produto. Se o produto define 'parceiros'
+ * (array de opções — ex.: credito-pessoal tem Velotax/SuperSim/NoVerde),
+ * retorna essa lista. Senão, sintetiza uma lista de 1 item a partir dos
+ * campos antigos (link_afiliado/nome no topo do produto), pra produtos
+ * que ainda não foram migrados pro modelo de múltiplos parceiros.
+ */
+function get_partners_for_product(array $produto): array {
+    if (!empty($produto['parceiros'])) {
+        return $produto['parceiros'];
+    }
+    return [[
+        'id' => $produto['slug'],
+        'nome' => $produto['nome'],
+        'logo' => null,
+        'descricao_curta' => $produto['descricao_curta'] ?? '',
+        'link_afiliado' => $produto['link_afiliado'] ?? '#',
+        'passar_cpf_na_url' => $produto['passar_cpf_na_url'] ?? false,
+        'tem_api' => false,
+    ]];
+}
+
+/**
+ * Acha um parceiro específico de um produto pelo id. Cai pro primeiro
+ * da lista se o id não vier ou não bater com nenhum (link direto antigo
+ * continua funcionando).
+ */
+function get_partner_by_id(array $produto, ?string $parceiroId): ?array {
+    $parceiros = get_partners_for_product($produto);
+    if ($parceiroId !== null) {
+        foreach ($parceiros as $p) {
+            if ($p['id'] === $parceiroId) return $p;
+        }
+    }
+    return $parceiros[0] ?? null;
 }
