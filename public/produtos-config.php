@@ -12,7 +12,7 @@
 $products = [
     'credito-pessoal' => [
         'id' => '001',
-        'nome' => 'Empréstimo Pessoal para Negativados',
+        'nome' => 'Empréstimo Pessoal',
         'slug' => 'credito-pessoal',
         'icone' => 'ph-user-circle',
         'descricao' => 'Empréstimo rápido e descomplicado, mesmo com restrição no nome',
