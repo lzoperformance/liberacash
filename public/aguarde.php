@@ -240,7 +240,7 @@ function gerarPropostasMock(array $dados): array
     }
 
     // Parceiro 4: NoVerde (aceita negativado)
-    if ($negativado || true) {
+    if ($negativado) {
         $propostas[] = [
             'parceiro'    => 'NoVerde',
             'logo'        => 'noverde',

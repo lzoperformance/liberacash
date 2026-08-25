@@ -13,7 +13,7 @@
 
     <div id="modalHeader">
       <div class="modal-logo-wrapper">
-        <img src="/images/logo-creditovc.png" alt="Crédito.vc">
+        <img src="/images/logo.png" alt="LiberaCash">
       </div>
       <h2 class="modal-title" id="modalCreditoTitle">Crie sua conta<br><span>e veja suas ofertas</span></h2>
       <p class="modal-subtitle" id="modalSubtitle">Rápido, grátis e sem compromisso!</p>

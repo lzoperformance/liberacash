@@ -17,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($username === '' || $password === '') {
         $erro = 'Preencha usuário e senha.';
     } else {
-        $pdo = get_db_connection();
         $stmt = $pdo->prepare('SELECT id, password_hash FROM admin_users WHERE username = :u LIMIT 1');
         $stmt->execute([':u' => $username]);
         $user = $stmt->fetch();

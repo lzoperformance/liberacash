@@ -84,7 +84,7 @@
 
 <body class="body">
   <section class="section wf-section">
-    <div class="w-layout-blockcontainer container w-container"><img src="images/logo-creditovc.png" loading="lazy" alt="" class="image"></div>
+    <div class="w-layout-blockcontainer container w-container"><img src="images/logo.png" loading="lazy" alt="" class="image"></div>
   </section>
 
   <section class="section-2 wf-section">
@@ -203,7 +203,7 @@
 
   <section class="section wf-section">
     <div class="w-layout-blockcontainer container w-container">
-      <img src="images/logo-creditovc.png" loading="lazy" alt="" class="image-6">
+      <img src="images/logo.png" loading="lazy" alt="" class="image-6">
 
       <div class="text-block-2">
         Prazo de Pagamento: varia de acordo com a Instituição Financeira escolhida, podendo ser entre 6 e 120 meses. A variação, de acordo com a Instituição Financeira escolhida, <br>pode ser entre 14,9% a.m. (429,47% a.a.) até 18.5% a.m. (592,55% a.a.) e o custo efetivo total (CET) pode variar de 15,57% a.m. (467,86% a.a.) até 27.29% a.m. (1709,88% a.a.). <br>Exemplo: um empréstimo de R$ 750,00 em 6 meses com taxa de juros de 14.9% a.m. (429,47% a.a.) terá parcelas de R$217,41 e CET de 18,29% a.m. (651,16% a.a.). Um modelo <br>de aparelho celular compatível poderá ser necessário para a aprovação do crédito. A HIPER.CASH não é uma instituição financeira. O portal presta um serviço 100% gratuito <br>e foi criado com o objetivo de ajudar usuários a encontrarem as melhores condições de crédito pessoal e empresarial, personalizadas de acordo com seu perfil. Temos <br>parcerias com as principais Fintechs de Crédito e Bancos do Brasil. Preencha o nosso formulário para solicitar o seu empréstimos pessoal e receber o contato de um de <br>nossos parceiros.

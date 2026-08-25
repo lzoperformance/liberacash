@@ -11,7 +11,7 @@ $temPropostaPreAprovada = $temPropostaPreAprovada ?? false;
 ?>
 <header class="painel-header">
   <div class="painel-header__inner">
-    <img src="/images/logo-creditovc.png" alt="Crédito.vc" class="painel-logo">
+    <img src="/images/logo.png" alt="LiberaCash" class="painel-logo">
 
     <nav class="painel-nav" aria-label="Navegação do painel">
       <a href="/painel/index.php" class="painel-nav__link <?php echo $abaAtiva === 'ofertas' ? 'is-active' : ''; ?>">Minhas Ofertas</a>
