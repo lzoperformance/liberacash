@@ -11,7 +11,7 @@ $temPropostaPreAprovada = $temPropostaPreAprovada ?? false;
 ?>
 <header class="painel-header">
   <div class="painel-header__inner">
-    <img src="/images/logo-full-white-text.png" alt="LiberaCash" class="painel-logo">
+    <img src="/images/logo-full-white-text.png?v=2" alt="LiberaCash" class="painel-logo">
 
     <nav class="painel-nav" aria-label="Navegação do painel">
       <a href="/painel/index.php" class="painel-nav__link <?php echo $abaAtiva === 'ofertas' ? 'is-active' : ''; ?>">Minhas Ofertas</a>
@@ -44,7 +44,7 @@ $temPropostaPreAprovada = $temPropostaPreAprovada ?? false;
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 14px;
 }
-.painel-logo { height: 26px; object-fit: contain; }
+.painel-logo { height: 40px; object-fit: contain; }
 
 .painel-nav { display: flex; gap: 4px; flex-wrap: wrap; }
 .painel-nav__link {
