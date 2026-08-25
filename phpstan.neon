@@ -1,3 +1,5 @@
 parameters:
     parallel:
         maximumNumberOfProcesses: 1
+    excludePaths:
+        - public/vendor/*
