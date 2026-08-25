@@ -11,7 +11,7 @@ $temPropostaPreAprovada = $temPropostaPreAprovada ?? false;
 ?>
 <header class="painel-header">
   <div class="painel-header__inner">
-    <img src="/images/logo.png" alt="LiberaCash" class="painel-logo">
+    <img src="/images/logo-full-white-text.png" alt="LiberaCash" class="painel-logo">
 
     <nav class="painel-nav" aria-label="Navegação do painel">
       <a href="/painel/index.php" class="painel-nav__link <?php echo $abaAtiva === 'ofertas' ? 'is-active' : ''; ?>">Minhas Ofertas</a>
@@ -35,35 +35,37 @@ $temPropostaPreAprovada = $temPropostaPreAprovada ?? false;
   <?php endif; ?>
 </header>
 
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="/css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
 <style>
-.painel-header { background: #ffffff; border-bottom: 1px solid #e6e6e6; }
+.painel-header { background: var(--lc-gradient-dark, linear-gradient(160deg, #123A22, #081A0F)); }
 .painel-header__inner {
   max-width: 1100px; margin: 0 auto; padding: 16px 24px;
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 14px;
 }
-.painel-logo { height: 38px; object-fit: contain; }
+.painel-logo { height: 26px; object-fit: contain; }
 
-.painel-nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.painel-nav { display: flex; gap: 4px; flex-wrap: wrap; }
 .painel-nav__link {
-  text-decoration: none; font-family: 'Lato', sans-serif; font-weight: 700;
-  font-size: 14px; color: #666; padding: 8px 14px; border-radius: 20px; transition: all .2s;
+  text-decoration: none; font-family: var(--lc-font-body, 'Inter', sans-serif); font-weight: 600;
+  font-size: 13.5px; color: rgba(234,251,239,0.65); padding: 8px 14px; border-radius: var(--lc-radius-full, 999px); transition: all .2s;
 }
-.painel-nav__link:hover { background: #f0fff4; color: #1e8449; }
-.painel-nav__link.is-active { background: #2ecc71; color: #fff; }
+.painel-nav__link:hover { background: rgba(255,255,255,0.08); color: var(--lc-off-white, #EAFBEF); }
+.painel-nav__link.is-active { background: var(--lc-gradient-brand, linear-gradient(135deg, #83E167, #6BE193)); color: var(--lc-text-dark, #0C2F1B); }
 
 .painel-header__saudacao { display: flex; align-items: center; gap: 16px; }
-.painel-saudacao-texto { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 16px; color: #333; }
+.painel-saudacao-texto { font-family: var(--lc-font-display, 'Space Grotesk', sans-serif); font-weight: 600; font-size: 15px; color: var(--lc-off-white, #EAFBEF); }
 .painel-btn-logout {
-  background: #fff; border: 1.5px solid #7ed684; color: #1e8449; padding: 8px 16px;
-  border-radius: 25px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s;
+  background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,255,255,0.18); color: var(--lc-off-white, #EAFBEF); padding: 8px 16px;
+  border-radius: var(--lc-radius-full, 999px); font-size: 13px; font-weight: 600; font-family: var(--lc-font-body, 'Inter', sans-serif); cursor: pointer; transition: all 0.2s;
 }
-.painel-btn-logout:hover { background: #f0fff4; }
+.painel-btn-logout:hover { background: rgba(255,255,255,0.14); }
 
 .painel-banner-urgencia {
-  background: linear-gradient(90deg, #1e8449, #2ecc71);
-  color: #fff; text-align: center; font-weight: 700; font-size: 14px;
-  padding: 10px 16px;
+  background: var(--lc-gradient-brand, linear-gradient(135deg, #83E167, #6BE193));
+  color: var(--lc-text-dark, #0C2F1B); text-align: center; font-weight: 700; font-size: 14px;
+  padding: 10px 16px; font-family: var(--lc-font-body, 'Inter', sans-serif);
 }
 .painel-banner-urgencia i { margin-right: 6px; }
 

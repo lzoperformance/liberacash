@@ -24,17 +24,20 @@
     --lc-green-900: #16562D;
     --lc-green-700: #368C52;
 
-    /* Fundo escuro — hero, footer, seções de destaque. Ainda não temos
-       amostra real (nenhum arquivo com esse fundo foi enviado, só prévias
-       no chat) — valor estimado, recalibrar se vier um asset com fundo. */
-    --lc-bg-dark-900: #071A0F;
-    --lc-bg-dark-800: #0B2415;
-    --lc-bg-dark-700: #0F2E1B;
+    /* Fundo escuro — hero, footer, header, modais. Amostrado direto do
+       arquivo real (public/images/logo-full-dark.png), não é mais
+       estimativa. */
+    --lc-bg-dark-900: #081A0F;
+    --lc-bg-dark-800: #0C2F1B;
+    --lc-bg-dark-700: #123A22;
 
     /* Neutros */
     --lc-white: #FFFFFF;
     --lc-off-white: #EAFBEF;   /* branco com leve matiz verde, texto sobre fundo escuro */
-    --lc-text-dark: #0B2415;   /* texto sobre fundo claro */
+    --lc-text-dark: #0C2F1B;   /* texto sobre fundo claro — mesmo tom do fundo escuro, não preto puro */
+    --lc-text-muted: #4B5F52;  /* texto secundário sobre fundo claro */
+    --lc-surface: #F3FBF3;     /* superfície de card sobre fundo claro — leve matiz verde, não branco puro */
+    --lc-border: #D3EBD9;      /* borda sutil sobre fundo claro */
     --lc-gray-500: #6B7A70;
 
     /* Feedback (mantém convenção do site antigo) */
@@ -43,4 +46,22 @@
 
     /* Gradiente de marca (usar com moderação — hero, botão principal) */
     --lc-gradient-brand: linear-gradient(135deg, var(--lc-green-400), var(--lc-green-300));
+    --lc-gradient-dark: linear-gradient(160deg, var(--lc-bg-dark-700), var(--lc-bg-dark-900));
+
+    /* Tipografia — ver docs/briefing-marca.md para o racional da escolha.
+       Space Grotesk pra display/números (personalidade, numerais precisos
+       — importante pro site inteiro girar em torno de valor de empréstimo
+       e CPF), Inter pro corpo/formulário (legibilidade máxima com
+       acentuação em pt-BR, gente preenchendo dado sensível sob pressão
+       não pode ter ambiguidade de leitura). */
+    --lc-font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+    --lc-font-body: 'Inter', 'Segoe UI', sans-serif;
+
+    /* Sombra/elevação consistente (substitui as várias box-shadow soltas
+       espalhadas pelo CSS legado) */
+    --lc-shadow-card: 0 2px 12px rgba(12, 47, 27, 0.08);
+    --lc-shadow-modal: 0 20px 60px rgba(8, 26, 15, 0.35);
+    --lc-radius-lg: 24px;
+    --lc-radius-md: 16px;
+    --lc-radius-full: 999px;
 }

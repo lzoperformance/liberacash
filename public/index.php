@@ -14,7 +14,7 @@ $produtos_ativos = get_products_ordered();
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>Credito.vc - Empréstimo Rápido e Seguro</title>
+  <title>LiberaCash - Empréstimo Rápido e Seguro</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <meta property="og:title" content="LiberaCash">
@@ -38,11 +38,13 @@ $produtos_ativos = get_products_ordered();
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- CSS Principal -->
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/credito-vc-jul-23.webflow.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
   <link href="css/main.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
+  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
   
   <!-- Font Awesome - carregado de forma não-bloqueante -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">

@@ -13,7 +13,7 @@
 
     <div id="modalHeader">
       <div class="modal-logo-wrapper">
-        <img src="/images/logo.png" alt="LiberaCash">
+        <img src="/images/logo-icon.png" alt="LiberaCash">
       </div>
       <h2 class="modal-title" id="modalCreditoTitle">Crie sua conta<br><span>e veja suas ofertas</span></h2>
       <p class="modal-subtitle" id="modalSubtitle">Rápido, grátis e sem compromisso!</p>
@@ -131,16 +131,18 @@
 </div>
 
 <style>
-.overlay-consultando { position: fixed; inset: 0; background: rgba(255,255,255,0.96); display: none; align-items: center; justify-content: center; z-index: 10001; }
+.overlay-consultando { position: fixed; inset: 0; background: rgba(8,26,15,0.96); display: none; align-items: center; justify-content: center; z-index: 10001; }
 .overlay-consultando.is-open { display: flex; }
-.overlay-consultando__box { text-align: center; font-family: 'Lato', sans-serif; padding: 0 20px; }
-.overlay-consultando__box p { margin-top: 16px; font-weight: 700; color: #333; font-size: 15px; }
-.overlay-consultando__spinner { width: 46px; height: 46px; border: 4px solid #d7f5e0; border-top-color: #2ecc71; border-radius: 50%; margin: 0 auto; animation: overlayConsultandoSpin 0.8s linear infinite; }
+.overlay-consultando__box { text-align: center; font-family: var(--lc-font-body, 'Inter', sans-serif); padding: 0 20px; }
+.overlay-consultando__box p { margin-top: 16px; font-weight: 600; color: var(--lc-off-white, #EAFBEF); font-size: 15px; }
+.overlay-consultando__spinner { width: 46px; height: 46px; border: 4px solid rgba(131,225,103,0.25); border-top-color: var(--lc-green-400, #83E167); border-radius: 50%; margin: 0 auto; animation: overlayConsultandoSpin 0.8s linear infinite; }
 @keyframes overlayConsultandoSpin { to { transform: rotate(360deg); } }
 </style>
 
 <!-- ========== ESTILOS DO MODAL ========== -->
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
 /* --- Overlay --- */
 .modal-overlay {
   position: fixed;
@@ -148,7 +150,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(8, 26, 15, 0.65);
   display: none;
   justify-content: center;
   align-items: center;
@@ -161,13 +163,12 @@
 
 /* --- Container --- */
 .modal-box {
-  background: #ffffff;
+  background: var(--lc-white, #fff);
   width: 100%;
-  max-width: 460px;
-  border-radius: 20px;
-  padding: 30px 25px;
+  max-width: 420px;
+  border-radius: var(--lc-radius-lg, 24px);
   position: relative;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  box-shadow: var(--lc-shadow-modal, 0 20px 60px rgba(8,26,15,.35));
   max-height: 90vh;
   overflow-y: auto;
   animation: modalSlideUp .4s ease;
@@ -180,47 +181,60 @@
 /* --- Close Button --- */
 .modal-close-btn {
   position: absolute;
-  top: 12px;
-  right: 15px;
-  background: #2ecc71;
+  top: 16px;
+  right: 16px;
+  background: rgba(255,255,255,0.15);
   color: white;
   border: none;
   border-radius: 50%;
   width: 32px;
   height: 32px;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  transition: background 0.2s;
   z-index: 10;
 }
-.modal-close-btn:hover { background: #27ae60; }
+.modal-close-btn:hover { background: rgba(255,255,255,0.28); }
 
-/* --- Header --- */
+/* --- Header (banda escura, curva pro card claro) --- */
 #modalHeader {
-  margin-top: 10px;
+  background: var(--lc-gradient-dark, linear-gradient(160deg, #123A22, #081A0F));
+  padding: 32px 28px 40px;
   text-align: center;
+  position: relative;
+  border-radius: var(--lc-radius-lg, 24px) var(--lc-radius-lg, 24px) 0 0;
 }
-.modal-logo-wrapper { margin-bottom: 15px; }
-.modal-logo-wrapper img { height: 45px; object-fit: contain; }
+#modalHeader::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 24px;
+  background: var(--lc-white, #fff);
+  border-radius: 24px 24px 0 0;
+}
+.modal-logo-wrapper { margin-bottom: 16px; }
+.modal-logo-wrapper img {
+  height: 44px; width: 44px; object-fit: contain; border-radius: 12px;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+}
 .modal-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-  color: #333;
+  font-family: var(--lc-font-display, 'Space Grotesk', sans-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--lc-off-white, #EAFBEF);
   text-align: center;
-  line-height: 1.2;
-  margin-bottom: 10px;
+  line-height: 1.25;
+  margin: 0 0 6px;
 }
-.modal-title span { color: #2ecc71; }
+.modal-title span { color: var(--lc-green-300, #6BE193); }
 .modal-subtitle {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 20px;
+  font-size: 13.5px;
+  color: rgba(234,251,239,0.68);
+  margin: 0;
   text-align: center;
   line-height: 1.4;
+  font-family: var(--lc-font-body, 'Inter', sans-serif);
 }
 
 /* --- Alert Box (erros/sucesso gerais) --- */
@@ -228,9 +242,10 @@
   border-radius: 10px;
   padding: 10px 14px;
   font-size: 13px;
-  margin-bottom: 14px;
+  margin: 20px 28px 0;
   text-align: center;
   line-height: 1.4;
+  font-family: var(--lc-font-body, 'Inter', sans-serif);
 }
 .alert-box.is-error {
   background: #fdecea;
@@ -238,38 +253,40 @@
   color: #c0392b;
 }
 .alert-box.is-success {
-  background: #f0fff4;
-  border: 1px solid #7ed684;
-  color: #1e8449;
+  background: var(--lc-surface, #F3FBF3);
+  border: 1px solid var(--lc-green-400, #83E167);
+  color: var(--lc-green-900, #16562D);
 }
 
 /* --- Form --- */
 .modal-form {
   display: none;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+  padding: 24px 28px 28px;
+  font-family: var(--lc-font-body, 'Inter', sans-serif);
 }
 .modal-form.active { display: flex; }
 
 /* --- Form Groups --- */
 .form-group { position: relative; }
-.modal-form input {
+.modal-form input, .modal-form select {
   width: 100%;
-  padding: 12px 20px;
-  border: 1px solid #7ed684;
-  border-radius: 25px;
-  font-size: 14px;
-  font-family: 'Lato', sans-serif;
-  color: #333;
+  padding: 13px 16px;
+  border: 1.5px solid var(--lc-border, #D3EBD9);
+  border-radius: var(--lc-radius-md, 16px);
+  font-size: 14.5px;
+  font-family: var(--lc-font-body, 'Inter', sans-serif);
+  color: var(--lc-text-dark, #0C2F1B);
   outline: none;
-  transition: border 0.3s;
-  background-color: #fff;
+  transition: border-color .15s, background .15s;
+  background-color: var(--lc-surface, #F3FBF3);
   box-sizing: border-box;
 }
-.modal-form input::placeholder { color: #888; }
+.modal-form input::placeholder { color: var(--lc-text-muted, #4B5F52); }
 .modal-form input:focus {
-  border-color: #2ecc71;
-  box-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
+  border-color: var(--lc-green-500, #7CE071);
+  background: #fff;
 }
 .modal-form input.is-invalid { border-color: #e74c3c; }
 .field-error {
@@ -277,7 +294,7 @@
   color: #e74c3c;
   font-size: 11px;
   margin-top: 4px;
-  padding-left: 20px;
+  padding-left: 16px;
   min-height: 14px;
 }
 
@@ -289,7 +306,7 @@
   right: 14px;
   top: 50%;
   transform: translateY(-50%);
-  color: #2ecc71;
+  color: var(--lc-text-muted, #4B5F52);
 }
 .toggle-password { cursor: pointer; }
 
@@ -297,53 +314,59 @@
 .checkbox-terms {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 9px;
   font-size: 12px;
-  color: #333;
+  color: var(--lc-text-muted, #4B5F52);
   cursor: pointer;
   user-select: none;
-  line-height: 1.4;
+  line-height: 1.45;
+  margin-top: 4px;
 }
 .checkbox-terms input[type="checkbox"] {
-  accent-color: #1fc859;
+  accent-color: var(--lc-green-600, #2FBE63);
   width: 16px;
   height: 16px;
   cursor: pointer;
-  margin-top: 2px;
+  margin-top: 1px;
   flex-shrink: 0;
 }
-.checkbox-terms a { color: #333; text-decoration: none; font-weight: 500; }
+.checkbox-terms a { color: var(--lc-text-dark, #0C2F1B); text-decoration: none; font-weight: 600; }
 .checkbox-terms a:hover { text-decoration: underline; }
 
 /* --- Buttons --- */
 .modal-btn-submit {
   width: 100%;
-  background: #2ecc71;
-  color: #ffffff;
-  padding: 14px 20px;
+  background: var(--lc-gradient-brand, linear-gradient(135deg, #83E167, #6BE193));
+  color: var(--lc-text-dark, #0C2F1B);
+  padding: 15px 20px;
   border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: bold;
+  border-radius: var(--lc-radius-md, 16px);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--lc-font-body, 'Inter', sans-serif);
   cursor: pointer;
-  margin-top: 8px;
-  transition: background 0.3s;
+  margin-top: 6px;
+  transition: transform .15s, box-shadow .15s;
+  box-shadow: 0 6px 16px rgba(131, 225, 103, 0.35);
 }
-.modal-btn-submit:hover { background: #27ae60; }
+.modal-btn-submit:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(131, 225, 103, 0.45); }
 .modal-btn-submit:disabled {
-  background: #a8dab3;
+  background: var(--lc-border, #D3EBD9);
+  color: var(--lc-text-muted, #4B5F52);
+  box-shadow: none;
   cursor: not-allowed;
+  transform: none;
 }
 
 /* --- Links de troca de painel --- */
 .auth-switch-link {
   text-align: center;
   font-size: 13px;
-  color: #555;
-  margin-top: 6px;
+  color: var(--lc-text-muted, #4B5F52);
+  margin-top: 8px;
 }
 .auth-switch-link a {
-  color: #2ecc71;
+  color: var(--lc-green-700, #368C52);
   font-weight: 700;
   text-decoration: none;
 }
@@ -351,7 +374,7 @@
 
 .auth-panel-intro {
   font-size: 13px;
-  color: #666;
+  color: var(--lc-text-muted, #4B5F52);
   text-align: center;
   line-height: 1.5;
   margin-bottom: 4px;
@@ -359,8 +382,9 @@
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .modal-box { padding: 25px 20px; }
-  .modal-title { font-size: 20px; }
+  #modalHeader { padding: 28px 22px 36px; }
+  .modal-form { padding: 22px 22px 24px; }
+  .modal-title { font-size: 19px; }
 }
 </style>
 
