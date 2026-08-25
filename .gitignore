@@ -9,6 +9,7 @@ libs/
 config/db-config.php
 config/aws-config.php
 config/parceiros-config.php
+config/anthropic-config.php
 .env
 .env.*
 !.env.example
