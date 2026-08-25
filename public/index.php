@@ -72,15 +72,16 @@ $produtos_ativos = get_products_ordered();
     body.no-scroll { overflow: hidden; }
     
     /* Top Warning Bar - fixa no topo, sempre visível */
-    .top-bar { background-color: #19a44a; padding: 0; height: 32px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; color: #ffffff; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001; }
+    .top-bar { background: var(--lc-gradient-dark, linear-gradient(160deg, #123A22, #081A0F)); padding: 0; height: 32px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; color: var(--lc-off-white, #EAFBEF); position: fixed; top: 0; left: 0; width: 100%; z-index: 1001; }
 
     /* Header */
-    .header { background-color: var(--primary-green); padding: 10px 0; position: sticky; top: 32px; z-index: 1000; }
+    .header { background: var(--lc-white, #fff); padding: 14px 0; position: sticky; top: 32px; z-index: 1000; box-shadow: 0 1px 0 var(--lc-border, #D3EBD9); }
     .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-    .logo img { height: 35px; }
-    .nav-menu { display: flex; list-style: none; gap: 20px; }
-    .nav-menu a { color: var(--white); text-decoration: none; font-size: 14px; font-weight: 600; }
-    .hamburger { display: none; cursor: pointer; color: white; font-size: 24px; }
+    .logo img { height: 32px; }
+    .nav-menu { display: flex; list-style: none; gap: 4px; }
+    .nav-menu a { color: var(--lc-text-muted, #4B5F52); text-decoration: none; font-size: 14px; font-weight: 600; font-family: var(--lc-font-body, 'Inter', sans-serif); padding: 8px 14px; border-radius: var(--lc-radius-full, 999px); transition: all .2s; }
+    .nav-menu a:hover { background: var(--lc-surface, #F3FBF3); color: var(--lc-green-900, #16562D); }
+    .hamburger { display: none; cursor: pointer; color: var(--lc-text-dark, #0C2F1B); font-size: 24px; }
 
     /* Banner Slider Ajustado */
     .banner-slider-container { max-width: 684px; margin: 30px auto 20px auto; padding: 0 10px; position: relative; }
@@ -119,42 +120,50 @@ $produtos_ativos = get_products_ordered();
         animation: slideInLeft 0.8s ease-out;
     }
     
-    .hero-text h1 { 
-        font-size: 46px; 
-        line-height: 1.1; 
-        margin-bottom: 20px; 
-        font-family: 'Raleway', sans-serif; 
-        text-align: left; 
-        text-shadow: 0 2px 15px rgba(255, 255, 255, 0.9); 
+    .hero-text h1 {
+        font-size: 48px;
+        line-height: 1.08;
+        margin-bottom: 20px;
+        font-family: var(--lc-font-display, 'Space Grotesk', sans-serif);
+        font-weight: 600;
+        text-align: left;
+        letter-spacing: -0.01em;
+    }
+
+    .hero-text h1 span {
+        background: var(--lc-gradient-brand, linear-gradient(135deg, #83E167, #6BE193));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: var(--lc-green-600, #2FBE63);
     }
     
-    .hero-text h1 span { 
-        color: var(--primary-green); 
+    .hero-text p {
+        font-size: 18px;
+        font-family: var(--lc-font-body, 'Inter', sans-serif);
+        color: var(--lc-text-muted, #4B5F52);
+        margin-bottom: 30px;
+        text-align: left;
+        max-width: 90%;
+        line-height: 1.5;
     }
     
-    .hero-text p { 
-        font-size: 19px; 
-        color: var(--text-light); 
-        margin-bottom: 30px; 
-        text-align: left; 
-        max-width: 90%; 
-        text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8); 
-    }
-    
-    .btn-discover { 
-        background-color: var(--primary-green); 
-        color: white; 
-        padding: 15px 40px; 
-        border-radius: 30px; 
-        text-decoration: none; 
-        font-weight: bold; 
-        display: inline-block; 
-        transition: all 0.3s ease; 
-        cursor: pointer; 
-        border: none; 
-        position: relative; 
+    .btn-discover {
+        background: var(--lc-gradient-brand, linear-gradient(135deg, #83E167, #6BE193));
+        color: var(--lc-text-dark, #0C2F1B);
+        padding: 16px 42px;
+        border-radius: var(--lc-radius-full, 999px);
+        text-decoration: none;
+        font-weight: 700;
+        font-family: var(--lc-font-body, 'Inter', sans-serif);
+        font-size: 15.5px;
+        display: inline-block;
+        transition: transform .15s, box-shadow .15s;
+        cursor: pointer;
+        border: none;
+        position: relative;
         z-index: 3;
-        box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        box-shadow: 0 8px 22px rgba(131, 225, 103, 0.4);
     }
     /* Selo de Confiança no Hero (HTML/CSS — antes era uma imagem JPG que borrava em telas Retina) */
 .hero-trust-badges {
@@ -212,15 +221,14 @@ $produtos_ativos = get_products_ordered();
     .hero-trust-badge-item .label-text { font-size: 12px; }
     .hero-trust-badge-item .icon-circle { width: 34px; height: 34px; min-width: 34px; }
 }
-    .btn-discover:hover { 
-        background-color: var(--dark-green);
+    .btn-discover:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+        box-shadow: 0 12px 28px rgba(131, 225, 103, 0.5);
     }
-    
-    /* Container da imagem otimizado para homem.jpg */
-    .hero-img { 
-        width: 50%; 
+
+    /* Container da ilustração (SVG, não recorta como foto) */
+    .hero-img {
+        width: 48%;
         flex-shrink: 0;
         display: flex;
         align-items: center;
@@ -228,18 +236,13 @@ $produtos_ativos = get_products_ordered();
         position: relative;
         z-index: 1;
         animation: slideInRight 0.8s ease-out;
-        overflow: hidden;
-        border-radius: 12px;
     }
-    
-    .hero-img img { 
-        width: 100%; 
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+
+    .hero-img img {
+        width: 100%;
+        max-width: 460px;
+        height: auto;
         display: block;
-        border-radius: 12px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     }
 
     /* Animações */
@@ -616,7 +619,7 @@ $produtos_ativos = get_products_ordered();
     </div>
   </div>
   <div class="hero-img">
-    <img src="images/homem.jpg" alt="Homem sorrindo com smartphone - Simule seu empréstimo">
+    <img src="images/hero-mulher.svg" alt="Mulher sorrindo com aprovação confirmada no celular - Simule seu empréstimo">
   </div>
 </section>
 

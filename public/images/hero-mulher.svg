@@ -1,0 +1,104 @@
+<svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#B8F2A0" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#B8F2A0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16562D"/>
+      <stop offset="100%" stop-color="#0C2F1B"/>
+    </linearGradient>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#83E167"/>
+      <stop offset="100%" stop-color="#6BE193"/>
+    </linearGradient>
+    <linearGradient id="skinShade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F2C9A0"/>
+      <stop offset="100%" stop-color="#E8B888"/>
+    </linearGradient>
+    <linearGradient id="billGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8CE64E"/>
+      <stop offset="100%" stop-color="#3DDC91"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="320" cy="300" r="260" fill="url(#glow)"/>
+
+  <!-- floating cash — atrás -->
+  <g opacity="0.95">
+    <rect x="60" y="120" width="86" height="52" rx="8" fill="url(#billGrad)" transform="rotate(-18 103 146)"/>
+    <circle cx="103" cy="146" r="14" fill="#16562D" opacity="0.35" transform="rotate(-18 103 146)"/>
+    <rect x="500" y="90" width="78" height="48" rx="8" fill="url(#billGrad)" transform="rotate(14 539 114)"/>
+    <circle cx="539" cy="114" r="13" fill="#16562D" opacity="0.35" transform="rotate(14 539 114)"/>
+    <rect x="70" y="420" width="70" height="44" rx="8" fill="url(#billGrad)" transform="rotate(20 105 442)"/>
+    <rect x="520" y="400" width="90" height="54" rx="9" fill="url(#billGrad)" transform="rotate(-12 565 427)"/>
+    <circle cx="565" cy="427" r="14" fill="#16562D" opacity="0.35" transform="rotate(-12 565 427)"/>
+  </g>
+
+  <!-- corpo / blazer -->
+  <path d="M180 640 C180 520 220 460 320 460 C420 460 460 520 460 640 Z" fill="#0C2F1B"/>
+  <path d="M180 640 C180 520 220 460 320 460 L320 640 Z" fill="#123A22"/>
+  <path d="M255 470 L320 520 L245 505 Z" fill="#EAFBEF"/>
+  <path d="M385 470 L320 520 L395 505 Z" fill="#EAFBEF"/>
+
+  <!-- pescoço -->
+  <rect x="292" y="405" width="56" height="70" rx="20" fill="url(#skinShade)"/>
+
+  <!-- cabelo (trás) -->
+  <path d="M320 165 C230 165 200 250 210 330 C216 380 240 410 260 420 L260 350 C240 320 240 260 270 230 C300 200 340 200 370 230 C400 260 400 320 380 350 L380 420 C400 410 424 380 430 330 C440 250 410 165 320 165 Z" fill="url(#hairGrad)"/>
+
+  <!-- rosto -->
+  <ellipse cx="320" cy="300" rx="78" ry="92" fill="url(#skinShade)"/>
+
+  <!-- orelha -->
+  <ellipse cx="242" cy="305" rx="10" ry="16" fill="#E8B888"/>
+  <ellipse cx="398" cy="305" rx="10" ry="16" fill="#E8B888"/>
+  <!-- brinco -->
+  <circle cx="242" cy="322" r="4" fill="#83E167"/>
+  <circle cx="398" cy="322" r="4" fill="#83E167"/>
+
+  <!-- cabelo (franja/topo) -->
+  <path d="M320 195 C255 195 232 245 236 290 C255 265 285 250 320 250 C355 250 385 265 404 290 C408 245 385 195 320 195 Z" fill="url(#hairGrad)"/>
+  <path d="M236 288 C232 300 234 316 244 326 C242 305 248 296 256 292 Z" fill="url(#hairGrad)"/>
+  <path d="M404 288 C408 300 406 316 396 326 C398 305 392 296 384 292 Z" fill="url(#hairGrad)"/>
+
+  <!-- sobrancelhas -->
+  <path d="M270 278 Q286 268 302 278" stroke="#4A2E1A" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M338 278 Q354 268 370 278" stroke="#4A2E1A" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- olhos (fechados, sorrindo) -->
+  <path d="M274 300 Q286 308 298 300" stroke="#4A2E1A" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M342 300 Q354 308 366 300" stroke="#4A2E1A" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- bochechas -->
+  <circle cx="270" cy="325" r="14" fill="#E8887A" opacity="0.35"/>
+  <circle cx="370" cy="325" r="14" fill="#E8887A" opacity="0.35"/>
+
+  <!-- nariz -->
+  <path d="M318 305 Q314 322 320 328 Q326 330 330 326" stroke="#D9A876" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- sorriso -->
+  <path d="M288 342 Q320 368 352 342" stroke="#7A3A2A" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M296 346 Q320 360 344 346" fill="#FFFFFF"/>
+
+  <!-- blazer gola / lapela -->
+  <path d="M255 470 C270 500 290 515 320 518 C350 515 370 500 385 470 L392 520 C360 545 280 545 248 520 Z" fill="#16562D"/>
+
+  <!-- celular na mão -->
+  <g transform="translate(392 400) rotate(8)">
+    <rect x="0" y="0" width="66" height="118" rx="14" fill="#0C2F1B"/>
+    <rect x="6" y="10" width="54" height="98" rx="6" fill="url(#topGrad)"/>
+    <rect x="18" y="30" width="30" height="8" rx="4" fill="#0C2F1B" opacity="0.55"/>
+    <rect x="18" y="46" width="30" height="8" rx="4" fill="#0C2F1B" opacity="0.35"/>
+    <circle cx="33" cy="78" r="12" fill="#0C2F1B" opacity="0.75"/>
+    <path d="M27 78 l4 5 l9 -11" stroke="#EAFBEF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M370 470 C385 460 405 450 420 448 C430 447 440 452 440 462 C440 472 428 478 415 480 C400 483 385 480 372 490 Z" fill="url(#skinShade)"/>
+
+  <!-- selo verificado flutuante -->
+  <g transform="translate(150 380)">
+    <circle cx="0" cy="0" r="26" fill="#FFFFFF"/>
+    <circle cx="0" cy="0" r="26" fill="none" stroke="#83E167" stroke-width="3"/>
+    <path d="M-10 0 l7 8 l15 -17" stroke="#16562D" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
