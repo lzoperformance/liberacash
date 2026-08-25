@@ -15,7 +15,7 @@ $posts = $stmt->fetchAll();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Posts | Admin Blog - Crédito.vc</title>
+<title>Posts | Admin Blog - LiberaCash</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
@@ -62,7 +62,7 @@ $posts = $stmt->fetchAll();
 <body>
 
 <div class="topbar">
-    <div class="brand">Admin <span>Blog</span> · Crédito.vc</div>
+    <div class="brand">Admin <span>Blog</span> · LiberaCash</div>
     <div>
         <span>Olá, <?php echo htmlspecialchars($_SESSION['admin_username'], ENT_QUOTES, 'UTF-8'); ?></span>
         <a href="/blog/" target="_blank">Ver blog <i class="fas fa-external-link-alt"></i></a>

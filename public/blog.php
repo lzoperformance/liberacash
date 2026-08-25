@@ -1,7 +1,7 @@
 <?php
 /**
- * Blog Credito.vc - blog.php
- * Modelo de blog integrado com o design do site credito.vc
+ * Blog LiberaCash - blog.php
+ * Modelo de blog integrado com o design do site libera.cash
  * Suporta listagem, post individual, filtro por categoria,
  * SEO/Open Graph, botões de compartilhamento e posts relacionados.
  * Header e banner sincronizados com home.php.
@@ -26,7 +26,7 @@ if ($slug !== null) {
             'titulo'    => $row['titulo'],
             'categoria' => $row['categoria'],
             'data'      => date('d/m/Y', strtotime($row['created_at'])),
-            'autor'     => $row['autor'] ?: 'Redação Crédito.vc',
+            'autor'     => $row['autor'] ?: 'Redação LiberaCash',
             'resumo'    => $row['resumo'],
             'conteudo'  => $row['conteudo'],
             'imagem'    => $row['imagem_capa'],
@@ -50,7 +50,7 @@ foreach ($rows as $row) {
         'titulo'    => $row['titulo'],
         'categoria' => $row['categoria'],
         'data'      => date('d/m/Y', strtotime($row['created_at'])),
-        'autor'     => $row['autor'] ?: 'Redação Crédito.vc',
+        'autor'     => $row['autor'] ?: 'Redação LiberaCash',
         'resumo'    => $row['resumo'],
         'conteudo'  => $row['conteudo'],
         'imagem'    => $row['imagem_capa'],
@@ -73,7 +73,7 @@ if ($categoria_filtro) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $current_post ? "Credito.vc - " . htmlspecialchars($current_post["titulo"], ENT_QUOTES, 'UTF-8') : "Credito.vc - Blog | Dicas Financeiras"; ?></title>
+    <title><?php echo $current_post ? "LiberaCash - " . htmlspecialchars($current_post["titulo"], ENT_QUOTES, 'UTF-8') : "LiberaCash - Blog | Dicas Financeiras"; ?></title>
 
     <!-- SEO / Open Graph -->
     <?php if ($current_post): ?>
@@ -85,8 +85,8 @@ if ($categoria_filtro) {
         <meta property="og:url" content="https://libera.cash/blog/<?php echo urlencode($current_post["slug"]); ?>/">
         <meta name="twitter:card" content="summary_large_image">
     <?php else: ?>
-        <meta name="description" content="Blog Credito.vc — Dicas de saúde financeira, cartões de crédito, empréstimos e organização do seu dinheiro.">
-        <meta property="og:title" content="Blog Credito.vc">
+        <meta name="description" content="Blog LiberaCash — Dicas de saúde financeira, cartões de crédito, empréstimos e organização do seu dinheiro.">
+        <meta property="og:title" content="Blog LiberaCash">
         <meta property="og:description" content="Dicas para sua saúde financeira, cartões e empréstimos.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://libera.cash/blog/">
@@ -101,7 +101,7 @@ if ($categoria_filtro) {
         // Converte data DD/MM/AAAA para ISO 8601 com fuso horário de Brasília
         $partes_data = explode('/', $current_post['data']);
         $data_iso = isset($partes_data[2]) ? $partes_data[2] . '-' . $partes_data[1] . '-' . $partes_data[0] . 'T00:00:00-03:00' : date('c');
-        $autor_post = isset($current_post['autor']) ? $current_post['autor'] : 'Redação Crédito.vc';
+        $autor_post = isset($current_post['autor']) ? $current_post['autor'] : 'Redação LiberaCash';
 
         $jsonld = [
             "@context" => "https://schema.org",
@@ -118,7 +118,7 @@ if ($categoria_filtro) {
             ],
             "publisher" => [
                 "@type" => "Organization",
-                "name" => "Crédito.vc",
+                "name" => "LiberaCash",
                 "logo" => [
                     "@type" => "ImageObject",
                     "url" => "images/logo.png"
@@ -755,14 +755,14 @@ if ($categoria_filtro) {
 
 <!-- ==== Top warning bar ==== -->
 <div class="top-bar">
-    Atenção! A Crédito.vc não cobra nenhum depósito antecipado para a liberação de empréstimo.
+    Atenção! A LiberaCash não cobra nenhum depósito antecipado para a liberação de empréstimo.
 </div>
 
 <!-- ==== Header ==== -->
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="LiberaCash"></a>
         </div>
         <ul class="nav-menu">
             <li><a href="/">Home</a></li>
@@ -813,7 +813,7 @@ if ($categoria_filtro) {
 
 <!-- ==== Descritivo do Blog (entre banner e filtros) ==== -->
 <div class="blog-intro">
-    <strong>Blog Crédito.vc</strong>
+    <strong>Blog LiberaCash</strong>
     <span>Dicas para sua saúde financeira, cartões e empréstimos.</span>
 </div>
 
@@ -824,7 +824,7 @@ if ($categoria_filtro) {
     <img class="single-post-image" src="<?php echo htmlspecialchars($current_post['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($current_post['titulo'], ENT_QUOTES, 'UTF-8'); ?>">
     <span class="post-category"><?php echo htmlspecialchars($current_post['categoria'], ENT_QUOTES, 'UTF-8'); ?></span>
             <div class="post-meta">
-    <i class="far fa-user"></i> <?php echo htmlspecialchars(isset($current_post['autor']) ? $current_post['autor'] : 'Redação Crédito.vc', ENT_QUOTES, 'UTF-8'); ?>
+    <i class="far fa-user"></i> <?php echo htmlspecialchars(isset($current_post['autor']) ? $current_post['autor'] : 'Redação LiberaCash', ENT_QUOTES, 'UTF-8'); ?>
     &nbsp;·&nbsp;
     <i class="far fa-calendar-alt"></i> <?php echo htmlspecialchars($current_post['data'], ENT_QUOTES, 'UTF-8'); ?>
     &nbsp;·&nbsp;
@@ -935,17 +935,17 @@ if ($categoria_filtro) {
 <!-- ==== Footer (mesma estrutura da home) ==== -->
 <footer class="footer">
     <div class="footer-container">
-        <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
 
         <div class="footer-social">
-            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Crédito.vc"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Crédito.vc"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
         </div>
 
         <div class="footer-text">
             Ao acessar/utilizar este site, você aceita as condições dos <a href="/termos-e-condicoes/" target="_blank">Termos de uso</a> e <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.<br><br>
-            Credito.vc é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil. Preencha o formulário e receba contato de um parceiro.
+            LiberaCash é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil. Preencha o formulário e receba contato de um parceiro.
         </div>
 
         <details class="footer-details">
@@ -954,7 +954,7 @@ if ($categoria_filtro) {
         </details>
 
         <div class="footer-copyright">
-            &copy; <?php echo date('Y'); ?> Credito.vc. Todos os direitos reservados.
+            &copy; <?php echo date('Y'); ?> LiberaCash. Todos os direitos reservados.
         </div>
     </div>
 </footer>

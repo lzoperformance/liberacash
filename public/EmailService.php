@@ -58,7 +58,7 @@ class EmailService
     public function enviarPropostaPreAprovada(array $usuario, array $produto, ?float $valor = null): bool
     {
         $valorFmt = $valor ? 'R$ ' . number_format($valor, 2, ',', '.') : 'um valor especial';
-        $assunto = 'Você tem uma proposta pré-aprovada no Crédito.vc!';
+        $assunto = 'Você tem uma proposta pré-aprovada no LiberaCash!';
         $corpo = "
             <p>Olá, {$this->primeiroNome($usuario['nome'])}!</p>
             <p>Encontramos uma proposta pré-aprovada de <strong>{$produto['nome']}</strong>

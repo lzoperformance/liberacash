@@ -21,7 +21,7 @@ $posts = $stmt->fetchAll();
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Gerenciar Blog - Crédito.vc</title>
+    <title>Gerenciar Blog - LiberaCash</title>
     <style>
         body { font-family: system-ui, sans-serif; background: #f4f6f8; margin: 0; padding: 20px; }
         .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }

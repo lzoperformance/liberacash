@@ -1,6 +1,6 @@
 <?php
 /**
- * Página Contato - Credito.vc
+ * Página Contato - LiberaCash
  * Formulário de contato + informações de atendimento.
  * Segue o design do blog.php e sobre.php.
  */
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato | Crédito.vc</title>
+    <title>Contato | LiberaCash</title>
 
     <script type="application/ld+json">
     {
@@ -63,9 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     </script>
 
-    <meta name="description" content="Entre em contato com a Crédito.vc. Tire dúvidas, envie sugestões ou proponha parcerias.">
-    <meta property="og:title" content="Contato | Crédito.vc">
-    <meta property="og:description" content="Entre em contato com a Crédito.vc. Tire dúvidas, envie sugestões ou proponha parcerias.">
+    <meta name="description" content="Entre em contato com a LiberaCash. Tire dúvidas, envie sugestões ou proponha parcerias.">
+    <meta property="og:title" content="Contato | LiberaCash">
+    <meta property="og:description" content="Entre em contato com a LiberaCash. Tire dúvidas, envie sugestões ou proponha parcerias.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://libera.cash/contato/">
 
@@ -180,13 +180,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
 <div class="top-bar">
-    Atenção! A Crédito.vc não cobra nenhum depósito antecipado para a liberação de empréstimo.
+    Atenção! A LiberaCash não cobra nenhum depósito antecipado para a liberação de empréstimo.
 </div>
 
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="LiberaCash"></a>
         </div>
         <ul class="nav-menu">
             <li><a href="/">Home</a></li>
@@ -206,7 +206,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </nav>
 
 <section class="hero">
-    <h1>Fale com a Crédito.vc</h1>
+    <h1>Fale com a LiberaCash</h1>
     <p>Tem dúvidas, sugestões ou quer se tornar nosso parceiro? Preencha o formulário ou use um dos canais abaixo — respondemos em até 2 dias úteis.</p>
 </section>
 
@@ -309,18 +309,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <footer class="footer">
     <div class="footer-container">
-        <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
         <div class="footer-social">
-            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Crédito.vc"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Crédito.vc"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <div class="footer-text">
             Ao acessar/utilizar este site, você aceita as condições dos <a href="/termos-e-condicoes/"  target="_blank">Termos de uso</a> e <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.<br><br>
-            Credito.vc é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil. Preencha o formulário e receba contato de um parceiro.
+            LiberaCash é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil. Preencha o formulário e receba contato de um parceiro.
         </div>
         <div class="footer-copyright">
-            &copy; <?php echo date('Y'); ?> Credito.vc. Todos os direitos reservados.
+            &copy; <?php echo date('Y'); ?> LiberaCash. Todos os direitos reservados.
         </div>
     </div>
 </footer>

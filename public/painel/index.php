@@ -1,7 +1,7 @@
 <?php
 /**
  * painel/index.php
- * Dashboard da área logada — Crédito.vc
+ * Dashboard da área logada — LiberaCash
  */
 
 declare(strict_types=1);
@@ -104,7 +104,7 @@ $abaAtiva = 'ofertas';
         <?php foreach ($propostasPreAprovadas as $proposta):
           $prodInfo = get_product_by_slug($proposta['produto_slug']); ?>
           <div class="proposta-card">
-            <div class="proposta-card__parceiro"><?php echo htmlspecialchars($proposta['parceiro'] ?: 'Parceiro Crédito.vc'); ?></div>
+            <div class="proposta-card__parceiro"><?php echo htmlspecialchars($proposta['parceiro'] ?: 'Parceiro LiberaCash'); ?></div>
             <div class="proposta-card__valor">
               R$ <?php echo number_format((float)($proposta['valor_solicitado'] ?? 0), 2, ',', '.'); ?>
             </div>

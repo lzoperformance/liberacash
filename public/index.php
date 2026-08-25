@@ -478,7 +478,7 @@ $produtos_ativos = get_products_ordered();
   {
     "@context": "https://schema.org",
     "@type": "FinancialService",
-    "name": "Crédito.vc",
+    "name": "LiberaCash",
     "url": "https://libera.cash",
     "logo": "images/logo.png",
     "description": "Plataforma de comparação de empréstimo pessoal online. Conectamos você às melhores opções de crédito do mercado.",
@@ -503,7 +503,7 @@ $produtos_ativos = get_products_ordered();
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Como funciona a Credito.vc?",
+        "name": "Como funciona a LiberaCash?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Nós conectamos você às melhores empresas de crédito do mercado. Você preenche um rápido formulário com o seu perfil e nós encontramos as instituições financeiras com as maiores chances de aprovação e as melhores taxas para o seu caso."
@@ -554,7 +554,7 @@ $produtos_ativos = get_products_ordered();
 
   <header class="header">
     <div class="header-container">
-      <div class="logo"><img src="images/logo.png" alt="Crédito.vc"></div>
+      <div class="logo"><img src="images/logo.png" alt="LiberaCash"></div>
       <nav class="nav-menu">
             <li><a href="/">Crédito Pessoal</a></li>
             <li><a href="/cartoes/">Cartão de Crédito</a></li>
@@ -678,7 +678,7 @@ $produtos_ativos = get_products_ordered();
         <div class="box-item">
           <img src="images/money-bag-creditovc.png" class="box-icon-img" alt="Parcelas">
           <h4>Pode ser autônomo e negativado!</h4>
-          <p>A Crédito.vc entende a sua realidade.<br>Temos parceiros com soluções de crédito sob medida, mesmo se você estiver com o nome sujo.</p>
+          <p>A LiberaCash entende a sua realidade.<br>Temos parceiros com soluções de crédito sob medida, mesmo se você estiver com o nome sujo.</p>
         </div>
       </div>
     </div>
@@ -733,12 +733,12 @@ $produtos_ativos = get_products_ordered();
 
   <footer class="footer">
     <div class="footer-container">
-      <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+      <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
 
        <div class="footer-social">
-            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Crédito.vc"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Crédito.vc"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
         </div>
       
       <label class="footer-policy-box" id="policyLabel">

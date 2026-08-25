@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login | Admin Blog - Crédito.vc</title>
+<title>Login | Admin Blog - LiberaCash</title>
 <meta name="robots" content="noindex, nofollow">
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="login-box">
         <h1>Admin Blog</h1>
-        <p class="sub">Crédito.vc — painel de gerenciamento do blog</p>
+        <p class="sub">LiberaCash — painel de gerenciamento do blog</p>
 
         <?php if ($erro): ?>
             <div class="erro"><?php echo htmlspecialchars($erro, ENT_QUOTES, 'UTF-8'); ?></div>

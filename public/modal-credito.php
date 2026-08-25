@@ -1,6 +1,6 @@
 <?php
 /**
- * Modal de Autenticação - Crédito.vc
+ * Modal de Autenticação - LiberaCash
  * 3 telas: Cadastro Rápido (default) | Login | Esqueci minha senha
  * Include reutilizável antes do </body> em qualquer página.
  */

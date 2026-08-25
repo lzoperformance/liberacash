@@ -4,7 +4,7 @@ require_once __DIR__ . '/auth.php'; // já deixa $pdo pronto
 $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
 $post = [
     'id' => null, 'slug' => '', 'titulo' => '', 'subtitulo' => '', 'conteudo' => '',
-    'resumo' => '', 'imagem_capa' => '', 'categoria' => '', 'autor' => 'Redação Crédito.vc',
+    'resumo' => '', 'imagem_capa' => '', 'categoria' => '', 'autor' => 'Redação LiberaCash',
     'status' => 'publicado', 'meta_title' => '', 'meta_description' => '',
 ];
 
@@ -27,7 +27,7 @@ $categorias = $pdo->query("SELECT DISTINCT categoria FROM blog_posts ORDER BY ca
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?php echo $id ? 'Editar Post' : 'Novo Post'; ?> | Admin Blog - Crédito.vc</title>
+<title><?php echo $id ? 'Editar Post' : 'Novo Post'; ?> | Admin Blog - LiberaCash</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
@@ -72,7 +72,7 @@ $categorias = $pdo->query("SELECT DISTINCT categoria FROM blog_posts ORDER BY ca
 <body>
 
 <div class="topbar">
-    <div class="brand">Admin <span>Blog</span> · Crédito.vc</div>
+    <div class="brand">Admin <span>Blog</span> · LiberaCash</div>
     <div>
         <a href="/admin_blog/index.php">&larr; Voltar</a>
         <a href="/admin_blog/logout.php">Sair <i class="fas fa-sign-out-alt"></i></a>
@@ -114,7 +114,7 @@ $categorias = $pdo->query("SELECT DISTINCT categoria FROM blog_posts ORDER BY ca
             </div>
             <div class="form-group">
                 <label for="autor">Autor</label>
-                <input type="text" id="autor" name="autor" value="<?php echo htmlspecialchars($post['autor'] ?: 'Redação Crédito.vc', ENT_QUOTES, 'UTF-8'); ?>">
+                <input type="text" id="autor" name="autor" value="<?php echo htmlspecialchars($post['autor'] ?: 'Redação LiberaCash', ENT_QUOTES, 'UTF-8'); ?>">
             </div>
         </div>
 

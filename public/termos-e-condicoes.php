@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termos de Uso e Condições - Credito.vc</title>
+    <title>Termos de Uso e Condições - LiberaCash</title>
 
     <script type="application/ld+json">
     {
@@ -16,8 +16,8 @@
     }
     </script>
 
-    <meta name="description" content="Termos de uso e condições de navegação do site Credito.vc.">
-    <meta property="og:title" content="Termos e Condições - Credito.vc">
+    <meta name="description" content="Termos de uso e condições de navegação do site LiberaCash.">
+    <meta property="og:title" content="Termos e Condições - LiberaCash">
     <meta property="og:description" content="Termos de uso e condições de navegação da nossa plataforma.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://libera.cash/termos-e-condicoes/">
@@ -278,14 +278,14 @@
 
 <!-- ==== Top warning bar ==== -->
 <div class="top-bar">
-    Atenção! A Crédito.vc não cobra nenhum depósito antecipado para a liberação de empréstimo.
+    Atenção! A LiberaCash não cobra nenhum depósito antecipado para a liberação de empréstimo.
 </div>
 
 <!-- ==== Header ==== -->
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="LiberaCash"></a>
         </div>
         
         <ul class="nav-menu">
@@ -313,12 +313,12 @@
 <!-- ==== Conteúdo ==== -->
 <div class="container">
     <div class="termos-content">
-        <p><strong>TERMOS DE USO E CONDIÇÕES DE NAVEGAÇÃO – WWW.CREDITO.VC</strong></p>
-        <p>Bem-vindo ao www.credito.vc. Este site é de propriedade e operado pela LZO AGÊNCIA DE PUBLICIDADE LTDA, inscrita no CNPJ sob o nº 05.595.492/0001-05, com sede na Av. Paulista, 1636 - Conj 04 Sala 1504, Bela Vista, São Paulo/SP, CEP 01.310-200, doravante denominada simplesmente "LZO".</p>
+        <p><strong>TERMOS DE USO E CONDIÇÕES DE NAVEGAÇÃO – WWW.LIBERA.CASH</strong></p>
+        <p>Bem-vindo ao libera.cash. Este site é de propriedade e operado pela LZO AGÊNCIA DE PUBLICIDADE LTDA, inscrita no CNPJ sob o nº 05.595.492/0001-05, com sede na Av. Paulista, 1636 - Conj 04 Sala 1504, Bela Vista, São Paulo/SP, CEP 01.310-200, doravante denominada simplesmente "LZO".</p>
         <p>Ao acessar este site, simular propostas ou preencher nossos formulários, você (doravante denominado "Usuário") aceita e concorda integralmente com as condições destes Termos de Uso. Caso não concorde, solicitamos que não utilize nossa plataforma.</p>
 
         <h2>1. Natureza do Serviço (O que nós fazemos)</h2>
-        <p>A LZO, por meio do site www.credito.vc, atua como plataforma digital de captação de leads financeiros, originação de propostas e correspondente bancário (nos termos da Resolução CMN nº 4.935 do Banco Central do Brasil).</p>
+        <p>A LZO, por meio do site libera.cash, atua como plataforma digital de captação de leads financeiros, originação de propostas e correspondente bancário (nos termos da Resolução CMN nº 4.935 do Banco Central do Brasil).</p>
         <p><strong>Importante:</strong> A LZO NÃO é uma instituição financeira, não concede empréstimos, financiamentos ou cartões de crédito diretamente, e não cobra qualquer taxa ou depósito antecipado do Usuário para a aprovação ou liberação de crédito.</p>
         <p>Nossa função é aproximar o Usuário de potenciais credores, facilitando a busca pelas melhores ofertas do mercado.</p>
 
@@ -327,7 +327,7 @@
         <p>O Usuário assume total responsabilidade civil e criminal pela autenticidade dos dados fornecidos (como renda, CPF, restrições financeiras e dados de contato), estando ciente de que dados falsos ou fraudulentos serão reportados às autoridades competentes e resultarão no descarte imediato da proposta.</p>
 
         <h2>3. Envio de Dados para Parceiros e Bureaus de Crédito</h2>
-        <p>O Usuário está ciente e concorda que, ao enviar sua solicitação de crédito através do www.credito.vc:</p>
+        <p>O Usuário está ciente e concorda que, ao enviar sua solicitação de crédito através do libera.cash:</p>
         <ul>
             <li>Seus dados cadastrais, financeiros, profissionais e de perfil de crédito serão compartilhados com nossa ampla rede de Instituições Financeiras Parceiras, Bancos, Fintechs, Administradoras de Cartão e Correspondentes Bancários, para fins de análise de risco, viabilidade, simulação de taxas e eventual concessão de crédito.</li>
             <li>Seus dados serão enviados e consultados junto a Bureaus de Crédito, birôs de perfilamento e proteção ao crédito (incluindo Serasa Experian, Boa Vista SCPC, Quod, entre outros de mercado), bem como ao Sistema de Informações de Crédito (SCR) do Banco Central do Brasil, com a finalidade de prevenção à fraude, score comportamental e proteção do crédito.</li>
@@ -347,7 +347,7 @@
         <p>A LZO não se responsabiliza pelas condições contratuais, taxas de juros ou tarifas pactuadas entre o Usuário e a Instituição Financeira parceira escolhida, sendo tal relação jurídica inteiramente externa à nossa plataforma.</p>
 
         <h2>6. Propriedade Intelectual</h2>
-        <p>Todos os direitos de propriedade intelectual sobre o site www.credito.vc, incluindo marcas, logotipos, layouts, gráficos, textos e o sistema FormUp®, pertencem exclusivamente à LZO ou estão devidamente licenciados. É proibida a cópia, reprodução ou engenharia reversa sem autorização prévia por escrito.</p>
+        <p>Todos os direitos de propriedade intelectual sobre o site libera.cash, incluindo marcas, logotipos, layouts, gráficos, textos e o sistema FormUp®, pertencem exclusivamente à LZO ou estão devidamente licenciados. É proibida a cópia, reprodução ou engenharia reversa sem autorização prévia por escrito.</p>
 
         <h2>7. Modificações e Atualizações</h2>
         <p>A LZO reserva-se o direito de alterar estes Termos de Uso a qualquer momento, visando adequar-se a mudanças legislativas ou novas resoluções do Banco Central do Brasil. As alterações entrarão em vigor imediatamente após a publicação no site.</p>
@@ -362,17 +362,17 @@
 <!-- ==== Footer ==== -->
 <footer class="footer">
     <div class="footer-container">
-        <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
 
         <div class="footer-social">
-            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Crédito.vc"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Crédito.vc"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
         </div>
 
         <div class="footer-text">
             Ao acessar/utilizar este site, você aceita as condições dos <a href="/termos-e-condicoes/" target="_blank">Termos de uso</a> e <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.<br><br>
-            Credito.vc é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil. Preencha o formulário e receba contato de um parceiro.
+            LiberaCash é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil. Preencha o formulário e receba contato de um parceiro.
         </div>
 
         <details class="footer-details">
@@ -381,7 +381,7 @@
         </details>
 
         <div class="footer-copyright">
-            &copy; <?php echo date('Y'); ?> Credito.vc. Todos os direitos reservados.
+            &copy; <?php echo date('Y'); ?> LiberaCash. Todos os direitos reservados.
         </div>
     </div>
 </footer>

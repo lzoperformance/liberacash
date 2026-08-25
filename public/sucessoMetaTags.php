@@ -5,10 +5,10 @@
 <html data-wf-page="64bd66edba579d6ccefcd759" data-wf-site="64bd66edba579d6ccefcd756">
 <head>
   <meta charset="utf-8">
-  <title>Credito.vc - Sucesso</title>
+  <title>LiberaCash - Sucesso</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
-  <meta property="og:title" content="Credito.vc">
+  <meta property="og:title" content="LiberaCash">
   <meta property="og:description" content="Descubra quanto você tem disponível para receber e tenha o dinheiro na sua conta em até 24h.">
   <meta property="og:image" content="https://libera.cash/images/webclip.png">
   <meta property="og:url" content="https://libera.cash/">
@@ -127,7 +127,7 @@
     <div class="w-layout-blockcontainer container-4 w-container">
       <div id="w-node-_42e2ff2b-db53-2450-8166-3129fd79ba28-cefcd759" class="w-layout-layout wf-layout-layout">
         <div id="w-node-_3446969d-0118-4926-e634-8ecf967edaa3-cefcd759" class="w-layout-cell cell"><img src="images/ico-smile.png" loading="lazy" alt="" class="image-3">
-          <p class="paragraphcenter"><strong>Pode ser autônomo ou<br>até mesmo negativado!</strong><br><span class="text-span-2">A Crédito.vc entende a <br>sua realidade.</span></p>
+          <p class="paragraphcenter"><strong>Pode ser autônomo ou<br>até mesmo negativado!</strong><br><span class="text-span-2">A LiberaCash entende a <br>sua realidade.</span></p>
         </div>
 
         <div id="w-node-bc7ca7db-4843-1d7f-2c1d-4c14ebf3bf35-cefcd759" class="w-layout-cell cell-2"><img src="images/ico-celular.png" loading="lazy" alt="" class="image-4">
@@ -135,7 +135,7 @@
         </div>
 
         <div id="w-node-_4799c201-39b9-7102-3164-5a824e4cb1ad-cefcd759" class="w-layout-cell cell-3"><img src="images/ico-money.png" loading="lazy" alt="" class="image-5">
-          <p class="paragraphcenter"><strong class="bold-text">Pode ser autônomo ou<br>até mesmo negativado!</strong><br><span class="text-span-4">A Crédito.vc entende a <br>sua realidade.</span></p>
+          <p class="paragraphcenter"><strong class="bold-text">Pode ser autônomo ou<br>até mesmo negativado!</strong><br><span class="text-span-4">A LiberaCash entende a <br>sua realidade.</span></p>
         </div>
       </div>
     </div>

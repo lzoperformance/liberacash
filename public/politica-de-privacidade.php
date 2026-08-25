@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - Credito.vc</title>
+    <title>Política de Privacidade - LiberaCash</title>
 
     <script type="application/ld+json">
     {
@@ -16,9 +16,9 @@
     }
     </script>
 
-    <meta name="description" content="Política de Privacidade do site Credito.vc. Saiba como protegemos e utilizamos seus dados.">
-    <meta property="og:title" content="Política de Privacidade - Credito.vc">
-    <meta property="og:description" content="Transparência e segurança: veja como a Credito.vc trata seus dados pessoais em conformidade com a LGPD.">
+    <meta name="description" content="Política de Privacidade do site LiberaCash. Saiba como protegemos e utilizamos seus dados.">
+    <meta property="og:title" content="Política de Privacidade - LiberaCash">
+    <meta property="og:description" content="Transparência e segurança: veja como a LiberaCash trata seus dados pessoais em conformidade com a LGPD.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://libera.cash/politica-de-privacidade/">
 
@@ -314,14 +314,14 @@
 
 <!-- ==== Top warning bar ==== -->
 <div class="top-bar">
-    Atenção! A Crédito.vc não cobra nenhum depósito antecipado para a liberação de empréstimo.
+    Atenção! A LiberaCash não cobra nenhum depósito antecipado para a liberação de empréstimo.
 </div>
 
 <!-- ==== Header ==== -->
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="LiberaCash"></a>
         </div>
         
         <ul class="nav-menu">
@@ -349,20 +349,20 @@
 <!-- ==== Conteúdo ==== -->
 <div class="container">
     <div class="politica-content">
-        <p><strong>POLÍTICA DE PRIVACIDADE – WWW.CREDITO.VC</strong></p>
+        <p><strong>POLÍTICA DE PRIVACIDADE – WWW.LIBERA.CASH</strong></p>
         <p>
             <strong>LZO AGÊNCIA DE PUBLICIDADE LTDA</strong><br>
             CNPJ: 05.595.492/0001-05<br>
             Endereço: Av. Paulista, 1636 - Conj 04 Sala 1504, Bela Vista, São Paulo/SP, CEP 01.310-200<br>
             Conhecida comercialmente como "LZO Performance"
         </p>
-        <p>Para a LZO Performance, proprietária e operadora do site www.credito.vc, a privacidade e a proteção dos seus dados pessoais são fundamentais. A coleta e a utilização de suas informações ocorrem exclusivamente dentro do âmbito das disposições legais da Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD), do Marco Civil da Internet (Lei nº 12.965/2014) e das normas de Sigilo Bancário (Lei Complementar nº 105/2001).</p>
+        <p>Para a LZO Performance, proprietária e operadora do site libera.cash, a privacidade e a proteção dos seus dados pessoais são fundamentais. A coleta e a utilização de suas informações ocorrem exclusivamente dentro do âmbito das disposições legais da Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD), do Marco Civil da Internet (Lei nº 12.965/2014) e das normas de Sigilo Bancário (Lei Complementar nº 105/2001).</p>
         <p>Com esta Política de Privacidade, informamos de maneira transparente como processamos dados pessoais em nosso site, landing pages e formulários voltados à originação e intermediação de crédito.</p>
 
         <h2>Âmbito de Aplicação</h2>
         <p>Esta política aplica-se especificamente a:</p>
         <ul>
-            <li>Todas as páginas de internet, subdomínios e formulários operados na plataforma www.credito.vc;</li>
+            <li>Todas as páginas de internet, subdomínios e formulários operados na plataforma libera.cash;</li>
             <li>Campanhas de marketing e captação de propostas de crédito geridas pela LZO para este canal;</li>
             <li>Interações realizadas através de canais digitais como e-mail, SMS e aplicativos de mensagens (ex: WhatsApp) vinculados ao site.</li>
         </ul>
@@ -378,7 +378,7 @@
         </ul>
 
         <h2>Quem Somos e Nosso Papel no Tratamento de Dados</h2>
-        <p>A LZO Performance atua no site www.credito.vc primordialmente como Correspondente Bancário (nos termos da Resolução CMN nº 4.935 do Banco Central do Brasil) ou parceira de originação de leads financeiros:</p>
+        <p>A LZO Performance atua no site libera.cash primordialmente como Correspondente Bancário (nos termos da Resolução CMN nº 4.935 do Banco Central do Brasil) ou parceira de originação de leads financeiros:</p>
         <ul>
             <li><strong>LZO como CONTROLADORA:</strong> Somos responsáveis pelas decisões de tratamento quando você navega em nossa plataforma, simula propostas, aceita nossos termos ou entra em contato com nosso atendimento.</li>
             <li><strong>LZO como OPERADORA/CORRESPONDENTE:</strong> Ao coletar seus dados para propostas de financiamento, empréstimos ou cartões, nós os transmitimos para as Instituições Financeiras Parceiras (Bancos/Fintechs). Neste caso, a instituição financeira escolhida atuará como Controladora dos dados para fins de análise final e concessão do crédito, seguindo suas próprias políticas.</li>
@@ -477,7 +477,7 @@
         </ul>
 
         <h2>Decisões Automatizadas e Perfilamento (Score)</h2>
-        <p>Os processos de simulação do site www.credito.vc e de nossos parceiros financeiros utilizam processamento automatizado de dados para gerar scores e pré-aprovações de crédito baseados no seu perfil.</p>
+        <p>Os processos de simulação do site libera.cash e de nossos parceiros financeiros utilizam processamento automatizado de dados para gerar scores e pré-aprovações de crédito baseados no seu perfil.</p>
         <p>Conforme o Artigo 20 da LGPD, você tem o direito de solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado de seus dados que afetem seus interesses, bastando entrar em contato através do e-mail privacidade@lzo.com.br.</p>
 
         <h2>Retenção e Eliminação de Dados</h2>
@@ -489,7 +489,7 @@
         </ul>
 
         <h2>Segurança dos Dados</h2>
-        <p>A LZO Performance adota rigorosas medidas de segurança técnicas para o ambiente do www.credito.vc, incluindo:</p>
+        <p>A LZO Performance adota rigorosas medidas de segurança técnicas para o ambiente do libera.cash, incluindo:</p>
         <ul>
             <li>Uso do sistema proprietário FormUp®, com tráfego de dados criptografado (HTTPS/SSL);</li>
             <li>Protocolos rígidos de segurança de rede para impedir vazamento de dados sensíveis;</li>
@@ -512,7 +512,7 @@
         <p style="margin-top: 40px; font-style: italic;">Data da última atualização: 27/02/2026</p>
 
         <div class="box-destaque">
-            <p style="margin-bottom: 0;"><strong>CONSENTIMENTO E AUTORIZAÇÃO:</strong> Ao preencher os formulários no site www.credito.vc, você declara ciência inequívoca desta Política e autoriza expressamente a LZO Performance a consultar seus dados junto a bureaus de crédito e transmiti-los às instituições financeiras parceiras para fins de análise e oferta de crédito.</p>
+            <p style="margin-bottom: 0;"><strong>CONSENTIMENTO E AUTORIZAÇÃO:</strong> Ao preencher os formulários no site libera.cash, você declara ciência inequívoca desta Política e autoriza expressamente a LZO Performance a consultar seus dados junto a bureaus de crédito e transmiti-los às instituições financeiras parceiras para fins de análise e oferta de crédito.</p>
         </div>
     </div>
 </div>
@@ -520,17 +520,17 @@
 <!-- ==== Footer ==== -->
 <footer class="footer">
     <div class="footer-container">
-        <img src="images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+        <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
 
         <div class="footer-social">
-            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Crédito.vc"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Crédito.vc"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
         </div>
 
         <div class="footer-text">
             Ao acessar/utilizar este site, você aceita as condições dos <a href="/termos-e-condicoes/" target="_blank">Termos de uso</a> e <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.<br><br>
-            Credito.vc é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil. Preencha o formulário e receba contato de um parceiro.
+            LiberaCash é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil. Preencha o formulário e receba contato de um parceiro.
         </div>
 
         <details class="footer-details">
@@ -539,7 +539,7 @@
         </details>
 
         <div class="footer-copyright">
-            &copy; <?php echo date('Y'); ?> Credito.vc. Todos os direitos reservados.
+            &copy; <?php echo date('Y'); ?> LiberaCash. Todos os direitos reservados.
         </div>
     </div>
 </footer>

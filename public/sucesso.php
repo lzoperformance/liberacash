@@ -74,7 +74,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propostas de Emprestimo - Confira suas opcoes | Credito.vc</title>
+    <title>Propostas de Emprestimo - Confira suas opcoes | LiberaCash</title>
 
     <meta name="description" content="Confira as propostas de emprestimo pre-aprovadas para voce. Compare taxas, parcelas e escolha a melhor opcao.">
     <meta name="robots" content="noindex, nofollow">
@@ -595,7 +595,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
 <body>
 
 <div class="top-bar">
-    Atencao! A Credito.vc nao cobra nenhum deposito antecipado para a liberacao de emprestimo.
+    Atencao! A LiberaCash nao cobra nenhum deposito antecipado para a liberacao de emprestimo.
 </div>
 
 <header class="header">
@@ -751,18 +751,18 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
         <img src="images/logo-footer.png" class="footer-logo" alt="LiberaCash">
 
         <div class="footer-social">
-            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Credito.vc"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Credito.vc"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Credito.vc"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
         </div>
 
         <div class="footer-text">
             Ao acessar/utilizar este site, voce aceita as condicoes dos <a href="termos-e-condicoes.php" target="_blank">Termos de uso</a> e <a href="politica-de-privacidade.php" target="_blank">Politica de Privacidade</a>.<br><br>
-            Credito.vc e um site da LZO Agencia de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 - Bela Vista, Sao Paulo/SP. Nao somos uma instituicao financeira: oferecemos um servico 100% gratuito de comparacao de credito pessoal e empresarial, conectando voce as melhores condicoes entre nossos parceiros - principais Fintechs e Bancos do Brasil. Preencha o formulario e receba contato de um parceiro.
+            LiberaCash e um site da LZO Agencia de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 - Bela Vista, Sao Paulo/SP. Nao somos uma instituicao financeira: oferecemos um servico 100% gratuito de comparacao de credito pessoal e empresarial, conectando voce as melhores condicoes entre nossos parceiros - principais Fintechs e Bancos do Brasil. Preencha o formulario e receba contato de um parceiro.
         </div>
 
         <div class="footer-copyright">
-            &copy; <?php echo date('Y'); ?> Credito.vc. Todos os direitos reservados.
+            &copy; <?php echo date('Y'); ?> LiberaCash. Todos os direitos reservados.
         </div>
     </div>
 </footer>

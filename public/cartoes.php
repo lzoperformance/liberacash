@@ -8,10 +8,10 @@
 <html lang="pt-BR" data-wf-page="5ffe2095ae8e1eda5c07a7d4" data-wf-site="5ffe2095ae8e1ebf8707a7d3">
 <head>  
   <meta charset="utf-8">
-  <title>Credito.vc - Escolha seu Cartão</title>
+  <title>LiberaCash - Escolha seu Cartão</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
-  <meta property="og:title" content="Credito.vc - O Financeiro">
+  <meta property="og:title" content="LiberaCash - O Financeiro">
   <meta property="og:description" content="Escolha seu novo cartão! Conheça os benefícios de cada um e mude!">
   <meta property="og:image" content="https://www.financeiro.vc/images/webclip-financeiro.png">
   <meta property="og:url" content="https://libera.cash/">
@@ -50,7 +50,7 @@
 
   <style>
     /* ==========================================================================
-       ESTILOS GERAIS DA HOME (CREDITO.VC)
+       ESTILOS GERAIS DA HOME (LIBERACASH)
        ========================================================================== */
     :root {
       --primary-green: #2ecc71;
@@ -232,13 +232,13 @@
 <body class="body">
 
   <div class="top-bar">
-    Atenção! A Crédito.vc não cobra nenhum depósito antecipado para a liberação de empréstimo.
+    Atenção! A LiberaCash não cobra nenhum depósito antecipado para a liberação de empréstimo.
   </div>
 
   <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png" alt="Crédito.vc"></a>
+            <a href="/"><img src="images/logo.png" alt="LiberaCash"></a>
         </div>
         <ul class="nav-menu">
             <li><a href="/">Home</a></li>
@@ -464,12 +464,12 @@
 
   <footer class="footer">
     <div class="footer-container">
-      <img src="/images/logo-footer.png" class="footer-logo" alt="Crédito.vc">
+      <img src="/images/logo-footer.png" class="footer-logo" alt="LiberaCash">
 
       <div class="footer-social">
-        <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook Crédito.vc"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Crédito.vc"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Crédito.vc"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
       </div>
 
       <label class="footer-policy-box" id="policyLabel">
@@ -478,12 +478,12 @@
       </label>
 
       <div class="footer-text">
-        Credito.vc é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil.<br><br>
-        <strong>Importante:</strong> As condições dos cartões de crédito, incluindo limite aprovado, anuidade, taxas de juros, encargos, benefícios e demais características, variam conforme a instituição financeira emissora e a análise de crédito do solicitante. A aprovação está sujeita aos critérios exclusivos de cada instituição parceira. A Credito.vc não é uma instituição financeira e não concede crédito nem emite cartões. Nosso portal oferece um serviço gratuito de comparação e conexão entre usuários e instituições financeiras parceiras, facilitando a solicitação de cartões de crédito.
+        LiberaCash é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil.<br><br>
+        <strong>Importante:</strong> As condições dos cartões de crédito, incluindo limite aprovado, anuidade, taxas de juros, encargos, benefícios e demais características, variam conforme a instituição financeira emissora e a análise de crédito do solicitante. A aprovação está sujeita aos critérios exclusivos de cada instituição parceira. A LiberaCash não é uma instituição financeira e não concede crédito nem emite cartões. Nosso portal oferece um serviço gratuito de comparação e conexão entre usuários e instituições financeiras parceiras, facilitando a solicitação de cartões de crédito.
       </div>
 
       <div class="footer-copyright">
-        &copy; <?php echo date('Y'); ?> Credito.vc. Todos os direitos reservados.
+        &copy; <?php echo date('Y'); ?> LiberaCash. Todos os direitos reservados.
       </div>
     </div>
   </footer>
