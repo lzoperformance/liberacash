@@ -9,7 +9,7 @@
 <footer class="painel-footer">
   <div class="painel-footer__inner">
     <p class="painel-footer__disclaimer">
-      LiberaCash é um site de comparação e correspondente de instituições financeiras parceiras,
+      LiberaCash&reg; é um site de comparação e correspondente de instituições financeiras parceiras,
       não é uma instituição financeira e não realiza empréstimos diretamente. As condições de crédito
       (taxas, prazos e valores) são definidas exclusivamente pela instituição parceira responsável pela
       proposta, mediante análise de crédito. A aprovação está sujeita a análise cadastral.
@@ -20,7 +20,7 @@
       <a href="/contato.php">Contato</a>
       <a href="/sobre.php">Sobre</a>
     </nav>
-    <p class="painel-footer__copy">&copy; <?php echo date('Y'); ?> LiberaCash — Todos os direitos reservados.</p>
+    <p class="painel-footer__copy">&copy; <?php echo date('Y'); ?> LiberaCash&reg; — Todos os direitos reservados.</p>
   </div>
 </footer>
 

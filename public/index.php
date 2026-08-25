@@ -77,7 +77,7 @@ $produtos_ativos = get_products_ordered();
     /* Header */
     .header { background: var(--lc-white, #fff); padding: 14px 0; position: sticky; top: 32px; z-index: 1000; box-shadow: 0 1px 0 var(--lc-border, #D3EBD9); }
     .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-    .logo img { height: 32px; }
+    .logo img { height: 46px; }
     .nav-menu { display: flex; list-style: none; gap: 4px; }
     .nav-menu a { color: var(--lc-text-muted, #4B5F52); text-decoration: none; font-size: 14px; font-weight: 600; font-family: var(--lc-font-body, 'Inter', sans-serif); padding: 8px 14px; border-radius: var(--lc-radius-full, 999px); transition: all .2s; }
     .nav-menu a:hover { background: var(--lc-surface, #F3FBF3); color: var(--lc-green-900, #16562D); }
@@ -362,12 +362,13 @@ $produtos_ativos = get_products_ordered();
     /* Footer */
     .footer { padding: 50px 0; text-align: center; background-color: var(--white); border-top: 1px solid #eee; }
     .footer-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; align-items: center; }
-    .footer-logo { height: 38px; margin-bottom: 25px; }
+    .footer-logo { height: 52px; margin-bottom: 25px; }
     .footer-policy-box { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 25px; font-size: 13px; color: #333333; cursor: pointer; user-select: none; }
     .footer-policy-box input[type="checkbox"] { accent-color: #1fc859; width: 16px; height: 16px; cursor: pointer; }
     .footer-policy-box a { color: #333333; text-decoration: none; font-weight: 500; }
     .footer-policy-box a:hover { text-decoration: underline; }
-    .footer-text { font-size: 12px; color: #666; line-height: 1.6; }
+    .footer-text { font-size: 12px; color: var(--lc-text-muted, #666); line-height: 1.6; max-width: 720px; margin: 0 auto; text-align: center; }
+    .footer-copy { font-size: 11px; color: #999; margin-top: 16px; }
 
     /* ===== REDES SOCIAIS NO FOOTER ===== */
 .footer-social {
@@ -569,31 +570,6 @@ $produtos_ativos = get_products_ordered();
     </div>
   </header>
 
-  <div class="banner-slider-container">
-    <div class="banner-slider">
-      <div class="slider-wrapper">
-        <a href="#linkbanner#" class="slide">
-          <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo">
-        </a>
-        <a href="https://www.itau.com.br/cartoes/escolha/g/azul-visa-infinite?utm_source=lzo&utm_medium=affiliate&utm_campaign=gl-aff-cartoes-conversao-azul-infinite&cpg_s=sliceafl&utmgl=utm_camp-{campaign.id}" class="slide">
-          <img src="images/banner-itaul-infinity.png" alt="Empréstimo pessoal Juvo - Slide 2">
-        </a>
-        <a href="#linkbanner#" class="slide">
-          <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo - Slide 3">
-        </a>
-      </div>
-    </div>
-    <div class="slider-nav">
-      <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-      <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-    </div>
-    <div class="slider-dots">
-      <div class="dot active" data-index="0"></div>
-      <div class="dot" data-index="1"></div>
-      <div class="dot" data-index="2"></div>
-    </div>
-  </div>
-
   <!-- HERO SECTION CORRIGIDA - OTIMIZADA PARA HOMEM.JPG -->
   <section class="section-hero">
   <div class="hero-text">
@@ -639,6 +615,31 @@ $produtos_ativos = get_products_ordered();
     </div>
     <?php endforeach; ?>
   </section>
+
+  <div class="banner-slider-container">
+    <div class="banner-slider">
+      <div class="slider-wrapper">
+        <a href="#linkbanner#" class="slide">
+          <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo">
+        </a>
+        <a href="https://www.itau.com.br/cartoes/escolha/g/azul-visa-infinite?utm_source=lzo&utm_medium=affiliate&utm_campaign=gl-aff-cartoes-conversao-azul-infinite&cpg_s=sliceafl&utmgl=utm_camp-{campaign.id}" class="slide">
+          <img src="images/banner-itaul-infinity.png" alt="Empréstimo pessoal Juvo - Slide 2">
+        </a>
+        <a href="#linkbanner#" class="slide">
+          <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo - Slide 3">
+        </a>
+      </div>
+    </div>
+    <div class="slider-nav">
+      <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+      <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="slider-dots">
+      <div class="dot active" data-index="0"></div>
+      <div class="dot" data-index="1"></div>
+      <div class="dot" data-index="2"></div>
+    </div>
+  </div>
 
   <section class="section-comparison" id="form">
     <div class="comparison-container">
@@ -750,7 +751,9 @@ $produtos_ativos = get_products_ordered();
       </label>
 
       <div class="footer-text">
-Prazo de Pagamento: varia de acordo com a Instituição Financeira escolhida, podendo ser entre 6 e 120 meses. A variação da taxa de juros, de acordo com a Instituição Financeira escolhida, pode ser de 14,9% a.m. (423,96% a.a.) até 18,5% a.m. (668,75% a.a.), e o custo efetivo total (CET) pode variar de 15,57% a.m. (467,86% a.a.) até 27,29% a.m. (1709,88% a.a.). Exemplo: um empréstimo de R$ 750,00 em 6 meses com taxa de juros de 14,9% a.m. (423,96% a.a.) terá parcelas de R$ 198,39 (caso o CET seja igual à taxa de juros). Um modelo de aparelho celular compatível poderá ser necessário para a aprovação do crédito. A Libera Cash não é uma instituição financeira. O portal presta um serviço 100% gratuito e foi criado com o objetivo de ajudar usuários a encontrarem as melhores condições de crédito pessoal e empresarial, personalizadas de acordo com seu perfil. Temos parcerias com as principais Fintechs de Crédito e Bancos do Brasil. Preencha o nosso formulário para solicitar o seu empréstimo pessoal e receber o contato de um de nossos parceiros.      </div>
+LiberaCash&reg; é um site de comparação e correspondente de instituições financeiras parceiras, não é uma instituição financeira e não realiza empréstimos diretamente. As condições de crédito (taxas, prazos e valores) são definidas exclusivamente pela instituição parceira responsável pela proposta, mediante análise de crédito. A aprovação está sujeita a análise cadastral.
+      </div>
+      <p class="footer-copy">&copy; <?php echo date('Y'); ?> LiberaCash&reg; — Todos os direitos reservados.</p>
     </div>
   </footer>
 
