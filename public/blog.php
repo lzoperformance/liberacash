@@ -25,6 +25,55 @@ function lc_tempo_leitura(string $conteudoHtml): int
     return max(1, (int)ceil(str_word_count(strip_tags($conteudoHtml)) / 200));
 }
 
+/**
+ * Ícone de capa quando o post não tem imagem_capa. Casa por palavra-chave
+ * no título antes de cair no padrão da categoria — assim cada post tem um
+ * ícone que faz sentido pro assunto dele, não um genérico repetido.
+ */
+function lc_post_icone(string $titulo, string $categoria): string
+{
+    $t = (string)iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', mb_strtolower($titulo, 'UTF-8'));
+    $mapa = [
+        'score' => 'fa-gauge-high',
+        'consignado' => 'fa-file-signature',
+        'negativado' => 'fa-shield-heart',
+        'nome sujo' => 'fa-shield-heart',
+        'golpe' => 'fa-user-shield',
+        'autonomo' => 'fa-briefcase',
+        'cet,' => 'fa-calculator',
+        'cet, juros' => 'fa-calculator',
+        'juros e parcelas' => 'fa-calculator',
+        'online' => 'fa-mobile-screen-button',
+        'agencia' => 'fa-building-columns',
+        'banco' => 'fa-building-columns',
+        'analise de credito' => 'fa-magnifying-glass-chart',
+        'erro' => 'fa-triangle-exclamation',
+        'ipca' => 'fa-chart-line',
+        'inflac' => 'fa-chart-line',
+    ];
+    foreach ($mapa as $chave => $icone) {
+        if (strpos($t, $chave) !== false) return $icone;
+    }
+    $porCategoria = [
+        'Crédito' => 'fa-hand-holding-dollar',
+        'Finanças Pessoais' => 'fa-wallet',
+        'Educação Financeira' => 'fa-graduation-cap',
+        'Economia' => 'fa-chart-line',
+    ];
+    return $porCategoria[$categoria] ?? 'fa-newspaper';
+}
+
+function lc_post_gradiente(string $categoria): string
+{
+    $mapa = [
+        'Crédito' => 'grad-brand',
+        'Finanças Pessoais' => 'grad-dark',
+        'Educação Financeira' => 'grad-teal',
+        'Economia' => 'grad-forest',
+    ];
+    return $mapa[$categoria] ?? 'grad-brand';
+}
+
 // --- Post individual (via slug) ---
 $slug = isset($_GET["post"]) ? $_GET["post"] : null;
 $current_post = null;
@@ -93,6 +142,21 @@ if ($post_destaque) {
         return $p['slug'] !== $post_destaque['slug'];
     }));
 }
+
+// --- Seções por categoria (listagem sem filtro) — agrupa o que sobrou
+// depois do destaque, uma seção por categoria, com "Ver todos" pra quem
+// tiver mais de 4 posts.
+$secoes = [];
+if (!$categoria_filtro) {
+    foreach ($posts_grid as $p) {
+        $secoes[$p['categoria']][] = $p;
+    }
+}
+
+// --- "Direto da Redação" — recorte de posts reais em formato de citação,
+// só com dados verdadeiros (categoria + resumo do próprio post), nunca
+// nomes/cargos inventados.
+$destaques_redacao = array_slice($posts, 0, 4);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -268,14 +332,54 @@ if ($post_destaque) {
         .post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(12,47,27,.12); }
         .post-image-wrap { position: relative; height: 160px; background: var(--lc-surface); }
         .post-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .post-image-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--lc-gradient-brand); }
-        .post-image-fallback i { font-size: 28px; color: var(--lc-green-900); opacity: .5; }
+        .post-image-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+        .post-image-fallback i { font-size: 30px; }
+        .post-image-fallback.grad-brand { background: var(--lc-gradient-brand); }
+        .post-image-fallback.grad-brand i { color: var(--lc-green-900); opacity: .55; }
+        .post-image-fallback.grad-dark { background: var(--lc-gradient-dark); }
+        .post-image-fallback.grad-dark i { color: var(--lc-off-white); opacity: .5; }
+        .post-image-fallback.grad-teal { background: linear-gradient(135deg, var(--lc-green-300), var(--lc-green-700)); }
+        .post-image-fallback.grad-teal i { color: var(--lc-white); opacity: .55; }
+        .post-image-fallback.grad-forest { background: linear-gradient(135deg, var(--lc-green-700), var(--lc-bg-dark-800)); }
+        .post-image-fallback.grad-forest i { color: var(--lc-off-white); opacity: .5; }
+        .hero-post-image .post-image-fallback i { font-size: 64px; }
         .post-category { position: absolute; bottom: 10px; left: 10px; background: rgba(8,26,15,.75); color: var(--lc-off-white); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; padding: 5px 10px; border-radius: var(--lc-radius-full); }
         .post-content { padding: 18px 20px 20px 20px; flex-grow: 1; display: flex; flex-direction: column; }
         .post-title { font-family: var(--lc-font-display); font-size: 16px; font-weight: 700; line-height: 1.35; color: var(--lc-text-dark); margin-bottom: 8px; }
         .post-excerpt { color: var(--lc-text-muted); font-size: 13px; line-height: 1.6; margin-bottom: 16px; flex-grow: 1; }
         .post-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--lc-border); padding-top: 12px; font-size: 11px; color: var(--lc-gray-500); }
         .no-results { text-align: center; padding: 50px 20px; color: var(--lc-text-muted); grid-column: 1 / -1; background: var(--lc-surface); border-radius: var(--lc-radius-md); }
+
+        /* ==== Seções por categoria ==== */
+        .category-section { margin-bottom: 44px; }
+        .category-section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px; }
+        .category-section-header h3 { font-family: var(--lc-font-display); font-size: 18px; font-weight: 700; color: var(--lc-text-dark); }
+        .category-section-header a { font-size: 12.5px; font-weight: 700; color: var(--lc-green-700); text-decoration: none; white-space: nowrap; }
+        .category-section-header a:hover { text-decoration: underline; }
+
+        /* ==== Direto da Redação ==== */
+        .editorial-row { margin: 8px 0 50px 0; padding: 32px; background: var(--lc-surface); border-radius: var(--lc-radius-lg); border: 1px solid var(--lc-border); }
+        .editorial-row-eyebrow { font-family: var(--lc-font-display); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--lc-green-700); }
+        .editorial-row-header h3 { font-family: var(--lc-font-display); font-size: 20px; font-weight: 700; color: var(--lc-text-dark); margin-top: 4px; margin-bottom: 22px; }
+        .editorial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 22px; }
+        .editorial-card { display: block; text-decoration: none; color: inherit; }
+        .editorial-avatar { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+        .editorial-avatar i { font-size: 17px; }
+        .editorial-avatar.grad-brand i { color: var(--lc-green-900); }
+        .editorial-avatar.grad-dark i, .editorial-avatar.grad-teal i, .editorial-avatar.grad-forest i { color: var(--lc-off-white); }
+        .editorial-role { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--lc-green-700); margin-bottom: 8px; }
+        .editorial-quote { font-size: 13.5px; line-height: 1.55; color: var(--lc-text-dark); font-style: italic; }
+        .editorial-card:hover .editorial-quote { color: var(--lc-green-900); }
+
+        /* ==== CTA fixo discreto (sempre visível ao rolar) ==== */
+        .sticky-cta-bar { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999; background: var(--lc-gradient-dark); color: var(--lc-off-white); padding: 12px 20px; display: flex; align-items: center; justify-content: center; gap: 18px; box-shadow: 0 -4px 20px rgba(8,26,15,.25); transition: transform .3s ease; }
+        .sticky-cta-bar.hidden { transform: translateY(100%); }
+        .sticky-cta-text { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+        .sticky-cta-text i { color: var(--lc-green-400); }
+        .sticky-cta-btn { background: var(--lc-gradient-brand); color: var(--lc-text-dark); font-weight: 700; font-size: 12.5px; padding: 9px 20px; border-radius: var(--lc-radius-full); border: none; cursor: pointer; white-space: nowrap; }
+        .sticky-cta-close { background: none; border: none; color: var(--lc-off-white); opacity: .6; cursor: pointer; font-size: 14px; padding: 4px; }
+        .sticky-cta-close:hover { opacity: 1; }
+        body.has-sticky-cta { padding-bottom: 60px; }
 
         /* ==== Sidebar ==== */
         .sidebar-card { background: var(--lc-white); border: 1px solid var(--lc-border); border-radius: var(--lc-radius-md); padding: 24px; margin-bottom: 24px; }
@@ -359,10 +463,13 @@ if ($post_destaque) {
             .blog-intro h1 { font-size: 26px; }
             .single-post h1 { font-size: 1.6rem; }
             .single-post-image { height: 220px; }
+            .sticky-cta-text { display: none; }
+            .sticky-cta-bar { justify-content: space-between; }
+            .sticky-cta-btn { flex-grow: 1; }
         }
     </style>
 </head>
-<body>
+<body class="has-sticky-cta">
 
 <div class="top-bar">
     Atenção! A LiberaCash não cobra nenhum depósito antecipado para a liberação de empréstimo.
@@ -487,7 +594,7 @@ if ($post_destaque) {
                                     <?php if ($r['imagem']): ?>
                                         <img src="<?php echo htmlspecialchars($r['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($r['titulo'], ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
                                     <?php else: ?>
-                                        <div class="post-image-fallback"><i class="fas fa-newspaper"></i></div>
+                                        <div class="post-image-fallback <?php echo lc_post_gradiente($r['categoria']); ?>"><i class="fas <?php echo lc_post_icone($r['titulo'], $r['categoria']); ?>"></i></div>
                                     <?php endif; ?>
                                     <span class="post-category"><?php echo htmlspecialchars($r['categoria'], ENT_QUOTES, 'UTF-8'); ?></span>
                                 </div>
@@ -512,6 +619,8 @@ if ($post_destaque) {
             <div class="hero-post-image">
                 <?php if ($post_destaque['imagem']): ?>
                     <img src="<?php echo htmlspecialchars($post_destaque['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post_destaque['titulo'], ENT_QUOTES, 'UTF-8'); ?>">
+                <?php else: ?>
+                    <div class="post-image-fallback <?php echo lc_post_gradiente($post_destaque['categoria']); ?>"><i class="fas <?php echo lc_post_icone($post_destaque['titulo'], $post_destaque['categoria']); ?>"></i></div>
                 <?php endif; ?>
             </div>
             <div class="hero-post-body">
@@ -525,35 +634,97 @@ if ($post_destaque) {
         </a>
         <?php endif; ?>
 
+        <?php if (!$categoria_filtro && !empty($destaques_redacao)): ?>
+        <div class="editorial-row">
+            <div class="editorial-row-header">
+                <span class="editorial-row-eyebrow">Direto da Redação</span>
+                <h3>O que a nossa equipe está lendo em crédito</h3>
+            </div>
+            <div class="editorial-grid">
+                <?php foreach ($destaques_redacao as $ed): ?>
+                <a class="editorial-card" href="/blog/<?php echo urlencode($ed['slug']); ?>/">
+                    <div class="editorial-avatar <?php echo lc_post_gradiente($ed['categoria']); ?>"><i class="fas <?php echo lc_post_icone($ed['titulo'], $ed['categoria']); ?>"></i></div>
+                    <div class="editorial-role"><?php echo htmlspecialchars($ed['categoria'], ENT_QUOTES, 'UTF-8'); ?> · Redação LiberaCash</div>
+                    <p class="editorial-quote">"<?php echo htmlspecialchars($ed['resumo'], ENT_QUOTES, 'UTF-8'); ?>"</p>
+                </a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <?php endif; ?>
+
         <div class="blog-layout">
-            <div class="blog-grid">
+            <div>
                 <?php if (empty($posts_grid) && empty($post_destaque)): ?>
                     <p class="no-results">Ainda não temos posts publicados nessa categoria. Volte em breve!</p>
-                <?php else: ?>
-                    <?php foreach ($posts_grid as $post): ?>
-                    <a class="post-card" href="/blog/<?php echo urlencode($post['slug']); ?>/">
-                        <div class="post-image-wrap">
-                            <?php if ($post['imagem']): ?>
-                                <img src="<?php echo htmlspecialchars($post['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['titulo'], ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
-                            <?php else: ?>
-                                <div class="post-image-fallback"><i class="fas fa-newspaper"></i></div>
-                            <?php endif; ?>
-                            <span class="post-category"><?php echo htmlspecialchars($post['categoria'], ENT_QUOTES, 'UTF-8'); ?></span>
-                        </div>
-                        <div class="post-content">
-                            <h2 class="post-title"><?php echo htmlspecialchars($post['titulo'], ENT_QUOTES, 'UTF-8'); ?></h2>
-                            <p class="post-excerpt"><?php echo htmlspecialchars($post['resumo'], ENT_QUOTES, 'UTF-8'); ?></p>
-                            <div class="post-footer">
-                                <span><i class="far fa-calendar-alt"></i> <?php echo htmlspecialchars($post['data'], ENT_QUOTES, 'UTF-8'); ?></span>
-                                <span><?php echo lc_tempo_leitura($post['conteudo']); ?> min</span>
+                <?php elseif ($categoria_filtro): ?>
+                    <div class="blog-grid">
+                        <?php foreach ($posts_grid as $post): ?>
+                        <a class="post-card" href="/blog/<?php echo urlencode($post['slug']); ?>/">
+                            <div class="post-image-wrap">
+                                <?php if ($post['imagem']): ?>
+                                    <img src="<?php echo htmlspecialchars($post['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['titulo'], ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
+                                <?php else: ?>
+                                    <div class="post-image-fallback <?php echo lc_post_gradiente($post['categoria']); ?>"><i class="fas <?php echo lc_post_icone($post['titulo'], $post['categoria']); ?>"></i></div>
+                                <?php endif; ?>
+                                <span class="post-category"><?php echo htmlspecialchars($post['categoria'], ENT_QUOTES, 'UTF-8'); ?></span>
                             </div>
+                            <div class="post-content">
+                                <h2 class="post-title"><?php echo htmlspecialchars($post['titulo'], ENT_QUOTES, 'UTF-8'); ?></h2>
+                                <p class="post-excerpt"><?php echo htmlspecialchars($post['resumo'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                <div class="post-footer">
+                                    <span><i class="far fa-calendar-alt"></i> <?php echo htmlspecialchars($post['data'], ENT_QUOTES, 'UTF-8'); ?></span>
+                                    <span><?php echo lc_tempo_leitura($post['conteudo']); ?> min</span>
+                                </div>
+                            </div>
+                        </a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php else: ?>
+                    <?php foreach ($secoes as $cat => $itens): ?>
+                    <div class="category-section">
+                        <div class="category-section-header">
+                            <h3><?php echo htmlspecialchars($cat, ENT_QUOTES, 'UTF-8'); ?></h3>
+                            <?php if (count($itens) > 4): ?>
+                            <a href="/blog/?categoria=<?php echo urlencode($cat); ?>">Ver todos &rarr;</a>
+                            <?php endif; ?>
                         </div>
-                    </a>
+                        <div class="blog-grid">
+                            <?php foreach (array_slice($itens, 0, 4) as $post): ?>
+                            <a class="post-card" href="/blog/<?php echo urlencode($post['slug']); ?>/">
+                                <div class="post-image-wrap">
+                                    <?php if ($post['imagem']): ?>
+                                        <img src="<?php echo htmlspecialchars($post['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['titulo'], ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
+                                    <?php else: ?>
+                                        <div class="post-image-fallback <?php echo lc_post_gradiente($post['categoria']); ?>"><i class="fas <?php echo lc_post_icone($post['titulo'], $post['categoria']); ?>"></i></div>
+                                    <?php endif; ?>
+                                    <span class="post-category"><?php echo htmlspecialchars($post['categoria'], ENT_QUOTES, 'UTF-8'); ?></span>
+                                </div>
+                                <div class="post-content">
+                                    <h2 class="post-title"><?php echo htmlspecialchars($post['titulo'], ENT_QUOTES, 'UTF-8'); ?></h2>
+                                    <p class="post-excerpt"><?php echo htmlspecialchars($post['resumo'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                    <div class="post-footer">
+                                        <span><i class="far fa-calendar-alt"></i> <?php echo htmlspecialchars($post['data'], ENT_QUOTES, 'UTF-8'); ?></span>
+                                        <span><?php echo lc_tempo_leitura($post['conteudo']); ?> min</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
 
             <aside>
+                <div class="sidebar-cta">
+                    <h4>Precisa de dinheiro rápido?</h4>
+                    <p>Compare propostas de empréstimo 100% online, sem compromisso.</p>
+                    <button class="sidebar-cta-btn btn-open-modal"
+                            data-title="Qual o melhor&nbsp;<span>crédito para você?</span>"
+                            data-subtitle="Descubra quanto você tem disponível para receber e tenha o dinheiro na sua conta!"
+                            data-icon="">Simular agora</button>
+                </div>
+
                 <?php if (!empty($mais_lidos)): ?>
                 <div class="sidebar-card">
                     <div class="sidebar-title"><i class="fas fa-fire"></i> Mais lidos</div>
@@ -583,15 +754,6 @@ if ($post_destaque) {
                     </div>
                 </div>
                 <?php endif; ?>
-
-                <div class="sidebar-cta">
-                    <h4>Precisa de dinheiro rápido?</h4>
-                    <p>Compare propostas de empréstimo 100% online, sem compromisso.</p>
-                    <button class="sidebar-cta-btn btn-open-modal"
-                            data-title="Qual o melhor&nbsp;<span>crédito para você?</span>"
-                            data-subtitle="Descubra quanto você tem disponível para receber e tenha o dinheiro na sua conta!"
-                            data-icon="">Simular agora</button>
-                </div>
             </aside>
         </div>
     <?php endif; ?>
@@ -613,6 +775,15 @@ if ($post_destaque) {
     </div>
 </footer>
 
+<div class="sticky-cta-bar" id="stickyCtaBar">
+    <span class="sticky-cta-text"><i class="fas fa-bolt"></i> Compare seu empréstimo em 2 minutos, sem compromisso.</span>
+    <button class="sticky-cta-btn btn-open-modal"
+            data-title="Qual o melhor&nbsp;<span>crédito para você?</span>"
+            data-subtitle="Descubra quanto você tem disponível para receber e tenha o dinheiro na sua conta!"
+            data-icon="">Simular agora</button>
+    <button class="sticky-cta-close" id="stickyCtaClose" aria-label="Fechar"><i class="fas fa-times"></i></button>
+</div>
+
 <?php include 'modal-credito.php'; ?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -620,6 +791,16 @@ if ($post_destaque) {
 $(document).ready(function(){
     $('.hamburger').click(function(){
         $('.nav-menu').slideToggle();
+    });
+
+    if (sessionStorage.getItem('lcStickyCtaFechado') === '1') {
+        $('#stickyCtaBar').addClass('hidden');
+        $('body').removeClass('has-sticky-cta');
+    }
+    $('#stickyCtaClose').click(function(){
+        $('#stickyCtaBar').addClass('hidden');
+        $('body').removeClass('has-sticky-cta');
+        try { sessionStorage.setItem('lcStickyCtaFechado', '1'); } catch (e) {}
     });
 
     let currentIndex = 0;
