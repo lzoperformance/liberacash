@@ -7,4 +7,4 @@
 -- =====================================================================
 
 ALTER TABLE blog_posts
-  ADD COLUMN IF NOT EXISTS views INT UNSIGNED NOT NULL DEFAULT 0 AFTER fonte_url;
+  ADD COLUMN views INT UNSIGNED NOT NULL DEFAULT 0 AFTER fonte_url;
