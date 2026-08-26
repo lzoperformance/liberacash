@@ -226,7 +226,7 @@
       .c-botao-mobile { margin-top: 42px; padding-right: 15px; padding-left: 15px; }
     }
   </style>
-  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
+  <link href="/css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
 </head>
 
 <body class="body">
@@ -238,7 +238,7 @@
   <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png?v=2" alt="LiberaCash"></a>
+            <a href="/"><img src="/images/logo.png?v=2" alt="LiberaCash"></a>
         </div>
         <ul class="nav-menu">
             <li><a href="/">Home</a></li>

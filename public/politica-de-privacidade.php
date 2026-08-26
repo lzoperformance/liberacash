@@ -24,8 +24,8 @@
 
     <link rel="canonical" href="/politica-de-privacidade/">
 
-    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="images/webclip.png" rel="apple-touch-icon">
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="/images/webclip.png" rel="apple-touch-icon">
 
     <!-- Fontes / ícones -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
@@ -308,7 +308,7 @@
             }
         }
     </style>
-  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
+  <link href="/css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
 </head>
 <body>
 
@@ -321,7 +321,7 @@
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png?v=2" alt="LiberaCash"></a>
+            <a href="/"><img src="/images/logo.png?v=2" alt="LiberaCash"></a>
         </div>
         
         <ul class="nav-menu">
@@ -520,7 +520,7 @@
 <!-- ==== Footer ==== -->
 <footer class="footer">
     <div class="footer-container">
-        <img src="images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
+        <img src="/images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
 
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>

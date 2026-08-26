@@ -71,8 +71,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <link rel="canonical" href="/contato/">
 
-    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="images/webclip.png" rel="apple-touch-icon">
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="/images/webclip.png" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -175,7 +175,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             .footer-text { text-align: left; }
         }
     </style>
-  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
+  <link href="/css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
 </head>
 <body>
 
@@ -186,7 +186,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png?v=2" alt="LiberaCash"></a>
+            <a href="/"><img src="/images/logo.png?v=2" alt="LiberaCash"></a>
         </div>
         <ul class="nav-menu">
             <li><a href="/">Home</a></li>
@@ -309,7 +309,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <footer class="footer">
     <div class="footer-container">
-        <img src="images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
+        <img src="/images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>

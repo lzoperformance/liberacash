@@ -161,8 +161,8 @@ if ($categoria_filtro) {
     <?php echo json_encode($breadcrumb_jsonld, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
     </script>
 
-    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="images/webclip.png" rel="apple-touch-icon">
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="/images/webclip.png" rel="apple-touch-icon">
 
     <!-- Fontes / ícones -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
@@ -762,7 +762,7 @@ if ($categoria_filtro) {
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="images/logo.png?v=2" alt="LiberaCash"></a>
+            <a href="/"><img src="/images/logo.png?v=2" alt="LiberaCash"></a>
         </div>
         <ul class="nav-menu">
             <li><a href="/">Home</a></li>
@@ -780,21 +780,21 @@ if ($categoria_filtro) {
     <div class="banner-slider">
         <div class="slider-wrapper">
             <a href="#linkbanner#" class="slide">
-                <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo">
+                <img src="/images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo">
             </a>
             <a href="https://www.itau.com.br/cartoes/escolha/g/azul-visa-infinite?utm_source=lzo&utm_medium=affiliate&utm_campaign=gl-aff-cartoes-conversao-azul-infinite&cpg_s=sliceafl&utmgl=utm_camp-{campaign.id}" class="slide">
-                <img src="images/banner-itaul-infinity.png" alt="Itaú Azul Visa Infinite">
+                <img src="/images/banner-itaul-infinity.png" alt="Itaú Azul Visa Infinite">
             </a>
             <a href="#linkbanner#" class="slide">
-                <img src="images/banner-itaul-atacadao.png" alt="Atacadao - Slide 3">
+                <img src="/images/banner-itaul-atacadao.png" alt="Atacadao - Slide 3">
             </a>
             <!-- Slide 4 - substitua o src e o href pelos seus -->
             <a href="#linkbanner4#" class="slide">
-                <img src="images/banner-itaul-passai.png" alt="Assai Banner 4">
+                <img src="/images/banner-itaul-passai.png" alt="Assai Banner 4">
             </a>
             <!-- Slide 5 - substitua o src e o href pelos seus -->
             <a href="#linkbanner5#" class="slide">
-                <img src="images/banner-itaul-carredour.png" alt="Carrefour Banner 5">
+                <img src="/images/banner-itaul-carredour.png" alt="Carrefour Banner 5">
             </a>
         </div>
     </div>
@@ -935,7 +935,7 @@ if ($categoria_filtro) {
 <!-- ==== Footer (mesma estrutura da home) ==== -->
 <footer class="footer">
     <div class="footer-container">
-        <img src="images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
+        <img src="/images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
 
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
