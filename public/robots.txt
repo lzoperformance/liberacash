@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /painel/
+Disallow: /admin_blog/
+Disallow: /config/
 
-Sitemap: https://www.credito.vc/sitemap.xml
+Sitemap: https://libera.cash/sitemap.xml
