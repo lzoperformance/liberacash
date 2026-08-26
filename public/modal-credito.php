@@ -13,7 +13,7 @@
 
     <div id="modalHeader">
       <div class="modal-logo-wrapper">
-        <img src="/images/logo-icon.png" alt="LiberaCash">
+        <img src="/images/logo-full-white-text.png?v=2" alt="LiberaCash">
       </div>
       <h2 class="modal-title" id="modalCreditoTitle">Crie sua conta<br><span>e veja suas ofertas</span></h2>
       <p class="modal-subtitle" id="modalSubtitle">Rápido, grátis e sem compromisso!</p>
@@ -215,7 +215,7 @@
 }
 .modal-logo-wrapper { margin-bottom: 16px; }
 .modal-logo-wrapper img {
-  height: 44px; width: 44px; object-fit: contain; border-radius: 12px;
+  height: 56px; width: auto; object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
 }
 .modal-title {
