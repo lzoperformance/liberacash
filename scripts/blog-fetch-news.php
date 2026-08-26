@@ -146,7 +146,7 @@ Fonte: {$nomeFonte}
 Regras:
 - Tom: direto, acessível, sem jargão desnecessário — o leitor não é especialista em economia.
 - Tamanho: 3 a 5 parágrafos curtos.
-- Termine SEMPRE com uma linha: "Fonte: {$nomeFonte}" (sem o link, isso é adicionado depois automaticamente).
+- NÃO termine o texto com uma linha de atribuição tipo "Fonte: ..." — isso é adicionado depois automaticamente pelo sistema, com link. Só escreva o conteúdo do post.
 - Não dê conselho financeiro personalizado nem prometa aprovação de crédito.
 - Retorne SOMENTE um JSON válido, sem markdown ao redor, no formato:
 {"titulo": "...", "subtitulo": "...", "resumo": "1-2 frases pro card de listagem", "conteudo_html": "<p>...</p><p>...</p>", "categoria": "uma palavra ou duas, ex: Crédito, Economia, Finanças Pessoais", "meta_title": "...", "meta_description": "..."}
