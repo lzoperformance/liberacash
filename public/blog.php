@@ -26,41 +26,80 @@ function lc_tempo_leitura(string $conteudoHtml): int
 }
 
 /**
- * Ícone de capa quando o post não tem imagem_capa. Casa por palavra-chave
- * no título antes de cair no padrão da categoria — assim cada post tem um
- * ícone que faz sentido pro assunto dele, não um genérico repetido.
+ * Motivo (ilustração) de capa quando o post não tem imagem_capa. Casa por
+ * palavra-chave no título — mais específico primeiro — antes de cair no
+ * padrão da categoria. Cada motivo vira um desenho SVG próprio (ver
+ * lc_svg_motivo), não uma imagem de banco de terceiros.
  */
-function lc_post_icone(string $titulo, string $categoria): string
+function lc_post_motivo(string $titulo, string $categoria): string
 {
     $t = (string)iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', mb_strtolower($titulo, 'UTF-8'));
     $mapa = [
-        'score' => 'fa-gauge-high',
-        'consignado' => 'fa-file-signature',
-        'negativado' => 'fa-shield-heart',
-        'nome sujo' => 'fa-shield-heart',
-        'golpe' => 'fa-user-shield',
-        'autonomo' => 'fa-briefcase',
-        'cet,' => 'fa-calculator',
-        'cet, juros' => 'fa-calculator',
-        'juros e parcelas' => 'fa-calculator',
-        'online' => 'fa-mobile-screen-button',
-        'agencia' => 'fa-building-columns',
-        'banco' => 'fa-building-columns',
-        'analise de credito' => 'fa-magnifying-glass-chart',
-        'erro' => 'fa-triangle-exclamation',
-        'ipca' => 'fa-chart-line',
-        'inflac' => 'fa-chart-line',
+        'moto' => 'moto',
+        'ipca' => 'cesta',
+        'inflac' => 'cesta',
+        'score' => 'grafico',
+        'quando vale a pena' => 'documento',
+        'roubada' => 'alerta',
+        'nome sujo' => 'alerta',
+        'negativado' => 'escudo',
+        'agencia' => 'placa',
+        'consignado' => 'grafico',
+        'perfil' => 'placa',
+        'autonomo' => 'maleta',
+        'cet,' => 'calculadora',
+        'juros e parcelas' => 'calculadora',
+        'erros comuns' => 'lupa',
+        'bancos analisam' => 'lupa',
+        'analise de credito' => 'documento',
+        'vale a pena' => 'balanca',
+        'online' => 'celular',
     ];
-    foreach ($mapa as $chave => $icone) {
-        if (strpos($t, $chave) !== false) return $icone;
+    foreach ($mapa as $chave => $motivo) {
+        if (strpos($t, $chave) !== false) return $motivo;
     }
     $porCategoria = [
-        'Crédito' => 'fa-hand-holding-dollar',
-        'Finanças Pessoais' => 'fa-wallet',
-        'Educação Financeira' => 'fa-graduation-cap',
-        'Economia' => 'fa-chart-line',
+        'Crédito' => 'cifrao',
+        'Finanças Pessoais' => 'balanca',
+        'Educação Financeira' => 'grafico',
+        'Economia' => 'cesta',
     ];
-    return $porCategoria[$categoria] ?? 'fa-newspaper';
+    return $porCategoria[$categoria] ?? 'cifrao';
+}
+
+/**
+ * Desenho SVG (só os elementos internos, viewBox 0 0 64 64) de cada
+ * motivo. Estilo único — traço 3.5, cantos arredondados — pra parecer um
+ * sistema de ilustração, não ícones soltos de fontes diferentes.
+ */
+function lc_svg_motivo(string $motivo): string
+{
+    $motivos = [
+        'moto' => '<circle cx="18" cy="46" r="8"/><circle cx="46" cy="46" r="8"/><path d="M18 46 L28 30 H40 L46 46"/><path d="M28 30 L24 20 H34"/><circle cx="34" cy="20" r="2.5" fill="currentColor" stroke="none"/>',
+        'celular' => '<rect x="20" y="10" width="24" height="44" rx="5"/><line x1="28" y1="46" x2="36" y2="46"/><path d="M26 30 L31 35 L40 24"/>',
+        'escudo' => '<path d="M32 8 L50 15 V30 C50 42 42 50 32 56 C22 50 14 42 14 30 V15 Z"/><path d="M24 31 L30 37 L41 24"/>',
+        'grafico' => '<polyline points="10,46 24,32 32,38 54,16"/><polyline points="42,16 54,16 54,28"/>',
+        'calculadora' => '<rect x="16" y="8" width="32" height="48" rx="4"/><rect x="21" y="14" width="22" height="10" rx="2"/><circle cx="23" cy="34" r="2.5" fill="currentColor" stroke="none"/><circle cx="32" cy="34" r="2.5" fill="currentColor" stroke="none"/><circle cx="41" cy="34" r="2.5" fill="currentColor" stroke="none"/><circle cx="23" cy="43" r="2.5" fill="currentColor" stroke="none"/><circle cx="32" cy="43" r="2.5" fill="currentColor" stroke="none"/><circle cx="41" cy="43" r="2.5" fill="currentColor" stroke="none"/>',
+        'balanca' => '<line x1="32" y1="10" x2="32" y2="50"/><line x1="16" y1="20" x2="48" y2="20"/><path d="M16 20 L10 34 A8 8 0 0 0 22 34 Z"/><path d="M48 20 L42 34 A8 8 0 0 0 54 34 Z"/><line x1="24" y1="54" x2="40" y2="54"/>',
+        'cesta' => '<path d="M14 26 H50 L46 50 H18 Z"/><line x1="22" y1="26" x2="26" y2="14"/><line x1="42" y1="26" x2="38" y2="14"/><line x1="32" y1="32" x2="32" y2="44"/><polyline points="27,39 32,44 37,39"/>',
+        'documento' => '<path d="M18 8 H38 L46 16 V56 H18 Z"/><path d="M38 8 V16 H46"/><path d="M24 34 L30 40 L40 26"/>',
+        'placa' => '<line x1="24" y1="12" x2="24" y2="56"/><path d="M24 18 H46 L40 26 H24"/><path d="M24 30 H14 L20 38 H24"/>',
+        'maleta' => '<rect x="12" y="22" width="40" height="28" rx="4"/><path d="M24 22 V16 A4 4 0 0 1 28 12 H36 A4 4 0 0 1 40 16 V22"/><line x1="12" y1="34" x2="52" y2="34"/>',
+        'lupa' => '<path d="M16 8 H36 L42 14 V38 H16 Z"/><line x1="22" y1="20" x2="32" y2="20"/><line x1="22" y1="27" x2="32" y2="27"/><circle cx="40" cy="42" r="9"/><line x1="47" y1="49" x2="54" y2="56"/>',
+        'alerta' => '<path d="M32 10 L58 54 H6 Z"/><line x1="32" y1="26" x2="32" y2="38"/><circle cx="32" cy="46" r="2" fill="currentColor" stroke="none"/>',
+        'cifrao' => '<circle cx="32" cy="32" r="22"/><path d="M32 20 V44 M26 25 C26 21 29 20 32 20 C36 20 38 22 38 25 C38 29 34 30 32 31 C29 32 26 33 26 37 C26 40 29 42 32 42 C35 42 38 40 38 37"/>',
+    ];
+    return $motivos[$motivo] ?? $motivos['cifrao'];
+}
+
+/** Monta a tag <svg> completa de capa pra um post (motivo + estilo padrão). */
+function lc_svg_capa(string $titulo, string $categoria): string
+{
+    $motivo = lc_post_motivo($titulo, $categoria);
+    $inner = lc_svg_motivo($motivo);
+    return '<svg viewBox="0 0 64 64" width="56" height="56" fill="none" stroke="currentColor" '
+        . 'stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+        . $inner . '</svg>';
 }
 
 function lc_post_gradiente(string $categoria): string
@@ -332,17 +371,18 @@ $destaques_redacao = array_slice($posts, 0, 4);
         .post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(12,47,27,.12); }
         .post-image-wrap { position: relative; height: 160px; background: var(--lc-surface); }
         .post-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .post-image-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
-        .post-image-fallback i { font-size: 30px; }
-        .post-image-fallback.grad-brand { background: var(--lc-gradient-brand); }
-        .post-image-fallback.grad-brand i { color: var(--lc-green-900); opacity: .55; }
-        .post-image-fallback.grad-dark { background: var(--lc-gradient-dark); }
-        .post-image-fallback.grad-dark i { color: var(--lc-off-white); opacity: .5; }
-        .post-image-fallback.grad-teal { background: linear-gradient(135deg, var(--lc-green-300), var(--lc-green-700)); }
-        .post-image-fallback.grad-teal i { color: var(--lc-white); opacity: .55; }
-        .post-image-fallback.grad-forest { background: linear-gradient(135deg, var(--lc-green-700), var(--lc-bg-dark-800)); }
-        .post-image-fallback.grad-forest i { color: var(--lc-off-white); opacity: .5; }
-        .hero-post-image .post-image-fallback i { font-size: 64px; }
+        .post-image-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .post-image-fallback::before { content: ""; position: absolute; width: 140px; height: 140px; border-radius: 50%; background: currentColor; opacity: .07; top: -40px; right: -40px; }
+        .post-image-fallback svg { position: relative; z-index: 1; }
+        .post-image-fallback.grad-brand { background: var(--lc-gradient-brand); color: var(--lc-green-900); }
+        .post-image-fallback.grad-brand svg { opacity: .7; }
+        .post-image-fallback.grad-dark { background: var(--lc-gradient-dark); color: var(--lc-off-white); }
+        .post-image-fallback.grad-dark svg { opacity: .65; }
+        .post-image-fallback.grad-teal { background: linear-gradient(135deg, var(--lc-green-300), var(--lc-green-700)); color: var(--lc-white); }
+        .post-image-fallback.grad-teal svg { opacity: .7; }
+        .post-image-fallback.grad-forest { background: linear-gradient(135deg, var(--lc-green-700), var(--lc-bg-dark-800)); color: var(--lc-off-white); }
+        .post-image-fallback.grad-forest svg { opacity: .65; }
+        .hero-post-image .post-image-fallback svg { width: 84px; height: 84px; }
         .post-category { position: absolute; bottom: 10px; left: 10px; background: rgba(8,26,15,.75); color: var(--lc-off-white); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; padding: 5px 10px; border-radius: var(--lc-radius-full); }
         .post-content { padding: 18px 20px 20px 20px; flex-grow: 1; display: flex; flex-direction: column; }
         .post-title { font-family: var(--lc-font-display); font-size: 16px; font-weight: 700; line-height: 1.35; color: var(--lc-text-dark); margin-bottom: 8px; }
@@ -364,9 +404,9 @@ $destaques_redacao = array_slice($posts, 0, 4);
         .editorial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 22px; }
         .editorial-card { display: block; text-decoration: none; color: inherit; }
         .editorial-avatar { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
-        .editorial-avatar i { font-size: 17px; }
-        .editorial-avatar.grad-brand i { color: var(--lc-green-900); }
-        .editorial-avatar.grad-dark i, .editorial-avatar.grad-teal i, .editorial-avatar.grad-forest i { color: var(--lc-off-white); }
+        .editorial-avatar svg { width: 22px; height: 22px; }
+        .editorial-avatar.grad-brand { color: var(--lc-green-900); }
+        .editorial-avatar.grad-dark, .editorial-avatar.grad-teal, .editorial-avatar.grad-forest { color: var(--lc-off-white); }
         .editorial-role { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--lc-green-700); margin-bottom: 8px; }
         .editorial-quote { font-size: 13.5px; line-height: 1.55; color: var(--lc-text-dark); font-style: italic; }
         .editorial-card:hover .editorial-quote { color: var(--lc-green-900); }
@@ -594,7 +634,7 @@ $destaques_redacao = array_slice($posts, 0, 4);
                                     <?php if ($r['imagem']): ?>
                                         <img src="<?php echo htmlspecialchars($r['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($r['titulo'], ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
                                     <?php else: ?>
-                                        <div class="post-image-fallback <?php echo lc_post_gradiente($r['categoria']); ?>"><i class="fas <?php echo lc_post_icone($r['titulo'], $r['categoria']); ?>"></i></div>
+                                        <div class="post-image-fallback <?php echo lc_post_gradiente($r['categoria']); ?>"><?php echo lc_svg_capa($r['titulo'], $r['categoria']); ?></div>
                                     <?php endif; ?>
                                     <span class="post-category"><?php echo htmlspecialchars($r['categoria'], ENT_QUOTES, 'UTF-8'); ?></span>
                                 </div>
@@ -620,7 +660,7 @@ $destaques_redacao = array_slice($posts, 0, 4);
                 <?php if ($post_destaque['imagem']): ?>
                     <img src="<?php echo htmlspecialchars($post_destaque['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post_destaque['titulo'], ENT_QUOTES, 'UTF-8'); ?>">
                 <?php else: ?>
-                    <div class="post-image-fallback <?php echo lc_post_gradiente($post_destaque['categoria']); ?>"><i class="fas <?php echo lc_post_icone($post_destaque['titulo'], $post_destaque['categoria']); ?>"></i></div>
+                    <div class="post-image-fallback <?php echo lc_post_gradiente($post_destaque['categoria']); ?>"><?php echo lc_svg_capa($post_destaque['titulo'], $post_destaque['categoria']); ?></div>
                 <?php endif; ?>
             </div>
             <div class="hero-post-body">
@@ -643,7 +683,7 @@ $destaques_redacao = array_slice($posts, 0, 4);
             <div class="editorial-grid">
                 <?php foreach ($destaques_redacao as $ed): ?>
                 <a class="editorial-card" href="/blog/<?php echo urlencode($ed['slug']); ?>/">
-                    <div class="editorial-avatar <?php echo lc_post_gradiente($ed['categoria']); ?>"><i class="fas <?php echo lc_post_icone($ed['titulo'], $ed['categoria']); ?>"></i></div>
+                    <div class="editorial-avatar <?php echo lc_post_gradiente($ed['categoria']); ?>"><?php echo lc_svg_capa($ed['titulo'], $ed['categoria']); ?></div>
                     <div class="editorial-role"><?php echo htmlspecialchars($ed['categoria'], ENT_QUOTES, 'UTF-8'); ?> · Redação LiberaCash</div>
                     <p class="editorial-quote">"<?php echo htmlspecialchars($ed['resumo'], ENT_QUOTES, 'UTF-8'); ?>"</p>
                 </a>
@@ -664,7 +704,7 @@ $destaques_redacao = array_slice($posts, 0, 4);
                                 <?php if ($post['imagem']): ?>
                                     <img src="<?php echo htmlspecialchars($post['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['titulo'], ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
                                 <?php else: ?>
-                                    <div class="post-image-fallback <?php echo lc_post_gradiente($post['categoria']); ?>"><i class="fas <?php echo lc_post_icone($post['titulo'], $post['categoria']); ?>"></i></div>
+                                    <div class="post-image-fallback <?php echo lc_post_gradiente($post['categoria']); ?>"><?php echo lc_svg_capa($post['titulo'], $post['categoria']); ?></div>
                                 <?php endif; ?>
                                 <span class="post-category"><?php echo htmlspecialchars($post['categoria'], ENT_QUOTES, 'UTF-8'); ?></span>
                             </div>
@@ -695,7 +735,7 @@ $destaques_redacao = array_slice($posts, 0, 4);
                                     <?php if ($post['imagem']): ?>
                                         <img src="<?php echo htmlspecialchars($post['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($post['titulo'], ENT_QUOTES, 'UTF-8'); ?>" loading="lazy">
                                     <?php else: ?>
-                                        <div class="post-image-fallback <?php echo lc_post_gradiente($post['categoria']); ?>"><i class="fas <?php echo lc_post_icone($post['titulo'], $post['categoria']); ?>"></i></div>
+                                        <div class="post-image-fallback <?php echo lc_post_gradiente($post['categoria']); ?>"><?php echo lc_svg_capa($post['titulo'], $post['categoria']); ?></div>
                                     <?php endif; ?>
                                     <span class="post-category"><?php echo htmlspecialchars($post['categoria'], ENT_QUOTES, 'UTF-8'); ?></span>
                                 </div>
