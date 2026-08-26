@@ -268,6 +268,22 @@ HTML,
     'meta_description' => 'Veja os erros mais comuns na hora de contratar um empréstimo pessoal e como evitar cada um deles.',
 ];
 
+$posts[] = [
+    'titulo' => 'Moto como garantia de empréstimo: como funciona e quando vale a pena',
+    'subtitulo' => 'Uma alternativa pra quem trabalha (ou já tem) sobre duas rodas',
+    'categoria' => 'Crédito',
+    'resumo' => 'Dar a moto como garantia costuma render taxas menores. Veja como funciona, quanto dá pra pegar e os riscos envolvidos.',
+    'conteudo' => <<<'HTML'
+<p>Empréstimo com garantia de moto é uma modalidade de crédito em que o veículo fica alienado à instituição financeira até o fim do contrato, funcionando como garantia da dívida. Em troca desse risco menor, as taxas de juros costumam ser bem mais baixas do que as de um empréstimo pessoal sem garantia.</p>
+<p>Na prática, você continua usando a moto normalmente no dia a dia — o que muda é que o documento fica com uma restrição financeira, registrada no DUT, até a quitação do contrato. Se as parcelas forem pagas em dia, a restrição é removida ao final e a moto volta a ficar 100% livre.</p>
+<p>O valor liberado costuma ser calculado como um percentual do valor da moto na tabela FIPE, geralmente entre 60% e 80%, dependendo da instituição, do modelo e da idade do veículo. Motos mais novas e populares tendem a ter melhores condições, já que têm mais liquidez de revenda.</p>
+<p>Essa modalidade costuma ser especialmente interessante pra quem trabalha com a moto — motoboys, entregadores de aplicativo, mototaxistas — e precisa de capital de giro, quer trocar uma dívida mais cara por uma mais barata, ou precisa cobrir uma emergência sem abrir mão do veículo que usa pra trabalhar.</p>
+<p>O principal risco é justamente esse: como a moto é a garantia, o não pagamento das parcelas pode levar à busca e apreensão do veículo. Por isso, antes de contratar, vale ter certeza de que a parcela cabe confortavelmente no orçamento, especialmente se a moto for sua principal ferramenta de trabalho.</p>
+HTML,
+    'meta_title' => 'Moto como garantia de empréstimo | LiberaCash',
+    'meta_description' => 'Entenda como funciona o empréstimo com garantia de moto, quanto dá pra conseguir e quando essa modalidade vale a pena.',
+];
+
 $stmtCheck = $pdo->prepare('SELECT id FROM blog_posts WHERE slug = :slug LIMIT 1');
 $stmtInsert = $pdo->prepare(
     'INSERT INTO blog_posts
