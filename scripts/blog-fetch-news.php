@@ -179,7 +179,16 @@ PROMPT;
     }
 
     $dados = json_decode($resposta, true);
-    $texto = $dados['content'][0]['text'] ?? '';
+    // Não assume que o texto está no bloco [0] — a API pode devolver um
+    // bloco de "thinking" antes do bloco de texto, então procura pelo
+    // primeiro bloco com type "text" em vez de pegar sempre o índice 0.
+    $texto = '';
+    foreach (($dados['content'] ?? []) as $bloco) {
+        if (($bloco['type'] ?? '') === 'text') {
+            $texto = $bloco['text'] ?? '';
+            break;
+        }
+    }
     // Remove eventuais cercas de código markdown, se vierem por engano
     $texto = preg_replace('/^```json\s*|\s*```$/m', '', trim($texto));
 
