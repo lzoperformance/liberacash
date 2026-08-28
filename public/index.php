@@ -595,7 +595,7 @@ $produtos_ativos = get_products_ordered();
     </div>
   </div>
   <div class="hero-img">
-    <img src="images/hero-mulher-nova.png?v=1" alt="Mulher sorrindo com aprovação confirmada no celular - Simule seu empréstimo">
+    <img src="images/hero-mulher-nova.png?v=2" alt="Mulher sorrindo com aprovação confirmada no celular - Simule seu empréstimo">
   </div>
 </section>
 
