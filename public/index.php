@@ -84,7 +84,7 @@ $produtos_ativos = get_products_ordered();
     .hamburger { display: none; cursor: pointer; color: var(--lc-text-dark, #0C2F1B); font-size: 24px; }
 
     /* Banner Slider Ajustado */
-    .banner-slider-container { max-width: 684px; margin: 30px auto 20px auto; padding: 0 10px; position: relative; }
+    .banner-slider-container { max-width: 684px; margin: 30px auto 20px auto; padding: 0 20px; position: relative; }
     .banner-slider { position: relative; width: 100%; max-height: 156px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .slider-wrapper { display: flex; width: 300%; transition: transform 0.5s ease-in-out; }
     .slide { width: 33.3333%; display: block; text-decoration: none; }
@@ -240,7 +240,7 @@ $produtos_ativos = get_products_ordered();
 
     .hero-img img {
         width: 100%;
-        max-width: 460px;
+        max-width: 580px;
         height: auto;
         display: block;
     }
@@ -466,7 +466,7 @@ $produtos_ativos = get_products_ordered();
       .comp-text h2 { font-size: 28px; text-align: center; }
       .comp-text p { margin-bottom: 25px; text-align: center; }
       .comp-form { padding: 30px 20px; }
-      .banner-slider-container { padding: 0 15px; margin: 20px auto 10px auto; }
+      .banner-slider-container { padding: 0 20px; margin: 20px auto 10px auto; }
       .slider-btn { width: 30px; height: 30px; font-size: 10px; }
       .footer-text { text-align: left; }
       .footer-policy-box { text-align: center; align-items: flex-start; }

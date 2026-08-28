@@ -99,12 +99,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .nav-menu a { color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; }
         .hamburger { display: none; cursor: pointer; color: #fff; font-size: 24px; }
 
-        .breadcrumbs { max-width: 1100px; margin: 0 auto; padding: 14px 20px; font-size: 13px; color: var(--gray-text); }
-        .breadcrumbs a { color: var(--gray-text); text-decoration: none; }
-        .breadcrumbs a:hover { color: var(--primary-green); text-decoration: underline; }
-        .breadcrumbs .sep { margin: 0 6px; color: #ccc; }
-        .breadcrumbs .current { color: var(--text-dark); font-weight: 600; }
-
         .hero { background: linear-gradient(135deg, var(--primary-green), var(--dark-green)); padding: 70px 20px; text-align: center; color: #fff; }
         .hero h1 { font-family: 'Raleway', sans-serif; font-size: 2.6rem; font-weight: 800; margin-bottom: 15px; }
         .hero p { font-size: 1.1rem; max-width: 720px; margin: 0 auto; opacity: 0.95; line-height: 1.6; }
@@ -143,14 +137,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .info-text strong { display: block; font-size: 13px; color: var(--dark-bg); margin-bottom: 3px; }
         .info-text a, .info-text span { font-size: 14px; color: var(--gray-text); text-decoration: none; line-height: 1.5; }
         .info-text a:hover { color: var(--primary-green); }
-
-        .info-social { display: flex; gap: 12px; margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; }
-        .info-social a {
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 40px; height: 40px; border-radius: 50%; background: var(--primary-green); color: #fff;
-            text-decoration: none; font-size: 15px; transition: var(--transition);
-        }
-        .info-social a:hover { background: var(--dark-green); transform: translateY(-2px); }
 
         /* Footer */
         .footer { padding: 50px 0; text-align: center; background: #fff; border-top: 1px solid #eee; }
@@ -202,12 +188,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
 </header>
-
-<nav class="breadcrumbs" aria-label="breadcrumb">
-    <a href="/">Início</a>
-    <span class="sep">/</span>
-    <span class="current">Contato</span>
-</nav>
 
 <section class="hero">
     <h1>Fale com a LiberaCash</h1>
@@ -270,14 +250,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <div class="info-item">
-                <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
-                <div class="info-text">
-                    <strong>WhatsApp</strong>
-                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">(11) 98957-2783</a>
-                </div>
-            </div>
-
-            <div class="info-item">
                 <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                 <div class="info-text">
                     <strong>Endereço</strong>
@@ -301,11 +273,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>
 
-            <div class="info-social">
-                <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
         </div>
 
     </div>
