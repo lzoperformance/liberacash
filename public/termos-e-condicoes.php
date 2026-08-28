@@ -205,12 +205,18 @@
             flex-direction: column;
             align-items: center;
         }
-        .footer-logo { height: 38px; margin-bottom: 25px; }
+        .footer-logo { height: 52px; margin-bottom: 25px; }
+        .footer-policy-box { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 25px; font-size: 13px; color: #333333; cursor: pointer; user-select: none; }
+        .footer-policy-box input[type="checkbox"] { accent-color: #1fc859; width: 16px; height: 16px; cursor: pointer; }
+        .footer-policy-box a { color: #333333; text-decoration: none; font-weight: 500; }
+        .footer-policy-box a:hover { text-decoration: underline; }
         .footer-text {
             font-size: 12px;
             color: #666666;
-            line-height: 1.7;
-            text-align: justify;
+            line-height: 1.6;
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
         }
         .footer-social {
             display: flex;
@@ -251,14 +257,10 @@
             line-height: 1.7;
             margin-top: 10px;
         }
-        .footer-copyright {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 12px;
+        .footer-copy {
+            font-size: 11px;
             color: #999;
-            width: 100%;
-            text-align: center;
+            margin-top: 16px;
         }
 
         /* ==== Media Queries ==== */
@@ -370,9 +372,13 @@
             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
         </div>
 
+        <label class="footer-policy-box" id="policyLabel">
+            <input type="checkbox" id="policyCheckbox" checked>
+            <span>Ao acessar/utilizar este site, você aceita as condições dos <a href="/termos-e-condicoes/" target="_blank">Termos de uso</a> e <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a></span>
+        </label>
+
         <div class="footer-text">
-            Ao acessar/utilizar este site, você aceita as condições dos <a href="/termos-e-condicoes/" target="_blank">Termos de uso</a> e <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.<br><br>
-            LiberaCash é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil. Preencha o formulário e receba contato de um parceiro.
+            LiberaCash&reg; é um site de comparação e correspondente de instituições financeiras parceiras, não é uma instituição financeira e não realiza empréstimos diretamente. As condições de crédito (taxas, prazos e valores) são definidas exclusivamente pela instituição parceira responsável pela proposta, mediante análise de crédito. A aprovação está sujeita a análise cadastral.
         </div>
 
         <details class="footer-details">
@@ -380,9 +386,7 @@
             <p>Prazo de pagamento: varia de acordo com a instituição financeira escolhida, podendo ser entre 6 e 120 meses. A taxa de juros pode variar de 14,9% a.m. (423,96% a.a.) até 18,5% a.m. (668,75% a.a.), e o custo efetivo total (CET) pode variar de 15,57% a.m. (467,86% a.a.) até 27,29% a.m. (1709,88% a.a.). Exemplo: um empréstimo de R$ 750,00 em 6 meses com taxa de juros de 14,9% a.m. terá parcelas de R$ 198,39 (caso o CET seja igual à taxa de juros). Um modelo de aparelho celular compatível poderá ser necessário para a aprovação do crédito.</p>
         </details>
 
-        <div class="footer-copyright">
-            &copy; <?php echo date('Y'); ?> LiberaCash. Todos os direitos reservados.
-        </div>
+        <p class="footer-copy">&copy; <?php echo date('Y'); ?> LiberaCash&reg; — Todos os direitos reservados.</p>
     </div>
 </footer>
 

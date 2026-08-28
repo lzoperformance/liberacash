@@ -486,6 +486,10 @@ $destaques_redacao = array_slice($posts, 0, 4);
         .footer-social { display: flex; gap: 15px; margin-bottom: 25px; justify-content: center; }
         .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: var(--lc-green-600); color: #fff; font-size: 16px; text-decoration: none; transition: all .3s ease; border-radius: 50%; }
         .footer-social a:hover { background-color: var(--lc-green-900); transform: translateY(-2px); }
+        .footer-policy-box { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 25px; font-size: 13px; color: #333333; cursor: pointer; user-select: none; }
+        .footer-policy-box input[type="checkbox"] { accent-color: #1fc859; width: 16px; height: 16px; cursor: pointer; }
+        .footer-policy-box a { color: #333333; text-decoration: none; font-weight: 500; }
+        .footer-policy-box a:hover { text-decoration: underline; }
         .footer-text { font-size: 12px; color: var(--lc-text-muted); line-height: 1.6; max-width: 720px; margin: 0 auto; text-align: center; }
         .footer-copy { font-size: 11px; color: var(--lc-gray-500); margin-top: 16px; }
 
@@ -807,8 +811,11 @@ $destaques_redacao = array_slice($posts, 0, 4);
             <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
         </div>
+        <label class="footer-policy-box" id="policyLabel">
+            <input type="checkbox" id="policyCheckbox" checked>
+            <span>Ao acessar/utilizar este site, você aceita as condições dos <a href="/termos-e-condicoes/" target="_blank">Termos de uso</a> e <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a></span>
+        </label>
         <div class="footer-text">
-            Ao acessar/utilizar este site, você aceita as condições dos <a href="/termos-e-condicoes/" target="_blank">Termos de uso</a> e <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a>.<br><br>
             LiberaCash&reg; é um site de comparação e correspondente de instituições financeiras parceiras, não é uma instituição financeira e não realiza empréstimos diretamente. As condições de crédito (taxas, prazos e valores) são definidas exclusivamente pela instituição parceira responsável pela proposta, mediante análise de crédito. A aprovação está sujeita a análise cadastral.
         </div>
         <p class="footer-copy">&copy; <?php echo date('Y'); ?> LiberaCash&reg; — Todos os direitos reservados.</p>

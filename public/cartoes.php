@@ -76,16 +76,16 @@
     /* Footer da Home */
     .footer { padding: 50px 0; text-align: center; background-color: var(--white); border-top: 1px solid #eee; width: 100%; }
     .footer-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; align-items: center; }
-    .footer-logo { height: 38px; margin-bottom: 25px; }
+    .footer-logo { height: 52px; margin-bottom: 25px; }
     .footer-policy-box { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 25px; font-size: 13px; color: #333333; cursor: pointer; user-select: none; }
     .footer-policy-box input[type="checkbox"] { accent-color: #1fc859; width: 16px; height: 16px; cursor: pointer; }
     .footer-policy-box a { color: #333333; text-decoration: none; font-weight: 500; }
     .footer-policy-box a:hover { text-decoration: underline; }
-    .footer-text { font-size: 12px; color: #666666; line-height: 1.7; text-align: justify; }
+    .footer-text { font-size: 12px; color: #666666; line-height: 1.6; max-width: 720px; margin: 0 auto; text-align: center; }
     .footer-social { display: flex; gap: 15px; margin-bottom: 25px; }
     .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--primary-green); color: #fff; font-size: 16px; text-decoration: none; transition: var(--transition); }
     .footer-social a:hover { background: var(--dark-green); transform: translateY(-2px); }
-    .footer-copyright { margin-top: 25px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #999; width: 100%; text-align: center; }
+    .footer-copy { font-size: 11px; color: #999; margin-top: 16px; }
 
     /* ==========================================================================
        CSS IMPORTADO E INTEGRADO DE CARTÕES (COMPLETAMENTE ISOLADO)
@@ -478,13 +478,11 @@
       </label>
 
       <div class="footer-text">
-        LiberaCash é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil.<br><br>
+        LiberaCash&reg; é um site da LZO Agência de Publicidade LTDA (CNPJ 05.595.492/0001-05), sediada na Av. Paulista, 1636 — Bela Vista, São Paulo/SP. Não somos uma instituição financeira: oferecemos um serviço 100% gratuito de comparação de crédito pessoal e empresarial, conectando você às melhores condições entre nossos parceiros — principais Fintechs e Bancos do Brasil.<br><br>
         <strong>Importante:</strong> As condições dos cartões de crédito, incluindo limite aprovado, anuidade, taxas de juros, encargos, benefícios e demais características, variam conforme a instituição financeira emissora e a análise de crédito do solicitante. A aprovação está sujeita aos critérios exclusivos de cada instituição parceira. A LiberaCash não é uma instituição financeira e não concede crédito nem emite cartões. Nosso portal oferece um serviço gratuito de comparação e conexão entre usuários e instituições financeiras parceiras, facilitando a solicitação de cartões de crédito.
       </div>
 
-      <div class="footer-copyright">
-        &copy; <?php echo date('Y'); ?> LiberaCash. Todos os direitos reservados.
-      </div>
+      <p class="footer-copy">&copy; <?php echo date('Y'); ?> LiberaCash&reg; — Todos os direitos reservados.</p>
     </div>
   </footer>
 
