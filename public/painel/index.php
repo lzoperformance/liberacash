@@ -95,35 +95,31 @@ $abaAtiva = 'ofertas';
     <div class="painel-calc__faixa"><span>R$ 500</span><span>R$ 50.000</span></div>
   </section>
 
-  <!-- ========== PROPOSTAS PRÉ-APROVADAS ========== -->
+  <!-- ========== PROPOSTAS PRÉ-APROVADAS ==========
+       Só mostra a seção quando existir uma proposta pré-aprovada de
+       verdade (vinda de historico_solicitacoes). Enquanto não houver
+       integração real de pré-aprovação automática por CPF pra todo
+       parceiro, não faz sentido dizer ao usuário que ele "não tem" —
+       é melhor simplesmente não mostrar nada aqui, sem afirmação
+       negativa (evita parecer uma recusa de crédito que não existiu). -->
+  <?php if ($temPropostaPreAprovada): ?>
   <section class="painel-secao">
     <h2 class="painel-secao-titulo">Propostas pré-aprovadas para você</h2>
-
-    <?php if ($temPropostaPreAprovada): ?>
-      <div class="painel-grid">
-        <?php foreach ($propostasPreAprovadas as $proposta):
-          $prodInfo = get_product_by_slug($proposta['produto_slug']); ?>
-          <div class="proposta-card">
-            <div class="proposta-card__parceiro"><?php echo htmlspecialchars($proposta['parceiro'] ?: 'Parceiro LiberaCash'); ?></div>
-            <div class="proposta-card__valor">
-              R$ <?php echo number_format((float)($proposta['valor_solicitado'] ?? 0), 2, ',', '.'); ?>
-            </div>
-            <p class="proposta-card__produto"><?php echo htmlspecialchars($prodInfo['nome'] ?? $proposta['produto_slug']); ?></p>
-            <a href="<?php echo htmlspecialchars($proposta['url_parceiro'] ?: '#'); ?>" class="oferta-card__btn">Contratar agora</a>
+    <div class="painel-grid">
+      <?php foreach ($propostasPreAprovadas as $proposta):
+        $prodInfo = get_product_by_slug($proposta['produto_slug']); ?>
+        <div class="proposta-card">
+          <div class="proposta-card__parceiro"><?php echo htmlspecialchars($proposta['parceiro'] ?: 'Parceiro LiberaCash'); ?></div>
+          <div class="proposta-card__valor">
+            R$ <?php echo number_format((float)($proposta['valor_solicitado'] ?? 0), 2, ',', '.'); ?>
           </div>
-        <?php endforeach; ?>
-      </div>
-    <?php else: ?>
-      <div class="aviso-sem-proposta">
-        <i class="fas fa-info-circle"></i>
-        <p>
-          No momento não encontramos propostas pré-aprovadas automáticas apenas com o seu CPF.
-          Mas não se preocupe! Complete os dados do seu perfil abaixo para liberarmos ofertas
-          no Consignado, Conta de Luz ou com Garantia.
-        </p>
-      </div>
-    <?php endif; ?>
+          <p class="proposta-card__produto"><?php echo htmlspecialchars($prodInfo['nome'] ?? $proposta['produto_slug']); ?></p>
+          <a href="<?php echo htmlspecialchars($proposta['url_parceiro'] ?: '#'); ?>" class="oferta-card__btn">Contratar agora</a>
+        </div>
+      <?php endforeach; ?>
+    </div>
   </section>
+  <?php endif; ?>
 
   <!-- ========== PRATELEIRA DE PRODUTOS (6 cards) ========== -->
   <section class="painel-secao">
