@@ -11,6 +11,8 @@
  */
 
 require_once __DIR__ . '/db.php'; // já deixa $pdo pronto
+require_once __DIR__ . '/track.php';
+lc_track_pageview($pdo);
 
 function lc_renderizar_conteudo(string $conteudo): string
 {

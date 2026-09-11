@@ -1,4 +1,7 @@
 <?php
+require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/track.php';
+lc_track_pageview($pdo);
 // Caso precise do ID de produto do outro arquivo, descomente as linhas abaixo:
 // $product_id = 796;
 // $new_product_id = 413;

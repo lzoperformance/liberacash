@@ -2,9 +2,15 @@
 session_start();
 require_once __DIR__ . '/../db.php'; // já deixa $pdo pronto
 
+// Só aceita "next" se for um caminho interno relativo (evita open redirect).
+$next = $_GET['next'] ?? $_POST['next'] ?? '';
+$destino = (is_string($next) && preg_match('#^/[A-Za-z0-9/_.\-?=&%]*$#', $next) && strpos($next, '//') !== 0)
+    ? $next
+    : '/admin_blog/index.php';
+
 // Já logado? Manda direto pro painel.
 if (!empty($_SESSION['admin_id'])) {
-    header('Location: /admin_blog/index.php');
+    header('Location: ' . $destino);
     exit;
 }
 
@@ -25,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             session_regenerate_id(true);
             $_SESSION['admin_id'] = $user['id'];
             $_SESSION['admin_username'] = $username;
-            header('Location: /admin_blog/index.php');
+            header('Location: ' . $destino);
             exit;
         }
 
@@ -120,6 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <form method="POST">
+            <input type="hidden" name="next" value="<?php echo htmlspecialchars($destino, ENT_QUOTES, 'UTF-8'); ?>">
             <div class="form-group">
                 <label for="username">Usuário</label>
                 <input type="text" id="username" name="username" autofocus required>

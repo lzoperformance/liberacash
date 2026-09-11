@@ -65,6 +65,7 @@ $posts = $stmt->fetchAll();
     <div class="brand">Admin <span>Blog</span> · LiberaCash</div>
     <div>
         <span>Olá, <?php echo htmlspecialchars($_SESSION['admin_username'], ENT_QUOTES, 'UTF-8'); ?></span>
+        <a href="/admin_dashboard/"><i class="fas fa-chart-line"></i> Dashboard</a>
         <a href="/blog/" target="_blank">Ver blog <i class="fas fa-external-link-alt"></i></a>
         <a href="/admin_blog/logout.php">Sair <i class="fas fa-sign-out-alt"></i></a>
     </div>

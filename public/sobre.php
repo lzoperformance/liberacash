@@ -4,6 +4,9 @@
  * Página institucional com informações da empresa,
  * missão, valores e equipe. Segue o design do blog.php.
  */
+require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/track.php';
+lc_track_pageview($pdo);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

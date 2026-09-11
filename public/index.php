@@ -1,4 +1,7 @@
 <?php
+require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/track.php';
+lc_track_pageview($pdo);
 require_once 'produtos-config.php';
 
 // Capturar produto da URL (se veio de campanha específica)

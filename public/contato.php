@@ -5,6 +5,8 @@
  * Segue o design do blog.php e sobre.php.
  */
 require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/track.php';
+lc_track_pageview($pdo);
 
 // Processamento do formulário (salva no banco de dados)
 $mensagem_status = '';

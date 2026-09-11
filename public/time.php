@@ -5,6 +5,9 @@
  * CEO/Founder, CTO e 8 áreas primordiais com seus líderes.
  * Fotos e nomes são placeholders — substituir pelos reais.
  */
+require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/track.php';
+lc_track_pageview($pdo);
 
 $lideres = [
     // Fundação

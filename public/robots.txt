@@ -2,6 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /painel/
 Disallow: /admin_blog/
+Disallow: /admin_dashboard/
+Disallow: /admin/
 Disallow: /config/
 
 Sitemap: https://libera.cash/sitemap.xml
