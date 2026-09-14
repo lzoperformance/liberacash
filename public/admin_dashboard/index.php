@@ -85,6 +85,34 @@ $topPaginas = $pdo->query(
 )->fetchAll();
 
 // ---------------------------------------------------------------------
+// De onde vêm os acessos (domínio do referrer; UTMs quando existem)
+// ---------------------------------------------------------------------
+$origens = $pdo->query(
+    "SELECT
+        CASE WHEN referrer IS NULL OR referrer = '' THEN 'Direto / sem referência'
+             ELSE SUBSTRING_INDEX(SUBSTRING_INDEX(SUBSTRING_INDEX(referrer, '://', -1), '/', 1), ':', 1)
+        END AS origem,
+        COUNT(*) c
+     FROM page_views
+     GROUP BY origem
+     ORDER BY c DESC
+     LIMIT 12"
+)->fetchAll();
+
+$origensUtm = $pdo->query(
+    "SELECT utm_source, COUNT(*) c FROM page_views
+     WHERE utm_source IS NOT NULL AND utm_source <> ''
+     GROUP BY utm_source ORDER BY c DESC LIMIT 10"
+)->fetchAll();
+
+// Amostra crua das últimas visitas — pra dar pra olhar e julgar se o
+// tráfego parece real (navegador/dispositivo variado) ou repetitivo
+// (mesmo user-agent toda hora, sinal de bot/scanner/teste automatizado).
+$amostraRecente = $pdo->query(
+    "SELECT path, referrer, user_agent, criado_em FROM page_views ORDER BY criado_em DESC LIMIT 40"
+)->fetchAll();
+
+// ---------------------------------------------------------------------
 // KPIs de leads (tabela usuarios = cada cadastro é um lead)
 // ---------------------------------------------------------------------
 $leads_hoje = (int)$pdo->query("SELECT COUNT(*) FROM usuarios WHERE DATE(criado_em) = CURDATE()")->fetchColumn();
@@ -185,6 +213,67 @@ $pageSubtitle = 'Acessos ao site e o funil de leads, num só lugar.';
             </tbody>
         </table>
         </div>
+    </div>
+</div>
+
+<div class="lc-grid-2">
+    <div class="lc-card">
+        <div class="lc-card-header"><h2>De onde vêm os acessos</h2></div>
+        <div class="lc-table-wrap">
+        <table class="lc-table">
+            <thead><tr><th>Origem (referência)</th><th>Acessos</th></tr></thead>
+            <tbody>
+                <?php if (empty($origens)): ?>
+                    <tr><td colspan="2" class="lc-empty-row">Ainda sem dados suficientes.</td></tr>
+                <?php else: foreach ($origens as $o): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($o['origem'], ENT_QUOTES, 'UTF-8'); ?></td>
+                        <td><?php echo number_format((int)$o['c'], 0, ',', '.'); ?></td>
+                    </tr>
+                <?php endforeach; endif; ?>
+            </tbody>
+        </table>
+        </div>
+        <p style="font-size:12px; color:var(--text-subtle); margin-top:12px;">"Direto / sem referência" inclui digitação direta da URL, favoritos, apps de mensagem (que geralmente escondem o referrer) e qualquer acesso automatizado.</p>
+    </div>
+    <div class="lc-card">
+        <div class="lc-card-header"><h2>Campanhas (UTM)</h2></div>
+        <div class="lc-table-wrap">
+        <table class="lc-table">
+            <thead><tr><th>utm_source</th><th>Acessos</th></tr></thead>
+            <tbody>
+                <?php if (empty($origensUtm)): ?>
+                    <tr><td colspan="2" class="lc-empty-row">Nenhum link com UTM foi acessado ainda.</td></tr>
+                <?php else: foreach ($origensUtm as $u): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($u['utm_source'], ENT_QUOTES, 'UTF-8'); ?></td>
+                        <td><?php echo number_format((int)$u['c'], 0, ',', '.'); ?></td>
+                    </tr>
+                <?php endforeach; endif; ?>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+<div class="lc-card">
+    <div class="lc-card-header"><h2>Acessos recentes (amostra crua)</h2></div>
+    <div class="lc-table-wrap">
+    <table class="lc-table">
+        <thead><tr><th>Quando</th><th>Página</th><th>Vindo de</th><th>Navegador / dispositivo</th></tr></thead>
+        <tbody>
+            <?php if (empty($amostraRecente)): ?>
+                <tr><td colspan="4" class="lc-empty-row">Ainda sem dados suficientes.</td></tr>
+            <?php else: foreach ($amostraRecente as $a): ?>
+                <tr>
+                    <td style="white-space:nowrap;"><?php echo date('d/m H:i:s', strtotime($a['criado_em'])); ?></td>
+                    <td><?php echo htmlspecialchars($a['path'], ENT_QUOTES, 'UTF-8'); ?></td>
+                    <td><?php echo $a['referrer'] ? htmlspecialchars($a['referrer'], ENT_QUOTES, 'UTF-8') : '<span style="color:var(--text-subtle);">direto</span>'; ?></td>
+                    <td style="max-width:320px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="<?php echo htmlspecialchars($a['user_agent'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($a['user_agent'] ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>
+                </tr>
+            <?php endforeach; endif; ?>
+        </tbody>
+    </table>
     </div>
 </div>
 
