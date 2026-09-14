@@ -44,7 +44,7 @@ $pageSubtitle = 'Desempenho dos posts, publicados e gerados por IA.';
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | Dashboard - LiberaCash</title>
 <meta name="robots" content="noindex, nofollow">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.1/chart.min.js"></script>
 <?php include __DIR__ . '/_estilo.php'; ?>
 </head>
 <?php include __DIR__ . '/_shell_top.php'; ?>
