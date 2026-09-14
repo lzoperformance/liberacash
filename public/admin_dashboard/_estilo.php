@@ -136,6 +136,18 @@ table.lc-table th {
 table.lc-table td { padding: 11px 12px; border-bottom: 1px solid var(--border-hairline); font: 500 13px var(--font-tabular); color: var(--text-body); }
 table.lc-table tr:hover td { background: var(--surface-hover); }
 table.lc-table tr:last-child td { border-bottom: none; }
+
+.lc-actions-cell { white-space: nowrap; }
+.lc-action-btn {
+  display: inline-flex; align-items: center; gap: 5px; padding: 6px 12px;
+  border-radius: var(--radius-control); font: 600 12px var(--font-ui);
+  text-decoration: none; white-space: nowrap; margin-right: 8px; border: none; cursor: pointer;
+}
+.lc-action-btn [data-lucide] { width: 13px; height: 13px; }
+.lc-action-btn.edit { color: var(--forest-700); background: var(--surface-accent-faint); }
+.lc-action-btn.edit:hover { background: var(--green-100); }
+.lc-action-btn.delete { color: var(--red-500); background: var(--status-pending-bg); }
+.lc-action-btn.delete:hover { background: #FADCDC; }
 .lc-empty-row { text-align: center; padding: 30px 20px; color: var(--text-muted); }
 
 /* ===== Badge ===== */

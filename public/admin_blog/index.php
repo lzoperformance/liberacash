@@ -73,11 +73,11 @@ $pageSubtitle = count($posts) . ' post(s) no total';
                 <td><span class="lc-badge <?php echo $p['status'] === 'publicado' ? 'success' : 'warning'; ?>"><?php echo ucfirst($p['status']); ?></span></td>
                 <td><?php echo (int)$p['views']; ?></td>
                 <td><?php echo date('d/m/Y', strtotime($p['created_at'])); ?></td>
-                <td style="white-space:nowrap;">
-                    <a href="/admin_blog/post-form.php?id=<?php echo (int)$p['id']; ?>" style="color:var(--forest-700); text-decoration:none; margin-right:14px; font-weight:600; font-size:13px;"><i data-lucide="pencil" style="width:14px;height:14px;vertical-align:-2px;"></i> Editar</a>
-                    <a href="/admin_blog/post-delete.php?id=<?php echo (int)$p['id']; ?>" style="color:var(--red-500); text-decoration:none; font-weight:600; font-size:13px;"
+                <td class="lc-actions-cell">
+                    <a href="/admin_blog/post-form.php?id=<?php echo (int)$p['id']; ?>" class="lc-action-btn edit"><i data-lucide="pencil"></i>Editar</a>
+                    <a href="/admin_blog/post-delete.php?id=<?php echo (int)$p['id']; ?>" class="lc-action-btn delete"
                        onclick="return confirm('Tem certeza que quer excluir o post &quot;<?php echo htmlspecialchars(addslashes($p['titulo']), ENT_QUOTES, 'UTF-8'); ?>&quot;? Essa ação não pode ser desfeita.');">
-                       <i data-lucide="trash-2" style="width:14px;height:14px;vertical-align:-2px;"></i> Excluir</a>
+                       <i data-lucide="trash-2"></i>Excluir</a>
                 </td>
             </tr>
             <?php endforeach; ?>
