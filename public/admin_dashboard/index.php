@@ -111,6 +111,8 @@ foreach ($produtoRows as $row) {
     $produtoLabels[] = $p['nome'] ?? $row['produto_slug'];
     $produtoValores[] = (int)$row['c'];
 }
+$pageTitle = 'Visão geral';
+$pageSubtitle = 'Acessos ao site e o funil de leads, num só lugar.';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -119,117 +121,112 @@ foreach ($produtoRows as $row) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard | LiberaCash</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 <?php include __DIR__ . '/_estilo.php'; ?>
 </head>
-<body>
+<?php include __DIR__ . '/_shell_top.php'; ?>
 
-<?php include __DIR__ . '/_nav.php'; ?>
-
-<div class="wrap">
-    <div class="page-header">
-        <h1>Visão geral</h1>
+<div class="lc-kpi-grid">
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="mouse-pointer-click"></i></span><span class="lc-stat-label">Acessos hoje</span></div>
+        <span class="lc-stat-value"><?php echo number_format($kpi_hoje, 0, ',', '.'); ?></span>
     </div>
-
-    <div class="kpi-grid">
-        <div class="kpi-card">
-            <span class="kpi-label">Acessos hoje</span>
-            <span class="kpi-value"><?php echo number_format($kpi_hoje, 0, ',', '.'); ?></span>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-label">Últimos 7 dias</span>
-            <span class="kpi-value"><?php echo number_format($kpi_7d, 0, ',', '.'); ?></span>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-label">Últimos 30 dias</span>
-            <span class="kpi-value"><?php echo number_format($kpi_30d, 0, ',', '.'); ?></span>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-label">Total (desde o início)</span>
-            <span class="kpi-value"><?php echo number_format($kpi_total, 0, ',', '.'); ?></span>
-        </div>
-        <div class="kpi-card destaque">
-            <span class="kpi-label">Horário de pico</span>
-            <span class="kpi-value"><?php echo $horaLabels[$horaPico] ?? '—'; ?></span>
-        </div>
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="calendar-days"></i></span><span class="lc-stat-label">Últimos 7 dias</span></div>
+        <span class="lc-stat-value"><?php echo number_format($kpi_7d, 0, ',', '.'); ?></span>
     </div>
-
-    <div class="card">
-        <div class="card-header">
-            <h2>Acessos ao longo do tempo</h2>
-            <div class="tabs" id="tabsPeriodo">
-                <button class="tab active" data-alvo="chartDia">Dia</button>
-                <button class="tab" data-alvo="chartSemana">Semana</button>
-                <button class="tab" data-alvo="chartMes">Mês</button>
-            </div>
-        </div>
-        <div class="chart-wrap"><canvas id="chartDia"></canvas></div>
-        <div class="chart-wrap" style="display:none;"><canvas id="chartSemana"></canvas></div>
-        <div class="chart-wrap" style="display:none;"><canvas id="chartMes"></canvas></div>
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="calendar-range"></i></span><span class="lc-stat-label">Últimos 30 dias</span></div>
+        <span class="lc-stat-value"><?php echo number_format($kpi_30d, 0, ',', '.'); ?></span>
     </div>
-
-    <div class="grid-2">
-        <div class="card">
-            <div class="card-header"><h2>Acessos por horário do dia</h2></div>
-            <div class="chart-wrap"><canvas id="chartHora"></canvas></div>
-        </div>
-        <div class="card">
-            <div class="card-header"><h2>Páginas mais vistas</h2></div>
-            <table>
-                <thead><tr><th>Página</th><th>Acessos</th></tr></thead>
-                <tbody>
-                    <?php if (empty($topPaginas)): ?>
-                        <tr><td colspan="2" class="empty-cell">Ainda sem dados suficientes.</td></tr>
-                    <?php else: foreach ($topPaginas as $p): ?>
-                        <tr>
-                            <td><?php echo htmlspecialchars($p['path'], ENT_QUOTES, 'UTF-8'); ?></td>
-                            <td><?php echo number_format((int)$p['c'], 0, ',', '.'); ?></td>
-                        </tr>
-                    <?php endforeach; endif; ?>
-                </tbody>
-            </table>
-        </div>
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="infinity"></i></span><span class="lc-stat-label">Total desde o início</span></div>
+        <span class="lc-stat-value"><?php echo number_format($kpi_total, 0, ',', '.'); ?></span>
     </div>
-
-    <div class="page-header" style="margin-top:40px;">
-        <h1>Leads</h1>
-        <a class="btn-new" href="/admin_dashboard/leads.php"><i class="fas fa-address-book"></i> Ver todos os leads</a>
-    </div>
-
-    <div class="kpi-grid">
-        <div class="kpi-card">
-            <span class="kpi-label">Leads hoje</span>
-            <span class="kpi-value"><?php echo number_format($leads_hoje, 0, ',', '.'); ?></span>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-label">Últimos 7 dias</span>
-            <span class="kpi-value"><?php echo number_format($leads_7d, 0, ',', '.'); ?></span>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-label">Últimos 30 dias</span>
-            <span class="kpi-value"><?php echo number_format($leads_30d, 0, ',', '.'); ?></span>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-label">Total de leads</span>
-            <span class="kpi-value"><?php echo number_format($leads_total, 0, ',', '.'); ?></span>
-        </div>
-        <div class="kpi-card destaque">
-            <span class="kpi-label">Conversão (visita → cadastro, 30d)</span>
-            <span class="kpi-value"><?php echo $taxaConversao !== null ? $taxaConversao . '%' : '—'; ?></span>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-header"><h2>Produto mais escolhido (cliques em parceiro)</h2></div>
-        <div class="chart-wrap"><canvas id="chartProdutos"></canvas></div>
+    <div class="lc-stat dark">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="flame"></i></span><span class="lc-stat-label">Horário de pico</span></div>
+        <span class="lc-stat-value"><?php echo $horaLabels[$horaPico] ?? '—'; ?></span>
     </div>
 </div>
 
+<div class="lc-card">
+    <div class="lc-card-header">
+        <h2>Acessos ao longo do tempo</h2>
+        <div class="lc-tabs" id="tabsPeriodo">
+            <button class="lc-tab active" data-alvo="chartDia">Dia</button>
+            <button class="lc-tab" data-alvo="chartSemana">Semana</button>
+            <button class="lc-tab" data-alvo="chartMes">Mês</button>
+        </div>
+    </div>
+    <div class="lc-chart-wrap"><canvas id="chartDia"></canvas></div>
+    <div class="lc-chart-wrap" style="display:none;"><canvas id="chartSemana"></canvas></div>
+    <div class="lc-chart-wrap" style="display:none;"><canvas id="chartMes"></canvas></div>
+</div>
+
+<div class="lc-grid-2">
+    <div class="lc-card">
+        <div class="lc-card-header"><h2>Acessos por horário do dia</h2></div>
+        <div class="lc-chart-wrap"><canvas id="chartHora"></canvas></div>
+    </div>
+    <div class="lc-card">
+        <div class="lc-card-header"><h2>Páginas mais vistas</h2></div>
+        <div class="lc-table-wrap">
+        <table class="lc-table">
+            <thead><tr><th>Página</th><th>Acessos</th></tr></thead>
+            <tbody>
+                <?php if (empty($topPaginas)): ?>
+                    <tr><td colspan="2" class="lc-empty-row">Ainda sem dados suficientes.</td></tr>
+                <?php else: foreach ($topPaginas as $p): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($p['path'], ENT_QUOTES, 'UTF-8'); ?></td>
+                        <td><?php echo number_format((int)$p['c'], 0, ',', '.'); ?></td>
+                    </tr>
+                <?php endforeach; endif; ?>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+<div class="lc-page-title-row" style="margin-top:8px;">
+    <h2>Leads</h2>
+    <a class="lc-btn lc-btn-dark lc-btn-sm" href="/admin_dashboard/leads.php"><i data-lucide="users" style="width:16px;height:16px;"></i> Ver todos os leads</a>
+</div>
+
+<div class="lc-kpi-grid">
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="user-plus"></i></span><span class="lc-stat-label">Leads hoje</span></div>
+        <span class="lc-stat-value"><?php echo number_format($leads_hoje, 0, ',', '.'); ?></span>
+    </div>
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="calendar-days"></i></span><span class="lc-stat-label">Últimos 7 dias</span></div>
+        <span class="lc-stat-value"><?php echo number_format($leads_7d, 0, ',', '.'); ?></span>
+    </div>
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="calendar-range"></i></span><span class="lc-stat-label">Últimos 30 dias</span></div>
+        <span class="lc-stat-value"><?php echo number_format($leads_30d, 0, ',', '.'); ?></span>
+    </div>
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="users"></i></span><span class="lc-stat-label">Total de leads</span></div>
+        <span class="lc-stat-value"><?php echo number_format($leads_total, 0, ',', '.'); ?></span>
+    </div>
+    <div class="lc-stat accent">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="trending-up"></i></span><span class="lc-stat-label">Conversão (visita → cadastro, 30d)</span></div>
+        <span class="lc-stat-value"><?php echo $taxaConversao !== null ? $taxaConversao . '%' : '—'; ?></span>
+    </div>
+</div>
+
+<div class="lc-card">
+    <div class="lc-card-header"><h2>Produto mais escolhido (cliques em parceiro)</h2></div>
+    <div class="lc-chart-wrap"><canvas id="chartProdutos"></canvas></div>
+</div>
+
 <script>
-const paletaVerde = '#2FBE63';
-const paletaVerdeClaro = 'rgba(47,190,99,0.15)';
-const paletaEscura = '#0C2F1B';
+Chart.defaults.font.family = "'Plus Jakarta Sans', 'Urbanist', sans-serif";
+Chart.defaults.color = '#828282';
+const paletaVerde = '#6BCE52';
+const paletaVerdeClaro = 'rgba(130,225,102,0.22)';
+const paletaEscura = '#0E3223';
 
 function lineChart(id, labels, dados) {
     return new Chart(document.getElementById(id), {
@@ -252,15 +249,14 @@ barChart('chartMes', <?php echo json_encode($mesLabels); ?>, <?php echo json_enc
 barChart('chartHora', <?php echo json_encode($horaLabels); ?>, <?php echo json_encode($horaValores); ?>, paletaEscura);
 barChart('chartProdutos', <?php echo json_encode($produtoLabels); ?>, <?php echo json_encode($produtoValores); ?>);
 
-document.querySelectorAll('#tabsPeriodo .tab').forEach(function (btn) {
+document.querySelectorAll('#tabsPeriodo .lc-tab').forEach(function (btn) {
     btn.addEventListener('click', function () {
-        document.querySelectorAll('#tabsPeriodo .tab').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.chart-wrap').forEach(w => w.style.display = 'none');
+        document.querySelectorAll('#tabsPeriodo .lc-tab').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.lc-chart-wrap').forEach(w => w.style.display = 'none');
         btn.classList.add('active');
-        document.getElementById(btn.dataset.alvo).closest('.chart-wrap').style.display = 'block';
+        document.getElementById(btn.dataset.alvo).closest('.lc-chart-wrap').style.display = 'block';
     });
 });
 </script>
 
-</body>
-</html>
+<?php include __DIR__ . '/_shell_bottom.php'; ?>

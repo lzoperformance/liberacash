@@ -34,6 +34,8 @@ for ($i = 11; $i >= 0; $i--) {
     $mesLabels[] = $mesesPt[$mes] . '/' . substr($ano, 2);
     $mesValores[] = (int)($porMesRaw[$ym] ?? 0);
 }
+$pageTitle = 'Blog';
+$pageSubtitle = 'Desempenho dos posts, publicados e gerados por IA.';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -42,99 +44,99 @@ for ($i = 11; $i >= 0; $i--) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | Dashboard - LiberaCash</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 <?php include __DIR__ . '/_estilo.php'; ?>
 </head>
-<body>
+<?php include __DIR__ . '/_shell_top.php'; ?>
 
-<?php include __DIR__ . '/_nav.php'; ?>
+<div class="lc-page-title-row" style="margin-top:-4px;">
+    <span></span>
+    <a class="lc-btn lc-btn-secondary lc-btn-sm" href="/admin_blog/" target="_blank"><i data-lucide="pencil" style="width:16px;height:16px;"></i> Gerenciar posts</a>
+</div>
 
-<div class="wrap">
-    <div class="page-header">
-        <h1>Blog</h1>
-        <a class="btn-outline" href="/admin_blog/" target="_blank"><i class="fas fa-pen"></i> Gerenciar posts</a>
+<div class="lc-kpi-grid">
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="files"></i></span><span class="lc-stat-label">Total de posts</span></div>
+        <span class="lc-stat-value"><?php echo $totalPosts; ?></span>
     </div>
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="check-circle-2"></i></span><span class="lc-stat-label">Publicados</span></div>
+        <span class="lc-stat-value"><?php echo $publicados; ?></span>
+    </div>
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="file-clock"></i></span><span class="lc-stat-label">Rascunhos</span></div>
+        <span class="lc-stat-value"><?php echo $rascunhos; ?></span>
+    </div>
+    <div class="lc-stat">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="eye"></i></span><span class="lc-stat-label">Total de leituras</span></div>
+        <span class="lc-stat-value"><?php echo number_format($totalViews, 0, ',', '.'); ?></span>
+    </div>
+    <div class="lc-stat dark">
+        <div class="lc-stat-top"><span class="lc-stat-icon"><i data-lucide="sparkles"></i></span><span class="lc-stat-label">IA / manuais</span></div>
+        <span class="lc-stat-value"><?php echo $geradosIa; ?> / <?php echo $manuais; ?></span>
+    </div>
+</div>
 
-    <div class="kpi-grid">
-        <div class="kpi-card">
-            <span class="kpi-label">Total de posts</span>
-            <span class="kpi-value"><?php echo $totalPosts; ?></span>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-label">Publicados</span>
-            <span class="kpi-value"><?php echo $publicados; ?></span>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-label">Rascunhos</span>
-            <span class="kpi-value"><?php echo $rascunhos; ?></span>
-        </div>
-        <div class="kpi-card">
-            <span class="kpi-label">Total de leituras</span>
-            <span class="kpi-value"><?php echo number_format($totalViews, 0, ',', '.'); ?></span>
-        </div>
-        <div class="kpi-card destaque">
-            <span class="kpi-label">Gerados por IA / manuais</span>
-            <span class="kpi-value"><?php echo $geradosIa; ?> / <?php echo $manuais; ?></span>
+<div class="lc-card">
+    <div class="lc-card-header"><h2>Posts publicados por mês</h2></div>
+    <div class="lc-chart-wrap"><canvas id="chartMes"></canvas></div>
+</div>
+
+<div class="lc-grid-2">
+    <div class="lc-card">
+        <div class="lc-card-header"><h2>Mais lidos</h2></div>
+        <div class="lc-table-wrap">
+        <table class="lc-table">
+            <thead><tr><th>Post</th><th>Leituras</th><th>Origem</th></tr></thead>
+            <tbody>
+                <?php if (empty($topPosts)): ?>
+                    <tr><td colspan="3" class="lc-empty-row">Nenhum post ainda.</td></tr>
+                <?php else: foreach ($topPosts as $p): ?>
+                    <tr>
+                        <td>
+                            <a href="/blog/<?php echo urlencode($p['slug']); ?>/" target="_blank"><?php echo htmlspecialchars($p['titulo'], ENT_QUOTES, 'UTF-8'); ?></a>
+                            <?php if ($p['status'] === 'rascunho'): ?><span class="lc-badge warning">rascunho</span><?php endif; ?>
+                        </td>
+                        <td><?php echo number_format((int)$p['views'], 0, ',', '.'); ?></td>
+                        <td><span class="lc-badge <?php echo $p['gerado_por_ia'] ? 'success' : 'neutral'; ?>"><?php echo $p['gerado_por_ia'] ? 'IA' : 'Manual'; ?></span></td>
+                    </tr>
+                <?php endforeach; endif; ?>
+            </tbody>
+        </table>
         </div>
     </div>
-
-    <div class="card">
-        <div class="card-header"><h2>Posts publicados por mês</h2></div>
-        <div class="chart-wrap"><canvas id="chartMes"></canvas></div>
-    </div>
-
-    <div class="grid-2">
-        <div class="card">
-            <div class="card-header"><h2>Mais lidos</h2></div>
-            <table>
-                <thead><tr><th>Post</th><th>Leituras</th><th>Origem</th></tr></thead>
-                <tbody>
-                    <?php if (empty($topPosts)): ?>
-                        <tr><td colspan="3" class="empty-cell">Nenhum post ainda.</td></tr>
-                    <?php else: foreach ($topPosts as $p): ?>
-                        <tr>
-                            <td>
-                                <a href="/blog/<?php echo urlencode($p['slug']); ?>/" target="_blank"><?php echo htmlspecialchars($p['titulo'], ENT_QUOTES, 'UTF-8'); ?></a>
-                                <?php if ($p['status'] === 'rascunho'): ?><span class="badge rascunho">rascunho</span><?php endif; ?>
-                            </td>
-                            <td><?php echo number_format((int)$p['views'], 0, ',', '.'); ?></td>
-                            <td><span class="badge <?php echo $p['gerado_por_ia'] ? 'ia' : 'manual'; ?>"><?php echo $p['gerado_por_ia'] ? 'IA' : 'Manual'; ?></span></td>
-                        </tr>
-                    <?php endforeach; endif; ?>
-                </tbody>
-            </table>
-        </div>
-        <div class="card">
-            <div class="card-header"><h2>Por categoria</h2></div>
-            <table>
-                <thead><tr><th>Categoria</th><th>Posts</th><th>Leituras</th></tr></thead>
-                <tbody>
-                    <?php if (empty($porCategoria)): ?>
-                        <tr><td colspan="3" class="empty-cell">Sem dados ainda.</td></tr>
-                    <?php else: foreach ($porCategoria as $c): ?>
-                        <tr>
-                            <td><?php echo htmlspecialchars($c['categoria'], ENT_QUOTES, 'UTF-8'); ?></td>
-                            <td><?php echo (int)$c['qtd']; ?></td>
-                            <td><?php echo number_format((int)$c['views'], 0, ',', '.'); ?></td>
-                        </tr>
-                    <?php endforeach; endif; ?>
-                </tbody>
-            </table>
+    <div class="lc-card">
+        <div class="lc-card-header"><h2>Por categoria</h2></div>
+        <div class="lc-table-wrap">
+        <table class="lc-table">
+            <thead><tr><th>Categoria</th><th>Posts</th><th>Leituras</th></tr></thead>
+            <tbody>
+                <?php if (empty($porCategoria)): ?>
+                    <tr><td colspan="3" class="lc-empty-row">Sem dados ainda.</td></tr>
+                <?php else: foreach ($porCategoria as $c): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($c['categoria'], ENT_QUOTES, 'UTF-8'); ?></td>
+                        <td><?php echo (int)$c['qtd']; ?></td>
+                        <td><?php echo number_format((int)$c['views'], 0, ',', '.'); ?></td>
+                    </tr>
+                <?php endforeach; endif; ?>
+            </tbody>
+        </table>
         </div>
     </div>
 </div>
 
 <script>
+Chart.defaults.font.family = "'Plus Jakarta Sans', 'Urbanist', sans-serif";
+Chart.defaults.color = '#828282';
 new Chart(document.getElementById('chartMes'), {
     type: 'bar',
     data: {
         labels: <?php echo json_encode($mesLabels); ?>,
-        datasets: [{ data: <?php echo json_encode($mesValores); ?>, backgroundColor: '#2FBE63', borderRadius: 4 }]
+        datasets: [{ data: <?php echo json_encode($mesValores); ?>, backgroundColor: '#6BCE52', borderRadius: 4 }]
     },
     options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { precision: 0 } } } }
 });
 </script>
 
-</body>
-</html>
+<?php include __DIR__ . '/_shell_bottom.php'; ?>
