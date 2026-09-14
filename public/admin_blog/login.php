@@ -46,96 +46,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login | Admin Blog - LiberaCash</title>
 <meta name="robots" content="noindex, nofollow">
+<?php include __DIR__ . '/../admin_dashboard/_estilo.php'; ?>
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-        font-family: 'Segoe UI', Arial, sans-serif;
-        background: linear-gradient(135deg, #2ecc71, #27ae60);
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    body { display: flex; align-items: center; justify-content: center; min-height: 100vh; overflow: auto; }
+    .lc-login-box {
+        background: var(--surface-card); padding: 40px; border-radius: var(--radius-shell);
+        box-shadow: var(--shadow-shell); border: 1px solid var(--border-accent);
+        width: 100%; max-width: 360px;
     }
-    .login-box {
-        background: #fff;
-        padding: 40px;
-        border-radius: 14px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        width: 100%;
-        max-width: 360px;
+    .lc-login-box img { height: 34px; margin-bottom: 22px; }
+    .lc-login-box h1 { font: 600 22px/1.2 var(--font-display); color: var(--text-strong); margin-bottom: 4px; }
+    .lc-login-box p.sub { font-size: 13px; color: var(--text-muted); margin-bottom: 26px; }
+    .lc-form-group { margin-bottom: 16px; }
+    .lc-form-group label { display: block; font: 600 12.5px var(--font-ui); color: var(--text-strong); margin-bottom: 6px; }
+    .lc-form-group input {
+        width: 100%; height: 44px; padding: 0 14px; border: 1.5px solid var(--border-default);
+        border-radius: var(--radius-field); font: 500 14px var(--font-ui); color: var(--text-strong);
     }
-    .login-box h1 {
-        font-size: 1.4rem;
-        color: #181a1f;
-        margin-bottom: 6px;
+    .lc-form-group input:focus { outline: none; border-color: var(--border-accent); box-shadow: 0 0 0 3px rgba(130,225,102,.35); }
+    .lc-btn-login {
+        width: 100%; height: 46px; background: var(--green-500); color: var(--forest-800); border: none;
+        border-radius: var(--radius-control); font: 700 14.5px var(--font-ui); cursor: pointer; margin-top: 6px;
     }
-    .login-box p.sub {
-        font-size: 13px;
-        color: #666;
-        margin-bottom: 24px;
-    }
-    .form-group { margin-bottom: 16px; }
-    .form-group label {
-        display: block;
-        font-size: 13px;
-        font-weight: 600;
-        color: #2d3436;
-        margin-bottom: 6px;
-    }
-    .form-group input {
-        width: 100%;
-        padding: 12px 14px;
-        border: 2px solid #eee;
-        border-radius: 8px;
-        font-size: 14px;
-    }
-    .form-group input:focus {
-        outline: none;
-        border-color: #2ecc71;
-    }
-    .btn-login {
-        width: 100%;
-        background: #2ecc71;
-        color: #fff;
-        border: none;
-        padding: 13px;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 700;
-        cursor: pointer;
-        margin-top: 6px;
-    }
-    .btn-login:hover { background: #27ae60; }
-    .erro {
-        background: #fdecea;
-        color: #c0392b;
-        padding: 10px 14px;
-        border-radius: 8px;
-        font-size: 13px;
-        margin-bottom: 16px;
-    }
+    .lc-btn-login:hover { background: var(--green-600); box-shadow: var(--shadow-accent); }
 </style>
 </head>
 <body>
-    <div class="login-box">
+    <div class="lc-login-box">
+        <img src="/images/logo.png?v=2" alt="LiberaCash">
         <h1>Admin Blog</h1>
-        <p class="sub">LiberaCash — painel de gerenciamento do blog</p>
+        <p class="sub">Painel de gerenciamento do blog</p>
 
         <?php if ($erro): ?>
-            <div class="erro"><?php echo htmlspecialchars($erro, ENT_QUOTES, 'UTF-8'); ?></div>
+            <div class="lc-badge pending" style="display:flex; padding:10px 14px; font-size:13px; margin-bottom:16px;"><?php echo htmlspecialchars($erro, ENT_QUOTES, 'UTF-8'); ?></div>
         <?php endif; ?>
 
         <form method="POST">
             <input type="hidden" name="next" value="<?php echo htmlspecialchars($destino, ENT_QUOTES, 'UTF-8'); ?>">
-            <div class="form-group">
+            <div class="lc-form-group">
                 <label for="username">Usuário</label>
                 <input type="text" id="username" name="username" autofocus required>
             </div>
-            <div class="form-group">
+            <div class="lc-form-group">
                 <label for="password">Senha</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" class="btn-login">Entrar</button>
+            <button type="submit" class="lc-btn-login">Entrar</button>
         </form>
     </div>
 </body>

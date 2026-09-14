@@ -67,10 +67,8 @@ a { color: inherit; }
   display: flex; flex-direction: column; gap: 18px; padding: 16px;
   overflow-y: auto;
 }
-.lc-sidebar-logo { display: flex; align-items: center; gap: 9px; padding: 4px 6px 0; }
-.lc-sidebar-logo img { height: 30px; }
-.lc-sidebar-logo span { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--text-strong); }
-.lc-sidebar-logo span b { color: var(--forest-700); }
+.lc-sidebar-logo { display: flex; align-items: center; padding: 6px 6px 4px; margin-bottom: 4px; }
+.lc-sidebar-logo img { height: 34px; width: auto; }
 
 .lc-eyebrow { display: block; padding: 0 14px 6px; font: 600 11px/1.2 var(--font-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--text-subtle); }
 .lc-nav-group { display: flex; flex-direction: column; gap: 3px; }
@@ -157,6 +155,27 @@ table.lc-table tr:last-child td { border-bottom: none; }
 .lc-btn-secondary { background: var(--surface-card); color: var(--text-strong); border-color: var(--border-default); }
 .lc-btn-secondary:hover { background: var(--surface-hover); }
 .lc-btn-sm { height: 36px; padding: 0 16px; font-size: 13px; }
+
+/* ===== Formulários (post-form etc.) ===== */
+.lc-form-group { margin-bottom: 18px; }
+.lc-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.lc-form-group label, .lc-form-row label { display: block; font: 700 13px var(--font-ui); color: var(--text-strong); margin-bottom: 7px; }
+.lc-form-group label .lc-hint, .lc-form-row label .lc-hint { font-weight: 400; color: var(--text-subtle); font-size: 11.5px; }
+.lc-form-group input[type=text], .lc-form-group input[type=url], .lc-form-group textarea, .lc-form-group select,
+.lc-form-row input[type=text], .lc-form-row input[type=url], .lc-form-row textarea, .lc-form-row select {
+    width: 100%; padding: 11px 14px; border: 1.5px solid var(--border-default); border-radius: var(--radius-field);
+    font: 500 14px var(--font-ui); color: var(--text-strong); background: var(--surface-card);
+}
+.lc-form-group input:focus, .lc-form-group textarea:focus, .lc-form-group select:focus,
+.lc-form-row input:focus, .lc-form-row textarea:focus, .lc-form-row select:focus {
+    outline: none; border-color: var(--border-accent); box-shadow: 0 0 0 3px rgba(130,225,102,.35);
+}
+.lc-form-group textarea { resize: vertical; font-family: var(--font-ui); }
+.lc-form-group textarea.lc-conteudo { min-height: 260px; }
+.lc-form-group textarea.lc-resumo { min-height: 80px; }
+.lc-form-actions { margin-top: 22px; display: flex; gap: 14px; align-items: center; }
+.lc-form-actions a.lc-cancel { color: var(--text-muted); text-decoration: none; font: 600 14px var(--font-ui); }
+.lc-form-actions a.lc-cancel:hover { color: var(--text-strong); }
 
 /* ===== Filters ===== */
 .lc-filters { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; }
