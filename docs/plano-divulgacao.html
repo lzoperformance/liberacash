@@ -1,0 +1,466 @@
+<!doctype html>
+<title>Plano de Divulgação LiberaCash</title>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Urbanist:ital,wght@0,400..800;1,400..600&family=Plus+Jakarta+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-50:#F3FCEB; --green-100:#E6F8D6; --green-200:#CDF1AE; --green-400:#9AE472;
+    --green-500:#82E166; --green-600:#6BCE52; --green-700:#51AE3B;
+    --forest-900:#07231A; --forest-800:#0E3223; --forest-700:#16562D; --forest-600:#1F6B3C;
+    --grey-0:#FFFFFF; --grey-50:#F7F7F7; --grey-100:#F1F1F1; --grey-150:#E9E9E9; --grey-200:#DFDFDF;
+    --grey-300:#CBCBCB; --grey-400:#A8A8A8; --grey-500:#828282; --grey-600:#636363;
+    --red-500:#E5484D; --red-50:#FDECEC; --amber-500:#B4790A; --amber-50:#FDF3E2; --blue-600:#2E63A6; --blue-50:#EAF3FB;
+
+    --bg: var(--grey-150);
+    --surface: var(--grey-0);
+    --surface-sunken: var(--grey-50);
+    --text-strong: var(--forest-800);
+    --text-body: #26382E;
+    --text-muted: var(--grey-600);
+    --text-subtle: var(--grey-500);
+    --border: var(--grey-200);
+    --border-hair: var(--grey-150);
+    --accent: var(--green-500);
+    --accent-ink: var(--forest-800);
+    --accent-soft: var(--green-50);
+    --link: var(--forest-700);
+    --shadow-card: 0 1px 2px rgba(14,50,35,.04), 0 10px 26px -14px rgba(14,50,35,.18);
+    --shadow-lift: 0 2px 4px rgba(14,50,35,.05), 0 18px 40px -18px rgba(14,50,35,.22);
+    --hi-bg: var(--green-50); --hi-fg: var(--forest-700);
+    --med-bg: var(--amber-50); --med-fg: var(--amber-500);
+    --lo-bg: var(--grey-100); --lo-fg: var(--grey-600);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: var(--forest-900);
+      --surface: #102A1D;
+      --surface-sunken: #0C2418;
+      --text-strong: #F2FAF4;
+      --text-body: #DCEBE1;
+      --text-muted: #9FB8A9;
+      --text-subtle: #7E9689;
+      --border: #1E3D2C;
+      --border-hair: #17301F;
+      --accent: var(--green-500);
+      --accent-ink: var(--forest-900);
+      --accent-soft: rgba(130,225,102,.12);
+      --link: var(--green-400);
+      --shadow-card: 0 1px 2px rgba(0,0,0,.3), 0 10px 26px -14px rgba(0,0,0,.5);
+      --shadow-lift: 0 2px 4px rgba(0,0,0,.3), 0 18px 40px -18px rgba(0,0,0,.55);
+      --hi-bg: rgba(130,225,102,.14); --hi-fg: var(--green-400);
+      --med-bg: rgba(226,154,44,.14); --med-fg: #E2B85C;
+      --lo-bg: rgba(255,255,255,.06); --lo-fg: var(--text-muted);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: var(--forest-900);
+    --surface: #102A1D;
+    --surface-sunken: #0C2418;
+    --text-strong: #F2FAF4;
+    --text-body: #DCEBE1;
+    --text-muted: #9FB8A9;
+    --text-subtle: #7E9689;
+    --border: #1E3D2C;
+    --border-hair: #17301F;
+    --accent: var(--green-500);
+    --accent-ink: var(--forest-900);
+    --accent-soft: rgba(130,225,102,.12);
+    --link: var(--green-400);
+    --shadow-card: 0 1px 2px rgba(0,0,0,.3), 0 10px 26px -14px rgba(0,0,0,.5);
+    --shadow-lift: 0 2px 4px rgba(0,0,0,.3), 0 18px 40px -18px rgba(0,0,0,.55);
+    --hi-bg: rgba(130,225,102,.14); --hi-fg: var(--green-400);
+    --med-bg: rgba(226,154,44,.14); --med-fg: #E2B85C;
+    --lo-bg: rgba(255,255,255,.06); --lo-fg: var(--text-muted);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text-body);
+    font-family: 'Urbanist', system-ui, sans-serif; font-size: 15.5px; line-height: 1.55;
+    padding-block: 40px 80px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding-inline: 20px; }
+  h1, h2, h3 { font-family: 'Space Grotesk', 'Urbanist', sans-serif; color: var(--text-strong); text-wrap: balance; letter-spacing: -0.01em; }
+  a { color: var(--link); }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* ---------- Header ---------- */
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font: 700 11.5px/1 'Plus Jakarta Sans', sans-serif; letter-spacing: .09em; text-transform: uppercase; color: var(--link); margin-bottom: 14px; }
+  .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  header h1 { font-size: clamp(28px, 4.2vw, 38px); font-weight: 700; margin: 0 0 12px; }
+  header .lede { font-size: 17px; color: var(--text-muted); max-width: 62ch; margin: 0; }
+  header { padding-block: 6px 30px; border-bottom: 1px solid var(--border-hair); margin-bottom: 32px; }
+
+  /* ---------- Sections ---------- */
+  section { margin-bottom: 46px; }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
+  .section-head h2 { font-size: 22px; font-weight: 700; margin: 0; }
+  .section-head .tag { font: 600 11.5px/1 'Plus Jakarta Sans', sans-serif; color: var(--text-subtle); text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+  section > p.intro { color: var(--text-muted); max-width: 68ch; margin: -8px 0 20px; }
+
+  /* ---------- Cards ---------- */
+  .card { background: var(--surface); border: 1px solid var(--border-hair); border-radius: 18px; box-shadow: var(--shadow-card); padding: 22px 24px; }
+
+  /* ---------- Resumo / thesis ---------- */
+  .thesis { background: var(--surface); border: 1px solid var(--border-hair); border-radius: 20px; box-shadow: var(--shadow-lift); padding: 26px 28px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: start; }
+  .thesis .mark { width: 42px; height: 42px; border-radius: 12px; background: var(--accent); flex: 0 0 auto; display: grid; place-items: center; font: 700 17px 'Space Grotesk'; color: var(--accent-ink); }
+  .thesis h2 { font-size: 17px; margin: 0 0 8px; }
+  .thesis p { margin: 0 0 10px; color: var(--text-body); }
+  .thesis p:last-child { margin-bottom: 0; }
+  .thesis .answer { font-weight: 700; color: var(--text-strong); }
+  @media (max-width: 560px) { .thesis { grid-template-columns: 1fr; } }
+
+  /* ---------- Fit matrix ---------- */
+  .fit-grid { display: grid; grid-template-columns: 1.3fr repeat(3, 1fr); gap: 1px; background: var(--border-hair); border: 1px solid var(--border-hair); border-radius: 16px; overflow: hidden; }
+  .fit-grid > div { background: var(--surface); padding: 13px 14px; }
+  .fit-grid .hd { background: var(--surface-sunken); font: 700 11px/1.2 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; letter-spacing: .05em; color: var(--text-subtle); }
+  .fit-grid .plat { font: 700 14px 'Space Grotesk'; color: var(--text-strong); display: flex; flex-direction: column; gap: 2px; }
+  .fit-grid .plat small { font: 500 12px 'Urbanist'; color: var(--text-muted); }
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font: 700 11.5px/1.3 'Plus Jakarta Sans', sans-serif; }
+  .pill.hi { background: var(--hi-bg); color: var(--hi-fg); }
+  .pill.med { background: var(--med-bg); color: var(--med-fg); }
+  .pill.lo { background: var(--lo-bg); color: var(--lo-fg); }
+  .fit-grid .cell { display: flex; align-items: center; }
+  @media (max-width: 720px) {
+    .fit-grid { grid-template-columns: 1fr; }
+    .fit-grid .hd:not(:first-child) { display: none; }
+    .fit-grid .cell::before { content: attr(data-label) ": "; font: 700 11px 'Plus Jakarta Sans'; color: var(--text-subtle); margin-right: 6px; }
+  }
+
+  /* ---------- Workflow ---------- */
+  .flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .flow-step { background: var(--surface); border: 1px solid var(--border-hair); border-radius: 16px; padding: 18px 18px 20px; position: relative; box-shadow: var(--shadow-card); }
+  .flow-step .n { font: 700 12px 'Plus Jakarta Sans'; color: var(--accent-ink); background: var(--accent); width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 12px; }
+  .flow-step h3 { font-size: 14.5px; margin: 0 0 6px; }
+  .flow-step p { margin: 0; font-size: 13.5px; color: var(--text-muted); }
+  .flow-step .out { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font: 600 11px/1 'Plus Jakarta Sans'; background: var(--surface-sunken); border: 1px solid var(--border-hair); color: var(--text-muted); padding: 5px 9px; border-radius: 999px; }
+  .flow-arrow { display: none; }
+  @media (min-width: 640px) {
+    .flow { align-items: stretch; }
+  }
+  @media (max-width: 640px) { .flow { grid-template-columns: 1fr; } }
+
+  /* ---------- Pillars ---------- */
+  .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .pillar { background: var(--surface); border: 1px solid var(--border-hair); border-radius: 16px; padding: 17px 18px; box-shadow: var(--shadow-card); }
+  .pillar h3 { font-size: 14.5px; margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+  .pillar h3 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: 0 0 auto; }
+  .pillar p { margin: 0 0 8px; font-size: 13.5px; color: var(--text-muted); }
+  .pillar .ex { font-size: 12.5px; color: var(--text-subtle); font-style: italic; }
+
+  /* ---------- Playbook per channel ---------- */
+  .playbook { display: flex; flex-direction: column; gap: 14px; }
+  .pb-card { background: var(--surface); border: 1px solid var(--border-hair); border-radius: 18px; box-shadow: var(--shadow-card); padding: 20px 22px; display: grid; grid-template-columns: 200px 1fr; gap: 20px; }
+  .pb-card .head { display: flex; flex-direction: column; gap: 6px; }
+  .pb-card .head h3 { font-size: 17px; margin: 0; }
+  .pb-card .head .role { font: 700 11px 'Plus Jakarta Sans'; text-transform: uppercase; letter-spacing: .05em; color: var(--link); }
+  .pb-card dl { display: grid; grid-template-columns: 100px 1fr; gap: 8px 14px; margin: 0; }
+  .pb-card dt { font: 700 12px 'Plus Jakarta Sans'; color: var(--text-subtle); text-transform: uppercase; letter-spacing: .04em; padding-top: 2px; }
+  .pb-card dd { margin: 0; font-size: 13.5px; color: var(--text-body); }
+  @media (max-width: 640px) { .pb-card { grid-template-columns: 1fr; } .pb-card dl { grid-template-columns: 1fr; gap: 2px 0; } .pb-card dt { margin-top: 6px; } }
+
+  /* ---------- Blog channel ranking ---------- */
+  .rank-list { display: flex; flex-direction: column; gap: 10px; }
+  .rank-item { display: grid; grid-template-columns: 34px 1fr; gap: 14px; background: var(--surface); border: 1px solid var(--border-hair); border-radius: 14px; padding: 14px 16px; box-shadow: var(--shadow-card); }
+  .rank-item .n { font: 700 16px 'Space Grotesk'; color: transparent; -webkit-text-stroke: 1.4px var(--accent); align-self: center; text-align: center; }
+  .rank-item h3 { font-size: 14.5px; margin: 0 0 3px; }
+  .rank-item p { margin: 0; font-size: 13px; color: var(--text-muted); }
+
+  /* ---------- Cadence table ---------- */
+  table.cadence { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border-hair); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-card); }
+  table.cadence th, table.cadence td { padding: 11px 14px; text-align: left; font-size: 13px; border-bottom: 1px solid var(--border-hair); }
+  table.cadence th { background: var(--surface-sunken); font: 700 11px 'Plus Jakarta Sans'; text-transform: uppercase; letter-spacing: .04em; color: var(--text-subtle); }
+  table.cadence tr:last-child td { border-bottom: none; }
+  table.cadence td.center { text-align: center; font-variant-numeric: tabular-nums; }
+  .tbl-wrap { overflow-x: auto; }
+
+  /* ---------- UTM box ---------- */
+  .utm-box { background: var(--surface); border: 1px solid var(--border-hair); border-radius: 16px; padding: 20px 22px; box-shadow: var(--shadow-card); }
+  .utm-row { display: grid; grid-template-columns: 120px 1fr; gap: 10px 16px; padding: 8px 0; border-bottom: 1px dashed var(--border-hair); align-items: baseline; }
+  .utm-row:last-child { border-bottom: none; }
+  .utm-row code { font: 600 12.5px/1.4 'Plus Jakarta Sans', monospace; color: var(--link); }
+  .utm-row span { font-size: 13px; color: var(--text-muted); }
+  .utm-example { margin-top: 14px; padding: 12px 14px; background: var(--surface-sunken); border-radius: 10px; font: 500 12.5px/1.6 'Plus Jakarta Sans', monospace; color: var(--text-body); word-break: break-all; }
+
+  /* ---------- Compliance callout ---------- */
+  .callout { border-radius: 16px; padding: 20px 22px; background: var(--med-bg); border: 1px solid color-mix(in srgb, var(--med-fg) 30%, transparent); }
+  .callout h2 { font-size: 16px; color: var(--med-fg); margin: 0 0 10px; display: flex; align-items: center; gap: 8px; }
+  .callout ul { margin: 0; padding-left: 20px; }
+  .callout li { margin-bottom: 6px; font-size: 13.5px; color: var(--text-body); }
+  .callout li:last-child { margin-bottom: 0; }
+  .callout li b { color: var(--text-strong); }
+
+  footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border-hair); font-size: 12px; color: var(--text-subtle); }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">Plano de conteúdo &amp; distribuição</span>
+    <h1>Onde a LiberaCash aparece antes de alguém precisar procurar</h1>
+    <p class="lede">Um plano de divulgação pra Meta, TikTok, Kwai e YouTube — com o fluxo de produção, os pilares de conteúdo e a resposta direta pra "qual o melhor canal pro blog".</p>
+  </header>
+
+  <section>
+    <div class="thesis">
+      <span class="mark">Lc</span>
+      <div>
+        <h2>Resumo em uma tela</h2>
+        <p>O público da LiberaCash (negativado, autônomo, aposentado buscando crédito) não é o público nativo do TikTok. Ele está no <span class="answer">Facebook</span>, no <span class="answer">WhatsApp</span> e assistindo <span class="answer">YouTube</span> — e busca no <span class="answer">Google</span> quando o problema aperta. Vídeo curto (Reels/TikTok/Kwai/Shorts) entra como topo de funil pra construir marca e confiança; o blog e o WhatsApp são quem realmente converte.</p>
+        <p>A resposta direta pro melhor canal do blog está na seção <a href="#blog">"Onde o blog realmente converte"</a> — mas adianto: não é rede social, é <b>SEO</b> combinado com o <b>botão de compartilhar no WhatsApp</b> que já existe em cada post.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Como o público da LiberaCash usa cada rede</h2>
+      <span class="tag">Leitura rápida</span>
+    </div>
+    <p class="intro">Potencial não é tamanho de audiência — é o quanto quem está lá se parece com quem preenche o formulário de crédito pessoal, consignado ou garantia.</p>
+    <div class="fit-grid">
+      <div class="hd">Canal</div>
+      <div class="hd">Potencial</div>
+      <div class="hd">Papel no funil</div>
+      <div class="hd">Por quê</div>
+
+      <div class="plat">Facebook<small>feed + grupos</small></div>
+      <div class="cell" data-label="Potencial"><span class="pill hi">Alto</span></div>
+      <div class="cell" data-label="Papel">Consideração</div>
+      <div class="cell" data-label="Por quê">Maior concentração de 35–65 anos entre as redes — exatamente a faixa que pede consignado e crédito pessoal.</div>
+
+      <div class="plat">Instagram<small>Reels + Stories</small></div>
+      <div class="cell" data-label="Potencial"><span class="pill hi">Alto</span></div>
+      <div class="cell" data-label="Papel">Awareness</div>
+      <div class="cell" data-label="Por quê">Alcance amplo e barato via Reels; bom pra construir reconhecimento de marca antes da pessoa precisar buscar.</div>
+
+      <div class="plat">Kwai<small>vídeo curto</small></div>
+      <div class="cell" data-label="Potencial"><span class="pill med">Médio</span></div>
+      <div class="cell" data-label="Papel">Awareness</div>
+      <div class="cell" data-label="Por quê">Base forte no interior do Brasil e em classes C/D — mais alinhado ao perfil de negativado do que parece à primeira vista.</div>
+
+      <div class="plat">YouTube<small>Shorts + vídeo longo</small></div>
+      <div class="cell" data-label="Potencial"><span class="pill hi">Alto</span></div>
+      <div class="cell" data-label="Papel">Consideração</div>
+      <div class="cell" data-label="Por quê">Maior consumo de conteúdo explicativo/financeiro do país; Shorts alimenta descoberta, vídeo longo constrói confiança.</div>
+
+      <div class="plat">TikTok<small>vídeo curto</small></div>
+      <div class="cell" data-label="Potencial"><span class="pill med">Médio</span></div>
+      <div class="cell" data-label="Papel">Awareness</div>
+      <div class="cell" data-label="Por quê">Público historicamente mais jovem que o de quem busca consignado — mas cresce em 30+ e custa pouco reaproveitar o mesmo vídeo aqui.</div>
+
+      <div class="plat">WhatsApp<small>compartilhamento</small></div>
+      <div class="cell" data-label="Potencial"><span class="pill hi">Alto</span></div>
+      <div class="cell" data-label="Papel">Conversão</div>
+      <div class="cell" data-label="Por quê">É como esse público de fato compartilha conteúdo entre si — já tem botão pronto em cada post do blog.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Fluxo de produção: grava uma vez, publica em seis lugares</h2>
+      <span class="tag">Operação</span>
+    </div>
+    <p class="intro">Com equipe pequena, a ordem importa: gravar primeiro o vídeo <b>longo</b> e cortar pra baixo rende muito mais que gravar cada formato do zero.</p>
+    <div class="flow">
+      <div class="flow-step">
+        <span class="n">1</span>
+        <h3>Grava um vídeo-base (5–8 min)</h3>
+        <p>Um pilar por vez: "como funciona o consignado", "o que é CET", "empréstimo com garantia de celular, vale a pena?". Fala direto pra câmera ou em formato de resposta a pergunta real de lead.</p>
+      </div>
+      <div class="flow-step">
+        <span class="n">2</span>
+        <h3>Corta em 4–6 recortes verticais</h3>
+        <p>Cada resposta/momento forte do vídeo longo vira um clipe de 20–60s, com legenda embutida (a maior parte assiste sem som).</p>
+        <div class="out"><span class="chip">9:16</span><span class="chip">legenda embutida</span><span class="chip">gancho nos 2s</span></div>
+      </div>
+      <div class="flow-step">
+        <span class="n">3</span>
+        <h3>Publica nativo em cada rede</h3>
+        <p>O vídeo longo fica no YouTube. Os recortes vão pra Reels, TikTok, Kwai e YouTube Shorts — mesma peça, sem reeditar, legenda/hashtag ajustada por rede.</p>
+        <div class="out"><span class="chip">Reels</span><span class="chip">TikTok</span><span class="chip">Kwai</span><span class="chip">Shorts</span><span class="chip">Facebook</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Pilares de conteúdo</h2>
+      <span class="tag">O que gravar</span>
+    </div>
+    <p class="intro">Os mesmos temas que já viram post no blog — reaproveita a apuração, só muda o formato.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <h3><span class="dot"></span>Você sabia?</h3>
+        <p>Desmistifica score, CET, juros — educa antes de vender.</p>
+        <p class="ex">"Por que duas pessoas pedindo o mesmo valor pagam taxas diferentes"</p>
+      </div>
+      <div class="pillar">
+        <h3><span class="dot"></span>Como funciona</h3>
+        <p>Explica uma modalidade por vídeo — fundo de funil, quem já está decidido.</p>
+        <p class="ex">"Empréstimo com garantia de veículo, passo a passo"</p>
+      </div>
+      <div class="pillar">
+        <h3><span class="dot"></span>Pergunta real</h3>
+        <p>Responde dúvida que apareceu no WhatsApp/comentário — formato mais barato de todos.</p>
+        <p class="ex">"Negativado consegue empréstimo? Alguém perguntou, eu respondo"</p>
+      </div>
+      <div class="pillar">
+        <h3><span class="dot"></span>No noticiário</h3>
+        <p>Reage a Selic, inflação — reaproveita os posts de Economia gerados pelo pipeline do blog.</p>
+        <p class="ex">"Selic caiu — o que muda na sua parcela"</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Manual por canal</h2>
+      <span class="tag">Formato &amp; cadência</span>
+    </div>
+    <div class="playbook">
+      <div class="pb-card">
+        <div class="head">
+          <h3>Meta — Facebook</h3>
+          <span class="role">Consideração</span>
+        </div>
+        <dl>
+          <dt>Formato</dt><dd>Recorte do vídeo-base (Reels/vídeo nativo) + posts de texto com link pro blog + participação em grupos de MEI/autônomos/economia doméstica.</dd>
+          <dt>Cadência</dt><dd>1 vídeo + 2–3 posts de texto por semana; grupos, 2x/semana.</dd>
+          <dt>Meta</dt><dd>Cliques pro blog e pro simulador — é a rede com maior chance de conversão direta.</dd>
+        </dl>
+      </div>
+      <div class="pb-card">
+        <div class="head">
+          <h3>Meta — Instagram</h3>
+          <span class="role">Awareness</span>
+        </div>
+        <dl>
+          <dt>Formato</dt><dd>Reels (recortes) + Stories com enquete/pergunta ("Você já tentou negociar dívida?") + carrossel educativo 1x/semana.</dd>
+          <dt>Cadência</dt><dd>3–4 Reels/semana, Stories quase todo dia.</dd>
+          <dt>Meta</dt><dd>Reconhecimento de marca e seguidores — vira audiência pra retargeting no Meta Ads mais pra frente.</dd>
+        </dl>
+      </div>
+      <div class="pb-card">
+        <div class="head">
+          <h3>TikTok &amp; Kwai</h3>
+          <span class="role">Awareness</span>
+        </div>
+        <dl>
+          <dt>Formato</dt><dd>Mesmo recorte do fluxo de produção, republicado sem edição extra. Kwai aceita vídeo um pouco mais longo (até 3 min) — dá pra subir uma versão levemente mais completa lá.</dd>
+          <dt>Cadência</dt><dd>3–4 posts/semana em cada, no piloto automático (mesma peça do Instagram).</dd>
+          <dt>Meta</dt><dd>Alcance barato; não espera conversão direta, espera familiaridade com a marca.</dd>
+        </dl>
+      </div>
+      <div class="pb-card">
+        <div class="head">
+          <h3>YouTube</h3>
+          <span class="role">Consideração + Autoridade</span>
+        </div>
+        <dl>
+          <dt>Formato</dt><dd>Vídeo-base de 5–8 min (o pilar da semana) + os mesmos recortes como Shorts.</dd>
+          <dt>Cadência</dt><dd>1 vídeo longo/semana, 3–4 Shorts/semana.</dd>
+          <dt>Meta</dt><dd>É onde a pessoa fica mais tempo — o formato mais forte pra construir confiança antes de pedir dado sensível como CPF.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="section-head">
+      <h2>Onde o blog realmente converte</h2>
+      <span class="tag">Resposta direta</span>
+    </div>
+    <p class="intro">Rede social é vitrine; quem manda tráfego de intenção alta pro blog é outra coisa. Em ordem de prioridade:</p>
+    <div class="rank-list">
+      <div class="rank-item">
+        <span class="n">01</span>
+        <div>
+          <h3>SEO / busca no Google</h3>
+          <p>Já está com a base pronta (sitemap, schema, meta tags) — os 17+ posts respondem pergunta real de quem já está buscando "empréstimo para negativado". É o único canal que soma sozinho, sem custo por clique, mês após mês.</p>
+        </div>
+      </div>
+      <div class="rank-item">
+        <span class="n">02</span>
+        <div>
+          <h3>WhatsApp</h3>
+          <p>Já tem botão de compartilhar em cada post. É como esse público específico de fato passa conteúdo adiante — mais do que curtir num feed. Vale considerar uma lista de transmissão pra quem quiser receber post novo.</p>
+        </div>
+      </div>
+      <div class="rank-item">
+        <span class="n">03</span>
+        <div>
+          <h3>Facebook (link direto + grupos)</h3>
+          <p>Post simples com o link do artigo, e principalmente presença em grupos de tema relacionado — mais eficaz que impulsionar post pra alcance frio.</p>
+        </div>
+      </div>
+      <div class="rank-item">
+        <span class="n">04</span>
+        <div>
+          <h3>Google Discover</h3>
+          <p>Bônus orgânico: recompensa publicação frequente e engajamento — o pipeline diário de posts por IA já está alinhado com o que esse canal favorece, sem esforço extra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Cadência semanal sugerida</h2>
+      <span class="tag">Ponto de partida</span>
+    </div>
+    <div class="tbl-wrap">
+    <table class="cadence">
+      <thead>
+        <tr><th>Canal</th><th>O quê</th><th class="center">Por semana</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>YouTube</td><td>1 vídeo-base (5–8 min)</td><td class="center num">1</td></tr>
+        <tr><td>YouTube Shorts</td><td>Recortes do vídeo-base</td><td class="center num">3–4</td></tr>
+        <tr><td>Instagram Reels</td><td>Mesmos recortes</td><td class="center num">3–4</td></tr>
+        <tr><td>TikTok</td><td>Mesmos recortes</td><td class="center num">3–4</td></tr>
+        <tr><td>Kwai</td><td>Mesmos recortes</td><td class="center num">3–4</td></tr>
+        <tr><td>Facebook</td><td>Posts de texto/link + vídeo</td><td class="center num">2–3</td></tr>
+        <tr><td>Grupos de Facebook</td><td>Participação/resposta</td><td class="center num">2</td></tr>
+        <tr><td>Blog</td><td>Posts (pipeline automático + curadoria)</td><td class="center num">~7</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Como rastrear</h2>
+      <span class="tag">UTM</span>
+    </div>
+    <p class="intro">O dashboard em <code>/admin_dashboard/</code> já lê UTM de cada acesso — só precisa padronizar como cada link é montado.</p>
+    <div class="utm-box">
+      <div class="utm-row"><code>utm_source</code><span>instagram · tiktok · kwai · youtube · facebook · whatsapp</span></div>
+      <div class="utm-row"><code>utm_medium</code><span>social (post orgânico) · video · groups (grupos de Facebook)</span></div>
+      <div class="utm-row"><code>utm_campaign</code><span>o tema do vídeo/post, em slug — ex.: <code>consignado-explicado</code></span></div>
+      <div class="utm-example">https://libera.cash/blog/?utm_source=instagram&amp;utm_medium=social&amp;utm_campaign=consignado-explicado</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout">
+      <h2>Antes de publicar</h2>
+      <ul>
+        <li><b>Nunca prometer aprovação garantida</b> — mesma regra que já vale pro site: "alta chance", nunca "garantido".</li>
+        <li><b>Sem depoimento inventado</b> — se for usar história de cliente, precisa ser real e autorizada, ou claramente marcada como exemplo ilustrativo.</li>
+        <li><b>Mencionar o CET</b> quando o vídeo falar de taxa de juros, não só a taxa nominal.</li>
+        <li><b>LiberaCash não é banco</b> — deixar claro que é comparador/correspondente, igual já está no rodapé do site.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    Plano vivo — ajusta a cadência pelos números reais do <a href="/admin_dashboard/">dashboard</a> depois das primeiras semanas.
+  </footer>
+
+</div>
