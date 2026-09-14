@@ -120,13 +120,28 @@ function montar_url_parceiro(array $produto, array $utms, array $extras = []): s
         parse_str($partes['query'], $existentes);
     }
 
+    // Um parâmetro com valor vazio no link (ex.: os links da LZO terminam
+    // em "?pid=") é um espaço reservado pra gente preencher com o CPF —
+    // não pode contar como "valor fixo do parceiro" e travar o merge.
+    $placeholder = null;
+    foreach ($existentes as $chave => $valor) {
+        if ($valor === '') { $placeholder = $chave; break; }
+    }
+    $existentes = array_filter($existentes, function ($v) { return $v !== ''; });
+
+    if ($placeholder !== null && isset($extras['cpf'])) {
+        $extras[$placeholder] = $extras['cpf'];
+        if ($placeholder !== 'cpf') unset($extras['cpf']);
+    }
+
     $nossos = array_filter([
         'utm_source'   => $utms['utm_source']   ?? 'creditovc',
         'utm_medium'   => $utms['utm_medium']   ?? 'painel',
         'utm_campaign' => $utms['utm_campaign'] ?? $produto['slug'],
     ]);
 
-    // Prioridade: o que já está fixo no link_afiliado > extras > nossos defaults
+    // Prioridade: o que já está fixo (não-vazio) no link_afiliado > extras
+    // (CPF/placeholder preenchido) > nossos defaults.
     $queryFinal = array_merge($nossos, $extras, $existentes);
 
     $baseSemQuery = strtok($base, '?');

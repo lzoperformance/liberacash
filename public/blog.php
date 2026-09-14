@@ -559,9 +559,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="slider-wrapper">
             <a href="#linkbanner#" class="slide"><img src="/images/banner-juvo-creditovc.png" alt="Empréstimo pessoal"></a>
             <a href="https://www.itau.com.br/cartoes/escolha/g/azul-visa-infinite?utm_source=lzo&utm_medium=affiliate&utm_campaign=gl-aff-cartoes-conversao-azul-infinite&cpg_s=sliceafl&utmgl=utm_camp-{campaign.id}" class="slide"><img src="/images/banner-itaul-infinity.png" alt="Itaú Azul Visa Infinite"></a>
-            <a href="#linkbanner#" class="slide"><img src="/images/banner-itaul-atacadao.png" alt="Oferta parceira"></a>
             <a href="#linkbanner4#" class="slide"><img src="/images/banner-itaul-passai.png" alt="Oferta parceira"></a>
-            <a href="#linkbanner5#" class="slide"><img src="/images/banner-itaul-carredour.png" alt="Oferta parceira"></a>
         </div>
     </div>
     <div class="slider-nav">
@@ -572,8 +570,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="dot active" data-index="0"></div>
         <div class="dot" data-index="1"></div>
         <div class="dot" data-index="2"></div>
-        <div class="dot" data-index="3"></div>
-        <div class="dot" data-index="4"></div>
     </div>
 </div>
 

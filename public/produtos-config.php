@@ -23,7 +23,7 @@ $products = [
         'api_key' => '', // vem de parceiros-config.php, não daqui
         'formup_campaign_id' => '', // A definir
         'pixel_conversion_id' => '', // A definir
-        'link_afiliado' => 'https://credito.velotax.com.br/cpf?utm_source=lzo', // link de retorno pós-aprovação da Velotax
+        'link_afiliado' => 'https://lzo.upone.link/r/MyBvX4BMkW?pid=', // Velotax — link de retorno pós-aprovação
         'passar_cpf_na_url' => true, // a Velotax precisa do CPF na URL de retorno pra identificar o aprovado
         'ativo' => true,
         'ordem' => 1,
@@ -34,26 +34,27 @@ $products = [
         'campos_necessarios' => ['negativado'],
         // Múltiplos parceiros pro mesmo produto — usuário escolhe na tela
         // de "Escolher parceiro" antes de sair pro site de cada um.
-        // TODO: aguardando logo (arquivo) e link de afiliado reais de
-        // SuperSim e NoVerde — Velotax já é o único com API de verdade.
+        // SuperSim vem primeiro de propósito: é a recomendação padrão pra
+        // todo lead nesse produto (pedido do cliente). NoVerde ainda
+        // aguarda link/logo reais.
         'parceiros' => [
-            [
-                'id' => 'velotax',
-                'nome' => 'Velotax',
-                'logo' => null, // A DEFINIR
-                'descricao_curta' => 'Pré-aprovação automática consultando seu CPF',
-                'link_afiliado' => 'https://credito.velotax.com.br/cpf?utm_source=lzo',
-                'passar_cpf_na_url' => true,
-                'tem_api' => true,
-            ],
             [
                 'id' => 'supersim',
                 'nome' => 'SuperSim',
                 'logo' => null, // A DEFINIR
                 'descricao_curta' => 'Empréstimo pessoal, aceita nome negativado',
-                'link_afiliado' => '#', // A DEFINIR
-                'passar_cpf_na_url' => false,
+                'link_afiliado' => 'https://lzo.upone.link/r/pw0zGxp2kG?pid=',
+                'passar_cpf_na_url' => true,
                 'tem_api' => false,
+            ],
+            [
+                'id' => 'velotax',
+                'nome' => 'Velotax',
+                'logo' => null, // A DEFINIR
+                'descricao_curta' => 'Pré-aprovação automática consultando seu CPF',
+                'link_afiliado' => 'https://lzo.upone.link/r/MyBvX4BMkW?pid=',
+                'passar_cpf_na_url' => true,
+                'tem_api' => true,
             ],
             [
                 'id' => 'noverde',
@@ -80,13 +81,25 @@ $products = [
         'api_key' => '', // A definir
         'formup_campaign_id' => '', // A definir
         'pixel_conversion_id' => '', // A definir
-        'link_afiliado' => '#', // A definir
+        'link_afiliado' => 'https://lzo.upone.link/r/k9763WxRqd?pid=', // Juvo
+        'passar_cpf_na_url' => true,
         'ativo' => true,
         'ordem' => 2,
         'tags' => ['garantia', 'celular', 'taxas menores'],
         'publico_alvo' => 'Pessoas que possuem smartphone e querem taxas reduzidas',
         'selos' => ['RECOMENDADO PARA VOCÊ'],
         'campos_necessarios' => ['modelo_celular', 'sistema_celular'],
+        'parceiros' => [
+            [
+                'id' => 'juvo',
+                'nome' => 'Juvo',
+                'logo' => null, // A DEFINIR
+                'descricao_curta' => 'Empréstimo com garantia de celular',
+                'link_afiliado' => 'https://lzo.upone.link/r/k9763WxRqd?pid=',
+                'passar_cpf_na_url' => true,
+                'tem_api' => false,
+            ],
+        ],
     ],
 
     'garantia-imovel' => [
@@ -124,13 +137,25 @@ $products = [
         'api_key' => '', // A definir
         'formup_campaign_id' => '', // A definir
         'pixel_conversion_id' => '', // A definir
-        'link_afiliado' => '#', // A definir
+        'link_afiliado' => 'https://lzo.upone.link/r/0z9VvmONlz?pid=', // BV
+        'passar_cpf_na_url' => true,
         'ativo' => true,
         'ordem' => 4,
         'tags' => ['garantia', 'veículo', 'taxas competitivas'],
         'publico_alvo' => 'Proprietários de veículos que precisam de crédito com melhores condições',
         'selos' => [],
         'campos_necessarios' => ['fonte_renda', 'renda_mensal'],
+        'parceiros' => [
+            [
+                'id' => 'bv',
+                'nome' => 'BV',
+                'logo' => null, // A DEFINIR
+                'descricao_curta' => 'Empréstimo com garantia de veículo',
+                'link_afiliado' => 'https://lzo.upone.link/r/0z9VvmONlz?pid=',
+                'passar_cpf_na_url' => true,
+                'tem_api' => false,
+            ],
+        ],
     ],
 
     'conta-luz' => [
@@ -170,13 +195,34 @@ $products = [
         'api_key' => '', // A definir
         'formup_campaign_id' => '', // A definir
         'pixel_conversion_id' => '', // A definir
-        'link_afiliado' => '#', // A definir
+        'link_afiliado' => 'https://lzo.upone.link/r/wL9LZnGQ5p?pid=', // Acredity
+        'passar_cpf_na_url' => true,
         'ativo' => true,
         'ordem' => 6,
         'tags' => ['consignado', 'INSS', 'aposentado', 'pensionista'],
         'publico_alvo' => 'Aposentados e pensionistas do INSS',
         'selos' => ['RECOMENDADO PARA VOCÊ'],
         'campos_necessarios' => ['data_nascimento', 'fonte_renda', 'renda_mensal'],
+        'parceiros' => [
+            [
+                'id' => 'acredity',
+                'nome' => 'Acredity',
+                'logo' => null, // A DEFINIR
+                'descricao_curta' => 'Crédito consignado',
+                'link_afiliado' => 'https://lzo.upone.link/r/wL9LZnGQ5p?pid=',
+                'passar_cpf_na_url' => true,
+                'tem_api' => false,
+            ],
+            [
+                'id' => 'velotax',
+                'nome' => 'Velotax',
+                'logo' => null, // A DEFINIR
+                'descricao_curta' => 'Crédito consignado',
+                'link_afiliado' => 'https://lzo.upone.link/r/MyBvX4BMkW?pid=',
+                'passar_cpf_na_url' => true,
+                'tem_api' => false,
+            ],
+        ],
     ],
 ];
 
