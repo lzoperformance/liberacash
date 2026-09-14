@@ -1,0 +1,47 @@
+:root{
+  /* 4px base. The reference UI leans on 8/12/16/20/24 for card interiors. */
+  --space-0:0px;
+  --space-1:2px;
+  --space-2:4px;
+  --space-3:6px;
+  --space-4:8px;
+  --space-5:10px;
+  --space-6:12px;
+  --space-7:14px;
+  --space-8:16px;
+  --space-10:20px;
+  --space-12:24px;
+  --space-14:28px;
+  --space-16:32px;
+  --space-20:40px;
+  --space-24:48px;
+  --space-32:64px;
+  --space-40:80px;
+  --space-48:96px;
+  --space-64:128px;
+
+  /* Semantic */
+  --gap-inline:8px;         /* icon ↔ label */
+  --gap-stack:12px;         /* rows inside a card */
+  --gap-card:16px;          /* between cards in a grid */
+  --pad-card:20px;          /* standard card interior */
+  --pad-card-sm:14px;
+  --pad-card-lg:24px;
+  --pad-control-x:18px;
+  --pad-control-y:11px;
+
+  /* Layout */
+  --sidebar-width:248px;
+  --sidebar-width-collapsed:72px;
+  --topbar-height:64px;
+  --mobile-tabbar-height:72px;
+  --shell-pad:16px;         /* gutter between app shell and desk */
+  --content-max:1440px;
+  --section-pad-y:96px;
+
+  /* Hit targets */
+  --touch-min:44px;
+  --control-h-sm:34px;
+  --control-h:42px;
+  --control-h-lg:50px;
+}

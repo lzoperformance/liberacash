@@ -1,0 +1,49 @@
+<!-- @dsCard group="Components" viewport="700x330" name="Core" subtitle="Button · IconButton · Badge · Card · Avatar · Logo" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Core</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--surface-desk);padding:18px;margin:0}#root{display:flex;flex-direction:column;gap:16px}.grp{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.cap{font:var(--type-eyebrow);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-subtle);width:100%;margin-bottom:-2px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.LiberaCashDesignSystem_78af32 || {};
+
+const {Button,IconButton,Badge,Card,Avatar,Logo}=NS;
+function Demo(){return <>
+<Card surface="hairline" pad="md"><div className="grp"><span className="cap">Button — variant</span>
+<Button variant="primary" icon="plus">Add Enhancements</Button>
+<Button variant="dark" glyph="↗">Send</Button>
+<Button variant="secondary" icon="download">Export</Button>
+<Button variant="ghost" iconAfter="chevron-right">Learn more</Button>
+<Button variant="danger" icon="trash-2">Remove</Button>
+<Button variant="primary" disabled>Disabled</Button>
+</div>
+<div className="grp" style={{marginTop:14}}><span className="cap">Size · sm / md / lg</span>
+<Button size="sm">Deposit</Button><Button size="md">Deposit</Button><Button size="lg" glyph="→">Get Started</Button>
+</div></Card>
+<Card surface="hairline" pad="md"><div className="grp"><span className="cap">IconButton · Badge · Avatar · Logo</span>
+<IconButton icon="settings" variant="plain" label="Settings"/>
+<IconButton icon="bell" variant="tile" label="Alerts"/>
+<IconButton icon="arrow-up" variant="accent" label="Send"/>
+<IconButton icon="gift" variant="solid" label="Rewards"/>
+<IconButton icon="search" variant="tile" size="xl" label="Search"/>
+<span style={{width:10}}/>
+<Badge tone="success">Completed</Badge><Badge tone="pending">Pending</Badge>
+<Badge tone="warning">Limit near</Badge><Badge tone="neutral">Draft</Badge>
+<Badge tone="accent">Active</Badge><Badge tone="dark">Premium</Badge>
+<Badge tone="success" size="sm" icon="trending-up" delta="+1.78%"/>
+<span style={{width:10}}/>
+<Avatar name="Jenny Wilson" size="sm"/><Avatar name="Jenny Wilson" ring/><Avatar name="Luis Ferreira" size="lg" status="online"/>
+<span style={{width:10}}/><Logo variant="mark" withName height={28} base="../.."/>
+</div></Card>
+<div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12}}>
+{[['card','Card'],['tile','Tile'],['inverse','Inverse'],['accent','Selected']].map(([s,l])=>
+<Card key={s} surface={s} pad="md" title={l} subtitle="Surface variant" style={{minHeight:96}}/>)}
+</div>
+</>}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+setTimeout(()=>window.lucide&&window.lucide.createIcons(),0);
+</script></body></html>

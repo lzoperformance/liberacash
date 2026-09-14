@@ -1,0 +1,108 @@
+:root{
+  /* ── Brand green — sampled from assets/logo-mark.png (gradient #86E160 → #76DF7D) ── */
+  --green-50:#F3FCEB;
+  --green-100:#E6F8D6;
+  --green-200:#CDF1AE;
+  --green-300:#B0E888;
+  --green-400:#9AE472;
+  --green-500:#82E166;   /* brand green. The logo tile, primary accent, hero card */
+  --green-600:#6BCE52;
+  --green-700:#51AE3B;
+  --green-800:#3C8A2C;
+
+  /* ── Forest — the ink. --forest-700 is the logo lettermark green (#16562D) ── */
+  --forest-950:#04160F;
+  --forest-900:#07231A;
+  --forest-800:#0E3223;  /* primary ink, dark buttons, dark chart series */
+  --forest-700:#16562D;
+  --forest-600:#1F6B3C;
+  --forest-500:#2E8450;
+  --forest-400:#5A9B78;
+  --forest-300:#8FBBA5;
+  --forest-200:#C2DBCF;
+  --forest-100:#E3EFE9;
+
+  /* ── Neutrals — warm-free greys, the desk the cards sit on ── */
+  --grey-0:#FFFFFF;
+  --grey-25:#FCFCFC;
+  --grey-50:#F7F7F7;
+  --grey-100:#F1F1F1;
+  --grey-150:#E9E9E9;
+  --grey-200:#DFDFDF;
+  --grey-300:#CBCBCB;
+  --grey-400:#A8A8A8;
+  --grey-500:#828282;
+  --grey-600:#636363;
+  --grey-700:#4A4A4A;
+  --grey-900:#1B1B1B;
+
+  /* ── Semantic hues ── */
+  --red-500:#E5484D;
+  --red-600:#C93B40;
+  --red-50:#FDECEC;
+  --amber-500:#E29A2C;
+  --amber-50:#FDF3E2;
+  --blue-500:#3B82C4;
+  --blue-50:#EAF3FB;
+
+  /* ══ Semantic aliases — use these in components ══ */
+  /* Text */
+  --text-strong:var(--forest-800);
+  --text-body:var(--forest-800);
+  --text-muted:var(--grey-500);
+  --text-subtle:var(--grey-400);
+  --text-on-dark:var(--grey-0);
+  --text-on-accent:var(--forest-800);
+  --text-accent:var(--forest-700);
+  --text-link:var(--forest-700);
+  --text-link-hover:var(--green-700);
+  --text-positive:var(--forest-600);
+  --text-negative:var(--red-500);
+
+  /* Surfaces */
+  --surface-desk:var(--grey-150);       /* page background — cards float on this */
+  --surface-page:var(--grey-50);
+  --surface-card:var(--grey-0);
+  --surface-card-sunken:var(--grey-50);
+  --surface-raised:var(--grey-0);
+  --surface-inverse:var(--forest-800);
+  --surface-accent:var(--green-500);
+  --surface-accent-soft:var(--green-100);
+  --surface-accent-faint:var(--green-50);
+  --surface-hover:var(--grey-100);
+  --surface-active:var(--grey-150);
+  --surface-shell:linear-gradient(180deg,var(--grey-50) 0%,var(--grey-100) 100%);
+  --surface-tile:linear-gradient(160deg,var(--grey-0) 0%,var(--grey-100) 100%);
+
+  /* Borders */
+  --border-hairline:var(--grey-150);
+  --border-default:var(--grey-200);
+  --border-strong:var(--grey-300);
+  --border-accent:var(--green-400);
+  --border-inverse:rgba(255,255,255,.14);
+  --border-focus:var(--forest-700);
+
+  /* Status */
+  --status-success-fg:var(--forest-600);
+  --status-success-bg:var(--green-50);
+  --status-pending-fg:var(--red-500);
+  --status-pending-bg:var(--red-50);
+  --status-warning-fg:var(--amber-500);
+  --status-warning-bg:var(--amber-50);
+  --status-neutral-fg:var(--grey-600);
+  --status-neutral-bg:var(--grey-100);
+
+  /* Data viz — the two-series income/expense pair, then the donut ramp */
+  --chart-series-1:var(--forest-800);
+  --chart-series-2:var(--green-500);
+  --chart-series-3:var(--forest-500);
+  --chart-series-4:var(--green-200);
+  --chart-grid:var(--grey-150);
+  --chart-axis-label:var(--grey-400);
+  --chart-area-fill:linear-gradient(180deg,rgba(130,225,102,.28) 0%,rgba(130,225,102,0) 100%); /* @kind color */
+
+  /* Brand gradients */
+  --gradient-brand:linear-gradient(135deg,#86E160 0%,#76DF7D 100%); /* @kind color */
+  --gradient-hero:radial-gradient(120% 140% at 78% 18%,#A5EB84 0%,#82E166 42%,#6BCE52 100%); /* @kind color */
+  --gradient-ai-orb:radial-gradient(60% 60% at 35% 30%,#C6F0A6 0%,#82E166 38%,#0E3223 100%); /* @kind color */
+}

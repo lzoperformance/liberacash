@@ -1,0 +1,20 @@
+:root{
+  --radius-xs:6px;
+  --radius-sm:10px;
+  --radius-md:14px;
+  --radius-lg:18px;
+  --radius-xl:24px;
+  --radius-2xl:28px;
+  --radius-3xl:36px;
+  --radius-pill:999px;
+
+  /* Semantic — the system is emphatically round; nothing is square-cornered. */
+  --radius-card:20px;
+  --radius-card-inner:14px;
+  --radius-shell:28px;       /* the app-shell plate floating on the desk */
+  --radius-control:999px;    /* buttons, chips, selects are all capsules */
+  --radius-field:12px;       /* text inputs are the one soft-rect exception */
+  --radius-badge:999px;
+  --radius-tile:22px;        /* logo tile / icon tile */
+  --radius-avatar:999px;
+}

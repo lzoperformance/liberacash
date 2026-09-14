@@ -1,0 +1,16 @@
+:root{
+  --duration-instant:80ms; /* @kind other */
+  --duration-fast:140ms; /* @kind other */
+  --duration-base:200ms; /* @kind other */
+  --duration-slow:320ms; /* @kind other */
+  --duration-chart:700ms; /* @kind other */
+
+  /* Standard easing is a gentle ease-out — nothing in this system bounces. */
+  --ease-out:cubic-bezier(.22,.7,.3,1); /* @kind other */
+  --ease-in-out:cubic-bezier(.45,.05,.3,1); /* @kind other */
+  --ease-enter:cubic-bezier(.16,.84,.28,1); /* @kind other */
+
+  --transition-control:background-color var(--duration-fast) var(--ease-out),color var(--duration-fast) var(--ease-out),box-shadow var(--duration-fast) var(--ease-out),border-color var(--duration-fast) var(--ease-out); /* @kind other */
+  --transition-surface:box-shadow var(--duration-base) var(--ease-out),transform var(--duration-base) var(--ease-out); /* @kind other */
+  --press-scale:.98; /* @kind other */
+}

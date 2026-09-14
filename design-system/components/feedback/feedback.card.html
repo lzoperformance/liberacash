@@ -1,0 +1,31 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Feedback" subtitle="Dropdown · Tooltip · UpgradeCard · AIPromptPanel" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Feedback</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--surface-desk);padding:18px;margin:0}#root{display:flex;flex-direction:column;gap:16px}.grp{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.cap{font:var(--type-eyebrow);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-subtle);width:100%;margin-bottom:-2px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.LiberaCashDesignSystem_78af32 || {};
+
+const {Dropdown,Tooltip,UpgradeCard,AIPromptPanel,IconButton,Card,Icon}=NS;
+function Demo(){return <div style={{display:'grid',gridTemplateColumns:'1fr 1.35fr',gap:14}}>
+<div style={{display:'flex',flexDirection:'column',gap:14}}>
+<Card surface="hairline" pad="md" title="Dropdown" subtitle="The … on every card header">
+<Dropdown align="left" trigger={<IconButton icon="more-horizontal" variant="tile" label="Options"/>} items={[{label:'View details',icon:'eye'},{label:'Export CSV',icon:'download',meta:'⌘E'},{divider:true},{label:'Remove card',icon:'trash-2',tone:'danger'}]}/>
+</Card>
+<Card surface="hairline" pad="md" title="Tooltip" bodyStyle={{paddingTop:26}}>
+<div style={{display:'flex',gap:28,alignItems:'center'}}>
+<Tooltip title="Monthly" rows={[{label:'Cashflow',value:'$8,903'}]} caption="Compared to $5,441 last month"/>
+<Tooltip variant="plain" title="Balance excludes pending charges" placement="bottom"><span style={{display:'inline-flex',gap:6,alignItems:'center',color:'var(--text-muted)',font:'var(--type-caption)'}}><Icon name="info" size={15}/>hover me</span></Tooltip>
+</div></Card>
+<UpgradeCard/>
+</div>
+<Card pad="lg"><AIPromptPanel heading="How Can I Assist You With Your Finances?" subheading="Quickly track cash flow, get AI-powered insights, and manage your money—all in one place" suggestions={['Show me my cash flow','Help me set a savings goal','Forecast my balance','Plan my monthly budget']} model="Choose Model" orbSize={84}/></Card>
+</div>}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+setTimeout(()=>window.lucide&&window.lucide.createIcons(),0);
+</script></body></html>

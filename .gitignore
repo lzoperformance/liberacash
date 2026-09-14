@@ -16,3 +16,9 @@ config/anthropic-config.php
 
 # Dependências do Composer (AWS SDK etc.)
 vendor/
+
+# Capturas de referência do design system (41MB, material de consulta de um
+# case de terceiros, não usado em produção) — fica só local, não no histórico
+# do git. Ver design-system/readme.md. O resto do design-system (tokens,
+# componentes, guidelines, ui_kits) é versionado normalmente.
+design-system/shots/

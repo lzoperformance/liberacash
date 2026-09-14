@@ -1,0 +1,104 @@
+<!-- @dsCard group="Admin Dashboard" viewport="1440x900" name="Home" subtitle="The desktop shell — click the rail to move between Home, Assistant, Transactions, Wallet and Settings." -->
+<!-- @startingPoint section="Admin Dashboard" subtitle="Full desktop shell — sidebar, topbar, dashboard grid" viewport="1440x900" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Libera Cash — Admin Dashboard</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+html,body{margin:0;height:100%}
+body{background:var(--surface-desk);overflow:hidden}
+#root{height:100%}
+.lc-shell{position:absolute;inset:var(--shell-pad);background:var(--surface-card);border-radius:var(--radius-shell);box-shadow:var(--shadow-shell);border:1px solid var(--border-accent);display:flex;overflow:hidden}
+.lc-main{flex:1;min-width:0;display:flex;flex-direction:column}
+.lc-scroll{flex:1;min-height:0;overflow-y:auto;padding:var(--gap-card) 24px 28px;background:var(--surface-card)}
+.lc-grid{display:grid;gap:var(--gap-card);min-width:0}
+.lc-grid>*{min-width:0}
+.lc-burger{display:none}
+.lc-scroll::-webkit-scrollbar{width:10px}
+.lc-scroll::-webkit-scrollbar-thumb{background:var(--grey-200);border-radius:999px;border:3px solid var(--surface-card)}
+@media (max-width:1180px){
+  .lc-grid{grid-template-columns:1fr !important}
+}
+@media (max-width:900px){
+  body{overflow:auto}
+  .lc-shell{position:static;inset:auto;margin:8px;border-radius:var(--radius-card);min-height:calc(100vh - 16px)}
+  .lc-rail{display:none}
+  .lc-burger{display:inline-grid}
+  .lc-scroll{padding:12px}
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="./data.js"></script>
+<script type="text/babel" src="./Panels.jsx"></script>
+<script type="text/babel" src="./Screens.jsx"></script>
+<script type="text/babel">
+const { Sidebar, TopBar, SearchField, IconButton, Avatar, UpgradeCard, Dropdown } = NS;
+
+function App() {
+  const [screen, setScreen] = React.useState('dashboard');
+  const [railOpen, setRailOpen] = React.useState(false);
+  const meta = SCREEN_META[screen];
+
+  React.useEffect(() => { if (window.lucide) window.lucide.createIcons(); });
+
+  const rail = (
+    <Sidebar base="../.." active={screen} sections={NAV_SECTIONS}
+      account={{ name: 'Jenny Wilson', role: 'Personal Account' }}
+      footer={<UpgradeCard onAction={() => setScreen('settings')} />}
+      onNavigate={(v) => { setScreen(v); setRailOpen(false); }} />
+  );
+
+  let body;
+  if (screen === 'dashboard') body = <HomeScreen />;
+  else if (screen === 'assistant') body = <AssistantScreen />;
+  else if (screen === 'transactions') body = <TransactionsScreen />;
+  else if (screen === 'wallet') body = <WalletScreen />;
+  else if (screen === 'settings') body = <SettingsScreen />;
+  else body = <PlaceholderScreen screen={screen} />;
+
+  return (
+    <div className="lc-shell">
+      <div className="lc-rail" style={{ display: 'flex' }}>{rail}</div>
+      {railOpen ? (
+        <>
+          <div onClick={() => setRailOpen(false)} style={{ position: 'fixed', inset: 0, zIndex: 60, background: 'rgba(4,22,15,.4)', backdropFilter: 'blur(6px)' }} />
+          <div style={{ position: 'fixed', left: 0, top: 0, bottom: 0, zIndex: 61, boxShadow: 'var(--shadow-popover)' }}>{rail}</div>
+        </>
+      ) : null}
+
+      <div className="lc-main">
+        <TopBar title={meta.title} subtitle={meta.subtitle}
+          search={<SearchField width={300} />}
+          actions={<>
+            <IconButton className="lc-burger" icon="menu" variant="plain" label="Menu" onClick={() => setRailOpen(true)} />
+            <IconButton icon="settings" variant="plain" label="Settings" onClick={() => setScreen('settings')} />
+            <IconButton icon="circle-help" variant="plain" label="Help" onClick={() => setScreen('help')} />
+            <Dropdown trigger={<Avatar name="Jenny Wilson" ring />} items={[
+              { label: 'Jenny Wilson', meta: 'Personal' },
+              { divider: true },
+              { label: 'Account settings', icon: 'settings' },
+              { label: 'Switch account', icon: 'repeat' },
+              { divider: true },
+              { label: 'Sign out', icon: 'log-out', tone: 'danger' },
+            ]} />
+          </>} />
+        <div className="lc-scroll">{body}</div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

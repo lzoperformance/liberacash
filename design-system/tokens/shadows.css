@@ -1,0 +1,24 @@
+:root{
+  /* Shadows are wide, soft and almost colourless — cards read as thin plates
+     lifted a few millimetres off the grey desk, never as heavy drop-shadow boxes. */
+  --shadow-hairline:0 0 0 1px var(--grey-150);
+  --shadow-xs:0 1px 2px rgba(14,50,35,.04);
+  --shadow-sm:0 2px 6px rgba(14,50,35,.05);
+  --shadow-card:0 1px 2px rgba(14,50,35,.03),0 8px 24px -12px rgba(14,50,35,.10);
+  --shadow-raised:0 2px 4px rgba(14,50,35,.04),0 16px 40px -16px rgba(14,50,35,.14);
+  --shadow-popover:0 8px 16px -6px rgba(14,50,35,.10),0 24px 48px -20px rgba(14,50,35,.22);
+  --shadow-shell:0 24px 70px -30px rgba(14,50,35,.22);
+  --shadow-accent:0 8px 24px -10px rgba(107,206,82,.55);
+
+  /* Inner light — the faint top highlight on grey tiles and the hero card */
+  --shadow-inner-top:inset 0 1px 0 rgba(255,255,255,.7);
+  --shadow-inner-accent:inset 0 1px 0 rgba(255,255,255,.35);
+
+  /* Focus ring */
+  --ring-focus:0 0 0 3px rgba(130,225,102,.45);
+  --ring-focus-dark:0 0 0 3px rgba(14,50,35,.18);
+
+  /* Protection gradients — used over the hero card art and over long scroll lists */
+  --scrim-bottom:linear-gradient(180deg,rgba(255,255,255,0) 0%,var(--grey-0) 72%); /* @kind color */
+  --scrim-dark:linear-gradient(180deg,rgba(4,22,15,0) 0%,rgba(4,22,15,.55) 100%); /* @kind color */
+}
