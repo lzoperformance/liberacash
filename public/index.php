@@ -60,8 +60,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- CSS Principal -->
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/credito-vc-jul-23.webflow.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
-  <link href="css/main.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
+  <link href="css/credito-vc-jul-23.webflow.css?v=<?= @filemtime(__DIR__ . '/css/credito-vc-jul-23.webflow.css') ?: '1' ?>" rel="stylesheet" type="text/css">
+  <link href="css/main.css?v=<?= @filemtime(__DIR__ . '/css/main.css') ?: '1' ?>" rel="stylesheet" type="text/css">
 
   <!-- Font Awesome - carregado de forma não-bloqueante -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">
@@ -566,7 +566,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ]
   }
   </script>
-  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
+  <link href="css/brand-tokens.css?v=<?= @filemtime(__DIR__ . '/css/brand-tokens.css') ?: '1' ?>" rel="stylesheet" type="text/css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->

@@ -25,9 +25,10 @@ if ($produto_url && !get_product_by_slug($produto_url)) {
   <meta charset="UTF-8">
   <title>Escolha seu crédito | LiberaCash</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
+  <link href="css/brand-tokens.css?v=<?= @filemtime(__DIR__ . '/css/brand-tokens.css') ?: '1' ?>" rel="stylesheet" type="text/css">
   <!-- Phosphor Icons (usado nos ícones dos cards de produto) -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>

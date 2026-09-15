@@ -140,9 +140,10 @@
 </style>
 
 <!-- ========== ESTILOS DO MODAL ========== -->
+<!-- Space Grotesk/Inter já são carregadas via <link> no <head> das páginas
+     que incluem este modal (index.php, blog.php, produtos.php) — @import
+     aqui seria uma segunda busca redundante e bloqueia o CSSOM. -->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
-
 /* --- Overlay --- */
 .modal-overlay {
   position: fixed;

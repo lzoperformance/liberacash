@@ -83,7 +83,8 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
     <link href="images/webclip.png" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:400,500,600,700,800,900|Montserrat:400,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -590,7 +591,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
             .footer-text { text-align: left; }
         }
     </style>
-  <link href="css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
+  <link href="css/brand-tokens.css?v=<?= @filemtime(__DIR__ . '/css/brand-tokens.css') ?: '1' ?>" rel="stylesheet">
 </head>
 <body>
 

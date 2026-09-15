@@ -151,6 +151,79 @@ curl -s -X POST https://api.phpstan.org/analyse \
   -d '{"code": "<conteúdo do arquivo>", "level": "1", "phpVersion": 70200}'
 ```
 
+## FASE 1.1 — nota final (halo do logo)
+
+O logo passou por 4 rodadas até a correção pegar de verdade. Registro
+porque o processo de depuração em si é útil pra próxima vez que algo
+"parecer certo isolado mas errado na página":
+
+1. Resize com `sips` introduziu um artefato de cor nas bordas
+   semi-transparentes (corrigido usando Pillow com alpha
+   premultiplicado antes do resize).
+2. O halo "novo" na verdade já existia no arquivo original — só
+   ficava invisível porque o arquivo era 3x maior que o necessário e o
+   navegador escondia o gradiente suave ao encolher agressivamente.
+   Removido cortando o canal alfa abaixo de um limiar.
+3. Achei que sobrava cor "escondida" sob os pixels transparentes e
+   "corrigi" isso — mas era um no-op (o algoritmo de resize já zerava
+   isso), então não mudou nada de verdade.
+4. **Causa raiz real**: o `<picture>` prioriza AVIF, e o `avifenc -q 60`
+   (usado pra tudo nesta fase) comprime o canal alfa com perdas o
+   suficiente pra borrar uma transição que era nítida no PNG fonte,
+   recriando o halo — só no AVIF, o WebP e o PNG já estavam corretos.
+   Só descobri isso checando a aba de rede do navegador pra ver qual
+   arquivo estava sendo carregado de verdade, em vez de testar o PNG
+   repetidamente. Corrigido subindo a qualidade do AVIF pra q=95
+   (arquivo vai de 6,8KB pra 12,5KB — irrelevante).
+
+Lição pro resto da auditoria: qualquer asset com transparência e borda
+nítida (ícones, logos) precisa ter o AVIF verificado numa qualidade
+mais alta, não só o PNG/WebP — o `-q 60` usado nos outros ícones não
+mostrou o mesmo problema porque a transição deles já era mais abrupta,
+mas vale reconferir se algo parecido aparecer.
+
+## FASE 1.2 — CSS e render-blocking (CONCLUÍDO — checkpoint 2, parcial)
+
+### Achados e correções
+
+- **Cache-busting quebrado com `uniqid()`**: 14 ocorrências em 10
+  páginas usavam `?<?= uniqid() ?>` pra "versionar" CSS/JS
+  (`brand-tokens.css`, `credito-vc-jul-23.webflow.css`, `main.css`,
+  `main.js`). `uniqid()` gera um valor novo a cada carregamento de
+  página — ou seja, **nenhum desses arquivos nunca cacheava**, nem no
+  navegador nem no Cloudflare, forçando download completo a cada
+  visita, em toda página do site. Trocado por
+  `filemtime(__DIR__ . '/css/arquivo.css')` — só muda quando o
+  arquivo de verdade muda, permitindo cache de verdade.
+- **Font Awesome inconsistente**: `produtos.php` carregava a versão
+  6.5.1 enquanto todo o resto do site usa 6.4.2 — isso impede o
+  Cloudflare/navegador de reaproveitar o cache entre páginas (URLs
+  diferentes = recursos diferentes pro cache). Padronizado pra 6.4.2
+  em todo lugar.
+- **Font Awesome bloqueando renderização**: só `index.php` usava o
+  truque não-bloqueante (`media="print" onload="this.media='all'"`);
+  as outras 10 páginas carregavam com `<link>` comum, bloqueando o
+  primeiro paint. Padronizado o padrão não-bloqueante em todas.
+- **`@import` de fonte dentro do modal** (`modal-credito.php`): puxava
+  Space Grotesk/Inter de novo via `@import` (a forma mais lenta de
+  carregar CSS — bloqueia o CSSOM e só é descoberta depois do parser
+  chegar nela). As 3 páginas que incluem esse modal (index, blog,
+  produtos) já carregam essas mesmas fontes via `<link>` no `<head>`.
+  Removido o `@import` redundante.
+
+### Itens desta fase NÃO resolvidos (decisão de design, não técnica)
+
+- **4 famílias tipográficas sobrepostas** (Space Grotesk, Inter, Lato,
+  Raleway, e ainda Montserrat em URLs antigas) — a auditoria pede pra
+  escolher uma principal ou justificar tecnicamente mais de uma. Isso
+  muda a identidade visual de metade do site (páginas mais antigas
+  estilo credito.vc usam Lato/Raleway, páginas novas usam Space
+  Grotesk/Inter) — não é uma correção técnica segura de fazer sem
+  aprovação, então não mexi. Fica pra decisão sua.
+- CSS crítico extraído/inline pro primeiro viewport, CSS não utilizado
+  removido via Coverage, minificação em produção — não iniciado
+  (ficam pra continuar depois, junto com JS na 1.3).
+
 ## Itens bloqueados (precisam de acesso/decisão externa)
 
 - Lighthouse real (mobile/mobile) antes/depois: **BLOQUEADO — REQUER

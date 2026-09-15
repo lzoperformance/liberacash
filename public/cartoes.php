@@ -40,8 +40,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   <link href="/css/normalize.css" rel="stylesheet" type="text/css">
   <link href="/css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="/css/credito-vc-jul-23.webflow.css?<?= uniqid() ?>" rel="stylesheet" type="text/css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/credito-vc-jul-23.webflow.css?v=<?= @filemtime(__DIR__ . '/css/credito-vc-jul-23.webflow.css') ?: '1' ?>" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
   
   <script data-ad-client="ca-pub-3848244970216851" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -244,7 +245,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .c-botao-mobile { margin-top: 42px; padding-right: 15px; padding-left: 15px; }
     }
   </style>
-  <link href="/css/brand-tokens.css?<?= uniqid() ?>" rel="stylesheet">
+  <link href="/css/brand-tokens.css?v=<?= @filemtime(__DIR__ . '/css/brand-tokens.css') ?: '1' ?>" rel="stylesheet">
 </head>
 
 <body class="body">
@@ -511,7 +512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="/js/webflow.js" type="text/javascript"></script>
-  <script src="/js/main.js?<?= uniqid() ?>" type="text/javascript"></script>
+  <script src="/js/main.js?v=<?= @filemtime(__DIR__ . '/js/main.js') ?: '1' ?>" type="text/javascript"></script>
 
   <script>
     $(document).ready(function(){
