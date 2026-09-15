@@ -71,7 +71,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Phosphor Icons para os produtos -->
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.2" defer></script>
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -819,10 +819,6 @@ LiberaCash&reg; é um site de comparação e correspondente de instituições fi
 
   <?php include 'modal-credito.php'; ?>
 
-  <!-- jQuery e Mask - apenas se necessário, com defer -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
-  
   <script defer>
     document.addEventListener('DOMContentLoaded', function(){
 

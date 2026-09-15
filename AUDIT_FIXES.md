@@ -232,3 +232,35 @@ mas vale reconferir se algo parecido aparecer.
 - CSP/HSTS/Permissions-Policy (Fase 4): dependem de configuração no
   Cloudflare/CloudPanel, fora do repositório. Serão documentados num
   `INFRA_SECURITY_HEADERS.md` quando chegarmos nessa fase.
+
+## FASE 1.3 — JavaScript (parcial)
+
+- **Phosphor Icons sem versão travada, bloqueando o render**: `index.php`
+  e `produtos.php` carregavam `unpkg.com/@phosphor-icons/web` (sem
+  versão = "latest", risco de quebra silenciosa um dia) sem `defer`.
+  Travado em `@2.1.2` (versão atual) + `defer`.
+- **Bug real encontrado**: `cartoes.php` inclui `js/main.js`, que chama
+  `$(...).mask(...)` — mas a página nunca carregava o plugin jQuery
+  Mask. Isso gera erro de JavaScript no console nessa página (silencioso
+  pro usuário, mas é erro de verdade). Corrigido adicionando o script
+  do plugin. Campo que o `.mask()` tenta segurar
+  (`#secondary_registry_number`) não existe mais no HTML atual — é
+  código legado do template antigo, então o `.mask()` agora só vira
+  no-op limpo em vez de erro.
+- **Caso oposto em `index.php`**: carregava jQuery + jQuery Mask sem
+  usar nenhum dos dois em lugar nenhum (nem a própria página nem o
+  modal que ela inclui, que usa `fetch()` nativo). Removidos os dois
+  scripts inteiros dessa página.
+- **Confirmado que jQuery é necessário** nas outras 8 páginas
+  (contato, blog, sobre, política, sucesso, time, termos, cartões) —
+  usado de verdade pro menu hamburguer mobile e, em blog.php, também
+  pro carrossel de banner e barra de CTA fixa. Não mexido, como a
+  auditoria pede ("não remover jQuery sem teste completo").
+
+### Não feito ainda (fica pra continuar)
+
+- Dividir bundles por rota, dynamic import pra modais, redução de
+  listeners globais — não iniciado.
+- Reescrever o menu hamburguer/carrossel em JS puro pra eliminar jQuery
+  de vez seria o próximo passo natural, mas é mudança de comportamento
+  em 8 páginas — não fiz sem test bem mais cuidadoso primeiro.

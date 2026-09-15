@@ -30,7 +30,7 @@ if ($produto_url && !get_product_by_slug($produto_url)) {
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="css/brand-tokens.css?v=<?= @filemtime(__DIR__ . '/css/brand-tokens.css') ?: '1' ?>" rel="stylesheet" type="text/css">
   <!-- Phosphor Icons (usado nos ícones dos cards de produto) -->
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.2" defer></script>
 </head>
 <body>
 
