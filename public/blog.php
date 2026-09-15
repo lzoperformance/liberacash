@@ -400,6 +400,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .post-image-fallback.grad-forest { background: linear-gradient(135deg, var(--lc-green-700), var(--lc-bg-dark-800)); color: var(--lc-off-white); }
         .post-image-fallback.grad-forest svg { opacity: .65; }
         .hero-post-image .post-image-fallback svg { width: 84px; height: 84px; }
+        .single-post-image.post-image-fallback svg { width: 96px; height: 96px; }
         .post-category { position: absolute; bottom: 10px; left: 10px; background: rgba(8,26,15,.75); color: var(--lc-off-white); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; padding: 5px 10px; border-radius: var(--lc-radius-full); }
         .post-content { padding: 18px 20px 20px 20px; flex-grow: 1; display: flex; flex-direction: column; }
         .post-title { font-family: var(--lc-font-display); font-size: 16px; font-weight: 700; line-height: 1.35; color: var(--lc-text-dark); margin-bottom: 8px; }
@@ -609,6 +610,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <?php if ($current_post['imagem']): ?>
                 <img class="single-post-image" src="<?php echo htmlspecialchars($current_post['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($current_post['titulo'], ENT_QUOTES, 'UTF-8'); ?>">
+                <?php else: ?>
+                <div class="single-post-image post-image-fallback <?php echo lc_post_gradiente($current_post['categoria']); ?>"><?php echo lc_svg_capa($current_post['titulo'], $current_post['categoria']); ?></div>
                 <?php endif; ?>
 
                 <div class="post-full-content">

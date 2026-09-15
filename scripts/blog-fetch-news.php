@@ -9,14 +9,14 @@
  * Roda via linha de comando (cron), NUNCA pela web — não fica em public/.
  *   php scripts/blog-fetch-news.php
  *
- * Publica como 'rascunho' de propósito: revise antes de publicar de
- * verdade (admin_blog/index.php) até confiar na qualidade do pipeline.
- * Pra publicar direto sem revisão, troca STATUS_PADRAO pra 'publicado'.
+ * Publica direto como 'publicado' — sem revisão manual. A capa de cada
+ * post usa o mesmo sistema de ilustração SVG por categoria do resto do
+ * blog (ver public/blog.php: lc_svg_capa), nunca foto de banco de imagem.
  */
 
 declare(strict_types=1);
 
-const STATUS_PADRAO = 'rascunho';
+const STATUS_PADRAO = 'publicado';
 
 const FONTES = [
     ['nome' => 'InfoMoney',     'rss' => 'https://www.infomoney.com.br/feed/'],
