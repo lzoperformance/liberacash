@@ -1,3 +1,4 @@
+<link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Urbanist:ital,wght@0,400..800;1,400..600&family=Plus+Jakarta+Sans:wght@400..700&display=swap" rel="stylesheet">
