@@ -194,10 +194,6 @@ if (!$categoria_filtro) {
     }
 }
 
-// --- "Direto da Redação" — recorte de posts reais em formato de citação,
-// só com dados verdadeiros (categoria + resumo do próprio post), nunca
-// nomes/cargos inventados.
-$destaques_redacao = array_slice($posts, 0, 4);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -357,7 +353,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         /* ==== Intro ==== */
         .blog-intro { text-align: center; margin: 32px auto 8px auto; padding: 0 20px; max-width: 900px; }
-        .blog-eyebrow { display: inline-block; font-family: var(--lc-font-display); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--lc-green-700); margin-bottom: 8px; }
         .blog-intro h1 { font-family: var(--lc-font-display); font-size: 34px; font-weight: 700; color: var(--lc-text-dark); letter-spacing: -0.5px; }
         .blog-intro p { font-size: 15px; color: var(--lc-text-muted); margin-top: 8px; }
 
@@ -383,7 +378,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         /* ==== Layout: grade + sidebar ==== */
         .blog-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; align-items: start; }
 
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 26px; }
+        .blog-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
         .post-card { background: var(--lc-white); border-radius: var(--lc-radius-md); overflow: hidden; box-shadow: var(--lc-shadow-card); transition: transform .25s ease, box-shadow .25s ease; display: flex; flex-direction: column; text-decoration: none; color: inherit; border: 1px solid var(--lc-border); }
         .post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(12,47,27,.12); }
         .post-image-wrap { position: relative; height: 160px; background: var(--lc-surface); }
@@ -414,20 +409,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .category-section-header h3 { font-family: var(--lc-font-display); font-size: 18px; font-weight: 700; color: var(--lc-text-dark); }
         .category-section-header a { font-size: 12.5px; font-weight: 700; color: var(--lc-green-700); text-decoration: none; white-space: nowrap; }
         .category-section-header a:hover { text-decoration: underline; }
-
-        /* ==== Direto da Redação ==== */
-        .editorial-row { margin: 8px 0 50px 0; padding: 32px; background: var(--lc-surface); border-radius: var(--lc-radius-lg); border: 1px solid var(--lc-border); }
-        .editorial-row-eyebrow { font-family: var(--lc-font-display); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--lc-green-700); }
-        .editorial-row-header h3 { font-family: var(--lc-font-display); font-size: 20px; font-weight: 700; color: var(--lc-text-dark); margin-top: 4px; margin-bottom: 22px; }
-        .editorial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 22px; }
-        .editorial-card { display: block; text-decoration: none; color: inherit; }
-        .editorial-avatar { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
-        .editorial-avatar svg { width: 22px; height: 22px; }
-        .editorial-avatar.grad-brand { color: var(--lc-green-900); }
-        .editorial-avatar.grad-dark, .editorial-avatar.grad-teal, .editorial-avatar.grad-forest { color: var(--lc-off-white); }
-        .editorial-role { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--lc-green-700); margin-bottom: 8px; }
-        .editorial-quote { font-size: 13.5px; line-height: 1.55; color: var(--lc-text-dark); font-style: italic; }
-        .editorial-card:hover .editorial-quote { color: var(--lc-green-900); }
 
         /* ==== CTA fixo discreto (sempre visível ao rolar) ==== */
         .sticky-cta-bar { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999; background: var(--lc-gradient-dark); color: var(--lc-off-white); padding: 12px 20px; display: flex; align-items: center; justify-content: center; gap: 18px; box-shadow: 0 -4px 20px rgba(8,26,15,.25); transition: transform .3s ease; }
@@ -518,6 +499,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             .hero-post { grid-template-columns: 1fr; }
             .hero-post-image { min-height: 200px; }
             .hero-post-body { padding: 28px; }
+            .blog-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 768px) {
             .nav-menu { display: none; }
@@ -525,9 +507,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             .blog-intro h1 { font-size: 26px; }
             .single-post h1 { font-size: 1.6rem; }
             .single-post-image { height: 220px; }
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
             .sticky-cta-text { display: none; }
             .sticky-cta-bar { justify-content: space-between; }
             .sticky-cta-btn { flex-grow: 1; }
+        }
+        @media (max-width: 520px) {
+            .blog-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -576,7 +562,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <?php if (!$current_post): ?>
 <div class="blog-intro">
-    <span class="blog-eyebrow">Blog LiberaCash</span>
     <h1>Notícias e dicas pra sua vida financeira</h1>
     <p>Crédito, empréstimos e organização financeira, explicados de forma simples.</p>
 </div>
@@ -696,24 +681,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         </a>
-        <?php endif; ?>
-
-        <?php if (!$categoria_filtro && !empty($destaques_redacao)): ?>
-        <div class="editorial-row">
-            <div class="editorial-row-header">
-                <span class="editorial-row-eyebrow">Direto da Redação</span>
-                <h3>O que a nossa equipe está lendo em crédito</h3>
-            </div>
-            <div class="editorial-grid">
-                <?php foreach ($destaques_redacao as $ed): ?>
-                <a class="editorial-card" href="/blog/<?php echo urlencode($ed['slug']); ?>/">
-                    <div class="editorial-avatar <?php echo lc_post_gradiente($ed['categoria']); ?>"><?php echo lc_svg_capa($ed['titulo'], $ed['categoria']); ?></div>
-                    <div class="editorial-role"><?php echo htmlspecialchars($ed['categoria'], ENT_QUOTES, 'UTF-8'); ?> · Redação LiberaCash</div>
-                    <p class="editorial-quote">"<?php echo htmlspecialchars($ed['resumo'], ENT_QUOTES, 'UTF-8'); ?>"</p>
-                </a>
-                <?php endforeach; ?>
-            </div>
-        </div>
         <?php endif; ?>
 
         <div class="blog-layout">

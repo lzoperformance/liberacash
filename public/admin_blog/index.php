@@ -2,11 +2,13 @@
 require_once __DIR__ . '/auth.php'; // já deixa $pdo pronto
 
 $busca = trim($_GET['busca'] ?? '');
+$ordem = ($_GET['ordem'] ?? 'desc') === 'asc' ? 'ASC' : 'DESC';
+
 if ($busca !== '') {
-    $stmt = $pdo->prepare("SELECT * FROM blog_posts WHERE titulo LIKE :b OR categoria LIKE :b ORDER BY created_at DESC");
+    $stmt = $pdo->prepare("SELECT * FROM blog_posts WHERE titulo LIKE :b OR categoria LIKE :b ORDER BY created_at $ordem");
     $stmt->execute([':b' => '%' . $busca . '%']);
 } else {
-    $stmt = $pdo->query("SELECT * FROM blog_posts ORDER BY created_at DESC");
+    $stmt = $pdo->query("SELECT * FROM blog_posts ORDER BY created_at $ordem");
 }
 $posts = $stmt->fetchAll();
 $pageTitle = 'Posts do blog';
@@ -46,6 +48,13 @@ $pageSubtitle = count($posts) . ' post(s) no total';
         <div class="lc-fgroup" style="flex-grow:1; max-width:360px;">
             <label for="busca">Buscar</label>
             <input type="text" id="busca" name="busca" placeholder="Título ou categoria..." value="<?php echo htmlspecialchars($busca, ENT_QUOTES, 'UTF-8'); ?>">
+        </div>
+        <div class="lc-fgroup">
+            <label for="ordem">Ordenar por data</label>
+            <select id="ordem" name="ordem">
+                <option value="desc" <?php echo $ordem === 'DESC' ? 'selected' : ''; ?>>Mais novo para mais antigo</option>
+                <option value="asc" <?php echo $ordem === 'ASC' ? 'selected' : ''; ?>>Mais antigo para mais novo</option>
+            </select>
         </div>
         <button type="submit" class="lc-btn lc-btn-secondary"><i data-lucide="search" style="width:16px;height:16px;"></i> Buscar</button>
     </form>

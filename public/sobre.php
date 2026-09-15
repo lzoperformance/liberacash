@@ -198,9 +198,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         /* Valores em grid */
         .values-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 25px;
+        }
+        @media (max-width: 520px) {
+            .values-grid { grid-template-columns: 1fr; }
         }
         .value-card {
             background: #f9f9f9;
