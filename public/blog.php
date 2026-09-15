@@ -529,7 +529,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="header">
     <div class="header-container">
-        <div class="logo"><a href="/"><img src="/images/logo.png?v=5" alt="LiberaCash" width="480" height="167"></a></div>
+        <div class="logo"><a href="/"><img src="/images/logo.png?v=6" alt="LiberaCash" width="480" height="167"></a></div>
         <nav class="nav-menu">
             <a href="/">Crédito Pessoal</a>
             <a href="/cartoes/">Cartão de Crédito</a>
@@ -792,7 +792,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="footer">
     <div class="footer-container">
-        <img src="/images/logo-footer.png?v=5" class="footer-logo" alt="LiberaCash" width="480" height="167" loading="lazy">
+        <img src="/images/logo-footer.png?v=6" class="footer-logo" alt="LiberaCash" width="480" height="167" loading="lazy">
         <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
