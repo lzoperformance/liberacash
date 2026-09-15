@@ -35,8 +35,9 @@ $products = [
         // Múltiplos parceiros pro mesmo produto — usuário escolhe na tela
         // de "Escolher parceiro" antes de sair pro site de cada um.
         // SuperSim vem primeiro de propósito: é a recomendação padrão pra
-        // todo lead nesse produto (pedido do cliente). NoVerde ainda
-        // aguarda link/logo reais.
+        // todo lead nesse produto (pedido do cliente). NoVerde ainda está
+        // em prospecção — link aponta direto pro onboarding deles (sem
+        // tracking de afiliado ainda) só pra eles verem como fica na landing.
         'parceiros' => [
             [
                 'id' => 'supersim',
@@ -61,7 +62,7 @@ $products = [
                 'nome' => 'NoVerde',
                 'logo' => null, // A DEFINIR
                 'descricao_curta' => 'Empréstimo pessoal sem burocracia',
-                'link_afiliado' => '#', // A DEFINIR
+                'link_afiliado' => 'https://app.noverde.com.br/onboarding', // prospecção, ainda sem link de afiliado com tracking
                 'passar_cpf_na_url' => false,
                 'tem_api' => false,
             ],
