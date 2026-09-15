@@ -584,7 +584,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <picture>
           <source type="image/avif" srcset="images/logo-480w.avif">
           <source type="image/webp" srcset="images/logo-480w.webp">
-          <img src="images/logo.png?v=3" alt="LiberaCash" width="480" height="167" decoding="async">
+          <img src="images/logo.png?v=4" alt="LiberaCash" width="480" height="167" decoding="async">
         </picture>
       </div>
       <nav class="nav-menu">
@@ -796,7 +796,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <picture>
         <source type="image/avif" srcset="images/logo-480w.avif">
         <source type="image/webp" srcset="images/logo-480w.webp">
-        <img src="images/logo-footer.png?v=3" class="footer-logo" alt="LiberaCash" width="480" height="167" loading="lazy" decoding="async">
+        <img src="images/logo-footer.png?v=4" class="footer-logo" alt="LiberaCash" width="480" height="167" loading="lazy" decoding="async">
       </picture>
 
        <div class="footer-social">
