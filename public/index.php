@@ -580,7 +580,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <header class="header">
     <div class="header-container">
-      <div class="logo"><img src="images/logo.png?v=2" alt="LiberaCash"></div>
+      <div class="logo">
+        <picture>
+          <source type="image/avif" srcset="images/logo-480w.avif">
+          <source type="image/webp" srcset="images/logo-480w.webp">
+          <img src="images/logo.png?v=3" alt="LiberaCash" width="480" height="167" decoding="async">
+        </picture>
+      </div>
       <nav class="nav-menu">
             <li><a href="/">Crédito Pessoal</a></li>
             <li><a href="/cartoes/">Cartão de Crédito</a></li>
@@ -617,7 +623,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="hero-img">
-    <img src="images/hero-mulher-nova.png?v=2" alt="Mulher sorrindo com aprovação confirmada no celular - Simule seu empréstimo">
+    <picture>
+      <source type="image/avif" srcset="images/hero-mulher-nova-480w.avif 480w, images/hero-mulher-nova-580w.avif 580w, images/hero-mulher-nova-960w.avif 960w, images/hero-mulher-nova-1200w.avif 1200w" sizes="(max-width: 900px) 100vw, 580px">
+      <source type="image/webp" srcset="images/hero-mulher-nova-480w.webp 480w, images/hero-mulher-nova-580w.webp 580w, images/hero-mulher-nova-960w.webp 960w, images/hero-mulher-nova-1200w.webp 1200w" sizes="(max-width: 900px) 100vw, 580px">
+      <img src="images/hero-mulher-nova.png?v=2" alt="Mulher sorrindo com aprovação confirmada no celular - Simule seu empréstimo" width="1200" height="917" fetchpriority="high" decoding="async">
+    </picture>
   </div>
 </section>
 
@@ -642,13 +652,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="banner-slider">
       <div class="slider-wrapper">
         <a href="#linkbanner#" class="slide">
-          <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo">
+          <picture>
+            <source type="image/avif" srcset="images/banner-juvo-creditovc.avif">
+            <source type="image/webp" srcset="images/banner-juvo-creditovc.webp">
+            <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo" width="684" height="156" decoding="async">
+          </picture>
         </a>
         <a href="https://www.itau.com.br/cartoes/escolha/g/azul-visa-infinite?utm_source=lzo&utm_medium=affiliate&utm_campaign=gl-aff-cartoes-conversao-azul-infinite&cpg_s=sliceafl&utmgl=utm_camp-{campaign.id}" class="slide">
-          <img src="images/banner-itaul-infinity.png" alt="Empréstimo pessoal Juvo - Slide 2">
+          <picture>
+            <source type="image/avif" srcset="images/banner-itaul-infinity.avif">
+            <source type="image/webp" srcset="images/banner-itaul-infinity.webp">
+            <img src="images/banner-itaul-infinity.png" alt="Cartão Itaú Azul Visa Infinite" width="684" height="156" loading="lazy" decoding="async">
+          </picture>
         </a>
         <a href="#linkbanner#" class="slide">
-          <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo - Slide 3">
+          <picture>
+            <source type="image/avif" srcset="images/banner-juvo-creditovc.avif">
+            <source type="image/webp" srcset="images/banner-juvo-creditovc.webp">
+            <img src="images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo" width="684" height="156" loading="lazy" decoding="async">
+          </picture>
         </a>
       </div>
     </div>
@@ -692,17 +714,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>Empréstimo com parcelas que cabem no seu bolso</h2>
       <div class="features-boxes-grid">
         <div class="box-item">
-          <img src="images/smile-creditovc.png" class="box-icon-img" alt="Autônomo">
+          <picture>
+            <source type="image/avif" srcset="images/smile-creditovc-120w.avif">
+            <source type="image/webp" srcset="images/smile-creditovc-120w.webp">
+            <img src="images/smile-creditovc-120w.png" class="box-icon-img" alt="" width="120" height="120" loading="lazy" decoding="async">
+          </picture>
           <h4>Sem complicações ou burocracia!</h4>
           <p>Facilitamos o seu acesso ao crédito.<br>Você preenche o formulário em menos de 2 minutos e nós fazemos o trabalho duro por você.</p>
         </div>
         <div class="box-item">
-          <img src="images/smartphone-creditovc.png" class="box-icon-img" alt="Celular">
+          <picture>
+            <source type="image/avif" srcset="images/smartphone-creditovc-120w.avif">
+            <source type="image/webp" srcset="images/smartphone-creditovc-120w.webp">
+            <img src="images/smartphone-creditovc-120w.png" class="box-icon-img" alt="" width="120" height="120" loading="lazy" decoding="async">
+          </picture>
           <h4>As melhores opções em um só lugar!</h4>
           <p>Conectamos seu perfil a diversas instituições financeiras parceiras para encontrar as taxas mais justas e personalizadas para você.</p>
         </div>
         <div class="box-item">
-          <img src="images/money-bag-creditovc.png" class="box-icon-img" alt="Parcelas">
+          <picture>
+            <source type="image/avif" srcset="images/money-bag-creditovc-120w.avif">
+            <source type="image/webp" srcset="images/money-bag-creditovc-120w.webp">
+            <img src="images/money-bag-creditovc-120w.png" class="box-icon-img" alt="" width="120" height="120" loading="lazy" decoding="async">
+          </picture>
           <h4>Pode ser autônomo e negativado!</h4>
           <p>A LiberaCash entende a sua realidade.<br>Temos parceiros com soluções de crédito sob medida, mesmo se você estiver com o nome sujo.</p>
         </div>
@@ -759,7 +793,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <footer class="footer">
     <div class="footer-container">
-      <img src="images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
+      <picture>
+        <source type="image/avif" srcset="images/logo-480w.avif">
+        <source type="image/webp" srcset="images/logo-480w.webp">
+        <img src="images/logo-footer.png?v=3" class="footer-logo" alt="LiberaCash" width="480" height="167" loading="lazy" decoding="async">
+      </picture>
 
        <div class="footer-social">
             <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>

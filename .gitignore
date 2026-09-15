@@ -22,3 +22,4 @@ vendor/
 # do git. Ver design-system/readme.md. O resto do design-system (tokens,
 # componentes, guidelines, ui_kits) é versionado normalmente.
 design-system/shots/
+public/images/hero-mulher-nova-original.png

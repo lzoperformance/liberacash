@@ -6,7 +6,7 @@
 ?>
 <footer class="painel-footer">
   <div class="painel-footer__inner">
-    <img src="/images/logo-footer.png?v=2" alt="LiberaCash" class="painel-footer__logo">
+    <img src="/images/logo-footer.png?v=3" alt="LiberaCash" class="painel-footer__logo" width="480" height="167" loading="lazy">
 
     <div class="painel-footer__social">
       <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>

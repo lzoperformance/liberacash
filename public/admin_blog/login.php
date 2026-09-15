@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="lc-login-box">
-        <img src="/images/logo.png?v=2" alt="LiberaCash">
+        <img src="/images/logo.png?v=3" alt="LiberaCash" width="480" height="167">
         <h1>Admin Blog</h1>
         <p class="sub">Painel de gerenciamento do blog</p>
 

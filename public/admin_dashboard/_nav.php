@@ -9,7 +9,7 @@ $paginaAtual = basename($caminhoAtual);
 ?>
 <nav class="lc-sidebar" id="lcSidebar">
     <div class="lc-sidebar-logo">
-        <img src="/images/logo.png?v=2" alt="LiberaCash">
+        <img src="/images/logo.png?v=3" alt="LiberaCash" width="480" height="167">
     </div>
 
     <div class="lc-nav-group">

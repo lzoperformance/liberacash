@@ -260,7 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/"><img src="/images/logo.png?v=2" alt="LiberaCash"></a>
+            <a href="/"><img src="/images/logo.png?v=3" alt="LiberaCash" width="480" height="167"></a>
         </div>
         <ul class="nav-menu">
             <li><a href="/">Home</a></li>
@@ -486,7 +486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <footer class="footer">
     <div class="footer-container">
-      <img src="/images/logo-footer.png?v=2" class="footer-logo" alt="LiberaCash">
+      <img src="/images/logo-footer.png?v=3" class="footer-logo" alt="LiberaCash" width="480" height="167" loading="lazy">
 
       <div class="footer-social">
         <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
