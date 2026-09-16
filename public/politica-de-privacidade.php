@@ -121,6 +121,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .hamburger {
             display: none;
             cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
             color: white;
             font-size: 24px;
         }
@@ -352,14 +355,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="/"><img src="/images/logo.png?v=7" alt="LiberaCash" width="480" height="167"></a>
         </div>
         
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
             <li><a href="/">Crédito</a></li>
             <li><a href="/cartoes/">Cartões</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/sobre/">Sobre</a></li>
             <li><a href="/contato/">Contato</a></li>
         </ul>
-        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <button type="button" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
     </div>
 </header>
 
@@ -584,6 +587,7 @@ $(document).ready(function(){
     // Menu Hamburger Mobile
     $('.hamburger').click(function(){
         $('.nav-menu').slideToggle();
+        $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'true' ? 'false' : 'true');
     });
 });
 </script>

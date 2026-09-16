@@ -148,6 +148,9 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
         .hamburger {
             display: none;
             cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
             color: white;
             font-size: 24px;
         }
@@ -604,14 +607,14 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
         <div class="logo">
             <a href="/"><img src="images/logo.png?v=7" alt="LiberaCash" width="480" height="167"></a>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
             <li><a href="/">Credito</a></li>
             <li><a href="cartoes.php">Cartao de Credito</a></li>
             <li><a href="blog.php">Blog</a></li>
             <li><a href="sobre.php">Sobre</a></li>
             <li><a href="contato.php">Contato</a></li>
         </ul>
-        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <button type="button" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
     </div>
 </header>
 
@@ -773,6 +776,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
 $(document).ready(function(){
     $('.hamburger').click(function(){
         $('.nav-menu').slideToggle();
+        $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'true' ? 'false' : 'true');
     });
 });
 </script>

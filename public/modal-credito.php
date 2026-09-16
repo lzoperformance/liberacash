@@ -7,7 +7,7 @@
 ?>
 
 <!-- ========== MODAL AUTENTICAÇÃO ========== -->
-<div class="modal-overlay" id="modalCredito" aria-hidden="true" role="dialog">
+<div class="modal-overlay" id="modalCredito" aria-hidden="true" role="dialog" aria-modal="true">
   <div class="modal-box">
     <button class="modal-close-btn" id="modalClose" aria-label="Fechar"><i class="fas fa-times"></i></button>
 
@@ -468,15 +468,24 @@ document.addEventListener('DOMContentLoaded', function() {
   window.abrirModalProdutos       = function() { window.abrirModalCadastro(); };
   window.abrirModalViaCalculadora = function() { window.abrirModalCadastro(); };
 
+  var ultimoElementoFocado = null;
   function abrirOverlay() {
+    ultimoElementoFocado = document.activeElement;
     overlay.classList.add('is-open');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    // move o foco pro modal (fecha o botão, se existir, senão o primeiro campo focável)
+    var alvo = closeBtn || overlay.querySelector('input, button, [tabindex]');
+    if (alvo) alvo.focus();
   }
   function closeModal() {
     overlay.classList.remove('is-open');
     overlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    // devolve o foco pra quem abriu o modal
+    if (ultimoElementoFocado && typeof ultimoElementoFocado.focus === 'function') {
+      ultimoElementoFocado.focus();
+    }
   }
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });

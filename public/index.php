@@ -99,7 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-menu { display: flex; list-style: none; gap: 4px; }
     .nav-menu a { color: var(--lc-text-muted, #4B5F52); text-decoration: none; font-size: 14px; font-weight: 600; font-family: var(--lc-font-body, 'Inter', sans-serif); padding: 8px 14px; border-radius: var(--lc-radius-full, 999px); transition: all .2s; }
     .nav-menu a:hover { background: var(--lc-surface, #F3FBF3); color: var(--lc-green-900, #16562D); }
-    .hamburger { display: none; cursor: pointer; color: var(--lc-text-dark, #0C2F1B); font-size: 24px; }
+    .hamburger { display: none; cursor: pointer; background: none; border: none; padding: 0; color: var(--lc-text-dark, #0C2F1B); font-size: 24px; }
 
     /* Banner Slider Ajustado */
     .banner-slider-container { max-width: 684px; margin: 30px auto 20px auto; padding: 0 20px; position: relative; }
@@ -588,14 +588,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <img src="images/logo.png?v=7" alt="LiberaCash" width="480" height="167" decoding="async">
         </picture>
       </div>
-      <nav class="nav-menu">
+      <nav class="nav-menu" id="nav-menu">
             <li><a href="/">Crédito Pessoal</a></li>
             <li><a href="/cartoes/">Cartão de Crédito</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/sobre/">Sobre</a></li>
             <li><a href="/contato/">Contato</a></li>
       </nav>
-      <div class="hamburger"><i class="fas fa-bars"></i></div>
+      <button type="button" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
     </div>
   </header>
 
@@ -678,8 +678,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="slider-nav">
-      <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-      <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+      <button class="slider-btn prev-btn" aria-label="Anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+      <button class="slider-btn next-btn" aria-label="Próximo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
     </div>
     <div class="slider-dots">
       <div class="dot active" data-index="0"></div>
@@ -851,7 +851,9 @@ LiberaCash&reg; é um site de comparação e correspondente de instituições fi
       // Menu Hamburger Mobile
       document.querySelector('.hamburger').addEventListener('click', function(){
         const menu = document.querySelector('.nav-menu');
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        const abrindo = menu.style.display !== 'block';
+        menu.style.display = abrindo ? 'block' : 'none';
+        this.setAttribute('aria-expanded', abrindo ? 'true' : 'false');
       });
 
       // LÓGICA DO CARROSSEL

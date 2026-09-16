@@ -116,7 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .logo img { height: 35px; }
         .nav-menu { display: flex; list-style: none; gap: 20px; }
         .nav-menu a { color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; }
-        .hamburger { display: none; cursor: pointer; color: #fff; font-size: 24px; }
+        .hamburger { display: none; cursor: pointer; background: none; border: none; padding: 0; color: #fff; font-size: 24px; }
 
         .hero { background: linear-gradient(135deg, var(--primary-green), var(--dark-green)); padding: 70px 20px; text-align: center; color: #fff; }
         .hero h1 { font-family: 'Raleway', sans-serif; font-size: 2.6rem; font-weight: 800; margin-bottom: 15px; }
@@ -201,14 +201,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="logo">
             <a href="/"><img src="/images/logo.png?v=7" alt="LiberaCash" width="480" height="167"></a>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
             <li><a href="/">Home</a></li>
             <li><a href="/cartoes/">Cartão de Crédito</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/sobre/">Sobre</a></li>
             <li><a href="/contato/">Contato</a></li>
         </ul>
-        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <button type="button" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
     </div>
 </header>
 
@@ -326,7 +326,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $('.hamburger').click(function(){ $('.nav-menu').slideToggle(); });
+    $('.hamburger').click(function(){ $('.nav-menu').slideToggle();
+        $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'true' ? 'false' : 'true'); });
 });
 </script>
 

@@ -338,7 +338,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .nav-menu { display: flex; list-style: none; gap: 4px; }
         .nav-menu a { color: var(--lc-text-muted); text-decoration: none; font-size: 14px; font-weight: 600; font-family: var(--lc-font-body); padding: 8px 14px; border-radius: var(--lc-radius-full); transition: all .2s; }
         .nav-menu a:hover, .nav-menu a.active { background: var(--lc-surface); color: var(--lc-green-900); }
-        .hamburger { display: none; cursor: pointer; color: var(--lc-text-dark); font-size: 24px; }
+        .hamburger { display: none; cursor: pointer; background: none; border: none; padding: 0; color: var(--lc-text-dark); font-size: 24px; }
 
         /* ==== Banner slider ==== */
         .banner-slider-container { max-width: 684px; margin: 26px auto 0 auto; padding: 0 20px; }
@@ -532,14 +532,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="header">
     <div class="header-container">
         <div class="logo"><a href="/"><img src="/images/logo.png?v=7" alt="LiberaCash" width="480" height="167"></a></div>
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="nav-menu">
             <a href="/">Crédito Pessoal</a>
             <a href="/cartoes/">Cartão de Crédito</a>
             <a href="/blog/" class="active">Blog</a>
             <a href="/sobre/">Sobre</a>
             <a href="/contato/">Contato</a>
         </nav>
-        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <button type="button" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
     </div>
 </header>
 
@@ -831,6 +831,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 $(document).ready(function(){
     $('.hamburger').click(function(){
         $('.nav-menu').slideToggle();
+        $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'true' ? 'false' : 'true');
     });
 
     if (sessionStorage.getItem('lcStickyCtaFechado') === '1') {
