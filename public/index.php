@@ -43,7 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="description" content="Libera Cash — Empréstimo pessoal online rápido e seguro. Compare propostas de múltiplos parceiros e receba o dinheiro na conta em até 24h. Simule grátis!">
   <meta name="keywords" content="empréstimo pessoal, empréstimo online, crédito pessoal, empréstimo negativado, simular empréstimo, crédito rápido">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="/">
+  <link rel="canonical" href="https://libera.cash/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Libera Cash">
@@ -495,16 +495,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   </style>
 
-  <!-- Schema.org: FinancialService -->
+  <!-- Schema.org: Organization (não FinancialService — a LiberaCash é um
+       comparador/correspondente, não uma instituição financeira; ver o
+       próprio texto do rodapé do site, que afirma isso explicitamente) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FinancialService",
+    "@type": "Organization",
     "name": "LiberaCash",
     "url": "https://libera.cash",
-    "logo": "images/logo.png",
-    "description": "Plataforma de comparação de empréstimo pessoal online. Conectamos você às melhores opções de crédito do mercado.",
-    "telephone": "+55-11-0000-0000",
+    "logo": "https://libera.cash/images/logo.png",
+    "description": "Plataforma de comparação de empréstimo pessoal online. Conectamos você às melhores opções de crédito entre instituições financeiras parceiras.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "São Paulo",

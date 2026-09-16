@@ -36,7 +36,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://libera.cash/sobre/">
 
-    <link rel="canonical" href="/sobre/">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://libera.cash/sobre/">
 
     <script type="application/ld+json">
     {

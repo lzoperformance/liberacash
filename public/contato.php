@@ -86,7 +86,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://libera.cash/contato/">
 
-    <link rel="canonical" href="/contato/">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://libera.cash/contato/">
 
     <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link href="/images/webclip.png" rel="apple-touch-icon">

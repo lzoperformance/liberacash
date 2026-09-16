@@ -29,11 +29,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>LiberaCash - Escolha seu Cartão</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
-  <meta property="og:title" content="LiberaCash - O Financeiro">
+  <meta name="description" content="Compare cartões de crédito e escolha o ideal pra você na LiberaCash. Conheça os benefícios de cada opção, 100% online e gratuito.">
+  <meta property="og:title" content="LiberaCash - Escolha seu Cartão">
   <meta property="og:description" content="Escolha seu novo cartão! Conheça os benefícios de cada um e mude!">
-  <meta property="og:image" content="https://www.financeiro.vc/images/webclip-financeiro.png">
-  <meta property="og:url" content="https://libera.cash/">
+  <meta property="og:image" content="https://libera.cash/images/webclip.png">
+  <meta property="og:url" content="https://libera.cash/cartoes/">
   <meta content="summary" name="twitter:card">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://libera.cash/cartoes/">
   
   <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="/images/webclip.png" rel="apple-touch-icon">

@@ -234,6 +234,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta property="og:url" content="https://libera.cash/blog/">
     <?php endif; ?>
 
+    <meta name="robots" content="index, follow">
     <?php if ($current_post): ?>
     <link rel="canonical" href="https://libera.cash/blog/<?php echo urlencode($current_post["slug"]); ?>/">
 <?php else: ?>
