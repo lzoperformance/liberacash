@@ -377,6 +377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="logo">
             <a href="/"><img src="/images/logo.png?v=7" alt="LiberaCash" width="480" height="167"></a>
         </div>
+        <nav aria-label="Menu principal">
         <ul class="nav-menu" id="nav-menu">
             <li><a href="/">Crédito</a></li>
             <li><a href="/cartoes/">Cartões</a></li>
@@ -384,6 +385,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="/sobre/">Sobre</a></li>
             <li><a href="/contato/">Contato</a></li>
         </ul>
+        </nav>
         <button type="button" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
     </div>
 </header>

@@ -607,6 +607,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
         <div class="logo">
             <a href="/"><img src="images/logo.png?v=7" alt="LiberaCash" width="480" height="167"></a>
         </div>
+        <nav aria-label="Menu principal">
         <ul class="nav-menu" id="nav-menu">
             <li><a href="/">Credito</a></li>
             <li><a href="cartoes.php">Cartao de Credito</a></li>
@@ -614,9 +615,12 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
             <li><a href="sobre.php">Sobre</a></li>
             <li><a href="contato.php">Contato</a></li>
         </ul>
+        </nav>
         <button type="button" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
     </div>
 </header>
+
+<main>
 
 <section class="hero">
     <h1><?php echo htmlspecialchars($nome); ?>, suas propostas estao prontas!</h1>
@@ -749,6 +753,8 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
     </div>
 
 </div>
+
+</main>
 
 <footer class="footer">
     <div class="footer-container">
