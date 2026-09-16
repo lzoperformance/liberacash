@@ -573,7 +573,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
             padding-top: 20px;
             border-top: 1px solid #eee;
             font-size: 12px;
-            color: #999;
+            color: #666666;
             width: 100%;
             text-align: center;
         }

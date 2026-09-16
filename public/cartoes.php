@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .footer-social { display: flex; gap: 15px; margin-bottom: 25px; }
     .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--primary-green); color: #fff; font-size: 16px; text-decoration: none; transition: var(--transition); }
     .footer-social a:hover { background: var(--dark-green); transform: translateY(-2px); }
-    .footer-copy { font-size: 11px; color: #999; margin-top: 16px; }
+    .footer-copy { font-size: 11px; color: #666666; margin-top: 16px; }
 
     /* ==========================================================================
        CSS IMPORTADO E INTEGRADO DE CARTÕES (COMPLETAMENTE ISOLADO)

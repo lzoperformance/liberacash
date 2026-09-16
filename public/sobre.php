@@ -384,7 +384,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         .footer-copy {
             font-size: 11px;
-            color: #999;
+            color: #666666;
             margin-top: 16px;
         }
 

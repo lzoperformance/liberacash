@@ -173,7 +173,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .footer-policy-box a { color: #333333; text-decoration: none; font-weight: 500; }
         .footer-policy-box a:hover { text-decoration: underline; }
         .footer-text { font-size: 12px; color: #666; line-height: 1.6; max-width: 720px; margin: 0 auto; text-align: center; }
-        .footer-copy { font-size: 11px; color: #999; margin-top: 16px; }
+        .footer-copy { font-size: 11px; color: #666666; margin-top: 16px; }
 
         @media (max-width: 768px) {
             .nav-menu { display: none; }
