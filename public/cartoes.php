@@ -275,6 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </header>
 
+  <main>
   <div class="cartoes-hero">
     <div class="c-all">
       <div class="c-lado1">
@@ -485,6 +486,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </div>
+  </main>
+
 
   <footer class="footer">
     <div class="footer-container">

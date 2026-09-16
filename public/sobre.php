@@ -426,6 +426,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </header>
 
+  <main>
 <section class="hero">
     <h1>Sobre a LiberaCash</h1>
     <p>Somos um comparador gratuito de crédito que conecta você às melhores condições entre os principais bancos e fintechs do Brasil, de forma simples, rápida e transparente.</p>
@@ -518,6 +519,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
 </div>
+  </main>
+
 
 <footer class="footer">
     <div class="footer-container">

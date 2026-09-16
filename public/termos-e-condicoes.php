@@ -327,6 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </header>
 
+  <main>
 <nav class="breadcrumbs" aria-label="breadcrumb">
     <a href="/">Início</a>
     <span class="sep">/</span>
@@ -388,6 +389,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <!-- ==== Footer ==== -->
+  </main>
+
 <footer class="footer">
     <div class="footer-container">
         <img src="/images/logo-footer.png?v=7" class="footer-logo" alt="LiberaCash" width="480" height="167" loading="lazy">

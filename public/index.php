@@ -599,6 +599,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </header>
 
+  <main>
+
   <!-- HERO SECTION CORRIGIDA - OTIMIZADA PARA HOMEM.JPG -->
   <section class="section-hero">
   <div class="hero-text">
@@ -791,6 +793,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer class="footer">
     <div class="footer-container">

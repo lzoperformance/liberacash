@@ -212,6 +212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </header>
 
+  <main>
 <section class="hero">
     <h1>Fale com a LiberaCash</h1>
     <p>Tem dúvidas, sugestões ou quer se tornar nosso parceiro? Preencha o formulário ou use um dos canais abaixo — respondemos em até 2 dias úteis.</p>
@@ -300,6 +301,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 </div>
+  </main>
+
 
 <footer class="footer">
     <div class="footer-container">

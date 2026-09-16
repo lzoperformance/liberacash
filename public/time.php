@@ -388,6 +388,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </header>
 
+  <main>
 <nav class="breadcrumbs" aria-label="breadcrumb">
     <a href="/">Início</a>
     <span class="sep">/</span>
@@ -454,6 +455,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
 </div>
+  </main>
+
 
 <footer class="footer">
     <div class="footer-container">

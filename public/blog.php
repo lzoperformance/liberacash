@@ -543,6 +543,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </header>
 
+<main>
+
 <div class="banner-slider-container">
     <div class="banner-slider">
         <div class="slider-wrapper">
@@ -791,6 +793,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     <?php endif; ?>
 </div>
+
+</main>
 
 <footer class="footer">
     <div class="footer-container">
