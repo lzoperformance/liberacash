@@ -299,3 +299,35 @@ mas vale reconferir se algo parecido aparecer.
 - Ordem de headings (H1→H2→H3) por página — não verificado ainda.
 - BreadcrumbList schema nas páginas internas — não implementado.
 - H1 único por página — não verificado sistematicamente.
+
+## FASE 3 — Acessibilidade WCAG (parcial)
+
+### Corrigido e testado ao vivo
+
+- **Menu mobile inoperável por teclado/leitor de tela** em 9 páginas:
+  era um `<div class="hamburger">` sem nome acessível, sem
+  `tabindex`, sem estado. Convertido pra `<button>` real com
+  `aria-label="Abrir menu"`, `aria-expanded` (alterna de verdade no
+  JS a cada clique) e `aria-controls` apontando pro menu (que ganhou
+  `id="nav-menu"`). Testado ao vivo em mobile (viewport 375px) na
+  home e no blog — abre, `aria-expanded` vira `"true"`, menu fica
+  visível.
+- Botões de anterior/próximo do carrossel da home ganharam
+  `aria-label` (blog.php já tinha).
+- Modal de cadastro: foco agora entra no modal ao abrir e volta pro
+  elemento que abriu ao fechar; adicionado `aria-modal="true"`. Já
+  tinha Escape e `role="dialog"` de antes.
+
+### Encontrado mas NÃO corrigido ainda (falta tempo, não risco)
+
+- **Touch targets abaixo de 44×44px**: os botões de anterior/próximo
+  do carrossel são 30-34px em vários lugares (WCAG pede mínimo
+  44×44 CSS px). Não mexi ainda porque aumentar o tamanho arriscava
+  quebrar o layout apertado do slider sem eu conseguir validar
+  visualmente a tempo — fica documentado pra próxima passada.
+- Labels de formulário (`for`/`id`), mensagens de erro com
+  `aria-describedby`, contraste WCAG AA, landmark regions, zoom 200%
+  — não verificados ainda.
+- Os "dots" indicadores do carrossel (`.dot`) têm o mesmo problema que
+  o hamburguer tinha: são `<div>` clicáveis sem nome acessível nem
+  foco de teclado. Não corrigidos ainda.
