@@ -347,10 +347,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .slide { flex: 0 0 100%; display: block; text-decoration: none; }
         .slide img { width: 100%; height: auto; max-height: 156px; object-fit: cover; display: block; }
         .slider-nav { position: absolute; top: 50%; width: calc(100% - 20px); left: 10px; display: flex; justify-content: space-between; transform: translateY(-50%); pointer-events: none; z-index: 10; }
-        .slider-btn { background: rgba(0,0,0,.35); color: #fff; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; pointer-events: auto; font-size: 12px; }
+        .slider-btn { background: rgba(0,0,0,.35); color: #fff; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; pointer-events: auto; font-size: 12px; position: relative; }
+        .slider-btn::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; }
         .slider-btn:hover { background: rgba(0,0,0,.6); }
         .slider-dots { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
-        .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lc-border); cursor: pointer; }
+        .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lc-border); cursor: pointer; position: relative; border: none; padding: 0; }
+        .dot::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; }
         .dot.active { background: var(--lc-green-600); width: 20px; border-radius: 4px; }
 
         /* ==== Intro ==== */
@@ -558,9 +560,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button class="slider-btn next-btn" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
     </div>
     <div class="slider-dots">
-        <div class="dot active" data-index="0"></div>
-        <div class="dot" data-index="1"></div>
-        <div class="dot" data-index="2"></div>
+        <button type="button" class="dot active" data-index="0" aria-label="Ir para o slide 1"></button>
+        <button type="button" class="dot" data-index="1" aria-label="Ir para o slide 2"></button>
+        <button type="button" class="dot" data-index="2" aria-label="Ir para o slide 3"></button>
     </div>
 </div>
 
