@@ -36,7 +36,7 @@
   max-width: 1100px; margin: 0 auto; padding: 40px 24px 28px; text-align: center;
   font-family: var(--lc-font-body, 'Inter', sans-serif); display: flex; flex-direction: column; align-items: center;
 }
-.painel-footer__logo { height: 44px; object-fit: contain; margin-bottom: 22px; }
+.painel-footer__logo { height: 44px; width: auto; object-fit: contain; margin-bottom: 22px; }
 .painel-footer__social { display: flex; gap: 14px; margin-bottom: 22px; }
 .painel-footer__social a {
   display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px;

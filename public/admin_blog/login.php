@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         box-shadow: var(--shadow-shell); border: 1px solid var(--border-accent);
         width: 100%; max-width: 360px;
     }
-    .lc-login-box img { height: 34px; margin-bottom: 22px; }
+    .lc-login-box img { height: 34px; width: auto; margin-bottom: 22px; }
     .lc-login-box h1 { font: 600 22px/1.2 var(--font-display); color: var(--text-strong); margin-bottom: 4px; }
     .lc-login-box p.sub { font-size: 13px; color: var(--text-muted); margin-bottom: 26px; }
     .lc-form-group { margin-bottom: 16px; }

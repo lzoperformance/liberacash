@@ -110,7 +110,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             align-items: center;
             padding: 0 20px;
         }
-        .logo img { height: 35px; }
+        .logo img { height: 35px; width: auto; }
         .nav-menu {
             display: flex;
             list-style: none;
@@ -347,7 +347,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             flex-direction: column;
             align-items: center;
         }
-        .footer-logo { height: 52px; margin-bottom: 25px; }
+        .footer-logo { height: 52px; width: auto; margin-bottom: 25px; }
         .footer-social {
             display: flex;
             gap: 15px;
