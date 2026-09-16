@@ -652,7 +652,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="banner-slider-container">
     <div class="banner-slider">
       <div class="slider-wrapper">
-        <a href="#linkbanner#" class="slide">
+        <a href="https://lzo.upone.link/r/k9763WxRqd?pid=" target="_blank" rel="noopener noreferrer" class="slide">
           <picture>
             <source type="image/avif" srcset="images/banner-juvo-creditovc.avif">
             <source type="image/webp" srcset="images/banner-juvo-creditovc.webp">
@@ -666,7 +666,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="images/banner-itaul-infinity.png" alt="Cartão Itaú Azul Visa Infinite" width="684" height="156" loading="lazy" decoding="async">
           </picture>
         </a>
-        <a href="#linkbanner#" class="slide">
+        <a href="https://lzo.upone.link/r/k9763WxRqd?pid=" target="_blank" rel="noopener noreferrer" class="slide">
           <picture>
             <source type="image/avif" srcset="images/banner-juvo-creditovc.avif">
             <source type="image/webp" srcset="images/banner-juvo-creditovc.webp">

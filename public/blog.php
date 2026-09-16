@@ -546,9 +546,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="banner-slider-container">
     <div class="banner-slider">
         <div class="slider-wrapper">
-            <a href="#linkbanner#" class="slide"><img src="/images/banner-juvo-creditovc.png" alt="Empréstimo pessoal"></a>
+            <a href="https://lzo.upone.link/r/k9763WxRqd?pid=" target="_blank" rel="noopener noreferrer" class="slide"><img src="/images/banner-juvo-creditovc.png" alt="Empréstimo pessoal Juvo"></a>
             <a href="https://www.itau.com.br/cartoes/escolha/g/azul-visa-infinite?utm_source=lzo&utm_medium=affiliate&utm_campaign=gl-aff-cartoes-conversao-azul-infinite&cpg_s=sliceafl&utmgl=utm_camp-{campaign.id}" class="slide"><img src="/images/banner-itaul-infinity.png" alt="Itaú Azul Visa Infinite"></a>
-            <a href="#linkbanner4#" class="slide"><img src="/images/banner-itaul-passai.png" alt="Oferta parceira"></a>
+            <a href="https://lzo.upone.link/r/4a4V4qpVl1?pid=" target="_blank" rel="noopener noreferrer" class="slide"><img src="/images/banner-itaul-passai.png" alt="Cartão Passaí"></a>
         </div>
     </div>
     <div class="slider-nav">
