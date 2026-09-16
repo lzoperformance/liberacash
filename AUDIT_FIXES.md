@@ -346,3 +346,34 @@ mas vale reconferir se algo parecido aparecer.
   validação (já existiam, funcionam via JS) agora têm
   `aria-describedby` + `aria-live="polite"`, então um leitor de tela
   anuncia o erro assim que ele aparece.
+- **Ordem de headings corrigida**: index.php tinha `<h4>` logo depois
+  do `<h1>` (cards de produto e cards "Sem complicações"), pulando H2
+  e H3 — viraram H2/H3 respectivamente. blog.php (post individual)
+  tinha o mesmo problema com "Gostou do conteúdo?" — virou H2.
+  Conferido cartoes.php/sobre.php/time.php: já estavam corretos.
+- **Contraste do rodapé de copyright**: `#999` sobre branco = 2,85:1
+  (WCAG AA pede 4,5:1 mínimo pra texto normal) em 8 páginas. Trocado
+  por `#666666` = 5,74:1.
+
+### INCIDENTE: logo esticado em todo o site (encontrado e corrigido no mesmo dia)
+
+Ao adicionar `width`/`height` nas tags `<img>` do logo pra evitar
+layout shift (Fase 1.1), toda página cuja CSS só define a altura do
+logo (`.logo img { height: 35px; }`, sem `width`) passou a esticar a
+imagem horizontalmente — o atributo HTML `width="480"` virou largura
+fixa em pixels em vez de ser recalculado proporcionalmente. O
+operador reportou com prints reais ("logo esticado") em 3 páginas
+diferentes, o que permitiu reproduzir e confirmar via medição direta
+no navegador (`clientWidth`/`clientHeight`) antes de corrigir.
+
+Fix: `width: auto` explícito em toda regra `.logo img`/`.footer-logo`
+do site (20 ocorrências, incluindo admin_blog/login.php e o rodapé do
+painel logado). Confirmado depois via medição ao vivo em 3 páginas
+que a proporção voltou a bater com o arquivo original (2,87:1). Não
+reintroduz layout shift — os atributos HTML continuam dando a
+proporção intrínseca pro navegador reservar espaço antes da imagem
+carregar.
+
+Depois disso, a pedido do operador, aumentei o tamanho do logo em
+todo o site (cabeçalho: 35→44px ou 46→52px conforme a página; rodapé:
+52→62px), mantendo a proporção correta.
