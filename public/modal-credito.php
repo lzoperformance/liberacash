@@ -33,31 +33,31 @@
       <input type="hidden" name="gclid" id="tracking_gclid" value="">
 
       <div class="form-group">
-        <input type="text" id="reg_full_name" name="full_name" placeholder="Nome completo" required autocomplete="name">
-        <span class="field-error" id="error_reg_full_name"></span>
+        <input type="text" id="reg_full_name" name="full_name" placeholder="Nome completo" aria-label="Nome completo" aria-describedby="error_reg_full_name" required autocomplete="name">
+        <span class="field-error" id="error_reg_full_name" aria-live="polite"></span>
       </div>
 
       <div class="form-group">
-        <input type="text" id="reg_cpf_number" name="cpf_number" placeholder="CPF" required maxlength="14" inputmode="numeric" autocomplete="off">
-        <span class="field-error" id="error_reg_cpf_number"></span>
+        <input type="text" id="reg_cpf_number" name="cpf_number" placeholder="CPF" aria-label="CPF" aria-describedby="error_reg_cpf_number" required maxlength="14" inputmode="numeric" autocomplete="off">
+        <span class="field-error" id="error_reg_cpf_number" aria-live="polite"></span>
       </div>
 
       <div class="form-group">
-        <input type="text" id="reg_mobile_phone" name="mobile_phone" placeholder="Celular com DDD" required maxlength="15" inputmode="tel" autocomplete="tel">
-        <span class="field-error" id="error_reg_mobile_phone"></span>
+        <input type="text" id="reg_mobile_phone" name="mobile_phone" placeholder="Celular com DDD" aria-label="Celular com DDD" aria-describedby="error_reg_mobile_phone" required maxlength="15" inputmode="tel" autocomplete="tel">
+        <span class="field-error" id="error_reg_mobile_phone" aria-live="polite"></span>
       </div>
 
       <div class="form-group">
-        <input type="email" id="reg_email" name="email" placeholder="E-mail" required autocomplete="email">
-        <span class="field-error" id="error_reg_email"></span>
+        <input type="email" id="reg_email" name="email" placeholder="E-mail" aria-label="E-mail" aria-describedby="error_reg_email" required autocomplete="email">
+        <span class="field-error" id="error_reg_email" aria-live="polite"></span>
       </div>
 
       <div class="form-group">
         <div class="input-with-icon">
-          <input type="password" id="reg_password" name="password" placeholder="Senha" required minlength="6" autocomplete="new-password">
+          <input type="password" id="reg_password" name="password" placeholder="Senha" aria-label="Senha" aria-describedby="error_reg_password" required minlength="6" autocomplete="new-password">
           <span class="input-icon toggle-password" data-target="reg_password"><i class="fas fa-eye"></i></span>
         </div>
-        <span class="field-error" id="error_reg_password"></span>
+        <span class="field-error" id="error_reg_password" aria-live="polite"></span>
       </div>
 
       <div class="form-group full-width">
@@ -65,7 +65,7 @@
           <input type="checkbox" id="reg_terms_accepted" name="terms_accepted" required>
           <span>Ao acessar/utilizar este site, você aceita as condições dos <a href="/termos-e-condicoes/" target="_blank">Termos de uso</a> e <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a></span>
         </label>
-        <span class="field-error" id="error_reg_terms_accepted"></span>
+        <span class="field-error" id="error_reg_terms_accepted" aria-live="polite"></span>
       </div>
 
       <button type="submit" class="modal-btn-submit full-width" id="btnCadastro">Criar Conta e Ver Ofertas</button>
@@ -79,16 +79,16 @@
     <form id="formLogin" class="modal-form auth-panel" data-panel="login" novalidate>
 
       <div class="form-group">
-        <input type="text" id="login_identifier" name="identifier" placeholder="CPF ou E-mail" required autocomplete="username">
-        <span class="field-error" id="error_login_identifier"></span>
+        <input type="text" id="login_identifier" name="identifier" placeholder="CPF ou E-mail" aria-label="CPF ou E-mail" aria-describedby="error_login_identifier" required autocomplete="username">
+        <span class="field-error" id="error_login_identifier" aria-live="polite"></span>
       </div>
 
       <div class="form-group">
         <div class="input-with-icon">
-          <input type="password" id="login_password" name="password" placeholder="Senha" required autocomplete="current-password">
+          <input type="password" id="login_password" name="password" placeholder="Senha" aria-label="Senha" aria-describedby="error_login_password" required autocomplete="current-password">
           <span class="input-icon toggle-password" data-target="login_password"><i class="fas fa-eye"></i></span>
         </div>
-        <span class="field-error" id="error_login_password"></span>
+        <span class="field-error" id="error_login_password" aria-live="polite"></span>
       </div>
 
       <button type="submit" class="modal-btn-submit full-width" id="btnLogin">Entrar na minha conta</button>
@@ -108,8 +108,8 @@
       </p>
 
       <div class="form-group">
-        <input type="text" id="reset_identifier" name="identifier" placeholder="E-mail ou CPF" required autocomplete="username">
-        <span class="field-error" id="error_reset_identifier"></span>
+        <input type="text" id="reset_identifier" name="identifier" placeholder="E-mail ou CPF" aria-label="E-mail ou CPF" aria-describedby="error_reset_identifier" required autocomplete="username">
+        <span class="field-error" id="error_reset_identifier" aria-live="polite"></span>
       </div>
 
       <button type="submit" class="modal-btn-submit full-width" id="btnEsqueciSenha">Enviar link de recuperação</button>
