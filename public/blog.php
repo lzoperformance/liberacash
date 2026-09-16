@@ -462,7 +462,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .single-post .post-full-content em a { color: var(--lc-green-700); font-weight: 600; }
 
         .post-cta { background: var(--lc-surface); border: 1px solid var(--lc-border); border-radius: var(--lc-radius-md); padding: 30px; margin: 40px 0; text-align: center; }
-        .post-cta h4 { font-family: var(--lc-font-display); font-size: 1.15rem; margin-bottom: 8px; color: var(--lc-text-dark); }
+        .post-cta h2 { font-family: var(--lc-font-display); font-size: 1.15rem; margin-bottom: 8px; color: var(--lc-text-dark); }
         .post-cta p { font-size: 14px; color: var(--lc-text-muted); margin-bottom: 18px; }
         .post-cta-btn { background: var(--lc-gradient-brand); color: var(--lc-text-dark); padding: 13px 28px; border-radius: var(--lc-radius-full); font-weight: 700; font-size: 13.5px; border: none; cursor: pointer; }
 
@@ -610,7 +610,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="post-cta">
-                    <h4>Gostou do conteúdo?</h4>
+                    <h2>Gostou do conteúdo?</h2>
                     <p>Compare propostas de empréstimo em minutos, 100% online e sem compromisso.</p>
                     <button class="post-cta-btn btn-open-modal"
                             data-title="Qual o melhor&nbsp;<span>crédito para você?</span>"

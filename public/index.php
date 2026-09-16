@@ -293,7 +293,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .feature-card { background: #e9f7f4; padding: 20px 18px; border-radius: 20px; text-align: left; border: 1px solid #1fc859; display: flex; flex-direction: column; justify-content: space-between; min-height: 160px; position: relative; }
     .feature-icon-wrapper { width: 55px; height: 55px; background-color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); margin-bottom: 20px; }
     .feature-icon { max-width: 32px; max-height: 32px; object-fit: contain; }
-    .feature-card h4 { font-size: 15px; font-weight: 600; color: #333333; line-height: 1.3; margin-bottom: 15px; padding-right: 10px; font-family: 'Raleway', sans-serif; }
+    .feature-card h2 { font-size: 15px; font-weight: 600; color: #333333; line-height: 1.3; margin-bottom: 15px; padding-right: 10px; font-family: 'Raleway', sans-serif; }
     .btn-simulate-wrapper { display: flex; justify-content: flex-end; width: 100%; }
     .btn-simulate { background: #1fc859; color: white; padding: 4px 22px; border-radius: 12px; text-decoration: none; font-size: 12px; font-weight: bold; transition: var(--transition); }
     .btn-simulate:hover { background: var(--dark-green); }
@@ -357,7 +357,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .features-boxes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
     .box-item { background: #ffffff; padding: 30px 25px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); text-align: left; }
     .box-icon-img { height: 45px; width: auto; object-fit: contain; margin-bottom: 20px; }
-    .box-item h4 { font-size: 17px; font-weight: 700; color: #2d3436; margin-bottom: 12px; line-height: 1.3; font-family: 'Raleway', sans-serif; }
+    .box-item h3 { font-size: 17px; font-weight: 700; color: #2d3436; margin-bottom: 12px; line-height: 1.3; font-family: 'Raleway', sans-serif; }
     .box-item p { font-size: 14px; color: var(--text-light); line-height: 1.5; }
 
     /* Testimonials */
@@ -642,7 +642,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="feature-icon-wrapper">
         <i class="ph <?php echo $prod['icone']; ?>" style="font-size:28px;color:var(--primary-green)"></i>
       </div>
-      <h4><?php echo htmlspecialchars($prod['nome']); ?></h4>
+      <h2><?php echo htmlspecialchars($prod['nome']); ?></h2>
       <div class="btn-simulate-wrapper">
         <button class="btn-simulate btn-open-modal" style="border:none; cursor:pointer;" 
                 data-title="<?php echo htmlspecialchars($prod['nome']); ?>" 
@@ -724,7 +724,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <source type="image/webp" srcset="images/smile-creditovc-120w.webp">
             <img src="images/smile-creditovc-120w.png" class="box-icon-img" alt="" width="120" height="120" loading="lazy" decoding="async">
           </picture>
-          <h4>Sem complicações ou burocracia!</h4>
+          <h3>Sem complicações ou burocracia!</h3>
           <p>Facilitamos o seu acesso ao crédito.<br>Você preenche o formulário em menos de 2 minutos e nós fazemos o trabalho duro por você.</p>
         </div>
         <div class="box-item">
@@ -733,7 +733,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <source type="image/webp" srcset="images/smartphone-creditovc-120w.webp">
             <img src="images/smartphone-creditovc-120w.png" class="box-icon-img" alt="" width="120" height="120" loading="lazy" decoding="async">
           </picture>
-          <h4>As melhores opções em um só lugar!</h4>
+          <h3>As melhores opções em um só lugar!</h3>
           <p>Conectamos seu perfil a diversas instituições financeiras parceiras para encontrar as taxas mais justas e personalizadas para você.</p>
         </div>
         <div class="box-item">
@@ -742,7 +742,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <source type="image/webp" srcset="images/money-bag-creditovc-120w.webp">
             <img src="images/money-bag-creditovc-120w.png" class="box-icon-img" alt="" width="120" height="120" loading="lazy" decoding="async">
           </picture>
-          <h4>Pode ser autônomo e negativado!</h4>
+          <h3>Pode ser autônomo e negativado!</h3>
           <p>A LiberaCash entende a sua realidade.<br>Temos parceiros com soluções de crédito sob medida, mesmo se você estiver com o nome sujo.</p>
         </div>
       </div>
