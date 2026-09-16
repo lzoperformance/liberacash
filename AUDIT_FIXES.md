@@ -326,8 +326,23 @@ mas vale reconferir se algo parecido aparecer.
   quebrar o layout apertado do slider sem eu conseguir validar
   visualmente a tempo — fica documentado pra próxima passada.
 - Labels de formulário (`for`/`id`), mensagens de erro com
-  `aria-describedby`, contraste WCAG AA, landmark regions, zoom 200%
-  — não verificados ainda.
-- Os "dots" indicadores do carrossel (`.dot`) têm o mesmo problema que
-  o hamburguer tinha: são `<div>` clicáveis sem nome acessível nem
-  foco de teclado. Não corrigidos ainda.
+  contraste WCAG AA, landmark regions, zoom 200% — não verificados
+  ainda.
+
+### Corrigido depois (checkpoint seguinte)
+
+- **Touch targets**: botões anterior/próximo e os "dots" do carrossel
+  (home e blog) tinham área de toque de 8-34px. Adicionada hit-area
+  invisível de 44x44px via `::before`, sem mudar a aparência visual.
+- **Dots do carrossel**: eram `<div>` sem nome acessível nem foco de
+  teclado (mesmo problema do hamburguer). Convertidos pra `<button>`
+  com `aria-label`.
+- **Formulário de cadastro/login/recuperação de senha** (o modal
+  principal, usado em toda página): não tinha nenhum `<label>`, só
+  `placeholder` — que some ao digitar e não é confiável pra leitor de
+  tela. Adicionado `aria-label` nos 8 campos sem mudar o visual do
+  modal (decisão consciente — `<label>` visível mudaria o design,
+  então preferi não fazer isso sem aprovação). Mensagens de erro de
+  validação (já existiam, funcionam via JS) agora têm
+  `aria-describedby` + `aria-live="polite"`, então um leitor de tela
+  anuncia o erro assim que ele aparece.
