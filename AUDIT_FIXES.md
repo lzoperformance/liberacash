@@ -264,3 +264,38 @@ mas vale reconferir se algo parecido aparecer.
 - Reescrever o menu hamburguer/carrossel em JS puro pra eliminar jQuery
   de vez seria o próximo passo natural, mas é mudança de comportamento
   em 8 páginas — não fiz sem test bem mais cuidadoso primeiro.
+
+## FASE 2 — SEO técnico (2.1, 2.2, 2.4, 2.5 concluídos; 2.3 já estava OK)
+
+- **2.1 Canonical**: absoluto e consistente em todas as 8 páginas
+  públicas (6 estavam relativos, cartoes.php não tinha nenhum).
+- **2.2 Meta robots**: `index, follow` explícito nas 8 páginas
+  públicas (7 não tinham nada, index.php já tinha). sucesso.php
+  já estava correto como `noindex, nofollow` — não mexido.
+- **2.3 Sitemap/robots.txt**: conferido — já está correto. 30 URLs,
+  sem duplicata, sem parâmetro, sem redirecionamento, inclui os posts
+  do blog dinamicamente (até os publicados pelo pipeline automático
+  recentemente). robots.txt bloqueia áreas administrativas
+  corretamente. Nenhuma ação necessária aqui.
+- **2.4 HTML semântico**: `<main>` adicionado nas 8 páginas (nenhuma
+  tinha — batia com o achado da auditoria de 27/27 URLs sem `<main>`).
+  Corrigidos os 4 links mortos `#linkbanner#`/`#linkbanner4#` do
+  carrossel (2 na home, 2 no blog) — confirmado com o operador antes
+  de trocar o destino, iam pro Juvo e pro Cartão Passaí, parceiros
+  reais que já tinham link de afiliado ativo em outro lugar do site.
+  Isso não é só achado de SEO: 2 dos 3 slides do carrossel da home
+  literalmente não levavam a lugar nenhum até agora.
+- **2.5 Structured data**: home corrigida (ver seção anterior — remove
+  telefone placeholder, logo absoluto, `@type` de `FinancialService`
+  pra `Organization`). FAQ da home conferido — bate com o conteúdo
+  visível, legítimo, não mexido.
+- **cartoes.php** ganhou meta description (não tinha nenhuma), e
+  og:title/og:image/og:url corrigidos — estavam com resquício de outra
+  marca (`www.financeiro.vc`, "O Financeiro") e apontando pra URL
+  errada.
+
+### Não feito ainda (Fase 2)
+
+- Ordem de headings (H1→H2→H3) por página — não verificado ainda.
+- BreadcrumbList schema nas páginas internas — não implementado.
+- H1 único por página — não verificado sistematicamente.
