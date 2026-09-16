@@ -133,7 +133,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
             align-items: center;
             padding: 0 20px;
         }
-        .logo img { height: 35px; width: auto; }
+        .logo img { height: 44px; width: auto; }
         .nav-menu {
             display: flex;
             list-style: none;
@@ -539,7 +539,7 @@ $parceiros_fallback = $parceiros_por_produto[$produtoAtual] ?? $parceiros_por_pr
             flex-direction: column;
             align-items: center;
         }
-        .footer-logo { height: 38px; width: auto; margin-bottom: 25px; }
+        .footer-logo { height: 46px; width: auto; margin-bottom: 25px; }
         .footer-social {
             display: flex;
             gap: 15px;

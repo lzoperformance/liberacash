@@ -106,7 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             align-items: center;
             padding: 0 20px;
         }
-        .logo img { height: 35px; width: auto; }
+        .logo img { height: 44px; width: auto; }
         .nav-menu {
             display: flex;
             list-style: none;
@@ -261,7 +261,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             flex-direction: column;
             align-items: center;
         }
-        .footer-logo { height: 52px; width: auto; margin-bottom: 25px; }
+        .footer-logo { height: 62px; width: auto; margin-bottom: 25px; }
         .footer-policy-box { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 25px; font-size: 13px; color: #333333; cursor: pointer; user-select: none; }
         .footer-policy-box input[type="checkbox"] { accent-color: #1fc859; width: 16px; height: 16px; cursor: pointer; }
         .footer-policy-box a { color: #333333; text-decoration: none; font-weight: 500; }

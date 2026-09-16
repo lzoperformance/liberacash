@@ -88,7 +88,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* Menu do Topo */
     .header { background-color: var(--primary-green); padding: 10px 0; position: sticky; top: 32px; z-index: 1000; width: 100%; }
     .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-    .logo img { height: 35px; width: auto; }
+    .logo img { height: 44px; width: auto; }
     .nav-menu { display: flex; list-style: none; gap: 20px; margin: 0; padding: 0; }
     .nav-menu a { color: var(--white); text-decoration: none; font-size: 14px; font-weight: 600; }
     .hamburger { display: none; cursor: pointer; background: none; border: none; padding: 0; color: white; font-size: 24px; }
@@ -96,7 +96,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* Footer da Home */
     .footer { padding: 50px 0; text-align: center; background-color: var(--white); border-top: 1px solid #eee; width: 100%; }
     .footer-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; align-items: center; }
-    .footer-logo { height: 52px; width: auto; margin-bottom: 25px; }
+    .footer-logo { height: 62px; width: auto; margin-bottom: 25px; }
     .footer-policy-box { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 25px; font-size: 13px; color: #333333; cursor: pointer; user-select: none; }
     .footer-policy-box input[type="checkbox"] { accent-color: #1fc859; width: 16px; height: 16px; cursor: pointer; }
     .footer-policy-box a { color: #333333; text-decoration: none; font-weight: 500; }
