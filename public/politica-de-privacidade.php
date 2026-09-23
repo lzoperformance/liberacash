@@ -25,17 +25,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade - LiberaCash</title>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://libera.cash/"},
-        {"@type": "ListItem", "position": 2, "name": "Política de Privacidade", "item": "https://libera.cash/politica-de-privacidade/"}
-      ]
-    }
-    </script>
-
     <meta name="description" content="Política de Privacidade do site LiberaCash. Saiba como protegemos e utilizamos seus dados.">
     <meta property="og:title" content="Política de Privacidade - LiberaCash">
     <meta property="og:description" content="Transparência e segurança: veja como a LiberaCash trata seus dados pessoais em conformidade com a LGPD.">
@@ -127,19 +116,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: white;
             font-size: 24px;
         }
-
-        /* ==== Breadcrumbs ==== */
-        .breadcrumbs {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 14px 20px;
-            font-size: 13px;
-            color: var(--text-light);
-        }
-        .breadcrumbs a { color: var(--text-light); text-decoration: none; }
-        .breadcrumbs a:hover { color: var(--primary-green); text-decoration: underline; }
-        .breadcrumbs .sep { margin: 0 6px; color: #ccc; }
-        .breadcrumbs .current { color: var(--text-dark); font-weight: 600; }
 
         /* ==== Banner Política ==== */
         .banner-politica {
@@ -369,12 +345,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
   <main>
-<nav class="breadcrumbs" aria-label="breadcrumb">
-    <a href="/">Início</a>
-    <span class="sep">/</span>
-    <span class="current">Política de Privacidade</span>
-</nav>
-
 <!-- ==== Banner Política ==== -->
 <div class="banner-politica">
     <h1>Política de Privacidade</h1>

@@ -25,17 +25,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Termos de Uso e Condições - LiberaCash</title>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://libera.cash/"},
-        {"@type": "ListItem", "position": 2, "name": "Termos e Condições", "item": "https://libera.cash/termos-e-condicoes/"}
-      ]
-    }
-    </script>
-
     <meta name="description" content="Termos de uso e condições de navegação do site LiberaCash.">
     <meta property="og:title" content="Termos e Condições - LiberaCash">
     <meta property="og:description" content="Termos de uso e condições de navegação da nossa plataforma.">
@@ -127,19 +116,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: white;
             font-size: 24px;
         }
-
-        /* ==== Breadcrumbs ==== */
-        .breadcrumbs {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 14px 20px;
-            font-size: 13px;
-            color: var(--text-light);
-        }
-        .breadcrumbs a { color: var(--text-light); text-decoration: none; }
-        .breadcrumbs a:hover { color: var(--primary-green); text-decoration: underline; }
-        .breadcrumbs .sep { margin: 0 6px; color: #ccc; }
-        .breadcrumbs .current { color: var(--text-dark); font-weight: 600; }
 
         /* ==== Banner Termos ==== */
         .banner-termos {
@@ -333,12 +309,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
   <main>
-<nav class="breadcrumbs" aria-label="breadcrumb">
-    <a href="/">Início</a>
-    <span class="sep">/</span>
-    <span class="current">Termos e Condições</span>
-</nav>
-
 <!-- ==== Banner Termos e Condições ==== -->
 <div class="banner-termos">
     <h1>Termos e Condições</h1>
