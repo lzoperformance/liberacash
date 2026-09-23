@@ -121,18 +121,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosso Time | LiberaCash</title>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://libera.cash/"},
-        {"@type": "ListItem", "position": 2, "name": "Sobre", "item": "https://libera.cash/sobre/"},
-        {"@type": "ListItem", "position": 3, "name": "Nosso Time", "item": "https://libera.cash/time/"}
-      ]
-    }
-    </script>
-
     <meta name="description" content="Conheça as pessoas por trás da LiberaCash — CEO, CTO e as lideranças das áreas que fazem nosso comparador de crédito funcionar.">
     <meta property="og:title" content="Nosso Time | LiberaCash">
     <meta property="og:description" content="Conheça as lideranças da LiberaCash.">
@@ -170,12 +158,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .nav-menu { display: flex; list-style: none; gap: 20px; }
         .nav-menu a { color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; }
         .hamburger { display: none; cursor: pointer; background: none; border: none; padding: 0; color: #fff; font-size: 24px; }
-
-        .breadcrumbs { max-width: 1200px; margin: 0 auto; padding: 14px 20px; font-size: 13px; color: var(--gray-text); }
-        .breadcrumbs a { color: var(--gray-text); text-decoration: none; }
-        .breadcrumbs a:hover { color: var(--primary-green); text-decoration: underline; }
-        .breadcrumbs .sep { margin: 0 6px; color: #ccc; }
-        .breadcrumbs .current { color: var(--text-dark); font-weight: 600; }
 
         .hero { background: linear-gradient(135deg, var(--primary-green), var(--dark-green)); padding: 70px 20px; text-align: center; color: #fff; }
         .hero h1 { font-family: 'Raleway', sans-serif; font-size: 2.6rem; font-weight: 800; margin-bottom: 15px; }
@@ -391,14 +373,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
   <main>
-<nav class="breadcrumbs" aria-label="breadcrumb">
-    <a href="/">Início</a>
-    <span class="sep">/</span>
-    <a href="/sobre/">Sobre</a>
-    <span class="sep">/</span>
-    <span class="current">Nosso Time</span>
-</nav>
-
 <section class="hero">
     <h1>Nosso Time</h1>
     <p>Conheça as pessoas que constroem a LiberaCash todos os dias. Um time formado por especialistas apaixonados por finanças, tecnologia e por facilitar a vida do brasileiro.</p>
