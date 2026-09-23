@@ -9,8 +9,8 @@
     <img src="/images/logo-footer.png?v=7" alt="LiberaCash" class="painel-footer__logo" width="480" height="167" loading="lazy">
 
     <div class="painel-footer__social">
-      <a href="https://www.facebook.com/creditovoce" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/credito.vc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61594187020204" target="_blank" rel="noopener noreferrer" aria-label="Facebook LiberaCash"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/libera_cash/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LiberaCash"><i class="fab fa-instagram"></i></a>
       <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn LiberaCash"><i class="fab fa-linkedin-in"></i></a>
     </div>
 
