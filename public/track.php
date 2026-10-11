@@ -10,6 +10,8 @@
  * Nunca deve derrubar a página — qualquer erro aqui é só logado.
  */
 
+require_once __DIR__ . '/attribution.php';
+
 function lc_track_pageview(PDO $pdo): void
 {
     $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
@@ -18,6 +20,9 @@ function lc_track_pageview(PDO $pdo): void
     if ($ua === '' || preg_match('/bot|crawl|spider|slurp|facebookexternalhit|preview|monitor|pingdom|uptime/i', $ua)) {
         return;
     }
+
+    // Origem do lead: grava o cookie de primeiro clique (se a URL trouxe campanha).
+    lc_attr_capturar();
 
     try {
         $ip = $_SERVER['REMOTE_ADDR'] ?? '';

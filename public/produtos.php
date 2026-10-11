@@ -10,6 +10,9 @@
  *  - Com produto pré-selecionado via URL:
  *      /produtos.php?produto=garantia-celular -> pula direto pra "Dados pessoais"
  */
+require_once __DIR__ . '/attribution.php';
+lc_attr_capturar(); // cookie de primeiro clique (origem da campanha)
+
 require_once __DIR__ . '/produtos-config.php';
 $produtos_ativos = get_products_ordered();
 

@@ -159,11 +159,13 @@ try {
 }
 
 // ---------------------------------------------------------------------
-// (Opcional) Registrar UTMs de origem em log/tabela de leads, se existir
+// Origem do lead (atribuição por primeiro clique) -> tabela leads_origem.
+// Lê o cookie lc_attr gravado na primeira visita com campanha; se o
+// visitante não tem cookie, usa os UTMs enviados pelo formulário.
+// Nunca bloqueia o cadastro: qualquer erro só vai pro log.
 // ---------------------------------------------------------------------
-// Exemplo, caso exista uma tabela leads_origem:
-// $pdo->prepare('INSERT INTO leads_origem (user_id, utm_source, utm_medium, utm_campaign, utm_content, fbclid, gclid) VALUES (?,?,?,?,?,?,?)')
-//     ->execute([$userId, $utmSource, $utmMedium, $utmCampaign, $utmContent, $fbclid, $gclid]);
+require_once __DIR__ . '/attribution.php';
+lc_attr_gravar($pdo, $userId, $input);
 
 // ---------------------------------------------------------------------
 // Consulta automática de pré-aprovação na Velotax — é essa chamada que
